@@ -23,11 +23,32 @@ footnotereturnlinkcontents = "↩"
 [[menu.main]]
     name = "Blog"
     url = "/blog/"
+    weight = 3     
 [[menu.main]]
     name = "Tags"
     url = "/tags/"
     weight = 4
 [[menu.main]]
+    name = "Subscribe"
+    url = "/index.xml"
+    
+[[menu.blog]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.blog]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.blog]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 3     
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+[[menu.blog]]
     name = "Subscribe"
     url = "/index.xml"
 
