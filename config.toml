@@ -44,7 +44,7 @@ footnotereturnlinkcontents = "↩"
     name = "Blog"
     url = "/blog/"
     weight = 3     
-[[menu.main]]
+[[menu.blog]]
     name = "Tags"
     url = "/tags/"
     weight = 4
