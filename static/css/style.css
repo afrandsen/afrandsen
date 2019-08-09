@@ -8,20 +8,39 @@ body {
 /* header and footer areas */
 .menu { padding: 0; }
 .menu li { display: inline-block; }
+.menu a { color: black; }
 .article-meta, .menu a {
   text-decoration: none;
-  color: black;
   background: #eee;
   padding: 5px;
   border-radius: 5px;
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+footer a { 
+  text-decoration: none;
+  color: black;
+}
 hr {
   border-style: dashed;
   color: #ddd;
 }
+
+/* links */
+p a { 
+  color: black; 
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+p a:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+li a { color: black; }
+li a:hover { text-decoration: none; }
 
 /* code */
 pre {
