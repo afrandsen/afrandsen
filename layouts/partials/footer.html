@@ -4,7 +4,10 @@
   <hr/>
   {{ . | markdownify }}
   {{ end }}
+  
   {{ if not .IsHome }}
+  
+  {{ if .IsPage }}
   
   {{ if .File.Path }}
 
@@ -20,6 +23,7 @@
   | <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit this page</a>
   {{ end }}
 
+  {{ end }}
   {{ end }}
   {{ end }}
   </footer>
