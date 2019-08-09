@@ -31,27 +31,7 @@ footnotereturnlinkcontents = "↩"
 [[menu.main]]
     name = "Subscribe"
     url = "/index.xml"
-    
-[[menu.blog]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.blog]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.blog]]
-    name = "Blog"
-    url = "/blog/"
-    weight = 3     
-[[menu.blog]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 4
-[[menu.blog]]
-    name = "Subscribe"
-    url = "/index.xml"
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Andreas Frandsen](https://afrandsen.rbind.io) 2019 | [Github](https://github.com/afrandsen) | [Linkedin](https://www.linkedin.com/in/andreas-kracht-frandsen-09438315a)"
+    footer = "&copy; [afrandsen](https://afrandsen.rbind.io) 2019 | [Github](https://github.com/afrandsen)
