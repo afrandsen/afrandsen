@@ -1,5 +1,5 @@
 ---
-title: Andreas Frandsen
+title: afrandsen
 ---
 
 # Welcome to My Personal Website
