@@ -12,9 +12,10 @@ You can find me and my repositories on [GitHub](https://github.com/afrandsen). W
 
 # About this site
 
-This site is created with [Hugo](https://gohugo.io/) and the theme is [hugo-xmin](https://github.com/yihui/hugo-xmin), a Hugo theme built by [Yihui Xie](https://github.com/yihui). The Markdown source files are hosted on Github. Feel free to comment on the site using [Disqus](https://disqus.com/). Please hit *“Edit this page”* in the menu if you find any mistakes in a blog post to propose a correction through a Github pull request.
+This site is created with [Hugo](https://gohugo.io/) and the theme is [hugo-xmin](https://github.com/yihui/hugo-xmin), a Hugo theme built by [Yihui Xie](https://github.com/yihui). The Markdown source files are hosted on GitHub. Feel free to comment on the site using [Disqus](https://disqus.com/). Please hit *“Edit this page”* in the footer if you find any mistakes in a blog post to propose a correction through a Github pull request.
 
 # Sites I often visit
+The following sites has helped me learn more about bikes. They are (almost) unbiased, and has helped me a lot in my purchasing decisions.
 
   - [Hambini Performance Engineering](https://www.hambini.com/blog/) -- Aerospace Engineer with an attention to detail (highly recommended read).
   
@@ -22,5 +23,5 @@ This site is created with [Hugo](https://gohugo.io/) and the theme is [hugo-xmin
   
   - [In The Know Cycling](https://intheknowcycling.com/) -- Buying advice.
  
-  - [Bicycle Rolling Resistance](https://www.bicyclerollingresistance.com/) -- Tests of bicycle tires.
+  - [Bicycle Rolling Resistance](https://www.bicyclerollingresistance.com/) -- Tests of bike tires.
  
