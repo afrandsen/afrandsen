@@ -33,6 +33,6 @@ footnotereturnlinkcontents = "↩"
     url = "/index.xml"
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "Andreas Frandsen's Personal Website."
     footer = "&copy; [Andreas Frandsen](https://afrandsen.rbind.io) 2019 | [GitHub](https://github.com/afrandsen)"
     GithubEdit = "https://github.com/afrandsen/afrandsen/edit/master/content/"
