@@ -26,6 +26,10 @@ footer a {
   border-bottom: none;
 }
 
+.menu li a:hover {
+  color: gray;
+}
+
 footer a:hover { 
   color: gray;
 }
