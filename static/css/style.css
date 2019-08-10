@@ -54,8 +54,7 @@ li a {
   padding-bottom: 2px;
   border-bottom: 1px solid;
 }
-li a:hover { 
-  color: gray;
+li a:hover {
   border-bottom: none;
 }
 
