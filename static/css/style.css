@@ -21,6 +21,15 @@ footer a {
   text-decoration: none;
   color: black;
 }
+
+.menu li a {
+  border-bottom: none;
+}
+
+footer a:hover { 
+  color: gray;
+}
+
 hr {
   border-style: dashed;
   color: #ddd;
@@ -39,8 +48,24 @@ p a:hover {
   border-bottom: none;
 }
 
-li a { color: black; }
-li a:hover { text-decoration: none; }
+li a {
+  color: black; 
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+li a:hover { 
+  color: gray;
+  border-bottom: none;
+}
+
+a.symbol {
+  color: black;
+}
+
+a.symbol:hover {
+  color: gray;
+}
 
 /* button */
 .button {
@@ -50,6 +75,10 @@ li a:hover { text-decoration: none; }
   text-decoration: none;
   cursor: pointer;
   background: #eee;
+}
+
+.button:hover {
+  color: gray;
 }
 
 /* code */

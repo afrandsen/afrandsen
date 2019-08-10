@@ -5,6 +5,10 @@
   {{ . | markdownify }}
   {{ end }}
   
+  {{ with .Site.Params.github }}
+  | <a class="symbol" href='{{ . }}'><i class="fab fa-github"></i></a>
+  {{ end }}
+  
   {{ if not .IsHome }}
   
   {{ if .IsPage }}

@@ -34,5 +34,6 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "Andreas Frandsen's Personal Website."
-    footer = "&copy; [Andreas Frandsen](https://afrandsen.rbind.io) 2019 | [GitHub](https://github.com/afrandsen)"
+    footer = "&copy; [Andreas Frandsen](https://afrandsen.rbind.io) 2019 "
+    github = "https://github.com/afrandsen"
     GithubEdit = "https://github.com/afrandsen/afrandsen/edit/master/content/"
