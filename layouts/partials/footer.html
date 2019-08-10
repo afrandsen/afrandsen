@@ -9,6 +9,10 @@
   | <a class="symbol" href='{{ . }}'><i class="fab fa-github"></i></a>
   {{ end }}
   
+  {{ with .Site.Params.linkedin }}
+  | <a class="symbol" href='{{ . }}'><i class="fab fa-linkedin"></i></a>
+  {{ end }}
+  
   {{ if not .IsHome }}
   
   {{ if .IsPage }}
