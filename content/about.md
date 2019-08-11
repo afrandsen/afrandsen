@@ -24,3 +24,5 @@ The following sites has helped me learn more about bikes. They are (almost) unbi
   - [In The Know Cycling](https://intheknowcycling.com/) -- Buying advice.
  
   - [Bicycle Rolling Resistance](https://www.bicyclerollingresistance.com/) -- Tests of bike tires.
+
+  - [China Cycling](https://www.youtube.com/channel/UCSun-GPfsD03Nz9UT8HMQPw/videos) -- Cycling in China, reviews, guides etc.
