@@ -35,8 +35,14 @@ footer a:hover {
 }
 
 hr {
-  border-style: dashed;
+  border-style: solid;
   color: #ddd;
+}
+
+.rule {
+  border-style: solid;
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 /* links */
