@@ -6,15 +6,15 @@
   {{ end }}
   
   {{ with .Site.Params.github }}
-  | <a class="symbol" href='{{ . }}'><i class="fab fa-github"></i></a>
+  <br> <a class="symbol" href='{{ . }}'><i class="fab fa-github"></i></a>
   {{ end }}
   
   {{ with .Site.Params.linkedin }}
-  | <a class="symbol" href='{{ . }}'><i class="fab fa-linkedin"></i></a>
+  <a class="symbol" href='{{ . }}'><i class="fab fa-linkedin"></i></a>
   {{ end }}
   
   {{ with .Site.Params.strava }}
-  | <a class="symbol" href='{{ . }}'><i class="fab fa-strava"></i></a>
+  <a class="symbol" href='{{ . }}'><i class="fab fa-strava"></i></a>
   {{ end }}
   
   {{ if not .IsHome }}
@@ -32,7 +32,7 @@
   {{ end }}
 
   {{ with .Site.Params.GithubEdit}}
-  | <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit this page</a>
+  <br> <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit this page</a>
   {{ end }}
 
   {{ end }}
