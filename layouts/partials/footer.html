@@ -13,6 +13,10 @@
   | <a class="symbol" href='{{ . }}'><i class="fab fa-linkedin"></i></a>
   {{ end }}
   
+  {{ with .Site.Params.strava }}
+  | <a class="symbol" href='{{ . }}'><i class="fab fa-strava"></i></a>
+  {{ end }}
+  
   {{ if not .IsHome }}
   
   {{ if .IsPage }}
