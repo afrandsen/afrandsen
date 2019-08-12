@@ -25,8 +25,8 @@ footnotereturnlinkcontents = "↩"
     url = "/blog/"
     weight = 3     
 [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
+    name = "License"
+    url = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
     weight = 4
 [[menu.main]]
     name = "Subscribe"

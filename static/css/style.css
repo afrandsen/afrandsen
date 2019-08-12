@@ -91,6 +91,11 @@ a.symbol:hover {
   color: gray;
 }
 
+/* footer license */
+.copyright {
+    float: right;
+}
+
 /* code */
 pre {
   border: 1px solid #ddd;
