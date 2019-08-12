@@ -1,4 +1,4 @@
 http://afrandsen.rbind.io/*    https://afrandsen.rbind.io/:splat  301!
 https://afrandsen.netlify.com/*  https://afrandsen.rbind.io/:splat  301!
 http://afrandsen.netlify.com/*   https://afrandsen.rbind.io/:splat  301!
-/image/  https://afrandsen.rbind.io
+/images/  https://afrandsen.rbind.io
