@@ -2,6 +2,7 @@
 title: SAS 9.4 Enhanced Editor Custom Theme
 author: Andreas Frandsen
 date: '2019-08-12'
+lastmod: '2019-08-13'
 slug: sas-9-4-enhanced-editor-custom-theme
 categories: []
 tags:
@@ -24,25 +25,25 @@ description: "How to change the theme/scheme of the Enhanced Editor in SAS 9.4. 
 
 <p>It may seem paradoxical that my first real blog post is about <a href="https://www.sas.com/en_us/home.html">SAS</a>. Given the fact that I ranted about it on the homepage. But I want to share something that makes the editor a little less frustrating, especially for your eyes. Lastly I want to show you a very useful tip when coding a SAS macro.</p>
 <p>The Enhanced Editor in SAS is something a lot of people uses almost daily, or at least I do. I remember the first time I started SAS on my PC. I was amazed by the old and clunky interface. Which as I have been told has not changed for decades. The one thing I could not live with was the syntax colour formatting the Enhanced Editor used. White backgrounds for coding is a no go for me. Though what is more important is the colours that your display is emitting. I recommend you to download and install <a href="https://justgetflux.com/">f.lux</a>, no matter how many hours you sit in front of the display. It helps filtering out colourful light with wavelengths around 480 nm, that normally affects your circadian timing.</p>
-<p>Like anything else related to SAS, the documentation for different settings/procedures are well hidden. SAS did not make it easy to change the Enhanced Editor Theme, but fear not! I will show below how you can do it. Firstly in a quick way and secondly in a longer way<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Like anything else related to SAS, the documentation for different settings/procedures are well hidden. SAS did not make it easy to change the Enhanced Editor Theme, but fear not! I will show below how you can do it. Firstly in a quick way and secondly in a longer way<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Notice that the first way will only affect <code>sas</code> files and not <code>scl</code> files. Though you can change the appearance using the second way. The theme uses Lucida Console and some subdued colours.</p>
 <div id="custom-theme-through-the-registry-editor" class="section level2">
 <h2>Custom Theme Through the Registry Editor</h2>
-<p>The first way to change the theme uses the Registry Editor. You can find it using by searching after <code>regedit</code> in the Windows Start Menu. Next you want to find this path.</p>
+<p>The first way to change the theme uses the Registry Editor. You can find it using by searching after “regedit” in the Windows Start Menu. Next you want to find this path.</p>
 <pre><code>HKEY_CURRENT_USER\Software\SAS Institute Inc.\Enhanced Editor\9.4\Editor Settings\.sas\Schemes</code></pre>
 <p>On that path you should see the existing themes. You want to make sure that it is the exact same path, before you move on.</p>
 <p>Next you locate to my Gist containing the Registration Entries for the new theme. It can be found here: <a href="https://gist.github.com/afrandsen/84c2128098783a2c549b2356d4897480">AKF_Dark.reg</a>. Hit the “Download ZIP” button, unzip the folder and return to the Registry Editor.</p>
 <p>You now want to import the Registry Entries, you might have done this before. All you have to do is click <code>File -&gt; Import</code> locate the download <code>reg</code> file and then click <code>Open</code>.</p>
-<p>Now you can open SAS 9.4 and choose the new theme in <code>Tools -&gt; Enhanced Editor Settings</code> using the drop-down list.</p>
+<p>Now you can open SAS 9.4 and choose the new theme in <code>Tools -&gt; Options -&gt; Enhanced Editor</code> using the drop-down list <code>Scheme</code>.</p>
 <p>If you don’t like my font and/or colours you can either change them directly in the settings, which tends to take a long time, or change the Registry Entries directly, using hexadecimal color codes. Notice that you need to change the background for a lot of elements: code, comments, dataLines etc.</p>
 </div>
 <div id="custom-theme-using-sas-9.4" class="section level2">
 <h2>Custom Theme Using SAS 9.4</h2>
-<p>If you want to make the theme completely yourself you can do it. Just open SAS 9.4 and choose <code>Tools -&gt; Enhanced Editor Settings</code>, in here you can set the exact colours you want. Save the theme when you are done.</p>
+<p>If you want to make the theme completely yourself you can do it. Just open SAS 9.4 and choose <code>Tools -&gt; Options -&gt; Enhanced Editor</code>, in here you can set the exact colours you want. Save the theme when you are done.</p>
 </div>
 <div id="tip-regarding-syntax-colouring-in-macros" class="section level2">
 <h2>Tip Regarding Syntax Colouring in Macros</h2>
 <p>I have always been annoyed by the fact that code inside a SAS macro isn’t syntax coloured.</p>
-<pre><code>%macro colourLess;
+<pre><code>%macro colourless;
     data noColour;
     set someData;
     run;

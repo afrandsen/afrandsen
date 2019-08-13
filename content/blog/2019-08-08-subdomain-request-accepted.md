@@ -2,6 +2,7 @@
 title: Subdomain Request Accepted!
 author: Andreas Frandsen
 date: '2019-08-08'
+lastmod: 0
 slug: subdomain-request-accepted
 categories: []
 tags:

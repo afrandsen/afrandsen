@@ -2,6 +2,7 @@
 title: SAS 9.4 Enhanced Editor Custom Theme
 author: Andreas Frandsen
 date: '2019-08-12'
+lastmod: '2019-08-13'
 slug: sas-9-4-enhanced-editor-custom-theme
 categories: []
 tags:
@@ -27,7 +28,7 @@ The Enhanced Editor in SAS is something a lot of people uses almost daily, or at
 Like anything else related to SAS, the documentation for different settings/procedures are well hidden. SAS did not make it easy to change the Enhanced Editor Theme, but fear not! I will show below how you can do it. Firstly in a quick way and secondly in a longer way^[I had to do it in the second way, to obtain the first way.]. Notice that the first way will only affect `sas` files and not `scl` files. Though you can change the appearance using the second way. The theme uses Lucida Console and some subdued colours.
 
 ## Custom Theme Through the Registry Editor
-The first way to change the theme uses the Registry Editor. You can find it using by searching after `regedit` in the Windows Start Menu. Next you want to find this path.
+The first way to change the theme uses the Registry Editor. You can find it using by searching after “regedit” in the Windows Start Menu. Next you want to find this path.
 
 ```
 HKEY_CURRENT_USER\Software\SAS Institute Inc.\Enhanced Editor\9.4\Editor Settings\.sas\Schemes
@@ -49,7 +50,7 @@ If you want to make the theme completely yourself you can do it. Just open SAS 9
 ## Tip Regarding Syntax Colouring in Macros
 I have always been annoyed by the fact that code inside a SAS macro isn't syntax coloured.
 ```
-%macro colourLess;
+%macro colourless;
     data noColour;
     set someData;
     run;
