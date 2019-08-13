@@ -3,7 +3,7 @@
 
 <script async src="//yihui.name/js/center-img.js"></script>
 
-{{ if .IsPage }}
+{{ if or (.IsPage) (eq .Kind "404") }}
   {{ partial "disqus.html" . }}
 {{ end }}
 
