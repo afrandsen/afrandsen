@@ -10,4 +10,4 @@ tags:
   - Netlify
 description: "Subdomain Request Accepted. Blog post from afrandsen."
 ---
-Recently I made a subdomain request, [#449](https://github.com/rbind/support/issues/449), to [rbind/support](https://github.com/rbind/support), it got accepted the following day and I received the subdomain I opted for: [afrandsen.rbind.io](afrandsen.rbind.io). You can read more about the Rbind project [here](https://support.rbind.io/).
+Recently I made a subdomain request, [#449](https://github.com/rbind/support/issues/449), to [rbind/support](https://github.com/rbind/support), it got accepted the following day and I received the subdomain I opted for: [afrandsen.rbind.io](https://afrandsen.rbind.io). You can read more about the Rbind project [here](https://support.rbind.io/).
