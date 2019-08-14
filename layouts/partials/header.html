@@ -14,8 +14,10 @@
   <body>
     <nav>
     <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
+      {{ $currentPage := . }}
+      {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
+      <li{{ if eq .URL $currentPage.Permalink }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
     </ul>
     <hr/>
