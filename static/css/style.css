@@ -30,6 +30,10 @@ footer a {
   text-decoration: underline;
 }
 
+.menu .active a:hover {
+  text-decoration: none;
+}
+
 .menu li a:hover {
   color: gray;
 }
