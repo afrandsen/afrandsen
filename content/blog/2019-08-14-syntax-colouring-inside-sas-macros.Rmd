@@ -10,6 +10,7 @@ tags:
   - SAS 9.4
   - Enhanced Editor
   - Macro
+description: "How to keep syntax colouring inside SAS macros. Blog post from afrandsen."
 ---
 
 This slight hack is a way to bypass how SAS syntax colouring behaves inside a macro, for the SAS Enhanced Editor. 
