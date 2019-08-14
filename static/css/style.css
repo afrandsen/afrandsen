@@ -96,10 +96,6 @@ a.symbol:hover {
     float: right;
 }
 
-.copyright:hover .image {
-    opacity: 0.3;
-}
-
 /* code */
 pre {
   border: 1px solid #ddd;
