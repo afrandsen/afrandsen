@@ -1,0 +1,44 @@
+---
+title: Syntax Colouring Inside SAS Macros
+author: Andreas Frandsen
+date: '2019-08-14'
+lastmod: 0
+slug: syntax-colouring-inside-sas-macros
+categories: []
+tags:
+  - SAS
+  - SAS 9.4
+  - Enhanced Editor
+  - Macro
+---
+
+
+
+<p>This slight hack is a way to bypass how SAS syntax colouring behaves inside a macro, for the SAS Enhanced Editor.</p>
+<div id="tip-regarding-syntax-colouring-in-macros" class="section level2">
+<h2>Tip Regarding Syntax Colouring in Macros</h2>
+<p>I have always been annoyed by the fact that code inside a SAS macro isn’t syntax coloured.</p>
+<pre><code>%macro colourless;
+    data noColour;
+    set someData;
+    run;
+%mend;</code></pre>
+<p>Even though you can’t see it here, the above code block would have the same syntax colour for all its elements.</p>
+<p>There is a slight hack that can help you! All you have to do is create an empty dummy macro inside the original macro. Just like this.</p>
+<pre><code>%macro colourful;
+    %macro disableTheDarkSide;
+    %mend disableTheDarkSide;
+
+    data colour;
+    set someColourfulData;
+    run;
+%mend;</code></pre>
+<p>This essentially give you the syntax colouring defined in <code>Tools -&gt; Options -&gt; Enhanced Editor</code> back. This makes me happy and maybe also you. If you don’t know how to change the theme that controls the syntax colouring then check my blog posts out <a href="https://afrandsen.rbind.io/blog/2019/08/12/sas-9-4-enhanced-editor-custom-theme/">SAS 9.4 Enhanced Editor Custom Theme</a>. But don’t fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> sooner or later.</p>
+<p>Feel free to comment with more SAS tips using Disqus.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Well essentially it is not a fix.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>

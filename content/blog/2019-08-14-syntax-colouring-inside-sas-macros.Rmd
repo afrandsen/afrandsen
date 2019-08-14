@@ -1,0 +1,44 @@
+---
+title: Syntax Colouring Inside SAS Macros
+author: Andreas Frandsen
+date: '2019-08-14'
+lastmod: 0
+slug: syntax-colouring-inside-sas-macros
+categories: []
+tags:
+  - SAS
+  - SAS 9.4
+  - Enhanced Editor
+  - Macro
+---
+
+This slight hack is a way to bypass how SAS syntax colouring behaves inside a macro, for the SAS Enhanced Editor. 
+
+## Tip Regarding Syntax Colouring in Macros
+I have always been annoyed by the fact that code inside a SAS macro isn't syntax coloured.
+```
+%macro colourless;
+    data noColour;
+    set someData;
+    run;
+%mend;
+```
+
+Even though you can't see it here, the above code block would have the same syntax colour for all its elements.
+
+There is a slight hack that can help you! All you have to do is create an empty dummy macro inside the original macro. Just like this.
+
+```
+%macro colourful;
+    %macro disableTheDarkSide;
+    %mend disableTheDarkSide;
+
+    data colour;
+    set someColourfulData;
+    run;
+%mend;
+```
+
+This essentially give you the syntax colouring defined in `Tools -> Options -> Enhanced Editor` back. This makes me happy and maybe also you. If you don't know how to change the theme that controls the syntax colouring then check my blog posts out [SAS 9.4 Enhanced Editor Custom Theme](https://afrandsen.rbind.io/blog/2019/08/12/sas-9-4-enhanced-editor-custom-theme/). But don't fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix^[Well essentially it is not a fix.] sooner or later.
+
+Feel free to comment with more SAS tips using Disqus.
