@@ -48,3 +48,5 @@ If you don't like my font and/or colours you can either change them directly in 
 If you want to make the theme completely yourself, you can do it. Just open SAS 9.4 and choose `Tools -> Options -> Enhanced Editor`, in here you can set the exact colours you want. Save the theme when you are done.
 
 Notice you always have the possible to change back to the default theme. Feel free to share your own links to your own theme using Disqus below.
+
+*Disclaimer: I do use the software SAS 9.4 and the AKF_Dark theme.*
