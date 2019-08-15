@@ -8,9 +8,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
-    post = "/post/:year/:month/:day/:slug/"
-    note = "/note/:year/:month/:day/:slug/"
-    blog = "/blog/:year/:month/:day/:slug/"
+    post = "/post/:year/:month/:slug/"
+    note = "/note/:year/:month/:slug/"
+    blog = "/blog/:year/:month/:slug/"
 
 [[menu.main]]
     name = "Home"
