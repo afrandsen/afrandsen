@@ -40,7 +40,7 @@ There is a slight hack that can help you! All you have to do is create an empty 
 %mend;
 ```
 
-This essentially give you the syntax colouring defined in `Tools -> Options -> Enhanced Editor` back. This makes me happy and maybe also you. If you don't know how to change the theme that controls the syntax colouring then check my blog posts out [SAS 9.4 Enhanced Editor Custom Theme](https://afrandsen.rbind.io/blog/2019/08/12/sas-9-4-enhanced-editor-custom-theme/). But don't fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix^[Well essentially it is not a fix.] sooner or later.
+This essentially give you the syntax colouring defined in `Tools -> Options -> Enhanced Editor` back. This makes me happy and maybe also you. If you don't know how to change the theme that controls the syntax colouring then check my blog posts out [SAS 9.4 Enhanced Editor Custom Theme](https://afrandsen.rbind.io/blog/2019/08/sas-9-4-enhanced-editor-custom-theme/). But don't fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix^[Well essentially it is not a fix.] sooner or later.
 
 Feel free to comment with more SAS tips using Disqus.
 
