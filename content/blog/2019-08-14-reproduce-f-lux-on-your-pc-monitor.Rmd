@@ -32,9 +32,9 @@ Data$BLUE <- Data$BLUE/255
 
 I am a user of [f.lux](https://justgetflux.com/) as stated in some of my other blog posts. f.lux does essentially one thing: It changes the colour temperature of your computer's display depending on the time of the day at your geological location. You can more or less think of it as filter on top of your monitor(s). This is great for your eyes, and mostly your circadian timing.
 
-At my work, local installations are handled remotely, thus I cannot install f.lux on my workstation. So I came up with a fix that takes use of your monitor's own settings. Usually you can adjust the colours through RGB^[Red, green and blue.] values as percentages on your display. You want to find some kind of a `Custom` menu.
+At my work, local installations are handled remotely, thus I cannot install f.lux on my workstation. So I came up with a fix that takes use of your monitor's own settings. Usually you can adjust the colours through RGB^[Red, green and blue.] values as percentages on your display. You can try to fiddle with your own monitor, you want to find some kind of a custom menu.
 
-At my location here in Denmark, f.lux works in the interval from 1900K to 6500K depending on the time of the day as stated above. Thus we need to convert kelvin temperatures to approximate RGB percentages. Fear not, I have already done it. Feel free to use my data table below. I have converted the kelvin temperatures from 1000K to 12000K.
+At my location here in Denmark, f.lux works in the interval from 1900K to 6500K depending on the time of the day as stated above. Thus we need to convert kelvin temperatures to approximate RGB percentages. Fear not I have already done it, thus all you have to do is search for the kelvin temperature. I have converted the kelvin temperatures in the range from 1000K to 12000K.
 
 ```{r kelvin-rgb}
 datatable(
@@ -51,6 +51,6 @@ datatable(
 ) %>% formatPercentage(c('RED','GREEN','BLUE'), 2)
 ```
 
-I like to have a couple of predefined custom settings on my monitors at work, and then manually choose them along the day. But mostly I find myself using a colour temperature around 3400K, which is what a usual halogen bulb emits.
+I like to have a couple of predefined custom settings on my monitors at work, and then manually choose among them along the day. But mostly I find myself using a colour temperature around 3400K, which is what a usual halogen bulb emits.
 
 *Disclaimer: I do use f.lux and the values given in Table 1.*
