@@ -8,8 +8,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
-    post = "/post/:year/:month/:slug/"
-    note = "/note/:year/:month/:slug/"
     blog = "/blog/:year/:month/:slug/"
 
 [[menu.main]]
