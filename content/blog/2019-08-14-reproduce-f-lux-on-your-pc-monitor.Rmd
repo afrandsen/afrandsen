@@ -7,13 +7,13 @@ slug: reproduce-f-lux-on-your-pc-monitor
 categories: []
 tags:
   - f.lux
-  - rgb
-  - kelvin
-  - temperature
-  - monitor
-  - colour
-  - eye strain
-  - circadian timing
+  - RGB
+  - Kelvin
+  - Temperature
+  - Monitor
+  - Colour
+  - Eye strain
+  - Circadian timing
 description: "How to reproduce f.lux using your PC monitor. Blog post from afrandsen."
 ---
 
