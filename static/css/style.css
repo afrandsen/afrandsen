@@ -22,6 +22,10 @@ footer a {
   color: black;
 }
 
+.title {
+  line-height: 1em;
+}
+
 .menu li a {
   border-bottom: none;
 }
