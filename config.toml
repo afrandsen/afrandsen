@@ -32,7 +32,7 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "Andreas Frandsen's Personal Website."
-    footer = "[Andreas Frandsen &copy; 2019](https://afrandsen.rbind.io)"
+    footer = "[&copy; Andreas Frandsen 2019](https://afrandsen.rbind.io)"
     github = "https://github.com/afrandsen"
     linkedin = "https://www.linkedin.com/in/andreas-kracht-frandsen-09438315a"
     strava = "https://www.strava.com/athletes/andreas_frandsen"
