@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "afrandsen | R, Bikes and Training"
+title = "R, Bikes and Training"
 theme = "hugo-xmin"
 googleAnalytics = "UA-145443946-1"
 disqusShortname = "afrandsen"
