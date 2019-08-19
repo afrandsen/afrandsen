@@ -1,5 +1,5 @@
 ---
-title: Home
+
 ---
 
 [<img src="/images/logo.svg" style="max-width:15%;min-width:40px;float:right;" alt="afrandsen" />](https://afrandsen.rbind.io)
@@ -12,4 +12,4 @@ I'm studying MSc in Mathematics and Economics at the Department of Mathematics, 
 
 <hr class="rule">
 
-Jeg læser kandidatgraden i matematik-økonomi ved Matematisk Fakultet, Aarhus Universitet. Mit primære interesse område er kvantitativ finansiering. Mit bachelorprojekt var *Langsigtet investering i aktiver: En empirisk analyse af risiko på tværs af investeringshorisonter*. Jeg arbejder som studentermedhjælper i [Jyske Bank](https://www.jyskebank.dk/), Markedsrisiko og Modeller. Jeg er skaberen af det forholdsvis simple open-source spil *tdf_manager* (Tour de Frandsen Manager 2019). Jeg optimerer som regel en af mine mange cykler, og cykler af og til på dem. Jeg hader [SAS](https://www.sas.com/en_us/home.html), selvom jeg benytter det hver dag. Jeg elsker [R](https://www.r-project.org/) og jeg prøver at få folk til at blive useR's. Jeg kan ikke kode hele dagen, så jeg spiller klaver for at holde fingrene i bevægelse, eller læser for at holde hovedet i gang. Jeg er stor tilhænger af [Git](https://git-scm.com/), [GitHub](https://github.com/), [GoldenCheetah](https://www.goldencheetah.org/) og [Overleaf](https://www.overleaf.com/). 
+Jeg læser kandidatgraden i matematik-økonomi ved Matematisk Fakultet, Aarhus Universitet. Mit primære interesse område er kvantitativ finansiering. Mit bachelorprojekt var *Langsigtet investering i aktiver: En empirisk analyse af risiko på tværs af investeringshorisonter*. Jeg arbejder som studentermedhjælper i [Jyske Bank](https://www.jyskebank.dk/), Markedsrisiko og Modeller. Jeg er skaberen af det forholdsvis simple open-source spil *tdf_manager* (Tour de Frandsen Manager 2019). Jeg optimerer som regel en af mine mange cykler, og cykler af og til på dem. Jeg hader [SAS](https://www.sas.com/en_us/home.html), selvom jeg benytter det hver dag. Jeg elsker [R](https://www.r-project.org/) og jeg prøver at få folk til at blive useR's. Jeg kan ikke kode hele dagen, så jeg spiller klaver for at holde fingrene i bevægelse, eller læser for at holde hovedet i gang. Jeg er stor tilhænger af [Git](https://git-scm.com/), [GitHub](https://github.com/), [GoldenCheetah](https://www.goldencheetah.org/) og [Overleaf](https://www.overleaf.com/).
