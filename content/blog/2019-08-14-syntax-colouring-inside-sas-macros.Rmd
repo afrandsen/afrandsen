@@ -17,7 +17,7 @@ This slight hack is a way to bypass how SAS syntax colouring behaves inside a ma
 
 ## Tip Regarding Syntax Colouring in Macros
 I have always been annoyed by the fact that code inside a SAS macro isn't syntax coloured.
-```
+```sas
 %macro colourless;
     data noColour;
     set someData;
@@ -25,11 +25,11 @@ I have always been annoyed by the fact that code inside a SAS macro isn't syntax
 %mend;
 ```
 
-Even though you can't see it here, the above code block would have the same syntax colour for all its elements.
+Even though you can't see it here, the above code block would have the same syntax colour for all its elements.^[[highlight.js](https://highlightjs.org/) shows the correct colours.]
 
 There is a slight hack that can help you! All you have to do is create an empty dummy macro inside the original macro. Just like this.
 
-```
+```sas
 %macro colourful;
     %macro disableTheDarkSide;
     %mend disableTheDarkSide;

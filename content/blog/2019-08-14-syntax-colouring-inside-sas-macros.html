@@ -19,14 +19,14 @@ description: "How to keep syntax colouring inside SAS macros. Blog post from afr
 <div id="tip-regarding-syntax-colouring-in-macros" class="section level2">
 <h2>Tip Regarding Syntax Colouring in Macros</h2>
 <p>I have always been annoyed by the fact that code inside a SAS macro isn’t syntax coloured.</p>
-<pre><code>%macro colourless;
+<pre class="sas"><code>%macro colourless;
     data noColour;
     set someData;
     run;
 %mend;</code></pre>
-<p>Even though you can’t see it here, the above code block would have the same syntax colour for all its elements.</p>
+<p>Even though you can’t see it here, the above code block would have the same syntax colour for all its elements.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p>There is a slight hack that can help you! All you have to do is create an empty dummy macro inside the original macro. Just like this.</p>
-<pre><code>%macro colourful;
+<pre class="sas"><code>%macro colourful;
     %macro disableTheDarkSide;
     %mend disableTheDarkSide;
 
@@ -34,13 +34,14 @@ description: "How to keep syntax colouring inside SAS macros. Blog post from afr
     set someColourfulData;
     run;
 %mend;</code></pre>
-<p>This essentially give you the syntax colouring defined in <code>Tools -&gt; Options -&gt; Enhanced Editor</code> back. This makes me happy and maybe also you. If you don’t know how to change the theme that controls the syntax colouring then check my blog posts out <a href="https://afrandsen.rbind.io/blog/2019/08/sas-9-4-enhanced-editor-custom-theme/">SAS 9.4 Enhanced Editor Custom Theme</a>. But don’t fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> sooner or later.</p>
+<p>This essentially give you the syntax colouring defined in <code>Tools -&gt; Options -&gt; Enhanced Editor</code> back. This makes me happy and maybe also you. If you don’t know how to change the theme that controls the syntax colouring then check my blog posts out <a href="https://afrandsen.rbind.io/blog/2019/08/sas-9-4-enhanced-editor-custom-theme/">SAS 9.4 Enhanced Editor Custom Theme</a>. But don’t fool yourself, SAS sees these nested macros as unexpected behaviour, and will maybe apply a fix<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> sooner or later.</p>
 <p>Feel free to comment with more SAS tips using Disqus.</p>
 <p><em>Disclaimer: I do use the software SAS 9.4.</em></p>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Well essentially it is not a fix.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p><a href="https://highlightjs.org/">highlight.js</a> shows the correct colours.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Well essentially it is not a fix.<a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
