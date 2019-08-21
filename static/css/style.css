@@ -33,14 +33,14 @@ h4 {
 }
 
 /* First line */
-main p:first-child::first-line {
+main p.firstpara:first-child::first-line {
   font-variant: small-caps;
   letter-spacing: .05em;
   font-size: 1.1em;
 }
 
 /* First letter */
-main p:first-child::first-letter {
+main p.firstpara:first-child::first-letter {
   font-size: 2.6em;
   padding: .04em .1em 0 0;
   float: left;
