@@ -5,6 +5,7 @@ body {
 h1, h2, h3, h4 {
   font-family: "Gill Sans W04 Roman";
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 code {
