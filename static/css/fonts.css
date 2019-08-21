@@ -2,10 +2,6 @@ body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", sans-serif;
 }
 
-h1, h2, h3, h4 {
-  text-transform: uppercase;
-}
-
 code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 85%;
