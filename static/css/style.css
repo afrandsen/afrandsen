@@ -12,8 +12,18 @@ h1 {
   font-weight: normal;
 }
 
-h1 {
+h2 {
   font-size: 22px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
   font-weight: bold;
 }
 
