@@ -41,7 +41,10 @@ main p:first-of-type::first-line {
 
 /* First letter */
 main p:first-of-type::first-letter {
-  initial-letter: 2;
+  font-size: 2.6em;
+  padding: .04em .1em 0 0;
+  float: left;
+  line-height: 1em;
 }
 
 /* header and footer areas */
