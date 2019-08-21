@@ -5,6 +5,18 @@ body {
   line-height: 1.5em;
 }
 
+/* H1, H2, etc. */
+
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
 /* header and footer areas */
 .menu { padding: 0; }
 .menu li { display: inline-block; }
