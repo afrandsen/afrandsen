@@ -7,6 +7,10 @@
   {{ partial "disqus.html" . }}
 {{ end }}
 
+{{ if .IsPage }}
+<script async src="{{ .Site.Params.customJS | relURL }}"></script>
+{{ end }}
+
 {{ template "_internal/google_analytics.html" . }}
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
