@@ -178,6 +178,12 @@ a.symbol:hover {
     float: right;
 }
 
+/* Disqus */
+.comment-policy {
+    background-color: #424242;
+    color: #ffffff;
+}
+
 /* Footnotes */
 
 .footnotes {
