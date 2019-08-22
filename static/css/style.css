@@ -179,7 +179,7 @@ a.symbol:hover {
 }
 
 /* Disqus */
-.comment-policy {
+#comment-policy {
     background-color: #424242;
     color: #ffffff;
 }
