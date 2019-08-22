@@ -21,7 +21,7 @@ tags:
 description: "How to change the theme/scheme of the Enhanced Editor in SAS 9.4. Blog post from afrandsen."
 ---
 
-It may seem paradoxical that my first real blog post is about [SAS](https://www.sas.com/en_us/home.html). Given the fact that I ranted about it on the homepage. But I want to share something that makes the editor a little less frustrating, especially for your eyes. Lastly I want to show you a very useful tip when coding a SAS macro.
+It may seem paradoxical that my first real blog post is about [SAS](https://www.sas.com/en_us/home.html). Given the fact that I ranted about it on the homepage. But I want to share something that makes the editor a little less frustrating, especially for your eyes.
 
 The Enhanced Editor in SAS is something a lot of people uses almost daily, or at least I do. I remember the first time I started SAS on my PC. I was amazed by the old and clunky interface. Which as I have been told has not changed for decades. The one thing I could not live with was the syntax colour formatting the Enhanced Editor used. White backgrounds for coding is a no go for me. Though what is more important is the colours that your display is emitting. I recommend you to download and install [f.lux](https://justgetflux.com/), no matter how many hours you sit in front of the display. It helps filtering out colourful light with wavelengths around 480 nm, that normally affects your circadian timing.
 
@@ -47,6 +47,6 @@ If you don't like my font and/or colours you can either change them directly in 
 ## Custom Theme Using SAS 9.4
 If you want to make the theme completely yourself, you can do it. Just open SAS 9.4 and choose `Tools -> Options -> Enhanced Editor`, in here you can set the exact colours you want. Save the theme when you are done.
 
-Notice you always have the possible to change back to the default theme. Feel free to share your own links to your own theme using Disqus below.
+Notice you always have the possible to change back to the default theme. Lastly I want to remind you of a very useful tip when coding a SAS macro, in my other blog post [Syntax Colouring Inside SAS Macros](https://afrandsen.rbind.io/blog/2019/08/syntax-colouring-inside-sas-macros/). Feel free to share your own links to your own theme using Disqus below.
 
 *Disclaimer: I do use the software SAS 9.4 and the AKF_Dark theme.*

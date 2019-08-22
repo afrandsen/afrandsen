@@ -1,0 +1,193 @@
+---
+layout: bare
+---
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Andreas Kracht Frandsen" />
+    <meta name="date" content="2019-08-22" />
+    <title>Andreas Kracht Frandsen’s Resume</title>
+
+        <link href="cv-english_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="cv-english_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    <link href="cv-english_files/paged-0.4/css/resume.css" rel="stylesheet" />
+    <script src="cv-english_files/paged-0.4/js/config.js"></script>
+    <script src="cv-english_files/paged-0.4/js/paged.js"></script>
+    <script src="cv-english_files/paged-0.4/js/hooks.js"></script>
+    
+    
+  </head>
+  <body>
+
+<div id="aside" class="section level1">
+<h1>Aside</h1>
+<p><img src="https://avatars0.githubusercontent.com/u/49564881?s=460&amp;v=4" alt="Andreas Kracht Frandsen" style="width:80.0%" /></p>
+<div id="contact" class="section level2">
+<h2>Contact Info</h2>
+<ul>
+<li><i class="fa fa-home"></i> <a href="https://afrandsen.rbind.io">afrandsen.rbind.io</a></li>
+<li><i class="fa fa-envelope"></i> ??<span class="citation">@gmail.com</span></li>
+<li><i class="fa fa-github"></i> <a href="https://github.com/afrandsen">github.com/afrandsen</a></li>
+<li><i class="fa fa-phone"></i> +45 ?? ?? ?? ??</li>
+<li>For more information, please contact me via email.</li>
+</ul>
+</div>
+<div id="skills" class="section level2">
+<h2>Skills</h2>
+<ul>
+<li><p>Experienced in statistical analysis, quantitative finance and corporate finance.</p></li>
+<li><p>Full experience with quantitative modelling.</p></li>
+<li><p>Highly skilled in R, Git, GitHub, Travis-CI, Hugo, SQL, Microsoft Excel, VBA, LaTeX, CSS, HTML5, JavaScript, C++, SAS and more.</p></li>
+</ul>
+</div>
+<div id="disclaimer" class="section level2">
+<h2>Disclaimer</h2>
+<p>This resume was made with R.</p>
+<p>Last updated on 2019-08-22.</p>
+</div>
+</div>
+<div id="main" class="section level1">
+<h1>Main</h1>
+<div id="title" class="section level2">
+<h2>Andreas Kracht Frandsen</h2>
+<p><span class="smallcaps"><b>MATHEMATICAL ECONOMIST WITH INTEREST IN QUANTITATIVE FINANCE</b></span></p>
+<p>I’m studying MSc in Mathematics and Economics
+at the Department of Mathematics, Aarhus University. I usually optimize one of
+my many bikes and occassionally ride them. I can’t code all day, so I play
+piano to keep the fingers moving or read books to keep the head going. I’m the
+inventor of the simple open-source game <em>tdf_manager</em>, and I have created the training
+stress model <em>TES</em>, for cycling, running and swimming.</p>
+</div>
+<div id="education" class="section level2" data-icon="graduation-cap" data-concise="true">
+<h2>Education</h2>
+<div id="aarhus-technical-school" class="section level3">
+<h3>Aarhus Technical School</h3>
+<p>Higher Technical Examination Programme</p>
+<p>Aarhus, Denmark</p>
+<p>2015</p>
+<p>Study Program: <em>Design and Technology</em></p>
+</div>
+<div id="department-of-mathematics-aarhus-university" class="section level3">
+<h3>Department of Mathematics, Aarhus University</h3>
+<p>BSc in Mathematics and Economics</p>
+<p>Aarhus, Denmark</p>
+<p>2018</p>
+<p>Thesis: <em>Long-term Asset Investment: An Empirical Analysis of Risk Across Investment Horizons</em></p>
+</div>
+<div id="department-of-mathematics-aarhus-university-1" class="section level3">
+<h3>Department of Mathematics, Aarhus University</h3>
+<p>MSc in Mathematics and Economics</p>
+<p>Aarhus, Denmark</p>
+<p>2020</p>
+<p>Thesis: ?</p>
+</div>
+</div>
+<div id="professional-experience" class="section level2" data-icon="suitcase">
+<h2>Professional Experience</h2>
+<div id="the-royal-library" class="section level3">
+<h3>The Royal Library</h3>
+<p>Student Assistant</p>
+<p>Aarhus, Denmark</p>
+<p>2015 - 2018</p>
+<ul>
+<li>Service.</li>
+</ul>
+</div>
+<div id="jyske-bank-market-risk-and-models" class="section level3">
+<h3>Jyske Bank, Market Risk and Models</h3>
+<p>Student Assistant</p>
+<p>Silkeborg, Denmark</p>
+<p>2018 - 2020</p>
+<ul>
+<li>Validation of marketdata.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<script>
+(function() {
+  var i, s, j, el, els;
+  var create_el = function(type, className, content, isHTML) {
+    var el = document.createElement(type);
+    if (className) el.className = className;
+    if (content) {
+      if (isHTML) {el.innerHTML = content;} else {el.innerText = content;}
+    }
+    return el;
+  }
+
+  // replace h2 title with h1
+  var title = document.getElementById('title').querySelector('h2');
+  title.parentNode.replaceChild(create_el('h1', false, title.innerHTML, true), title);
+
+  // add the class .aside to #aside
+  el = document.getElementById('aside');
+  if (el) el.className += ' aside';
+
+  // tweak class names of sections, and add icons
+  els = document.getElementById('main').querySelectorAll('.level2');
+  for (i = 0; i < els.length; i++) {
+    el = els[i];
+    if (i === 0 && el.id === 'title') continue;
+    el.className += ' main-block';
+    if (el.dataset['concise']) el.className += ' concise';
+    s = el.dataset['icon'] || 'bookmark';
+    el.firstElementChild.insertBefore(create_el('i', 'fa fa-' + s), el.firstElementChild.firstChild);
+  }
+
+  // tweak class names of blocks in sections
+  els = document.getElementById('main').querySelectorAll('.level3');
+  for (i = 0; i < els.length; i++) {
+    el = els[i];
+    if (el.parentNode.id === 'title') continue;
+    el.className += ' blocks';
+    el.innerHTML = '<div class="date"></div>' + '<div class="decorator"></div>' +
+      '<div class="details"><header></header><div></div></div>' + el.innerHTML;
+    var ps = el.querySelectorAll('p');
+    // move the date paragraph to the date div
+    if (ps.length >= 3) {
+      s = ps[2].innerText;
+      s = s === 'N/A' ? [] : s.split(' - ');
+      el.removeChild(ps[2]);
+      for (j = 0; j < s.length && j < 2; j++) {
+        el.children[0].appendChild(create_el('span', false, s[j]))
+      }
+    }
+    // move title, description, location to the details div
+    (function(h) {
+      h.appendChild(el.children[3]);
+      var p = el.children[3];  // description
+      if (p.innerText !== 'N/A') {
+        h.appendChild(create_el('span', 'place', p.innerHTML, true));
+      }
+      el.removeChild(p);
+      p = el.children[3];  // location
+      if (p.innerText !== 'N/A') {
+        s = create_el('span', 'location', p.innerHTML, true);
+        s.innerHTML = '<i class="fa fa-map-marker-alt"></i> ' + s.innerHTML;
+        h.appendChild(s);
+      }
+      el.removeChild(p);
+    })(el.children[2].firstElementChild);
+    // move the rest of content in a block into the last div of the details div
+    s = el.children[2];
+    while (j = s.nextSibling) {
+      if (j.className === 'aside') { s = j; continue; }
+      el.children[2].lastElementChild.append(j);
+    }
+  }
+})();
+</script>
+
+
+  </body>
+</html>
