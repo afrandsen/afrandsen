@@ -2,7 +2,7 @@
   {{ with .Site.DisqusShortname }}
     <button class="button" id="disqus-button" onclick="showComments()">Show Disqus comments</button>
     <div id="disqus-comments">
-      {{ $isDummyName := eq . "yourdiscussshortname" }}
+      {{ $isDummyName := eq . "afrandsen" }}
       {{ $isServer := $.Site.IsServer }}
       {{ if or $isDummyName $isServer }}
         <p>Disqus comments are disabled.</p>
