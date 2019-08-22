@@ -4,7 +4,7 @@ title: About
 description: "About Andreas Frandsen/afrandsen."
 ---
 
-My name is Andreas Frandsen. You can read more about me on my homepage or in my [curriculum vitae](https://afrandsen.rbind.io/bare/cv/). This blog is about R, bikes and training. All my opinions here are my own, so I ain't representing anyone else. I feel good when contributing to open-source software that I use often, either through pull requests or direct contact to the author(s).
+My name is Andreas Frandsen. You can read more about me on my homepage or in my [curriculum vitae](https://afrandsen.rbind.io/bare/cv-english/). This blog is about R, bikes and training. All my opinions here are my own, so I ain't representing anyone else. I feel good when contributing to open-source software that I use often, either through pull requests or direct contact to the author(s).
 
 ## Contact me
 
