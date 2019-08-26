@@ -42,7 +42,7 @@ main header ~ p:first-of-type::first-line {
 /* First letter */
 main header ~ p:first-of-type::first-letter {
   font-size: 2.6em;
-  padding: .04em .1em 0 0;
+  padding: .045em .1em 0 0;
   float: left;
   line-height: 1em;
 }
@@ -183,6 +183,15 @@ a.symbol:hover {
 .footnotes {
   font-size: .9em;
   line-height: 1em;
+}
+
+/* Captions knitr figures */
+.caption {
+  font-style: italic;
+  color: gray;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: center;
 }
 
 /* code */
