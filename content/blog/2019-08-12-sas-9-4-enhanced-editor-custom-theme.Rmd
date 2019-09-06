@@ -49,4 +49,4 @@ If you want to make the theme completely yourself, you can do it. Just open SAS 
 
 Notice you always have the possible to change back to the default theme. Lastly I want to remind you of a very useful tip when coding a SAS macro, in my other blog post [Syntax Colouring Inside SAS Macros](https://afrandsen.rbind.io/blog/2019/08/syntax-colouring-inside-sas-macros/). Feel free to share your own links to your own theme using Disqus below.
 
-*Disclaimer: I do use the software SAS 9.4 and the AKF_Dark theme.*
+*Disclaimer: I am not affiliated with SAS Institute.*

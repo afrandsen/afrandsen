@@ -44,4 +44,4 @@ This essentially give you the syntax colouring defined in `Tools -> Options -> E
 
 Feel free to comment with more SAS tips using Disqus.
 
-*Disclaimer: I do use the software SAS 9.4.*
+*Disclaimer: I am not affiliated with SAS Institute.*

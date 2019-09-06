@@ -52,5 +52,3 @@ datatable(
 ```
 
 I like to have a couple of predefined custom settings on my monitors at work, and then manually choose among them along the day. But mostly I find myself using a colour temperature around 3400K, which is what a usual halogen bulb emits.
-
-*Disclaimer: I do use f.lux at home and the values given in Table 1 on my workstation.*
