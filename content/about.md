@@ -12,7 +12,7 @@ You can find me and my repositories on [GitHub](https://github.com/afrandsen) an
 
 ## About this site
 
-This site is created with [Hugo](https://gohugo.io/). The Markdown source files are hosted on GitHub. Feel free to comment on the site using [Disqus](https://disqus.com/). I have made it easy for you to contribute to the site: Please hit *“Edit this page”* in the footer if you find any mistakes in a blog post to propose a correction through a GitHub pull request from an automatically created forked repository.
+This site is coded with [Hugo](https://gohugo.io/). The Markdown source files are hosted on GitHub. Feel free to comment on the site using [Disqus](https://disqus.com/). I have made it easy for you to contribute to the site: Please hit *“Edit this page”* in the footer if you find any mistakes in a blog post to propose a correction through a GitHub pull request from an automatically created forked repository.
 
 ## Sites I often visit
 The following sites has helped me learn more about bikes. They are (almost) unbiased, and has guided me a lot in my purchasing decisions.
