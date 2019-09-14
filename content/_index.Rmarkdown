@@ -1,5 +1,6 @@
 ---
 title: afrandsen
+description: "Andreas Frandsen's Personal Website."
 ---
 
 [<img src="/images/logo.svg" style="max-width:15%;min-width:40px;float:right;" alt="afrandsen" />](https://afrandsen.rbind.io)
