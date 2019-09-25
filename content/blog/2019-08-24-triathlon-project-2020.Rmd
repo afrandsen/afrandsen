@@ -38,19 +38,19 @@ Hambini produces the Racing Edition in the following colours: silver, black and 
 
 Hambini's own findings show that the average power consumption over 5000 kilometers is $\approx$ 0.5 watts for the Racing Edition. And that the bottom bracket stiffness is $\approx$ 600 N/deg. Thus the Hambini Racing Edition outperform several well established brands such as CeramicPoops. You can read more about his testing conditions on his website.
 
-I look forward to the day it gets installed in the Trinity frame. But for now I still need a lot of components, including the frame. If you want to buy a Hambini bottom bracket make sure that you check which version you need^[Contact Hambini and he will be fast to respond if you are in doubt.]. I have only ridden bikes with the BB86 standard, but many other standards exists. The general installation instructions can be found [here](https://www.hambini.com/technical-support/hambini-bottom-bracket-installation.html).
+I look forward to the day it gets installed in the Trinity frame. But for now I still need a lot of components, including the frame. If you want to buy a Hambini bottom bracket make sure that you check which version you need.^[Contact Hambini and he will be fast to respond if you are in doubt.] I have only ridden bikes with the BB86 standard, but many other standards exists. The general installation instructions can be found [here](https://www.hambini.com/technical-support/hambini-bottom-bracket-installation.html).
 
-Next up I take a look at the new Continental Grand Prix 5000's!
+Next up I take a look at some GPS mounts.
 
 ## Components
 
 The following lists the components and blog posts regarding the triathlon build.
 
 - [X] [Hambini BB86 Racing Edition Black - Part I](https://afrandsen.rbind.io/blog/2019/08/triathlon-project-2020-hambini-bb86-racing-edition-part-i/)
-- [ ] Continential GP5000 23 mm
+- [X] [Fouriers TT Mount - Part II](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-fouriers-tt-mount-part-ii/)
+- [ ] Continential Grand Prix 5000 23 mm
 - [ ] Farsports X Carbon TI
-- [ ] Fouriers TT Mount
-- [ ] Shimano Dura Ace 9100 SPD-SL
+- [ ] Shimano Dura Ace R9100 SPD-SL
 - [ ] Giant Trinity Advanced Pro 2 2020
 
 *Disclaimer: I am not affiliated with Hambini Performance Engineering. And I have funded the above product on my own.*
