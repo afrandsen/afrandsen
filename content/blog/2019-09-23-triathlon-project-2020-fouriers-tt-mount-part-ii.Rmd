@@ -1,0 +1,41 @@
+---
+title: Triathlon Project 2020 -- Fouriers TT Mount -- Part II
+author: Andreas Frandsen
+date: '2019-09-23'
+lastmod: 0
+slug: triathlon-project-2020-fouriers-tt-mount-part-ii
+categories: []
+tags: []
+description: "Triathlon build part II. Fouriers TT Garmin Mount. Blog post from afrandsen."
+---
+
+This is the second part regarding my triathlon project. I take a look at different GPS mounts bought from Aliexpress. As a regular user of [K-Edge](https://k-edge.com/) I wanted to find out if there existed some cheaper alternatives that performed just as well.
+
+I want my Garmin Edge 520 to be inline with the TT-bars. Thus I searched after some TT mounts that had their adapter body lower than the centerline of the bars.
+
+## Fouriers TT Mount
+
+The first mount is from the Taiwanese company [Fouriers](https://www.fouriers-bike.com/en/). It weighs 36 grams and is made out of aluminium and plastic. The head can be tilted forward and backward to obtain a good position. Three different plastic adapters is included, thus it can fit: Garmin, Bryton and Mio computers. It feels sturdy and very well made.
+
+![The Fouriers mount with inserted Garmin adapter.](/images/triathlon-project-2020-fouriers-tt-mount-part-ii/FTTM1.jpg)
+
+The Garmin Edge 520 has a secure fit in the mount. Though the unit will be higher than the TT-bars when installed.
+
+## Noname TT Mount
+
+The next one is a noname product. It weighs 32 grams and is made out of aluminium and plastic. The body can be tilted up and down. Because of this design property the unit can indeed be lower or inline with the TT-bars when installed.
+
+![Noname mount with inserted Garmin adapter.](/images/triathlon-project-2020-fouriers-tt-mount-part-ii/UTTM1.jpg)
+
+When I insert my Garmin it's a tiny bit loose. And I'm afraid that this results in a rattle that will be noticable when riding.
+
+## Components
+
+The following lists the components and blog posts regarding the triathlon build.
+
+- [X] [Hambini BB86 Racing Edition Black - Part I](https://afrandsen.rbind.io/blog/2019/08/triathlon-project-2020-hambini-bb86-racing-edition-part-i/)
+- [X] [Fouriers TT Mount - Part II](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-fouriers-tt-mount-part-ii/)
+- [X] Continential Grand Prix 5000 23 mm
+- [ ] Farsports X Carbon TI
+- [ ] Shimano Dura Ace R9100 SPD-SL
+- [ ] Giant Trinity Advanced Pro 2 2020
