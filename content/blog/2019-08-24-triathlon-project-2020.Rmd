@@ -1,5 +1,5 @@
 ---
-title: Triathlon Project 2020 - Hambini BB86 Racing Edition - Part I
+title: Triathlon Project 2020 -- Hambini BB86 Racing Edition -- Part I
 author: Andreas Frandsen
 date: '2019-08-24'
 slug: triathlon-project-2020-hambini-bb86-racing-edition-part-i
@@ -48,8 +48,8 @@ The following lists the components and blog posts regarding the triathlon build.
 
 - [X] [Hambini BB86 Racing Edition Black - Part I](https://afrandsen.rbind.io/blog/2019/08/triathlon-project-2020-hambini-bb86-racing-edition-part-i/)
 - [X] [Fouriers TT Mount - Part II](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-fouriers-tt-mount-part-ii/)
-- [ ] Continential Grand Prix 5000 23 mm
-- [ ] Farsports X Carbon TI
+- [X] Continential Grand Prix 5000 23 mm
+- [X] Farsports X Carbon TI
 - [ ] Shimano Dura Ace R9100 SPD-SL
 - [ ] Giant Trinity Advanced Pro 2 2020
 
