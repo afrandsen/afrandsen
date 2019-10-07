@@ -1,0 +1,119 @@
+---
+title: Triathlon Project 2020 -- Farsports X Carbon-TI Wheelset -- Part III
+author: Andreas Frandsen
+date: '2019-09-27'
+slug: triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii
+lastmod: 0
+categories: []
+tags:
+  - Farsports
+  - Wheelset
+  - Carbon-TI
+  - Sapim
+  - CX-Ray
+  - Sils
+  - Wheelsfar
+  - Aliexpress
+  - Carbon
+  - Wheels
+  - Hubs
+  - SKF
+  - Bearings
+  - Light
+  - Cheap
+description: "Triathlon build part III. Farsports X Carbon-TI Wheelset. Blog post from afrandsen."
+---
+
+In this third part I take a look at my newly received Farsports wheelset. Which consist of Farsports rims, Carbon-TI hubs, Sapim spokes and nipples.
+
+## Farsports X Carbon-TI Wheelset
+
+When considering the wheelset for my triathlon build I quickly turned to [Farsports](https://www.wheelsfar.com) for a couple of reasons. Firstly I wanted to have [Carbon-TI](https://www.carbon-ti.com/) X-Hub Road SP hubs, because of the fact that they are: quite light, well build and most importantly they have factory installed SKF bearings. Secondly I have bought wheels from Farsports before and I have been very happy with them and the buying experience. Lastly Farsports have very competitive prices which fits well within my budget.
+
+![Farsports wheelset. They look FAST.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI2.jpg)
+
+### Farsports
+
+Farsports is a chinese manufacturer of carbon wheelsets and other bike components. They are official distributors of [Sapim](https://www.sapim.be/) as can be seen [here](https://www.sapim.be/node/31). I also got written approval from Carbon-TI so all of the parts are original.
+
+You can buy from them on their shop website, via email or using [AliExpress](https://www.aliexpress.com) where they have multiple stores.
+
+### Sales advice
+
+When ordering the wheels I contacted Angela from Farsports, because she is the one I have ordered from before. Angela was very helpful as always and the whole process works pretty well and the communication in english doesn't seem to be a huge problem. One just need to be sure to explicitly state the parts you want so no misunderstandings arise. After some mails back and forth I ended up with the following specifications.
+
+  - Farsports 60/25 mm tubeless front rim
+  - Farsports 88/25 mm tubeless rear rim
+  - Carbon-TI X-Hub Road SP 20/24 hubs
+  - Sapim CX-Ray Straight pull spokes
+  - Sapim Sils nipples
+
+The rims are with no external holes in UD matt. I do not plan to install tubeless tires on them though, but it is nice to have the possibility.
+
+### Shipping
+
+I opted for XDB shipping which works like this: Farsports sends the wheels from China to a destination in Europe and from that place to Denmark. Thus I avoid the customs process in Denmark. XDB shipping is a bit more expensive as you indirectly pay for the customs process in the country Farsports exports the wheels to in the first step. I received them in 10 days, which I find very fast. They come in a robust box with lots of protection.
+
+### Carbon-TI
+
+As argued above I opted for the Carbon-TI hubs because of their many positives. The SKF bearings which are installed from factory are top tier bearings performs better than most other bearings preinstalled in other hubs (DT Swiss, Tune, etc.).^[See Hambini's blog post [here](https://www.hambini.com/blog/post/testing-to-find-the-fastest-bicycle-wheel-hubs/) for a test of the hubs.]
+
+<div class="figure">
+<img src="/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI4.jpg" width="50%"/><img src="/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI5.jpg" width="50%"/>
+<p class="caption">Carbon-TI X-Hub Road SP hubs. Old and new.</p>
+</div>
+
+The front bracing angle is 8.3 degrees, rear Bracing angle is 7.8 degrees non-driveside and 3.6 degrees driveside. Thus it is a very wide hub and few hubs on the market are wider. The axle diameter is 17 mm.
+
+They have a total weight of 220 g, which beats the DT Swiss 240s by a big margin. Now you think: "Okay great, but how do they SOUND?". And the answer is "GREAT!", they have a 56 T ratchet ring made out of titanium and 4 pawls, thus the sound is loud and metallic. No bells needed here.
+
+Recently Carbon-TI changed the graphics on their hubs and as a result I received the front hub with the old graphics and the rear hub with the new. A bit odd to look at, but whatever nobody sees it when I ride.
+
+### Sapim
+
+As stated above Farsports are official distributors of Sapim components and most of the wheels from Farsports are build using the Sapim CX-Ray's. They are bulletproof and have an aero bladed design.
+
+The nipples are the Sapim Sils which are made out of aluminium, I know a lot of mechanics only uses brass nipples, but I don't think the corrosion problem will be a huge issue for me.^[I never train in rainy weather or on wet roads.]
+
+### Review
+
+The finish of the carbon is great, especially in the rim bed area. On my other Farsports wheels that part was ugly. They are true to the eye, but I haven't checked them in the truing stand yet. Though one always needs to true wheels after the first couple of uses anyway.
+
+The wheels are build with: radial lacing on the front wheel, 2-cross on the driveside of the rear wheel and radial on the non-driveside. I'm not an expert in lacing of wheels, but that setup should be relatively good. Carbon-TI also make their hubs in a 24/28 hole version, but given my low weight $\approx$ 65 kg, I opted for the 20/24 version.
+
+Farsports includes 4 brake pads, QR skewers, manuals (for the hubs) and guidelines that one needs to follow, otherwise the 18 months warranty will be voided.
+
+![Proper aero wheels.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI1.jpg)
+
+The weight of the front wheel is 730 g and the weight of the rear wheel is 965 g. Thus a total weight of 1695 g, impressive! For comparison the Zipp 808 with dimples and shit weigh 1830 g.
+
+![Nice brick wall.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI3.jpg)
+
+The outer rim width of the wheels is 25 mm, the inner width is 18 mm. Thus my Continental Grand Prix 5000 in 23 mm should fit them perfectly, without creating any bulbous shape when inflated.
+
+![BPS preload adjustment. Notice the extreme details of the CX-Ray's 'Sapim' is visible on the spokes.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI6.jpg)
+
+Because of the clever design of the hubs, one needs to disassemble the hubs to insert the spokes and thus also adjust the BPS system afterwards. The BPS preload on the rear wheel was WAY to tight when I received the wheels, the wheel could not spin freely. Farsports could improve in that area in the future. I hope the SKF bearings have survived. Other than that the functionality of the BPS system is very good.
+
+![Textured Basalt braking surface.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI7.jpg)
+
+The breaking power of the Basalt braking surface is like any other carbon brake surfaces: poor. Even when using Farsports supplied braking pads.
+
+![Very nice finish, better than my first Farsports rims.](/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI8.jpg)
+
+No chips or ugly layup in the rim bed area. All in all I'm very happy with my purchase and they should save me a couple of watts when hitting the roads next year.
+
+Next I take a look at the Shimano Dura Ace R9100 SPD-SL pedals.
+
+## Components
+
+The following lists the components and blog posts regarding the triathlon build.
+
+- [X] [Hambini BB86 Racing Edition Black -- Part I](https://afrandsen.rbind.io/blog/2019/08/triathlon-project-2020-hambini-bb86-racing-edition-part-i/)
+- [X] [Fouriers TT Mount -- Part II](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-fouriers-tt-mount-part-ii/)
+- [X] [Farsports X Carbon-TI -- Part III](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/)
+- [X] Shimano Dura Ace R9100 SPD-SL
+- [X] Continential Grand Prix 5000 23 mm
+- [ ] Giant Trinity Advanced Pro 2 2020
+
+*Disclaimer: I am not affiliated with Farsports. And I have funded the above product on my own.*
