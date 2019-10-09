@@ -56,7 +56,7 @@ I opted for XDB shipping which works like this: Farsports sends the wheels from 
 
 ### Carbon-TI
 
-As argued above I opted for the Carbon-TI hubs because of their many positives. The SKF bearings which are installed from factory are top tier bearings performs better than most other bearings preinstalled in other hubs (DT Swiss, Tune, etc.).^[See Hambini's blog post [here](https://www.hambini.com/blog/post/testing-to-find-the-fastest-bicycle-wheel-hubs/) for a test of the hubs.]
+As argued above I opted for the Carbon-TI hubs because of their many positives. The SKF bearings which are installed from factory are top tier bearings. They perform better than most other bearings preinstalled in other hubs (DT Swiss, Tune, etc.).^[See Hambini's blog post [here](https://www.hambini.com/blog/post/testing-to-find-the-fastest-bicycle-wheel-hubs/) for a test of the hubs.]
 
 <div class="figure">
 <img src="/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI4.jpg" width="50%"/><img src="/images/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/FCTI5.jpg" width="50%"/>

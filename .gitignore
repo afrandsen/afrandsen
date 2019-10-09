@@ -5,3 +5,5 @@
 public/
 data/
 references/
+.log
+.tex
