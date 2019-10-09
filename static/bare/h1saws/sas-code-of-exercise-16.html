@@ -1,18 +1,14 @@
----
-layout: bare
----
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Exercise 22 | Handin_1_Andreas_Kracht_Frandsen.utf8.md</title>
+  <title>A SAS Code of Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md</title>
   <meta name="description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Exercise 22 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  <meta property="og:title" content="A SAS Code of Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
   <meta property="og:type" content="book" />
   
   
@@ -20,7 +16,7 @@ layout: bare
   <meta name="github-repo" content="afrandsen/afrandsen" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Exercise 22 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  <meta name="twitter:title" content="A SAS Code of Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
   
   <meta name="twitter:description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
   
@@ -33,8 +29,8 @@ layout: bare
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-16.html"/>
-<link rel="next" href="sas-code-of-exercise-16.html"/>
+<link rel="prev" href="exercise-22.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -189,137 +185,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-22" class="section level1">
-<h1><span class="header-section-number">3</span> Exercise 22</h1>
-<p><em>Let <span class="math inline">\(X\)</span> have a Weibull distribution with parameters <span class="math inline">\(\alpha, \lambda &gt; 0\)</span>, that is, <span class="math inline">\(X\)</span> has density <span class="math inline">\(f\)</span> as indicated in Table 2.2 in <span class="citation">Klein and Moeschberger (<a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>.</em></p>
-<div id="question-1" class="section level2">
-<h2><span class="header-section-number">3.1</span> Question 1</h2>
-<p><em>Show that <span class="math inline">\(h\)</span> and <span class="math inline">\(S\)</span> are as indicated in <span class="citation">Klein and Moeschberger (<a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>, Table 2.2. Determine <span class="math inline">\(H\)</span> as well.</em></p>
-<div id="weibull-distributed-random-variable" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Weibull Distributed Random Variable</h3>
-<p>The random variable <span class="math inline">\(X \sim \text{Weibull}(\alpha, \lambda)\)</span> with <span class="math inline">\(\alpha, \lambda &gt; 0\)</span>, has the following probability density function</p>
-<p><span class="math display" id="eq:PDF">\[\begin{equation}
-f(x) = \alpha\lambda x^{\alpha-1}\exp(-\lambda x^\alpha)\quad x\geq 0. \tag{3.1}
-\end{equation}\]</span></p>
-</div>
-<div id="survival-function" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Survival Function</h3>
-<p>For a continuous random variable the survival function is defined as the complement of the cumulative distribution function</p>
-<p><span class="math display" id="eq:Surv">\[\begin{equation}
-S(x)=1-F(x)=P(X&gt;x)=\int^{\infty}_x f(t) dt. \tag{3.2}
-\end{equation}\]</span></p>
-<p>Thus for the continouos random variable <span class="math inline">\(X\)</span> we use Equation <a href="exercise-22.html#eq:Surv">(3.2)</a>.</p>
-<p>We insert Equation <a href="exercise-22.html#eq:PDF">(3.1)</a> in Equation <a href="exercise-22.html#eq:Surv">(3.2)</a> and perform the calculation for <span class="math inline">\(x\geq 0\)</span>.</p>
-<p><span class="math display" id="eq:WeiSurv">\[\begin{align}
-S(x)&amp;=\int^{\infty}_x \alpha\lambda t^{\alpha-1}\exp(-\lambda t^\alpha) dt \notag \\
-    &amp;=\alpha\lambda\int^{\infty}_x t^{\alpha-1}\exp(-\lambda t^\alpha) dt \notag \\
-    &amp;=\alpha\lambda\int_{x^{\alpha}}^\infty t^{\alpha-1}\exp(-\lambda u) \frac{1}{\alpha t^{\alpha-1}} du \notag \\
-    &amp;=\lambda \int_{x^{\alpha}}^\infty \exp(-\lambda u) du \notag \\
-    &amp;=\left[-\exp\left(-\lambda u\right)\right]_{x^\alpha}^\infty \notag \\
-    &amp;=\left(-\exp(-\lambda\cdot \infty)-(-\exp(-\lambda\cdot x^\alpha))\right) \notag \\
-    &amp;=\left(0-(-\exp(-\lambda\cdot x^\alpha))\right) \notag \\
-    &amp;=\exp(-\lambda x^\alpha) \tag{3.3}.
-\end{align}\]</span></p>
-<p>Where we in the third and fifth equality perform integration by substitution. We see that the above function is indeed equal to the survival function in Table 2.2 <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>.</p>
-</div>
-<div id="hazard-function" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Hazard Function</h3>
-<p>For a continuous random variable the hazard function (rate) is defined as</p>
-<p><span class="math display" id="eq:Hazard">\[\begin{equation}
-h(x)= \frac{f(x)}{S(x)}. \tag{3.4}
-\end{equation}\]</span></p>
-<p>We insert Equation <a href="exercise-22.html#eq:WeiSurv">(3.3)</a> and Equation <a href="exercise-22.html#eq:PDF">(3.1)</a> in Equation <a href="exercise-22.html#eq:Hazard">(3.4)</a> and perform the calculation for <span class="math inline">\(x\geq 0\)</span>.</p>
-<p><span class="math display" id="eq:WeiHazard">\[\begin{align}
-h(x)&amp;= \frac{f(x)}{S(x)} \notag \\
-    &amp;=\frac{\alpha\lambda x^{\alpha-1}\exp(-\lambda x^\alpha)}{\exp(-\lambda x^\alpha)} \notag \\
-    &amp;=\alpha\lambda x^{\alpha-1}. \tag{3.5}
-\end{align}\]</span></p>
-<p>We see that the above function is indeed equal to the hazard function in Table 2.2 <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>.</p>
-</div>
-<div id="cumulative-hazard-function" class="section level3">
-<h3><span class="header-section-number">3.1.4</span> Cumulative Hazard Function</h3>
-<p>For a continuous random variable the cumulative hazard function is defined as</p>
-<p><span class="math display" id="eq:CumuHazard">\[\begin{equation}
-H(x)= \int_0^x h(u) du = -\ln(S(x)). \tag{3.6}
-\end{equation}\]</span></p>
-<p>We insert Equation <a href="exercise-22.html#eq:WeiSurv">(3.3)</a> in Equation <a href="exercise-22.html#eq:CumuHazard">(3.6)</a> and perform the calculation for <span class="math inline">\(x\geq 0\)</span>.</p>
-<p><span class="math display" id="eq:WeiCumuHazard">\[\begin{equation}
-H(x) = -\ln(\exp(-\lambda x^\alpha))=\lambda x^\alpha. \tag{3.7}
-\end{equation}\]</span></p>
-<p>We see that the above function is indeed equal to the cumulative hazard function in (<span class="citation">Klein and Moeschberger (<a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>, page 32).</p>
-<p>Thus we showed that the functions in Table 2.2 <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span> are correct and we are done.</p>
-</div>
-</div>
-<div id="question-2" class="section level2">
-<h2><span class="header-section-number">3.2</span> Question 2</h2>
-<p><em>Determine the distribution of <span class="math inline">\(X^\gamma\)</span> for <span class="math inline">\(\gamma &gt; 0\)</span>.</em></p>
-<p>We calculate the survival function of <span class="math inline">\(X^\gamma\)</span>. Since the distribution of a random variable is fully described by it’s survival function.</p>
-<p><span class="math display" id="eq:WeiGammaSurv">\[\begin{align}
-S_{X^{\gamma}}(x)&amp;=P\left(X^\gamma&gt;x\right) \notag\\
-                 &amp;=P\left(\ln(X^\gamma)&gt;\ln(x)\right) \notag\\
-                 &amp;=P\left(\gamma\ln(X)&gt;\ln(x)\right) \notag\\
-                 &amp;=P\left(\ln(X)&gt;\frac{\ln(x)}{\gamma}\right) \notag\\
-                 &amp;=P\left(\exp(\ln(X))&gt;\exp\left(\frac{\ln(x)}{\gamma}\right)\right) \notag\\
-                 &amp;=P\left(X&gt;\exp\left(\frac{\ln(x)}{\gamma}\right)\right) \notag\\
-                 &amp;=S_X\left(\exp\left(\frac{\ln(x)}{\gamma}\right)\right) \notag\\
-                 &amp;=\exp\left(-\lambda \left(\exp\left(\frac{\ln(x)}{\gamma}\right)\right)^\alpha\right) \notag\\
-                 &amp;=\exp\left(-\lambda x^{\tfrac{\alpha}{\gamma}}\right). \tag{3.8}
-\end{align}\]</span></p>
-<p>Thus from Table 2.2 <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span> we have <span class="math inline">\(X^\gamma\sim \text{Weibull}\left(\frac{\alpha}{\gamma},\lambda\right)\)</span>.</p>
-</div>
-<div id="question-3" class="section level2">
-<h2><span class="header-section-number">3.3</span> Question 3</h2>
-<p><em>Determine the distribution of <span class="math inline">\(\lambda X^\alpha\)</span>.</em></p>
-<p>We calculate the survival function of <span class="math inline">\(\lambda X^\alpha\)</span>. Since the distribution of a random variable is fully described by it’s survival function.</p>
-<p><span class="math display" id="eq:WeiOneSurv">\[\begin{align}
-S_{\lambda X^{\alpha}}(x)&amp;=P\left(\lambda X^{\alpha}&gt;x\right) \notag\\
-                 &amp;=P\left(\ln(\lambda X^{\alpha})&gt;\ln(x)\right) \notag\\
-                 &amp;=P\left(\ln(\lambda)+\alpha\ln(X)&gt;\ln(x)\right) \notag\\
-                 &amp;=P\left(\ln(X)&gt;\frac{\ln(x)-\ln(\lambda)}{\alpha}\right) \notag\\
-                 &amp;=P\left(\exp(\ln(X))&gt;\exp\left(\frac{\ln(x)-\ln(\lambda)}{\alpha}\right)\right) \notag\\
-                 &amp;=P\left(X&gt;\exp\left(\frac{\ln(x)-\ln(\lambda)}{\alpha}\right)\right) \notag\\
-                 &amp;=S_X\left(\exp\left(\frac{\ln(x)-\ln(\lambda)}{\alpha}\right)\right) \notag\\
-                 &amp;=\exp\left(-\lambda\left(\exp\left(\frac{\ln(x)-\ln(\lambda)}{\alpha}\right)\right)^\alpha\right) \notag\\
-                 &amp;=\exp\left(-\lambda x^{\tfrac{\alpha}{\gamma}}\right) \notag\\
-                 &amp;=\exp(-x). \tag{3.9}
-\end{align}\]</span></p>
-<p>Thus from Table 2.2 <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span> we have <span class="math inline">\(\lambda X^\alpha\sim \text{Weibull}\left(1,1\right) \overset{\text{d}}{=} \text{Exp}(1)\)</span>.</p>
-<p>Figure <a href="exercise-22.html#fig:WeiDist">3.1</a> below show the distribution.</p>
-<div class="figure" style="text-align: center"><span id="fig:WeiDist"></span>
-<img src="Handin_1_Andreas_Kracht_Frandsen_files/figure-html/WeiDist-1.svg" alt="Density of a Exp(1) distribution." width="480" />
-<p class="caption">
-Figure 3.1: Density of a Exp(1) distribution.
-</p>
-</div>
-</div>
-<div id="question-4" class="section level2">
-<h2><span class="header-section-number">3.4</span> Question 4</h2>
-<p><em>Let <span class="math inline">\(n\in\mathbb{N}\)</span> and <span class="math inline">\(X_1,\dots,X_n\)</span> be i.i.d. and have a Weibull distribution with parameters <span class="math inline">\(\alpha, \lambda &gt; 0\)</span> as common distribution. Determine the distribution of <span class="math inline">\(\min(X_1,\dots,X_n)\)</span>.</em></p>
-<p>The random variable <span class="math inline">\(X_i\)</span> has the survival function</p>
-<p><span class="math display">\[S_{X_i}(x)=\exp(-\lambda x^\alpha)\quad x\geq 0,\]</span></p>
-<p>for <span class="math inline">\(i=1,2,\dots,n\)</span>. As proved in Section <a href="exercise-22.html#survival-function">3.1.2</a>, Equation <a href="exercise-22.html#eq:WeiSurv">(3.3)</a>.</p>
-<p>Let <span class="math inline">\(Y=\min(X_1,\dots,X_n)\)</span>, then the survival function of <span class="math inline">\(Y\)</span> is</p>
-<p><span class="math display" id="eq:WeiMinSurv">\[\begin{align}
-S_Y(y)&amp;=P(Y&gt;y) \notag\\
-      &amp;=P(\min(X_1,\dots,X_n)&gt;y) \notag\\
-      &amp;=P(X_1&gt;y,X_2&gt;y,\dots,X_n&gt;y) \notag\\
-      &amp;=P(X_1&gt;y)\cdot P(X_1&gt;y)\cdots P(X_n&gt;y) \notag\\
-      &amp;=S_{X_1}(y)\cdot S_{X_2}(y)\cdots S_{X_n}(y) \notag\\
-      &amp;=(\exp(-\lambda y^\alpha))\cdot (\exp(-\lambda y^\alpha))\cdots \exp(-\lambda y^\alpha) \notag\\
-      &amp;=\exp(-n\cdot\lambda y^\alpha). \tag{3.10}
-\end{align}\]</span></p>
-<p>Where we in the fourth equality take use of the independency of our random variables. Thus <span class="math inline">\(Y=\min(X_1,\dots,X_n)\sim \text{Weibull}(\alpha, n\lambda)\)</span>.</p>
+<div id="sas-code-of-exercise-16" class="section level1">
+<h1><span class="header-section-number">A</span> SAS Code of Exercise 16</h1>
+<div id="code-a" class="section level2">
+<h2><span class="header-section-number">A.1</span> Code A</h2>
+<div id="code-aa" class="section level3">
+<h3><span class="header-section-number">A.1.1</span> Code AA</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">data</span> fev;</a>
+<a class="sourceLine" id="cb5-2" title="2">  <span class="kw">infile</span> <span class="st">&#39;~/Survival Analysis/Supplementary Notes/FEV.dat&#39;</span> </a>
+<a class="sourceLine" id="cb5-3" title="3">   firstobs=<span class="dv">2</span>;</a>
+<a class="sourceLine" id="cb5-4" title="4">  <span class="kw">input</span> patient base fev1 fev2 fev3 fev4 fev5 fev6 fev7 fev8 drug $<span class="dv">1</span>.;</a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="co">* AIC = 134.4;</span></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-9" title="9">class drug;</a>
+<a class="sourceLine" id="cb5-10" title="10">model fev1 = base / dist=<span class="fu">normal</span> <span class="kw">link</span>=identity;</a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="kw">run</span>;</a>
+<a class="sourceLine" id="cb5-12" title="12"></a>
+<a class="sourceLine" id="cb5-13" title="13"><span class="co">* AIC = 152.4;</span></a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-15" title="15">class drug(ref=<span class="st">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb5-16" title="16">model fev1 = drug / dist=<span class="fu">normal</span> <span class="kw">link</span>=identity;</a>
+<a class="sourceLine" id="cb5-17" title="17"><span class="kw">run</span>;</a>
+<a class="sourceLine" id="cb5-18" title="18"></a>
+<a class="sourceLine" id="cb5-19" title="19"><span class="co">* AIC = 103.4;</span></a>
+<a class="sourceLine" id="cb5-20" title="20"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-21" title="21">class drug(ref=<span class="st">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb5-22" title="22">model fev1 = base drug / dist=<span class="fu">normal</span> <span class="kw">link</span>=identity;</a>
+<a class="sourceLine" id="cb5-23" title="23"><span class="kw">run</span>;</a>
+<a class="sourceLine" id="cb5-24" title="24"></a>
+<a class="sourceLine" id="cb5-25" title="25"><span class="co">* AIC = 106.2;</span></a>
+<a class="sourceLine" id="cb5-26" title="26"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-27" title="27">class drug(ref=<span class="st">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb5-28" title="28">model fev1 = base drug / dist=<span class="fu">gamma</span> <span class="kw">link</span>=identity;</a>
+<a class="sourceLine" id="cb5-29" title="29"><span class="kw">run</span>;</a>
+<a class="sourceLine" id="cb5-30" title="30"></a>
+<a class="sourceLine" id="cb5-31" title="31"><span class="co">* AIC = 106.8;</span></a>
+<a class="sourceLine" id="cb5-32" title="32"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-33" title="33">class drug(ref=<span class="st">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb5-34" title="34">model fev1 = base drug / dist=<span class="fu">normal</span> <span class="kw">link</span>=<span class="fu">log</span>;</a>
+<a class="sourceLine" id="cb5-35" title="35"><span class="kw">run</span>;</a>
+<a class="sourceLine" id="cb5-36" title="36"></a>
+<a class="sourceLine" id="cb5-37" title="37"><span class="co">* AIC = 107.1;</span></a>
+<a class="sourceLine" id="cb5-38" title="38"><span class="kw">proc</span> genmod<span class="kw"> data</span>=fev plots=all;</a>
+<a class="sourceLine" id="cb5-39" title="39">class drug(ref=<span class="st">&#39;a&#39;</span>);</a>
+<a class="sourceLine" id="cb5-40" title="40">model fev1 = base drug base*drug / dist=<span class="fu">normal</span> <span class="kw">link</span>=identity;</a>
+<a class="sourceLine" id="cb5-41" title="41"><span class="kw">run</span>;</a></code></pre></div>
 
 
+<p></p>
 </div>
-</div>
-
-
-
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Klein2003">
-<p>Klein, John P., and Melvin L. Moeschberger. 2003. <em>Survival Analysis: Techniques for Censored and Truncated Data</em>. 2nd ed. Springer.</p>
 </div>
 </div>
             </section>
@@ -327,8 +243,8 @@ S_Y(y)&amp;=P(Y&gt;y) \notag\\
           </div>
         </div>
       </div>
-<a href="exercise-16.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sas-code-of-exercise-16.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-22.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -358,7 +274,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/afrandsen/afrandsen/edit/master/03-exercise22.Rmd",
+"link": "https://github.com/afrandsen/afrandsen/edit/master/04-appendix.Rmd",
 "text": "Edit"
 },
 "history": {

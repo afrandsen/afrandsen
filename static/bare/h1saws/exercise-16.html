@@ -1,18 +1,14 @@
----
-layout: bare
----
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md</title>
+  <title>2 Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md</title>
   <meta name="description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  <meta property="og:title" content="2 Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
   <meta property="og:type" content="book" />
   
   
@@ -20,7 +16,7 @@ layout: bare
   <meta name="github-repo" content="afrandsen/afrandsen" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  <meta name="twitter:title" content="2 Exercise 16 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
   
   <meta name="twitter:description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
   
@@ -33,8 +29,8 @@ layout: bare
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="exercise-16.html"/>
+<link rel="prev" href="exercise-13.html"/>
+<link rel="next" href="exercise-22.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -189,46 +185,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-13" class="section level1">
-<h1><span class="header-section-number">1</span> Exercise 13</h1>
-<p><em>In this exercise we use the SAS data set houses again. Execute the following code.</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">PROC</span> GLM<span class="kw"> DATA</span> = houses;</a>
-<a class="sourceLine" id="cb1-2" title="2">CLASS new;</a>
-<a class="sourceLine" id="cb1-3" title="3">MODEL price = new size;</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="kw">OUTPUT</span> OUT = outdata PREDICTED = predvalues;</a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="kw">RUN</span>;</a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="kw">QUIT</span>;</a></code></pre></div>
-<p><em>Use the data set outdata to produce the same graphs as in Figure 5.1 and Figure 5.2 <span class="citation">(Pedersen <a href="#ref-Pedersen2019" role="doc-biblioref">2019</a>)</span>, noting in particular the ingenious choice of colors and symbols in the first figure. Save as pdf files.</em></p>
-<div id="sas-code" class="section level2">
-<h2><span class="header-section-number">1.1</span> SAS Code</h2>
-<div id="the-houses-data-set" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> The Houses Data Set</h3>
-<p>In this exercise we use the data set <code>houses</code> which is obtained from the course website<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Table <a href="exercise-13.html#tab:houses">1.1</a> shows the variables and the first 10 observations.</p>
+<div id="exercise-16" class="section level1">
+<h1><span class="header-section-number">2</span> Exercise 16</h1>
+<p><em>Exercise 1.21 <span class="citation">(Agresti <a href="#ref-Agresti2015" role="doc-biblioref">2015</a>)</span> presented a study comparing forced expiratory volume after 1 hour of treatment for three drugs (<span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(p = \text{placebo}\)</span>), adjusting for a baseline measurement <span class="math inline">\(x_1\)</span>. Table 4.1 <span class="citation">(Agresti <a href="#ref-Agresti2015" role="doc-biblioref">2015</a>)</span> shows the results of fitting some normal GLMs (with identity link, except one with log link) and a GLM assuming a gamma response. Interpret results.</em></p>
+<ol style="list-style-type: decimal">
+<li><p><em>Do all analyses in SAS</em></p></li>
+<li><p><em>Write up the models mathematically.</em></p></li>
+<li><p><em>Include graphs to illustrate (lack of) fit.</em></p></li>
+<li><p><em>Which models (or which model) seem to perform best?</em></p></li>
+</ol>
+<p>The dataset <code>FEV</code> is obtained from <span class="citation">(College of Liberal Arts and Sciences <a href="#ref-FEV" role="doc-biblioref">2000</a>)</span>. Table <a href="exercise-16.html#tab:FEV">2.1</a> shows the variables and the first 10 observations.</p>
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:houses">Table 1.1: </span>The first 10 observations of houses.txt.
+<span id="tab:FEV">Table 2.1: </span>The first 10 observations of FEV.dat.
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
 </th>
 <th style="text-align:right;">
-taxes
+base
 </th>
 <th style="text-align:right;">
-beds
+fev1
 </th>
 <th style="text-align:right;">
-baths
+fev2
 </th>
 <th style="text-align:right;">
-new
+fev3
 </th>
 <th style="text-align:right;">
-price
+fev4
 </th>
 <th style="text-align:right;">
-size
+fev5
+</th>
+<th style="text-align:right;">
+fev6
+</th>
+<th style="text-align:right;">
+fev7
+</th>
+<th style="text-align:right;">
+fev8
+</th>
+<th style="text-align:right;">
+drug
 </th>
 </tr>
 </thead>
@@ -238,22 +241,34 @@ size
 1
 </td>
 <td style="text-align:right;">
-3104
+2.46
 </td>
 <td style="text-align:right;">
-4
+2.68
 </td>
 <td style="text-align:right;">
-2
+2.76
 </td>
 <td style="text-align:right;">
-0
+2.50
 </td>
 <td style="text-align:right;">
-279.9
+2.30
 </td>
 <td style="text-align:right;">
-2048
+2.14
+</td>
+<td style="text-align:right;">
+2.40
+</td>
+<td style="text-align:right;">
+2.33
+</td>
+<td style="text-align:right;">
+2.20
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -261,22 +276,34 @@ size
 2
 </td>
 <td style="text-align:right;">
-1173
+3.50
 </td>
 <td style="text-align:right;">
-2
+3.95
 </td>
 <td style="text-align:right;">
-1
+3.65
 </td>
 <td style="text-align:right;">
-0
+2.93
 </td>
 <td style="text-align:right;">
-146.5
+2.53
 </td>
 <td style="text-align:right;">
-912
+3.04
+</td>
+<td style="text-align:right;">
+3.37
+</td>
+<td style="text-align:right;">
+3.14
+</td>
+<td style="text-align:right;">
+2.62
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -284,22 +311,34 @@ size
 3
 </td>
 <td style="text-align:right;">
-3076
+1.96
 </td>
 <td style="text-align:right;">
-4
+2.28
 </td>
 <td style="text-align:right;">
-2
+2.34
 </td>
 <td style="text-align:right;">
-0
+2.29
 </td>
 <td style="text-align:right;">
-237.7
+2.43
 </td>
 <td style="text-align:right;">
-1654
+2.06
+</td>
+<td style="text-align:right;">
+2.18
+</td>
+<td style="text-align:right;">
+2.28
+</td>
+<td style="text-align:right;">
+2.29
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -307,22 +346,34 @@ size
 4
 </td>
 <td style="text-align:right;">
-1608
+3.44
 </td>
 <td style="text-align:right;">
-3
+4.08
 </td>
 <td style="text-align:right;">
-2
+3.87
 </td>
 <td style="text-align:right;">
-0
+3.79
 </td>
 <td style="text-align:right;">
-200.0
+3.30
 </td>
 <td style="text-align:right;">
-2068
+3.80
+</td>
+<td style="text-align:right;">
+3.24
+</td>
+<td style="text-align:right;">
+2.98
+</td>
+<td style="text-align:right;">
+2.91
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -330,22 +381,34 @@ size
 5
 </td>
 <td style="text-align:right;">
-1454
+2.80
 </td>
 <td style="text-align:right;">
-3
+4.09
 </td>
 <td style="text-align:right;">
-3
+3.90
 </td>
 <td style="text-align:right;">
-0
+3.54
 </td>
 <td style="text-align:right;">
-159.9
+3.35
 </td>
 <td style="text-align:right;">
-1477
+3.15
+</td>
+<td style="text-align:right;">
+3.23
+</td>
+<td style="text-align:right;">
+3.46
+</td>
+<td style="text-align:right;">
+3.27
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -353,22 +416,34 @@ size
 6
 </td>
 <td style="text-align:right;">
-2997
+2.36
 </td>
 <td style="text-align:right;">
-3
+3.79
 </td>
 <td style="text-align:right;">
-2
+3.97
 </td>
 <td style="text-align:right;">
-1
+3.78
 </td>
 <td style="text-align:right;">
-499.9
+3.69
 </td>
 <td style="text-align:right;">
-3153
+3.31
+</td>
+<td style="text-align:right;">
+2.83
+</td>
+<td style="text-align:right;">
+2.72
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -376,22 +451,34 @@ size
 7
 </td>
 <td style="text-align:right;">
-4054
+1.77
 </td>
 <td style="text-align:right;">
-3
+3.82
 </td>
 <td style="text-align:right;">
-2
+3.44
 </td>
 <td style="text-align:right;">
-0
+3.46
 </td>
 <td style="text-align:right;">
-265.5
+3.02
 </td>
 <td style="text-align:right;">
-1355
+2.98
+</td>
+<td style="text-align:right;">
+3.10
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+<td style="text-align:right;">
+2.88
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -399,22 +486,34 @@ size
 8
 </td>
 <td style="text-align:right;">
-3002
+2.64
 </td>
 <td style="text-align:right;">
-3
+3.67
 </td>
 <td style="text-align:right;">
-2
+3.47
 </td>
 <td style="text-align:right;">
-1
+3.19
 </td>
 <td style="text-align:right;">
-289.9
+2.19
 </td>
 <td style="text-align:right;">
-2075
+2.85
+</td>
+<td style="text-align:right;">
+2.68
+</td>
+<td style="text-align:right;">
+2.60
+</td>
+<td style="text-align:right;">
+2.73
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -422,22 +521,34 @@ size
 9
 </td>
 <td style="text-align:right;">
-6627
+2.30
 </td>
 <td style="text-align:right;">
-5
+4.12
 </td>
 <td style="text-align:right;">
-4
+3.71
 </td>
 <td style="text-align:right;">
-0
+3.57
 </td>
 <td style="text-align:right;">
-587.0
+3.49
 </td>
 <td style="text-align:right;">
-3990
+3.64
+</td>
+<td style="text-align:right;">
+3.38
+</td>
+<td style="text-align:right;">
+2.28
+</td>
+<td style="text-align:right;">
+3.72
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 <tr>
@@ -445,419 +556,76 @@ size
 10
 </td>
 <td style="text-align:right;">
-320
+2.27
 </td>
 <td style="text-align:right;">
-3
+2.77
 </td>
 <td style="text-align:right;">
-2
+2.77
 </td>
 <td style="text-align:right;">
-0
+2.75
 </td>
 <td style="text-align:right;">
-70.0
+2.75
 </td>
 <td style="text-align:right;">
-1160
+2.71
+</td>
+<td style="text-align:right;">
+2.75
+</td>
+<td style="text-align:right;">
+2.52
+</td>
+<td style="text-align:right;">
+2.60
+</td>
+<td style="text-align:right;">
+a
 </td>
 </tr>
 </tbody>
 </table>
+<div id="models" class="section level2">
+<h2><span class="header-section-number">2.1</span> Models</h2>
+<p>We will study the following models</p>
+<div id="additive-model-base" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Additive Model – base</h3>
+<p><span class="math display">\[Y_{ij}\sim N\left(\alpha + \gamma b_{ij}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
+<p>The above model is a NLM with <span class="math inline">\(\beta=\left(\alpha, \gamma \right)^\textsf{T}\)</span>.</p>
 </div>
-<div id="import-of-the-houses-data-set" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Import of the Houses Data Set</h3>
-<p>First we start by importing our data set to our SAS 9.4 session.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">DATA</span> houses;</a>
-<a class="sourceLine" id="cb2-2" title="2">  <span class="kw">INFILE</span> <span class="st">&#39;~/Survival Analysis/Supplementary Notes/houses.txt&#39;</span> </a>
-<a class="sourceLine" id="cb2-3" title="3">   FIRSTOBS = <span class="dv">2</span>;</a>
-<a class="sourceLine" id="cb2-4" title="4">  <span class="kw">INPUT</span> case taxes beds baths new price size;</a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="kw">RUN</span>;</a></code></pre></div>
-<p>Thus we take use of the <code>DATA</code> step. First we pass on the path to our data using the <code>INFILE</code> statement. Since our observations start in the second row, we must use the <code>FIRSTOBS</code> argument to tell SAS to start reading observations from the second row, by setting it to <code>2</code>. Next we tell SAS which columns and thereby variables in the <code>houses</code> data set it should read. We want every variable even though we aren’t going to use all of them. Thus we use the <code>INPUT</code> statement which takes variables as arguments. <span class="citation">(SAS Institute Inc. <a href="#ref-DATAStep" role="doc-biblioref">2013</a>)</span></p>
+<div id="additive-model-drug" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Additive Model – drug</h3>
+<p><span class="math display">\[Y_{ij}\sim N\left(\alpha + \beta_{i}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
+<p>The above model is a NLM with <span class="math inline">\(\beta=\left(\alpha, \beta_{a}, \beta_b, \beta_p \right)^\textsf{T}\)</span>.</p>
 </div>
-<div id="model-fitting" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Model Fitting</h3>
-<p>Next we run the <code>GLM</code> procedure as stated in the exercise.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">PROC</span> GLM<span class="kw"> DATA</span> = houses;</a>
-<a class="sourceLine" id="cb3-2" title="2">CLASS new;</a>
-<a class="sourceLine" id="cb3-3" title="3">MODEL price = new size;</a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="kw">OUTPUT</span> OUT = outdata PREDICTED = predvalues;</a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="kw">RUN</span>;</a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="kw">QUIT</span>;</a></code></pre></div>
-<p>We obtain the new data set <code>outdata</code> which is the same as the houses data set, but with an extra variable <code>predvalues</code> with the predicted prices. This variable can be spotted in Table <a href="exercise-13.html#tab:outdata">1.2</a> below.</p>
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:outdata">Table 1.2: </span>The first 10 observations of outdata.sas7bdat.
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-taxes
-</th>
-<th style="text-align:right;">
-beds
-</th>
-<th style="text-align:right;">
-baths
-</th>
-<th style="text-align:right;">
-new
-</th>
-<th style="text-align:right;">
-price
-</th>
-<th style="text-align:right;">
-size
-</th>
-<th style="text-align:right;">
-predvalues
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-3104
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-279.9
-</td>
-<td style="text-align:right;">
-2048
-</td>
-<td style="text-align:right;">
-197.6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-1173
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-146.5
-</td>
-<td style="text-align:right;">
-912
-</td>
-<td style="text-align:right;">
-65.7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-3076
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-237.7
-</td>
-<td style="text-align:right;">
-1654
-</td>
-<td style="text-align:right;">
-151.9
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-4
-</td>
-<td style="text-align:right;">
-1608
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-200.0
-</td>
-<td style="text-align:right;">
-2068
-</td>
-<td style="text-align:right;">
-199.9
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:right;">
-1454
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-159.9
-</td>
-<td style="text-align:right;">
-1477
-</td>
-<td style="text-align:right;">
-131.3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-6
-</td>
-<td style="text-align:right;">
-2997
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-499.9
-</td>
-<td style="text-align:right;">
-3153
-</td>
-<td style="text-align:right;">
-383.7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-7
-</td>
-<td style="text-align:right;">
-4054
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-265.5
-</td>
-<td style="text-align:right;">
-1355
-</td>
-<td style="text-align:right;">
-117.1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-8
-</td>
-<td style="text-align:right;">
-3002
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-289.9
-</td>
-<td style="text-align:right;">
-2075
-</td>
-<td style="text-align:right;">
-258.5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-9
-</td>
-<td style="text-align:right;">
-6627
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-587.0
-</td>
-<td style="text-align:right;">
-3990
-</td>
-<td style="text-align:right;">
-423.1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-10
-</td>
-<td style="text-align:right;">
-320
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-70.0
-</td>
-<td style="text-align:right;">
-1160
-</td>
-<td style="text-align:right;">
-94.5
-</td>
-</tr>
-</tbody>
-</table>
+<div id="additive-model-basedrug" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Additive Model – base+drug</h3>
+<p><span class="math display">\[Y_{ij}\sim N\left(\alpha + \gamma b_{ij} + \beta_{i}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
+<p>The above model is a NLM with <span class="math inline">\(\beta=\left(\alpha, \gamma, \beta_{a}, \beta_b, \beta_p \right)^\textsf{T}\)</span>.</p>
 </div>
-<div id="creation-of-plots" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Creation of Plots</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb4-1" title="1">ODS <span class="fu">PDF</span> <span class="kw">FILE</span> = <span class="st">&#39;~/Survival Analysis/Supplementary Notes/Graph1.pdf&#39;</span> NOTOC;</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="kw">OPTIONS</span> NODATE NONUMBER;</a>
-<a class="sourceLine" id="cb4-3" title="3"></a>
-<a class="sourceLine" id="cb4-4" title="4">ODS GRAPHICS <span class="kw">ON</span> / NOBORDER</a>
-<a class="sourceLine" id="cb4-5" title="5">                  ATTRPRIORITY=NONE</a>
-<a class="sourceLine" id="cb4-6" title="6">                  WIDTH=9IN;</a>
-<a class="sourceLine" id="cb4-7" title="7"></a>
-<a class="sourceLine" id="cb4-8" title="8"><span class="kw">PROC</span> SGPLOT<span class="kw"> DATA</span> = outdata;</a>
-<a class="sourceLine" id="cb4-9" title="9">SCATTER <span class="kw">X</span> = size Y = price / <span class="kw">GROUP</span> = new;</a>
-<a class="sourceLine" id="cb4-10" title="10"></a>
-<a class="sourceLine" id="cb4-11" title="11">STYLEATTRS DATASYMBOLS=(TRIANGLE STAR)</a>
-<a class="sourceLine" id="cb4-12" title="12">           DATACONTRASTCOLORS=(BLUE ORANGE);</a>
-<a class="sourceLine" id="cb4-13" title="13">           </a>
-<a class="sourceLine" id="cb4-14" title="14">REG <span class="kw">X</span> = size Y = predvalues / <span class="kw">GROUP</span> = new</a>
-<a class="sourceLine" id="cb4-15" title="15">                              NOMARKERS</a>
-<a class="sourceLine" id="cb4-16" title="16">                              LINEATTRS=(PATTERN=SOLID);</a>
-<a class="sourceLine" id="cb4-17" title="17">YAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Selling price&quot;</span>;</a>
-<a class="sourceLine" id="cb4-18" title="18">XAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Size&quot;</span>;</a>
-<a class="sourceLine" id="cb4-19" title="19">KEYLEGEND / NOBORDER DOWN = <span class="dv">2</span>;</a>
-<a class="sourceLine" id="cb4-20" title="20"><span class="kw">RUN</span>;</a>
-<a class="sourceLine" id="cb4-21" title="21"></a>
-<a class="sourceLine" id="cb4-22" title="22">ODS GRAPHICS / <span class="kw">RESET</span> = ALL;</a>
-<a class="sourceLine" id="cb4-23" title="23">ODS GRAPHICS OFF;</a>
-<a class="sourceLine" id="cb4-24" title="24"></a>
-<a class="sourceLine" id="cb4-25" title="25">ODS <span class="fu">PDF</span> <span class="fu">CLOSE</span>;</a>
-<a class="sourceLine" id="cb4-26" title="26"></a>
-<a class="sourceLine" id="cb4-27" title="27">ODS <span class="fu">PDF</span> <span class="kw">FILE</span> = <span class="st">&#39;~/Survival Analysis/Supplementary Notes/Graph2.pdf&#39;</span> NOTOC;</a>
-<a class="sourceLine" id="cb4-28" title="28"><span class="kw">OPTIONS</span> NODATE NONUMBER;</a>
-<a class="sourceLine" id="cb4-29" title="29"></a>
-<a class="sourceLine" id="cb4-30" title="30">ODS GRAPHICS <span class="kw">ON</span> / NOBORDER HEIGHT = 9IN;</a>
-<a class="sourceLine" id="cb4-31" title="31"></a>
-<a class="sourceLine" id="cb4-32" title="32"><span class="kw">PROC</span> SGPANEL<span class="kw"> DATA</span> = outdata;</a>
-<a class="sourceLine" id="cb4-33" title="33">PANELBY new / COLUMNS = <span class="dv">2</span></a>
-<a class="sourceLine" id="cb4-34" title="34">              ROWS = <span class="dv">1</span>;</a>
-<a class="sourceLine" id="cb4-35" title="35">SCATTER <span class="kw">X</span> = size Y = price;</a>
-<a class="sourceLine" id="cb4-36" title="36">REG <span class="kw">x</span> = size y = predvalues / NOMARKERS;</a>
-<a class="sourceLine" id="cb4-37" title="37">ROWAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Selling price&quot;</span>;</a>
-<a class="sourceLine" id="cb4-38" title="38">COLAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Size&quot;</span>;</a>
-<a class="sourceLine" id="cb4-39" title="39">KEYLEGEND / NOBORDER;</a>
-<a class="sourceLine" id="cb4-40" title="40"><span class="kw">RUN</span>;</a>
-<a class="sourceLine" id="cb4-41" title="41"></a>
-<a class="sourceLine" id="cb4-42" title="42">ODS GRAPHICS / <span class="kw">RESET</span> = ALL;</a>
-<a class="sourceLine" id="cb4-43" title="43">ODS GRAPHICS OFF;</a>
-<a class="sourceLine" id="cb4-44" title="44"></a>
-<a class="sourceLine" id="cb4-45" title="45">ODS <span class="fu">PDF</span> <span class="fu">CLOSE</span>;</a></code></pre></div>
+<div id="additive-model-basedrug-gamma" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Additive Model – base+drug (gamma)</h3>
+<p><span class="math display">\[Y_{ij}\sim \Gamma\left(\alpha + \gamma b_{ij} + \beta_{i}, k\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
 </div>
+<div id="additive-model-basedrug-log-link" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Additive Model – base+drug (log link)</h3>
+<p><span class="math display">\[Y_{ij}\sim N\left(\mu_{ij}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
+<p><span class="math display">\[\mu_{ij}=\log(\mathbb{E}(Y_{ij}))=\alpha + \gamma b_{ij} + \beta_{i}.\]</span></p>
+<p>The above model is a NLM with <span class="math inline">\(\beta=\left(\alpha, \gamma, \beta_{a}, \beta_b, \beta_p \right)^\textsf{T}\)</span>.</p>
 </div>
-<div id="plots" class="section level2">
-<h2><span class="header-section-number">1.2</span> Plots</h2>
-<div id="the-first-figure" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> The First Figure</h3>
-<p>Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> below show the pdf output achieved from the first <code>ODS PDF</code> statement in the SAS code from Section <a href="exercise-13.html#creation-of-plots">1.1.4</a>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-<p>Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> below show the svg output achieved from the first <code>ODS GRAPHICS</code> statement in the SAS code from Appendix .<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-
-<div class="figure" style="text-align: center"><span id="fig:Graph-1"></span>
-<img src="graphs/EX13_G1.svg" alt="Output from the SGPlot Procedure." width="100%" />
-<p class="caption">
-Figure 1.1: Output from the SGPlot Procedure.
-</p>
-</div>
-
-</div>
-<div id="the-second-figure" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> The Second Figure</h3>
-<p>Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> below show the pdf output achieved from the second <code>ODS PDF</code> statement in the SAS code from Section <a href="exercise-13.html#creation-of-plots">1.1.4</a>.</p>
-<p>Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> below show the svg output achieved from the second <code>ODS GRAPHICS</code> statement in the SAS code from Appendix .</p>
-
-<div class="figure" style="text-align: center"><span id="fig:Graph-2"></span>
-<img src="graphs/EX13_G2.svg" alt="Output from the SGPanel Procedure." width="100%" />
-<p class="caption">
-Figure 1.2: Output from the SGPanel Procedure.
-</p>
-</div>
-
-<p>We notice that Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> and Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> are indeed equal to Figure 5.1 and Figure 5.2 <span class="citation">(Pedersen <a href="#ref-Pedersen2019" role="doc-biblioref">2019</a>)</span>.</p>
+<div id="interaction-model-basedrugbasedrug" class="section level3">
+<h3><span class="header-section-number">2.1.6</span> Interaction Model – base+drug+base*drug</h3>
+<p><span class="math display">\[Y_{ij}\sim N\left(\alpha + \gamma b_{ij} + \beta_{i} + \delta_i b_{ij}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=a,b,p\)</span>, <span class="math inline">\(j=1,\dots,24\)</span>.</p>
+<p>The above model is a NLM with <span class="math inline">\(\beta=\left(\alpha, \gamma, \beta_{a}, \beta_b, \beta_p, \delta_a, \delta_b, \delta_p \right)^\textsf{T}\)</span>.</p>
 
 
 </div>
@@ -865,28 +633,20 @@ Figure 1.2: Output from the SGPanel Procedure.
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-Pedersen2019">
-<p>Pedersen, Jan. 2019. <em>Survival Analysis (Supplementary Notes)</em>. Department of Mathematics, Aarhus University.</p>
+<div id="ref-Agresti2015">
+<p>Agresti, Alan. 2015. <em>Foundations of Linear and Generalized Linear Models</em>. 1st ed. Wiley Series in Probability and Statistics. John Wiley &amp; Sons Inc.</p>
 </div>
-<div id="ref-DATAStep">
-<p>SAS Institute Inc. 2013. “SAS 9.4 ® DATA Step Statements: Reference.” <a href="https://documentation.sas.com/?docsetId=lestmtsref&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en">https://documentation.sas.com/?docsetId=lestmtsref&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en</a>.</p>
+<div id="ref-FEV">
+<p>College of Liberal Arts and Sciences. 2000. <a href="http://users.stat.ufl.edu/~aa/glm/data/FEV.dat">http://users.stat.ufl.edu/~aa/glm/data/FEV.dat</a>.</p>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Blackboard, Survival Analysis with SAS.<a href="exercise-13.html#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Yes, the caption is correctly positioned. I want to explicitly show the ‘A4’ size from <code>ODS PDF</code>, and has thereby not scaled the pdf.<a href="exercise-13.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>Notice the infinite scaling of svg output.<a href="exercise-13.html#fnref3" class="footnote-back">↩</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercise-16.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-13.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-22.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -916,7 +676,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/afrandsen/afrandsen/edit/master/01-exercise13.Rmd",
+"link": "https://github.com/afrandsen/afrandsen/edit/master/02-exercise16.Rmd",
 "text": "Edit"
 },
 "history": {
