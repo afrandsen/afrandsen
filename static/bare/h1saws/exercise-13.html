@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md</title>
+  <meta name="description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="github-repo" content="afrandsen/afrandsen" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Exercise 13 | Handin_1_Andreas_Kracht_Frandsen.utf8.md" />
+  
+  <meta name="twitter:description" content="Handin 1 of Survival Analysis with SAS, Aarhus University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="exercise-16.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Handin 1 - Survival Analysis with SAS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="exercise-13.html"><a href="exercise-13.html"><i class="fa fa-check"></i><b>1</b> Exercise 13</a><ul>
+<li class="chapter" data-level="1.1" data-path="exercise-13.html"><a href="exercise-13.html#sas-code"><i class="fa fa-check"></i><b>1.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="exercise-13.html"><a href="exercise-13.html#the-houses-data-set"><i class="fa fa-check"></i><b>1.1.1</b> The Houses Data Set</a></li>
+<li class="chapter" data-level="1.1.2" data-path="exercise-13.html"><a href="exercise-13.html#import-of-the-houses-data-set"><i class="fa fa-check"></i><b>1.1.2</b> Import of the Houses Data Set</a></li>
+<li class="chapter" data-level="1.1.3" data-path="exercise-13.html"><a href="exercise-13.html#model-fitting"><i class="fa fa-check"></i><b>1.1.3</b> Model Fitting</a></li>
+<li class="chapter" data-level="1.1.4" data-path="exercise-13.html"><a href="exercise-13.html#creation-of-plots"><i class="fa fa-check"></i><b>1.1.4</b> Creation of Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="exercise-13.html"><a href="exercise-13.html#plots"><i class="fa fa-check"></i><b>1.2</b> Plots</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="exercise-13.html"><a href="exercise-13.html#the-first-figure"><i class="fa fa-check"></i><b>1.2.1</b> The First Figure</a></li>
+<li class="chapter" data-level="1.2.2" data-path="exercise-13.html"><a href="exercise-13.html#the-second-figure"><i class="fa fa-check"></i><b>1.2.2</b> The Second Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exercise-16.html"><a href="exercise-16.html"><i class="fa fa-check"></i><b>2</b> Exercise 16</a><ul>
+<li class="chapter" data-level="2.1" data-path="exercise-16.html"><a href="exercise-16.html#models"><i class="fa fa-check"></i><b>2.1</b> Models</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="exercise-16.html"><a href="exercise-16.html#model-base"><i class="fa fa-check"></i><b>2.1.1</b> Model – base</a></li>
+<li class="chapter" data-level="2.1.2" data-path="exercise-16.html"><a href="exercise-16.html#model-drug"><i class="fa fa-check"></i><b>2.1.2</b> Model – drug</a></li>
+<li class="chapter" data-level="2.1.3" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug"><i class="fa fa-check"></i><b>2.1.3</b> Model – base+drug</a></li>
+<li class="chapter" data-level="2.1.4" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-gamma"><i class="fa fa-check"></i><b>2.1.4</b> Model – base+drug (gamma)</a></li>
+<li class="chapter" data-level="2.1.5" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-log-link"><i class="fa fa-check"></i><b>2.1.5</b> Model – base+drug (log link)</a></li>
+<li class="chapter" data-level="2.1.6" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrugbasedrug"><i class="fa fa-check"></i><b>2.1.6</b> Model – base+drug+base*drug</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="exercise-16.html"><a href="exercise-16.html#analysis-in-sas"><i class="fa fa-check"></i><b>2.2</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="exercise-16.html"><a href="exercise-16.html#additive-model-base"><i class="fa fa-check"></i><b>2.2.1</b> Additive Model – base</a></li>
+<li class="chapter" data-level="2.2.2" data-path="exercise-16.html"><a href="exercise-16.html#model-drug-1"><i class="fa fa-check"></i><b>2.2.2</b> Model – drug</a></li>
+<li class="chapter" data-level="2.2.3" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-1"><i class="fa fa-check"></i><b>2.2.3</b> Model – base+drug</a></li>
+<li class="chapter" data-level="2.2.4" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-gamma-1"><i class="fa fa-check"></i><b>2.2.4</b> Model – base+drug (gamma)</a></li>
+<li class="chapter" data-level="2.2.5" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-log-link-1"><i class="fa fa-check"></i><b>2.2.5</b> Model – base+drug (log link)</a></li>
+<li class="chapter" data-level="2.2.6" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrugbasedrug-1"><i class="fa fa-check"></i><b>2.2.6</b> Model – base+drug+base*drug</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="exercise-16.html"><a href="exercise-16.html#model-conclusion"><i class="fa fa-check"></i><b>2.3</b> Model Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exercise-22.html"><a href="exercise-22.html"><i class="fa fa-check"></i><b>3</b> Exercise 22</a><ul>
+<li class="chapter" data-level="3.1" data-path="exercise-22.html"><a href="exercise-22.html#question-1"><i class="fa fa-check"></i><b>3.1</b> Question 1</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="exercise-22.html"><a href="exercise-22.html#weibull-distributed-random-variable"><i class="fa fa-check"></i><b>3.1.1</b> Weibull Distributed Random Variable</a></li>
+<li class="chapter" data-level="3.1.2" data-path="exercise-22.html"><a href="exercise-22.html#survival-function"><i class="fa fa-check"></i><b>3.1.2</b> Survival Function</a></li>
+<li class="chapter" data-level="3.1.3" data-path="exercise-22.html"><a href="exercise-22.html#hazard-function"><i class="fa fa-check"></i><b>3.1.3</b> Hazard Function</a></li>
+<li class="chapter" data-level="3.1.4" data-path="exercise-22.html"><a href="exercise-22.html#cumulative-hazard-function"><i class="fa fa-check"></i><b>3.1.4</b> Cumulative Hazard Function</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exercise-22.html"><a href="exercise-22.html#question-2"><i class="fa fa-check"></i><b>3.2</b> Question 2</a></li>
+<li class="chapter" data-level="3.3" data-path="exercise-22.html"><a href="exercise-22.html#question-3"><i class="fa fa-check"></i><b>3.3</b> Question 3</a></li>
+<li class="chapter" data-level="3.4" data-path="exercise-22.html"><a href="exercise-22.html#question-4"><i class="fa fa-check"></i><b>3.4</b> Question 4</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html"><i class="fa fa-check"></i><b>A</b> SAS of Exercise 16</a><ul>
+<li class="chapter" data-level="A.1" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#sas-code-1"><i class="fa fa-check"></i><b>A.1</b> SAS Code</a></li>
+<li class="chapter" data-level="A.2" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#sas-output"><i class="fa fa-check"></i><b>A.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-drug-2"><i class="fa fa-check"></i><b>A.2.1</b> Model – drug</a></li>
+<li class="chapter" data-level="A.2.2" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-2"><i class="fa fa-check"></i><b>A.2.2</b> Model – base+drug</a></li>
+<li class="chapter" data-level="A.2.3" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-gamma-2"><i class="fa fa-check"></i><b>A.2.3</b> Model – base+drug (gamma)</a></li>
+<li class="chapter" data-level="A.2.4" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-log-link-2"><i class="fa fa-check"></i><b>A.2.4</b> Model – base+drug (log link)</a></li>
+<li class="chapter" data-level="A.2.5" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrugbasedrug-2"><i class="fa fa-check"></i><b>A.2.5</b> Model – base+drug+base*drug</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#sas-plots"><i class="fa fa-check"></i><b>A.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-drug-3"><i class="fa fa-check"></i><b>A.3.1</b> Model – drug</a></li>
+<li class="chapter" data-level="A.3.2" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-3"><i class="fa fa-check"></i><b>A.3.2</b> Model – base+drug</a></li>
+<li class="chapter" data-level="A.3.3" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-gamma-3"><i class="fa fa-check"></i><b>A.3.3</b> Model – base+drug (gamma)</a></li>
+<li class="chapter" data-level="A.3.4" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrug-log-link-3"><i class="fa fa-check"></i><b>A.3.4</b> Model – base+drug (log link)</a></li>
+<li class="chapter" data-level="A.3.5" data-path="sas-of-exercise-16.html"><a href="sas-of-exercise-16.html#model-basedrugbasedrug-3"><i class="fa fa-check"></i><b>A.3.5</b> Model – base+drug+base*drug</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-13" class="section level1">
+<h1><span class="header-section-number">1</span> Exercise 13</h1>
+<p><em>In this exercise we use the SAS data set houses again. Execute the following code.</em></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">PROC</span> GLM<span class="kw"> DATA</span> = houses;</a>
+<a class="sourceLine" id="cb1-2" title="2">CLASS new;</a>
+<a class="sourceLine" id="cb1-3" title="3">MODEL price = new size;</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">OUTPUT</span> OUT = outdata PREDICTED = predvalues;</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="kw">QUIT</span>;</a></code></pre></div>
+<p><em>Use the data set outdata to produce the same graphs as in Figure 5.1 and Figure 5.2 <span class="citation">(Pedersen <a href="#ref-Pedersen2019" role="doc-biblioref">2019</a>)</span>, noting in particular the ingenious choice of colors and symbols in the first figure. Save as pdf files.</em></p>
+<div id="sas-code" class="section level2">
+<h2><span class="header-section-number">1.1</span> SAS Code</h2>
+<div id="the-houses-data-set" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> The Houses Data Set</h3>
+<p>In this exercise we use the data set <code>houses</code> which is obtained from the course website<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Table <a href="exercise-13.html#tab:houses">1.1</a> shows the variables and the first 10 observations.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:houses">Table 1.1: </span>The first 10 observations of houses.txt.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+taxes
+</th>
+<th style="text-align:right;">
+beds
+</th>
+<th style="text-align:right;">
+baths
+</th>
+<th style="text-align:right;">
+new
+</th>
+<th style="text-align:right;">
+price
+</th>
+<th style="text-align:right;">
+size
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+3104
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+279.9
+</td>
+<td style="text-align:right;">
+2048
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+1173
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+146.5
+</td>
+<td style="text-align:right;">
+912
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+3076
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+237.7
+</td>
+<td style="text-align:right;">
+1654
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+1608
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+200.0
+</td>
+<td style="text-align:right;">
+2068
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+1454
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+159.9
+</td>
+<td style="text-align:right;">
+1477
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2997
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+499.9
+</td>
+<td style="text-align:right;">
+3153
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+4054
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+265.5
+</td>
+<td style="text-align:right;">
+1355
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+3002
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+289.9
+</td>
+<td style="text-align:right;">
+2075
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+6627
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+587.0
+</td>
+<td style="text-align:right;">
+3990
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+320
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+70.0
+</td>
+<td style="text-align:right;">
+1160
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="import-of-the-houses-data-set" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Import of the Houses Data Set</h3>
+<p>First we start by importing our data set to our SAS 9.4 session.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">DATA</span> houses;</a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="kw">INFILE</span> <span class="st">&#39;~/Survival Analysis/Supplementary Notes/houses.txt&#39;</span> </a>
+<a class="sourceLine" id="cb2-3" title="3">   FIRSTOBS = <span class="dv">2</span>;</a>
+<a class="sourceLine" id="cb2-4" title="4">  <span class="kw">INPUT</span> case taxes beds baths new price size;</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="kw">RUN</span>;</a></code></pre></div>
+<p>Thus we take use of the <code>DATA</code> step. First we pass on the path to our data using the <code>INFILE</code> statement. Since our observations start in the second row, we must use the <code>FIRSTOBS</code> argument to tell SAS to start reading observations from the second row, by setting it to <code>2</code>. Next we tell SAS which columns and thereby variables in the <code>houses</code> data set it should read. We want every variable even though we aren’t going to use all of them. Thus we use the <code>INPUT</code> statement which takes variables as arguments. <span class="citation">(SAS Institute Inc. <a href="#ref-DATAStep" role="doc-biblioref">2013</a><a href="#ref-DATAStep" role="doc-biblioref">a</a>)</span>.</p>
+</div>
+<div id="model-fitting" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Model Fitting</h3>
+<p>We want to analyse the following additive model
+<span class="math display">\[Y_{ij}\sim N\left(\alpha + \beta_i + \gamma s_{ij}, \sigma^2\right),\]</span></p>
+<p>where <span class="math inline">\(i=0,1\)</span>, <span class="math inline">\(j=1,\dots,n_i\)</span>, <span class="math inline">\(n_0=89\)</span> and <span class="math inline">\(n_1=11\)</span>. Thus we make the assumption of constant variance. Next we run the <code>GLM</code> procedure as stated in the exercise.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">PROC</span> GLM<span class="kw"> DATA</span> = houses;</a>
+<a class="sourceLine" id="cb3-2" title="2">CLASS new;</a>
+<a class="sourceLine" id="cb3-3" title="3">MODEL price = new size;</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="kw">OUTPUT</span> OUT = outdata PREDICTED = predvalues;</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="kw">QUIT</span>;</a></code></pre></div>
+<p>We obtain the new data set <code>outdata</code> which is the same as the <code>houses</code> data set, but with an extra variable <code>predvalues</code> with the predicted prices. This variable can be spotted in Table <a href="exercise-13.html#tab:outdata">1.2</a> below. <span class="citation">(SAS Institute Inc. <a href="#ref-GLM" role="doc-biblioref">2011</a><a href="#ref-GLM" role="doc-biblioref">b</a>)</span>.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:outdata">Table 1.2: </span>The first 10 observations of outdata.sas7bdat.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+taxes
+</th>
+<th style="text-align:right;">
+beds
+</th>
+<th style="text-align:right;">
+baths
+</th>
+<th style="text-align:right;">
+new
+</th>
+<th style="text-align:right;">
+price
+</th>
+<th style="text-align:right;">
+size
+</th>
+<th style="text-align:right;">
+predvalues
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+3104
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+279.9
+</td>
+<td style="text-align:right;">
+2048
+</td>
+<td style="text-align:right;">
+197.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+1173
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+146.5
+</td>
+<td style="text-align:right;">
+912
+</td>
+<td style="text-align:right;">
+65.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+3076
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+237.7
+</td>
+<td style="text-align:right;">
+1654
+</td>
+<td style="text-align:right;">
+151.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+1608
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+200.0
+</td>
+<td style="text-align:right;">
+2068
+</td>
+<td style="text-align:right;">
+199.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+1454
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+159.9
+</td>
+<td style="text-align:right;">
+1477
+</td>
+<td style="text-align:right;">
+131.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2997
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+499.9
+</td>
+<td style="text-align:right;">
+3153
+</td>
+<td style="text-align:right;">
+383.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+4054
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+265.5
+</td>
+<td style="text-align:right;">
+1355
+</td>
+<td style="text-align:right;">
+117.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+3002
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+289.9
+</td>
+<td style="text-align:right;">
+2075
+</td>
+<td style="text-align:right;">
+258.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+6627
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+587.0
+</td>
+<td style="text-align:right;">
+3990
+</td>
+<td style="text-align:right;">
+423.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+320
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+70.0
+</td>
+<td style="text-align:right;">
+1160
+</td>
+<td style="text-align:right;">
+94.5
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="creation-of-plots" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Creation of Plots</h3>
+<p>Before creating our plots we need to decide where to save them to and in which format.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb4-1" title="1">ODS <span class="fu">PDF</span> <span class="kw">FILE</span> = <span class="st">&#39;~/Survival Analysis/Supplementary Notes/Graph1.pdf&#39;</span> NOTOC;</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">OPTIONS</span> NODATE</a>
+<a class="sourceLine" id="cb4-3" title="3">        NONUMBER</a>
+<a class="sourceLine" id="cb4-4" title="4">        ORIENTATION = LANDSCAPE;</a></code></pre></div>
+<p>Thus we use the <code>ODS PDF</code> statement. Where <code>ODS</code> is SAS’ output delivery system. In this way we tell SAS to open a new pdf file that it can write to. Using the <code>FILE</code> argument we pass the physical path where we would like to save our pdf to. The <code>NOTOC</code> make sure that no table of contents is attached to our pdf file. Next we want to make sure that we get a plain file to work with, without dates and numbers this is handled by the <code>NODATE</code> and <code>NONUMBER</code> arguments of the <code>OPTIONS</code> statement. Lastly we want the orientation of our pdf to be in landscape<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, this is taking care of by the <code>ORIENTATION</code> argument. Luckily enough we don’t have to remove any graph titles this time, otherwise arguments such as <code>NOPROCTITLE</code>, <code>NOGTITLE</code>, <code>NOBYLINE</code>, <code>TITLE</code> would be helpful<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. <span class="citation">(SAS Institute Inc. <a href="#ref-ODS" role="doc-biblioref">2011</a><a href="#ref-ODS" role="doc-biblioref">c</a>)</span>.</p>
+<p>Now that our pdf is open and ready to write we can make the plot.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb5-1" title="1">ODS GRAPHICS <span class="kw">ON</span> / NOBORDER</a>
+<a class="sourceLine" id="cb5-2" title="2">                  ATTRPRIORITY = NONE</a>
+<a class="sourceLine" id="cb5-3" title="3">                  HEIGHT = 9IN;</a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="kw">PROC</span> SGPLOT<span class="kw"> DATA</span> = outdata;</a>
+<a class="sourceLine" id="cb5-6" title="6">SCATTER <span class="kw">X</span> = size Y = price / <span class="kw">GROUP</span> = new;</a>
+<a class="sourceLine" id="cb5-7" title="7">           </a>
+<a class="sourceLine" id="cb5-8" title="8">REG <span class="kw">X</span> = size Y = predvalues / <span class="kw">GROUP</span> = new</a>
+<a class="sourceLine" id="cb5-9" title="9">                              NOMARKERS</a>
+<a class="sourceLine" id="cb5-10" title="10">                              LINEATTRS = (PATTERN = SOLID);</a>
+<a class="sourceLine" id="cb5-11" title="11">                              </a>
+<a class="sourceLine" id="cb5-12" title="12">STYLEATTRS DATASYMBOLS = (TRIANGLE STAR)</a>
+<a class="sourceLine" id="cb5-13" title="13">           DATACONTRASTCOLORS = (BLUE ORANGE);</a>
+<a class="sourceLine" id="cb5-14" title="14">                              </a>
+<a class="sourceLine" id="cb5-15" title="15">YAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Selling price&quot;</span>;</a>
+<a class="sourceLine" id="cb5-16" title="16">XAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Size&quot;</span>;</a>
+<a class="sourceLine" id="cb5-17" title="17"></a>
+<a class="sourceLine" id="cb5-18" title="18">KEYLEGEND / NOBORDER DOWN = <span class="dv">2</span>;</a>
+<a class="sourceLine" id="cb5-19" title="19"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-20" title="20"></a>
+<a class="sourceLine" id="cb5-21" title="21">ODS GRAPHICS / <span class="kw">RESET</span> = ALL;</a>
+<a class="sourceLine" id="cb5-22" title="22">ODS GRAPHICS OFF;</a>
+<a class="sourceLine" id="cb5-23" title="23"></a>
+<a class="sourceLine" id="cb5-24" title="24">ODS <span class="fu">PDF</span> <span class="fu">CLOSE</span>;</a></code></pre></div>
+<p>Using the output delivery system again we make sure that our following procedures will produce the plots, this is handled by <code>ODS GRAPHICS ON</code>. We want to make sure that: no border is present, that we can distinguish groups by colors and markers and that we produce a relatively big plot in our pdf. This can be achieved using the options of our <code>ODS GRAPHICS</code> statement namely the arguments <code>NOBORDER</code>, <code>ATTRPRIORITY</code> and <code>HEIGHT</code> or <code>WIDTH</code>. <span class="citation">(SAS Institute Inc. <a href="#ref-ODS" role="doc-biblioref">2011</a><a href="#ref-ODS" role="doc-biblioref">c</a>)</span>.</p>
+<p>Next we create our plot using the procedure <code>SGPLOT</code> which is compatible with <code>ODS GRAPHICS</code>. To make a scatter plot we use the <code>SCATTER</code> statement with the corresponding <code>X</code> and <code>Y</code> axis settings, set accordingly. We want different colors depending on our group variable <code>new</code> thus we set the <code>GROUP</code> argument in the options correspondingly.</p>
+<p>We want SAS to make a regression line per group using the <code>predvalues</code> as the response variable. The <code>REG</code> statement creates regression lines on our plot, by setting the <code>Y</code> and <code>X</code> setting correctly we obtain the regression line. To get both of the regression lines, we again take use of the option argument <code>GROUP</code>. <code>REG</code> does also create markers for every observation, but we don’t want these so we remove them using <code>NOMARKERS</code>. Lastly we want both lines to be solid, thus we set the <code>LINEATTRS</code> correspondingly.</p>
+<p>We want: the old houses to have a star as a marker, orange as it’s corresponding color, new houses to have a triangle and blue as it’s corresponding color. Thus by using the <code>STYLEATTRS</code> statement with the arguments <code>DATASYMBOLS</code> and <code>DATACONTRASTCOLORS</code> we can set the specific markers and colors.</p>
+<p>The <code>KEYLEGEND</code> statement controls the settings regarding our plot legend, the <code>DOWN</code> option argument controls the number of rows in the legend. <code>YAXIS</code> and <code>XAXIS</code> control the axis labels. <span class="citation">(SAS Institute Inc. <a href="#ref-SGPLOT" role="doc-biblioref">2013</a><a href="#ref-SGPLOT" role="doc-biblioref">c</a>)</span>.</p>
+<p>Lastly we make sure to <code>RESET</code> and turn <code>OFF</code> our <code>ODS GRAPHICS</code> such that other plots in the same <em>session</em> behave <em>cleanly</em>. A lot of headache can arise if we forget to reset the output delivery system.</p>
+<p>Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> below shows the resulting plot.</p>
+<p>The SAS code below is almost identical to the above. I will explain <code>SGPANEL</code> below.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb6-1" title="1">ODS <span class="fu">PDF</span> <span class="kw">FILE</span> = <span class="st">&#39;~/Survival Analysis/Supplementary Notes/Graph2.pdf&#39;</span> NOTOC;</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">OPTIONS</span> NODATE</a>
+<a class="sourceLine" id="cb6-3" title="3">        NONUMBER</a>
+<a class="sourceLine" id="cb6-4" title="4">        ORIENTATION = LANDSCAPE;</a>
+<a class="sourceLine" id="cb6-5" title="5"></a>
+<a class="sourceLine" id="cb6-6" title="6">ODS GRAPHICS <span class="kw">ON</span> / NOBORDER HEIGHT = 9IN;</a>
+<a class="sourceLine" id="cb6-7" title="7"></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="kw">PROC</span> SGPANEL<span class="kw"> DATA</span> = outdata;</a>
+<a class="sourceLine" id="cb6-9" title="9">PANELBY new / COLUMNS = <span class="dv">2</span></a>
+<a class="sourceLine" id="cb6-10" title="10">              ROWS = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb6-11" title="11">              </a>
+<a class="sourceLine" id="cb6-12" title="12">SCATTER <span class="kw">X</span> = size Y = price;</a>
+<a class="sourceLine" id="cb6-13" title="13"></a>
+<a class="sourceLine" id="cb6-14" title="14">REG <span class="kw">x</span> = size y = predvalues / NOMARKERS;</a>
+<a class="sourceLine" id="cb6-15" title="15"></a>
+<a class="sourceLine" id="cb6-16" title="16">ROWAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Selling price&quot;</span>;</a>
+<a class="sourceLine" id="cb6-17" title="17">COLAXIS <span class="kw">LABEL</span> = <span class="st">&quot;Size&quot;</span>;</a>
+<a class="sourceLine" id="cb6-18" title="18"></a>
+<a class="sourceLine" id="cb6-19" title="19">KEYLEGEND / NOBORDER;</a>
+<a class="sourceLine" id="cb6-20" title="20"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb6-21" title="21"></a>
+<a class="sourceLine" id="cb6-22" title="22">ODS GRAPHICS / <span class="kw">RESET</span> = ALL;</a>
+<a class="sourceLine" id="cb6-23" title="23">ODS GRAPHICS OFF;</a>
+<a class="sourceLine" id="cb6-24" title="24"></a>
+<a class="sourceLine" id="cb6-25" title="25">ODS <span class="fu">PDF</span> <span class="fu">CLOSE</span>;</a></code></pre></div>
+<p>The <code>SGPANEL</code> procedure splits a plot into a matrix of panels or facets. In Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> we had both new and old house observations in the same plot. This time we want to seperate them, thus we use the <code>PANELBY</code> statement and tell SAS to use <code>new</code> as the classification variable. We want the two plots to be located beside each other, thus we set the option argument <code>COLUMNS</code> to <code>2</code> and <code>ROWS</code> to <code>1</code>. The rest of the statements in <code>SGPANEL</code> is similiar to those in <code>SGPLOT</code> above. This time we fortunatly don’t need to set the colors or markers specifically. <span class="citation">(SAS Institute Inc. <a href="#ref-SGPANEL" role="doc-biblioref">2013</a><a href="#ref-SGPANEL" role="doc-biblioref">b</a>)</span>.</p>
+<p>Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> below shows the resulting plot.</p>
+</div>
+</div>
+<div id="plots" class="section level2">
+<h2><span class="header-section-number">1.2</span> Plots</h2>
+<div id="the-first-figure" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> The First Figure</h3>
+<p>Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> below show the svg output achieved from an
+<code>ODS GRAPHICS</code>
+statement using the option argument
+<code>OUTPUTFMT = SVG</code>.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<div class="figure" style="text-align: center"><span id="fig:Graph-1"></span>
+<img src="graphs/EX13_G1.svg" alt="Output from the SGPlot Procedure." width="100%" />
+<p class="caption">
+Figure 1.1: Output from the SGPlot Procedure.
+</p>
+</div>
+</div>
+<div id="the-second-figure" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> The Second Figure</h3>
+<p>Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> below show the svg output achieved from an
+<code>ODS GRAPHICS</code>
+statement using the option argument
+<code>OUTPUTFMT = SVG</code>.</p>
+<div class="figure" style="text-align: center"><span id="fig:Graph-2"></span>
+<img src="graphs/EX13_G2.svg" alt="Output from the SGPanel Procedure." width="100%" />
+<p class="caption">
+Figure 1.2: Output from the SGPanel Procedure.
+</p>
+</div>
+<p>We notice that Figure <a href="exercise-13.html#fig:Graph-1">1.1</a> and Figure <a href="exercise-13.html#fig:Graph-2">1.2</a> are indeed equal to Figure 5.1 and Figure 5.2 <span class="citation">(Pedersen <a href="#ref-Pedersen2019" role="doc-biblioref">2019</a>)</span>.</p>
+
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Pedersen2019">
+<p>Pedersen, Jan. 2019. <em>Survival Analysis (Supplementary Notes)</em>. Department of Mathematics, Aarhus University.</p>
+</div>
+<div id="ref-GLM">
+<p>SAS Institute Inc. 2011b. “SAS 9.3 ® GLM Procedure.” <a href="https://support.sas.com/documentation/cdl/en/statug/63962/HTML/default/viewer.htm#glm_toc.htm">https://support.sas.com/documentation/cdl/en/statug/63962/HTML/default/viewer.htm#glm_toc.htm</a>.</p>
+</div>
+<div id="ref-ODS">
+<p>SAS Institute Inc. 2011c. “SAS 9.3 ® Output Delivery System.” <a href="https://documentation.sas.com/?docsetId=odsug&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en">https://documentation.sas.com/?docsetId=odsug&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en</a>.</p>
+</div>
+<div id="ref-DATAStep">
+<p>SAS Institute Inc. 2013a. “SAS 9.4 ® DATA Step Statements: Reference.” <a href="https://documentation.sas.com/?docsetId=lestmtsref&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en">https://documentation.sas.com/?docsetId=lestmtsref&amp;docsetTarget=titlepage.htm&amp;docsetVersion=9.4&amp;locale=en</a>.</p>
+</div>
+<div id="ref-SGPANEL">
+<p>SAS Institute Inc. 2013b. “SAS 9.4 ® SGPANEL Procedure.” <a href="https://documentation.sas.com/?docsetId=grstatproc&amp;docsetTarget=p121sy0a2jycdfn13zygo90opvra.htm&amp;docsetVersion=9.4&amp;locale=en">https://documentation.sas.com/?docsetId=grstatproc&amp;docsetTarget=p121sy0a2jycdfn13zygo90opvra.htm&amp;docsetVersion=9.4&amp;locale=en</a>.</p>
+</div>
+<div id="ref-SGPLOT">
+<p>SAS Institute Inc. 2013c. “SAS 9.4 ® SGPLOT Procedure.” <a href="https://documentation.sas.com/?docsetId=grstatproc&amp;docsetTarget=n0yjdd910dh59zn1toodgupaj4v9.htm&amp;docsetVersion=9.4&amp;locale=en">https://documentation.sas.com/?docsetId=grstatproc&amp;docsetTarget=n0yjdd910dh59zn1toodgupaj4v9.htm&amp;docsetVersion=9.4&amp;locale=en</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Blackboard, Survival Analysis with SAS.<a href="exercise-13.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Because of <span class="math inline">\(\LaTeX\)</span> reasons.<a href="exercise-13.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>A style template would give us the possibility to remove <em>any</em> titles.<a href="exercise-13.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Notice the infinite scaling of svg output.<a href="exercise-13.html#fnref4" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-16.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/afrandsen/survival-analysis/edit/master/Handins/Handin_1/01-exercise13.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Handin_1_Andreas_Kracht_Frandsen.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
