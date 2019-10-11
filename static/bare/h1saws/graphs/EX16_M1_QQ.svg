@@ -1,0 +1,690 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" baseProfile="full" version="1.1" id="SVGMain" onload='SVGMain_Init("SVGMain")' viewBox="-1 -1 865 649">
+<desc id="desc_SVGMain">Q-Q Plot of Residuals for fev1</desc>
+<defs>
+<clipPath id="SVGMain_clipPage1">
+<rect x="-1" y="-1" width="865" height="649"></rect>
+</clipPath>
+</defs>
+<g id="SVGMain_Page1" clip-path="url(#SVGMain_clipPage1)">
+<g transform=" scale(1.0, 1.0)">
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 14.0, 14.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath0">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath0)">
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 26.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath1">
+<rect x="-1.0" y="-1.0" width="837.0" height="595.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath1)">
+<rect x="67.41935" y="0.45732" width="767.08243" height="539.13043" style="fill: #FFFFFF; "></rect>
+<defs>
+<clipPath id="SVGMain_ClipPath2">
+<rect x="66.0" y="-1.0" width="770.0" height="542.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath2)">
+<path d="M66.91995 522.52053L835.00119 17.52454" style="stroke: #808080; stroke-width: 1; fill: none; "></path>
+<circle cx="74.91039" cy="435.55866" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="134.2239" cy="433.9962" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="167.38289" cy="432.2387" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="191.35829" cy="423.71846" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="210.51474" cy="415.40957" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="226.67293" cy="406.6264" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="240.77564" cy="394.42492" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="253.37755" cy="385.99488" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="264.83409" cy="383.24372" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="275.38744" cy="382.70587" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="285.21052" cy="377.89134" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="294.43137" cy="375.4379" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="303.14766" cy="361.77663" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="311.43573" cy="361.24693" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="319.35654" cy="359.43402" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="326.95958" cy="356.85127" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="334.28572" cy="356.46119" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="341.36914" cy="356.00539" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="348.23878" cy="353.78392" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="354.91945" cy="351.3859" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="361.43261" cy="350.21567" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="367.79702" cy="345.14037" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="374.02922" cy="322.3428" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="380.14391" cy="322.05541" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="386.1543" cy="319.69648" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="392.07229" cy="318.86907" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="397.90877" cy="316.68456" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="403.6737" cy="315.12426" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="409.37634" cy="314.305" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="415.02528" cy="310.29941" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="420.62864" cy="308.21757" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="426.19409" cy="307.40048" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="431.72897" cy="303.80344" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="437.24034" cy="302.76252" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="442.73505" cy="295.23594" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="448.21983" cy="292.73523" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="453.70131" cy="288.48735" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="459.18609" cy="286.66628" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="464.6808" cy="285.06903" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="470.19217" cy="283.66466" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="475.72704" cy="265.0123" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="481.29249" cy="264.18489" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="486.89586" cy="263.09887" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="492.5448" cy="257.97847" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="498.24743" cy="248.09897" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="504.01237" cy="246.21216" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="509.84885" cy="236.43533" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="515.76684" cy="234.61426" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="521.77722" cy="227.08552" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="527.89192" cy="222.10259" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="534.12412" cy="219.34327" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="540.48853" cy="209.08401" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="547.00169" cy="207.81111" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="553.68236" cy="207.36561" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="560.552" cy="201.10977" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="567.63541" cy="186.26796" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="574.96155" cy="175.04167" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="582.5646" cy="160.83223" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="590.4854" cy="160.19986" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="598.77348" cy="157.51443" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="607.48977" cy="152.71022" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="616.71062" cy="150.36761" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="626.5337" cy="147.52409" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="637.08705" cy="144.14056" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="648.54358" cy="135.98161" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="661.14549" cy="93.82541" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="675.24821" cy="78.38002" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="691.4064" cy="77.05986" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="710.56285" cy="64.79264" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="734.53825" cy="55.47162" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="767.69724" cy="52.77587" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+<circle cx="827.01075" cy="46.23264" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath3">
+<rect x="-1.0" y="-1.0" width="837.0" height="595.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath3)">
+<path d="M66.91995 540.08695L835.00119 540.08695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M835.00119 540.08695L835.00119 -0.04186" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M66.91995 -0.04186L835.00119 -0.04186" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M66.91995 540.08695L66.91995 -0.04186" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M66.91995 540.08695L835.00119 540.08695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M134.9848 540.08695L134.9848 546.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 129.4848, 562.48695)">
+<text textLength="11.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000032;</text>
+</g>
+<path d="M292.97269 540.08695L292.97269 546.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 287.47269, 562.48695)">
+<text textLength="11.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000031;</text>
+</g>
+<path d="M450.96057 540.08695L450.96057 546.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 447.46057, 562.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;</text>
+</g>
+<path d="M608.94845 540.08695L608.94845 546.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 605.44845, 562.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;</text>
+</g>
+<path d="M766.93633 540.08695L766.93633 546.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 763.43633, 562.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000032;</text>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 424.45997, 588.48695)">
+<text textLength="54.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000051;&#x000075;&#x000061;&#x00006E;&#x000074;&#x000069;&#x00006C;&#x000065;</text>
+</g>
+<path d="M66.91995 540.08695L66.91995 -0.04186" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M66.91995 532.09983L60.51728 532.09983" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.51562, 536.09983)">
+<text textLength="22.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000031;&#x00002E;&#x000035;</text>
+</g>
+<path d="M66.91995 444.74074L60.51728 444.74074" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.51562, 448.74074)">
+<text textLength="22.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000031;&#x00002E;&#x000030;</text>
+</g>
+<path d="M66.91995 357.38164L60.51728 357.38164" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.51562, 361.38164)">
+<text textLength="22.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000030;&#x00002E;&#x000035;</text>
+</g>
+<path d="M66.91995 270.02254L60.51728 270.02254" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.51562, 274.02254)">
+<text textLength="18.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000030;</text>
+</g>
+<path d="M66.91995 182.66344L60.51728 182.66344" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.51562, 186.66344)">
+<text textLength="18.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000035;</text>
+</g>
+<path d="M66.91995 95.30434L60.51728 95.30434" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.51562, 99.30434)">
+<text textLength="18.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x00002E;&#x000030;</text>
+</g>
+<path d="M66.91995 7.94525L60.51728 7.94525" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.51562, 11.94524)">
+<text textLength="18.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x00002E;&#x000035;</text>
+</g>
+<g transform="matrix(0.0, -1.0, 1.0, 0.0, 14.50896, 298.52254)">
+<text textLength="57.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000052;&#x000065;&#x000073;&#x000069;&#x000064;&#x000075;&#x000061;&#x00006C;</text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath4">
+<rect x="-1.0" y="-1.0" width="837.0" height="27.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath4)">
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 336.0, 0.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath5">
+<rect x="-1.0" y="-1.0" width="232.0" height="20.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath5)">
+<text textLength="223.0" lengthAdjust="spacingAndGlyphs" x="4.0" y="14.48437" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font6', 'Albany AMT', sans-serif; font-size: 16px; font-weight: bold; white-space: pre; ">&#x000051;&#x00002D;&#x000051;&#x000020;&#x000050;&#x00006C;&#x00006F;&#x000074;&#x000020;&#x00006F;&#x000066;&#x000020;&#x000052;&#x000065;&#x000073;&#x000069;&#x000064;&#x000075;&#x000061;&#x00006C;&#x000073;&#x000020;&#x000066;&#x00006F;&#x000072;&#x000020;&#x000066;&#x000065;&#x000076;&#x000031;</text>
+</g>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 26.0)">
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath6">
+<rect x="66.0" y="-1.0" width="770.0" height="542.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath6)">
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath7">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath7)">
+</g>
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="864" height="648" fill="#FFFFFF" fill-opacity="0" aria-hidden="true">
+<desc>Q-Q Plot of Residuals for fev1</desc>
+</rect>
+</g>
+<g id="SVGMain_singleTip1" visibility="hidden" pointer-events="none">
+   <rect id="SVGMain_singleBox1" x="0" y="0" width="88" height="20" rx="2" ry="2" fill="white" stroke="black" stroke-width="1.08" opacity="0.8"></rect>
+   <text id="SVGMain_singleText1" x="5" y="10" font-family="'Albany AMT', sans-serif" font-size="8"><tspan id="SVGMain_tiptspan1" x="5" class="tiptext"><![CDATA[ ]]></tspan></text>
+</g>
+<defs>
+<style type="text/css"><![CDATA[
+    tspan.tiptext { white-space: pre }
+]]></style>
+</defs>
+<defs>
+<style type="text/css"><![CDATA[
+  @font-face {
+      font-family: "SVGMain_Albany AMT Font3";
+      src: url("#SVGMain_Font3") format("svg")
+      }
+]]></style>
+<font id="SVGMain_Font3" horiz-adv-x="3776" >
+   <font-face      font-family="SVGMain_Albany AMT Font3"
+    units-per-em="2048" ascent="1854" descent="-434" >
+      <font-face-src>
+         <font-face-name name="SVGMain_Albany AMT Font3"></font-face-name>
+      </font-face-src>
+   </font-face>
+<missing-glyph><path d="M0 0v4992h3456v-4992h-3456" fill="none"></path>
+</missing-glyph>
+<glyph unicode="&#40;" horiz-adv-x="680" 
+d="M597 -294L524 -341Q317 -110 222 101 T128 576Q128 838 222 1050 T524 1493L597 1446Q444 1242 371 
+1034 T298 578Q298 332 369 124 T597 -294Z" ></glyph>
+<glyph unicode="&#47;" horiz-adv-x="552" 
+d="M565 1450L122 0L-10 0L432 1450L565 1450Z" ></glyph>
+<glyph unicode="&#104;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 650Q853 766 790 831 T620 896Q451 896 298 725 L298 0L128 0L128 
+1493L298 1493L298 896Q470 1066 662 1066 Q830 1066 927 973 T1024 708Z" ></glyph>
+<glyph unicode="&#65;" horiz-adv-x="1360" 
+d="M1333 0L1153 0L946 512L375 512L169 0L-10 0L573 1450L749 1450L1333 0ZM878 682L661 
+1222L444 682L878 682Z" ></glyph>
+<glyph unicode="&#103;" horiz-adv-x="1147" 
+d="M1024 -22Q1024 -220 904 -323 T562 -426Q336 -426 128 -298 L192 -170Q395 -256 574 -256 Q706 -256 780 
+-187 T853 6L853 170Q736 0 538 0 Q328 0 206 147 T85 554Q85 782 211 924 T526 1066Q
+738 1066 853 938 L853 1066L1024 1066L1024 -22ZM853 361L853 768Q816 822 737 859 T566 896Q418 
+896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+<glyph unicode="&#45;" horiz-adv-x="680" 
+d="M597 426L85 426L85 597L597 597L597 426Z" ></glyph>
+<glyph unicode="&#50;" horiz-adv-x="1147" 
+d="M1024 0L85 0L85 152Q336 390 502 539 T760 802T853 1035Q853 1148 771 1214 T559 1280Q380 
+1280 180 1194 L128 1365Q338 1450 566 1450 Q770 1450 897 1335 T1024 1039Q1024 904 941 773 T682 480L
+346 170L1024 170L1024 0Z" ></glyph>
+<glyph unicode="&#49;" horiz-adv-x="1147" 
+d="M725 0L554 0L554 1201Q435 1066 213 1066 L213 1237Q480 1237 597 1450 L725 1450L725 0Z" ></glyph>
+<glyph unicode="&#48;" horiz-adv-x="1147" 
+d="M1066 734Q1066 358 943 178 T576 0Q329 0 207 180 T85 734Q85 1092 207 1271 T576 1450Q820 
+1450 943 1271 T1066 734ZM575 170Q734 170 815 296 T896 726Q896 1014 820 1147 T573 1280Q414 1280 
+335 1141 T256 726Q256 448 336 309 T575 170Z" ></glyph>
+<glyph unicode="&#81;" horiz-adv-x="1572" 
+d="M810 0L804 0Q481 0 283 205 T85 724Q85 1048 273 1249 T790 1450Q1112 1450 1302 1251 T1493 
+726Q1493 477 1355 285 T981 29Q1080 -85 1253 -85 Q1340 -85 1424 -85 L1450 -227Q1339 -256 1263 -256 Q
+1092 -256 998 -196 T810 0ZM790 170Q1038 170 1180 319 T1322 724Q1322 976 1179 1128 T790 1280Q542 
+1280 399 1129 T256 724Q256 470 395 320 T790 170Z" ></glyph>
+<glyph unicode="&#117;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 170Q682 0 489 0 Q321 0 224 93 T128 358L128 1066L298 1066L298 
+416Q298 301 361 236 T532 170Q700 170 853 341 L853 1066L1024 1066L1024 0Z" ></glyph>
+<glyph unicode="&#97;" horiz-adv-x="1147" 
+d="M1077 0L906 0Q884 22 869 62 T853 128Q660 0 429 0 Q276 0 180 74 T85 282Q85 
+387 142 460 T314 573T606 625L853 640L853 668Q853 796 790 846 T569 896Q493 896 381 870 T
+192 810L128 981Q218 1019 348 1043 T587 1066Q810 1066 917 972 T1024 686L1024 248Q1024 84 1077 
+0ZM853 298L853 512Q616 500 542 493 T398 464T292 402T256 304Q256 244 310 207 T449 170Q
+557 170 671 206 T853 298Z" ></glyph>
+<glyph unicode="&#110;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 650Q853 766 790 831 T620 896Q451 896 298 725 L298 0L128 0L128 
+1066L298 1066L298 896Q470 1066 662 1066 Q830 1066 927 973 T1024 708Z" ></glyph>
+<glyph unicode="&#116;" horiz-adv-x="552" 
+d="M597 42Q497 0 437 0 Q298 0 234 73 T170 304L170 896L42 896L42 1066L170 1066L170 
+1365L341 1365L341 1066L554 1066L554 896L341 896L341 331Q341 170 461 170 Q513 170 576 170 Z" ></glyph>
+<glyph unicode="&#105;" horiz-adv-x="425" 
+d="M298 0L128 0L128 1066L298 1066L298 0ZM212 1493Q248 1493 273 1461 T298 1385Q298 1342 273 
+1311 T212 1280Q178 1280 153 1311 T128 1385Q128 1430 152 1462 T212 1493Z" ></glyph>
+<glyph unicode="&#108;" horiz-adv-x="425" 
+d="M298 0L128 0L128 1493L298 1493L298 0Z" ></glyph>
+<glyph unicode="&#101;" horiz-adv-x="1147" 
+d="M1109 170Q876 0 654 0 Q386 0 235 143 T85 535Q85 773 221 919 T591 1066Q800 1066 933 
+928 T1066 558L1066 512L256 512Q264 346 363 258 T638 170Q845 170 1045 298 ZM896 640Q882 757 
+795 826 T589 896Q458 896 370 829 T256 640Z" ></glyph>
+<glyph unicode="&#46;" horiz-adv-x="552" 
+d="M255 256Q309 256 346 219 T384 127Q384 73 346 36 T255 0Q200 0 164 36 T128 127Q128 
+182 164 219 T255 256Z" ></glyph>
+<glyph unicode="&#53;" horiz-adv-x="1147" 
+d="M341 905Q442 938 544 938 Q782 938 924 812 T1066 477Q1066 268 924 134 T551 0Q296 0 85 
+128 L139 298Q338 170 550 170 Q699 170 797 256 T896 477Q896 609 795 688 T538 768Q433 768 
+336 725 L170 758L170 1450L1024 1450L1024 1280L341 1280L341 905Z" ></glyph>
+<glyph unicode="&#82;" horiz-adv-x="1487" 
+d="M1461 0L1251 0L750 597L341 597L341 0L170 0L170 1450L742 1450Q995 1450 1137 1341 T1280 
+1028Q1280 876 1186 770 T937 624ZM341 768L736 768Q914 768 1012 835 T1109 1026Q1109 1280 721 1280 L
+341 1280L341 768Z" ></glyph>
+<glyph unicode="&#115;" horiz-adv-x="1020" 
+d="M832 810Q668 896 512 896 Q388 896 322 867 T256 786Q256 750 305 726 T448 668L588 618Q788 
+546 863 478 T938 306Q938 162 822 81 T510 0Q278 0 85 85 L149 256Q328 170 506 170 Q
+768 170 768 300 Q768 350 706 385 T465 483Q322 536 267 556 T169 610T105 685T85 779Q85 
+908 196 987 T516 1066Q604 1066 709 1044 T896 981Z" ></glyph>
+<glyph unicode="&#100;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 170Q736 0 538 0 Q331 0 208 148 T85 554Q85 782 211 924 T526 
+1066Q742 1066 853 938 L853 1493L1024 1493L1024 0ZM853 361L853 768Q816 822 737 859 T566 896Q
+418 896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+</font>
+<style type="text/css"><![CDATA[
+  @font-face {
+      font-family: "SVGMain_Albany AMT Font6";
+      font-weight: bold;
+      src: url("#SVGMain_Font6") format("svg")
+      }
+]]></style>
+<font id="SVGMain_Font6" horiz-adv-x="3648" >
+   <font-face      font-family="SVGMain_Albany AMT Font6"
+    font-weight="bold"    units-per-em="2048" ascent="1854" descent="-434" >
+      <font-face-src>
+         <font-face-name name="SVGMain_Albany AMT Font6"></font-face-name>
+      </font-face-src>
+   </font-face>
+<missing-glyph><path d="M0 0v4992h3456v-4992h-3456" fill="none"></path>
+</missing-glyph>
+<glyph unicode="&#40;" horiz-adv-x="680" 
+d="M640 -252L524 -341Q294 -107 189 104 T85 576Q85 832 187 1042 T524 1493L640 1404Q517 1245 450 
+1024 T384 578Q384 328 448 112 T640 -252Z" ></glyph>
+<glyph unicode="&#47;" horiz-adv-x="552" 
+d="M565 1450L208 0L-10 0L346 1450L565 1450Z" ></glyph>
+<glyph unicode="&#104;" horiz-adv-x="1232" 
+d="M1109 0L810 0L810 594Q810 810 662 810 Q530 810 426 640 L426 0L128 0L128 1493L426 
+1493L426 896Q555 1066 759 1066 Q919 1066 1014 970 T1109 700Z" ></glyph>
+<glyph unicode="&#65;" horiz-adv-x="1402" 
+d="M1493 0L1172 0L1027 384L466 384L320 0L0 0L594 1450L898 1450L1493 0ZM930 640L746 
+1124L562 640L930 640Z" ></glyph>
+<glyph unicode="&#103;" horiz-adv-x="1232" 
+d="M1109 48Q1109 -180 965 -303 T557 -426Q321 -426 128 -298 L192 -85Q365 -170 536 -170 Q668 -170 739 
+-111 T810 60L810 128Q692 0 513 0 Q325 0 205 141 T85 521Q85 774 206 920 T525 1066Q
+605 1066 683 1031 T810 938L810 1066L1109 1066L1109 48ZM810 384L810 682Q722 810 594 810 Q502 
+810 443 735 T384 528Q384 400 441 328 T594 256Q719 256 810 384Z" ></glyph>
+<glyph unicode="&#81;" horiz-adv-x="1572" 
+d="M725 0Q426 30 255 232 T85 722Q85 1047 273 1249 T790 1450Q1112 1450 1302 1250 T1493 724Q1493 
+480 1370 293 T1024 34Q1114 -85 1248 -85 Q1338 -85 1434 -85 L1493 -308Q1352 -341 1255 -341 Q1068 -341 
+957 -260 T725 0ZM790 256Q979 256 1087 383 T1194 724Q1194 938 1086 1066 T790 1194Q600 1194 492 
+1067 T384 724Q384 514 489 385 T790 256Z" ></glyph>
+<glyph unicode="&#45;" horiz-adv-x="680" 
+d="M597 384L85 384L85 682L597 682L597 384Z" ></glyph>
+<glyph unicode="&#32;" horiz-adv-x="552" 
+></glyph>
+<glyph unicode="&#80;" horiz-adv-x="1360" 
+d="M128 1450L742 1450Q996 1450 1138 1329 T1280 987Q1280 762 1137 637 T744 512L426 512L426 0L128 
+0L128 1450ZM426 768L722 768Q844 768 913 826 T981 984Q981 1080 912 1137 T722 1194L426 1194L
+426 768Z" ></glyph>
+<glyph unicode="&#108;" horiz-adv-x="552" 
+d="M426 0L128 0L128 1493L426 1493L426 0Z" ></glyph>
+<glyph unicode="&#111;" horiz-adv-x="1232" 
+d="M618 1066Q858 1066 1005 925 T1152 533Q1152 282 1005 141 T618 0Q377 0 231 141 T85 533Q85 
+784 231 925 T618 1066ZM618 256Q724 256 789 331 T853 533Q853 660 790 735 T618 810Q505 810 
+444 738 T384 533Q384 404 445 330 T618 256Z" ></glyph>
+<glyph unicode="&#116;" horiz-adv-x="680" 
+d="M725 85Q633 0 527 0 Q353 0 262 84 T170 326L170 810L42 810L42 1066L170 1066L170 
+1408L469 1408L469 1066L682 1066L682 810L469 810L469 392Q469 328 494 292 T563 256Q614 256 661 
+298 Z" ></glyph>
+<glyph unicode="&#102;" horiz-adv-x="680" 
+d="M768 1408L704 1194Q619 1237 562 1237 Q518 1237 494 1203 T469 1107L469 1066L682 1066L682 853L469 
+853L469 0L170 0L170 853L0 853L0 1066L170 1066L170 1158Q170 1321 265 1407 T538 1493Q636 
+1493 768 1408Z" ></glyph>
+<glyph unicode="&#82;" horiz-adv-x="1487" 
+d="M1504 0L1124 0L684 512L426 512L426 0L128 0L128 1450L772 1450Q1032 1450 1177 1328 T1322 
+986Q1322 822 1239 710 T1021 562ZM426 768L763 768Q1024 768 1024 983 Q1024 1083 953 1139 T748 1194L
+426 1194L426 768Z" ></glyph>
+<glyph unicode="&#101;" horiz-adv-x="1147" 
+d="M1066 128Q888 0 655 0 Q394 0 239 146 T85 535Q85 774 223 920 T590 1066Q800 1066 933 
+916 T1066 499L1066 426L384 426Q398 353 475 304 T661 256Q832 256 1002 341 ZM768 640Q757 738 
+706 795 T582 853Q504 853 449 795 T384 640Z" ></glyph>
+<glyph unicode="&#115;" horiz-adv-x="1147" 
+d="M960 725Q779 810 609 810 Q426 810 426 762 Q426 738 477 723 T650 664Q894 568 980 496 T1066 
+319Q1066 0 548 0 Q312 0 85 85 L149 341Q334 256 530 256 Q768 256 768 314 Q768 336 
+713 371 T530 446Q311 510 219 583 T128 761Q128 901 249 983 T593 1066Q806 1066 1024 981 Z" ></glyph>
+<glyph unicode="&#105;" horiz-adv-x="552" 
+d="M276 1493Q336 1493 381 1449 T426 1342Q426 1282 382 1238 T276 1194Q214 1194 171 1238 T128 1342Q128 
+1405 171 1449 T276 1493ZM426 0L128 0L128 1066L426 1066L426 0Z" ></glyph>
+<glyph unicode="&#100;" horiz-adv-x="1232" 
+d="M1109 0L810 0L810 144Q690 0 511 0 Q324 0 204 140 T85 514Q85 769 204 917 T511 
+1066Q700 1066 810 923 L810 1493L1109 1493L1109 0ZM810 382L810 692Q724 810 592 810 Q501 810 
+442 735 T384 528Q384 400 441 328 T594 256Q717 256 810 382Z" ></glyph>
+<glyph unicode="&#117;" horiz-adv-x="1232" 
+d="M1109 0L810 0L810 194Q682 0 479 0 Q318 0 223 97 T128 366L128 1066L426 1066L426 
+471Q426 256 574 256 Q706 256 810 426 L810 1066L1109 1066L1109 0Z" ></glyph>
+<glyph unicode="&#97;" horiz-adv-x="1147" 
+d="M1077 0L778 0Q725 70 725 128 Q586 0 392 0 Q249 0 167 85 T85 311Q85 413 139 
+489 T301 611T557 669L725 682L725 699Q725 853 529 853 Q468 853 369 828 T192 768L128 981Q
+228 1018 357 1042 T588 1066Q802 1066 913 965 T1024 670L1024 248Q1024 100 1077 0ZM725 341L725 
+512Q573 494 537 487 T461 457T403 398T384 320Q384 275 411 244 T486 213Q618 213 725 341Z" ></glyph>
+<glyph unicode="&#114;" horiz-adv-x="807" 
+d="M810 1024L746 768Q706 810 662 810 Q613 810 567 780 T474 673T426 582L426 0L128 0L128 
+1066L426 1066L426 853Q482 970 540 1018 T682 1066Q759 1066 810 1024Z" ></glyph>
+<glyph unicode="&#118;" horiz-adv-x="1147" 
+d="M1162 1066L734 0L418 0L-10 1066L261 1066L576 283L890 1066L1162 1066Z" ></glyph>
+<glyph unicode="&#49;" horiz-adv-x="1147" 
+d="M853 0L554 0L554 1119Q432 981 170 981 L170 1237Q478 1237 597 1450 L853 1450L853 0Z" ></glyph>
+</font>
+</defs>
+<script type="text/ecmascript"><![CDATA[
+var SVGMain_SVGRoot = null;
+var SVGMain_viewBox = null;
+var SVGMain_TrueCoords = null;
+var SVGMain_singleTip = null;
+var SVGMain_singleBox = null;
+var SVGMain_singleText = null;
+var SVGMain_tiptspan = null;
+var SVGMain_attrScale = 1;
+var SVGMain_rightEdge = null;
+var SVGMain_SVGHeight = null;
+var SVGMain_SVGWidth = null;
+function SVGMain_Init(anchor) {
+   SVGMain_SVGRoot = document.getElementById(anchor);
+   SVGMain_TrueCoords = SVGMain_SVGRoot.createSVGPoint();
+   SVGMain_singleTip = document.getElementById(anchor + '_singleTip1');
+   SVGMain_singleBox = document.getElementById(anchor + '_singleBox1');
+   SVGMain_singleText = document.getElementById(anchor + '_singleText1');
+   SVGMain_tiptspan = document.getElementById(anchor + '_tiptspan1');
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_SVGRoot.addEventListener('mousemove', SVGMain_ShowTooltip, false);
+   SVGMain_SVGRoot.addEventListener('mouseout', SVGMain_HideTooltip, false);
+   SVGMain_SVGHeight = SVGMain_SVGRoot.getAttributeNS(null, "height");
+   SVGMain_SVGWidth = SVGMain_SVGRoot.getAttributeNS(null, "width");
+   if (!isNaN(parseFloat(SVGMain_SVGHeight)) && !isNaN(parseFloat(SVGMain_SVGWidth)))
+      SVGMain_GetHW();
+   SVGMain_viewBox  = new ViewBox(SVGMain_SVGRoot);
+}
+function SVGMain_GetHW()
+{
+    if (SVGMain_SVGWidth != null && SVGMain_SVGWidth != "") {
+       if (SVGMain_SVGWidth.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGWidth.replace(/%/,""))/100;
+          SVGMain_SVGWidth = window.innerWidth * factor;
+       }
+       else if (SVGMain_SVGWidth.match(/in/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96;
+       else if (SVGMain_SVGWidth.match(/cm/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth);
+    }
+    if (SVGMain_SVGHeight != null && SVGMain_SVGHeight != "") {
+       if (SVGMain_SVGHeight.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGHeight.replace(/%/,""))/100;
+          SVGMain_SVGHeight = window.innerHeight * factor;
+       }
+       else if (SVGMain_SVGHeight.match(/in/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96;
+       else if (SVGMain_SVGHeight.match(/cm/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight);
+    }
+}
+function SVGMain_GetScaleFactors(evt)
+{
+   var zoomFactor = 1;
+   windowWidth  = (top.innerWidth==undefined)  ? window.innerWidth  : top.innerWidth;
+   windowHeight = (top.innerHeight==undefined) ? window.innerHeight : top.innerHeight;
+   SVGMain_rightEdge = (SVGMain_SVGWidth) ? SVGMain_SVGWidth - window.pageXOffset : windowWidth;
+   if (parseFloat(SVGMain_SVGWidth) > 0 || parseFloat(SVGMain_SVGHeight) > 0)
+      var tipScale = 1.38888;
+   else {
+      var tipXScale  = (screen.width/windowWidth) / SVGMain_SVGRoot.currentScale;
+      var tipYScale  = (screen.height/windowHeight) / SVGMain_SVGRoot.currentScale;
+      var tipScale   = (tipXScale + tipYScale)/2.0;
+   }
+   SVGMain_attrScale = tipScale;
+   if (navigator.appName == 'Adobe SVG Viewer') {
+      if (screen.deviceXDPI != null && screen.logicalXDPI != null)
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+      SVGMain_attrScale = zoomFactor*tipScale;
+   }
+   else if (navigator.userAgent != null && navigator.userAgent != '') {
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("msie") != -1 || ua.indexOf("trident") != -1) {
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("ipad") != -1) {
+         zoomFactor = SVGMain_SVGRoot.clientWidth / window.innerWidth;
+         SVGMain_attrScale = 1.5 / zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("opera") != -1)
+         SVGMain_attrScale = tipScale;
+      else if (ua.indexOf("firefox") != -1)
+         SVGMain_attrScale = tipScale;
+      else {
+         if (SVGMain_SVGWidth > 0 || SVGMain_SVGHeight > 0)
+            zoomFactor = 1;
+         else
+            zoomFactor = parseInt(document.defaultView.getComputedStyle(SVGMain_SVGRoot, null).width,10)/
+                                  SVGMain_SVGRoot.clientWidth;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge *= zoomFactor;
+      }
+   }
+}
+function SVGMain_GetTrueCoords(evt)
+{
+   var trans = SVGMain_SVGRoot.currentTranslate;
+   var scale = SVGMain_SVGRoot.currentScale;
+   SVGMain_GetScaleFactors();
+   var p1    = SVGMain_SVGRoot.createSVGPoint();
+   var p2;
+   if (!SVGMain_SVGRoot.getScreenCTM) {
+      var m = SVGMain_viewBox.getTM();
+      m = m.scale( 1/scale );
+      m = m.translate(-trans.x, -trans.y);
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      p2 = p1.matrixTransform(m);
+   }
+   else {
+      var m = SVGMain_SVGRoot.getScreenCTM();
+      if (navigator.userAgent.toLowerCase().indexOf("ipad") != -1) {
+         p1.x = evt.clientX + window.pageXOffset;
+         p1.y = evt.clientY + window.pageYOffset;
+      }
+      else {
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      }
+      p2 = p1.matrixTransform(m.inverse());
+   }
+   SVGMain_TrueCoords.x = Math.round(p2.x*100) / 100;
+   SVGMain_TrueCoords.y = Math.round(p2.y*100) / 100;
+}
+function SVGMain_HideTooltip( evt )
+{
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_singleTip.setAttributeNS(null, 'visibility', 'hidden');
+}
+function SVGMain_ShowTooltip( evt )
+{
+   SVGMain_GetTrueCoords( evt );
+   var targetElement = evt.target;
+   var tspanCount = targetElement.getElementsByTagName('desc').length;
+   if (tspanCount == 1) {
+      var targetTspan = targetElement.getElementsByTagName('desc').item(0);
+      if ( targetTspan) {
+         if (targetTspan.firstChild != null)
+            SVGMain_tiptspan.firstChild.nodeValue = targetTspan.firstChild.nodeValue; }
+   }
+   if ( '' != SVGMain_tiptspan.firstChild.nodeValue )
+   {
+      var outline = SVGMain_singleText.getBBox();
+      SVGMain_singleBox.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleText.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleTip.setAttributeNS(null, 'visibility', 'visible');
+      if (evt.clientX + ((outline.width + 10)/1.08) * SVGMain_attrScale > SVGMain_rightEdge) {
+         var xPos = SVGMain_TrueCoords.x - parseInt((outline.width + 10)*SVGMain_attrScale);
+         if (xPos < 0)
+            xPos = 0;
+      }
+      else
+         var xPos = SVGMain_TrueCoords.x;
+      if (SVGMain_TrueCoords.y < 21) {
+         var yPos = SVGMain_TrueCoords.y + ((outline.height + 21)/1.08)*SVGMain_attrScale;
+         if (yPos > windowHeight)
+            yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      }
+      else
+         var yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      if (Number(outline.width == 0))
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width);
+      else
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width + 10);
+      SVGMain_singleBox.setAttributeNS(null, 'height', outline.height + 10);
+      SVGMain_singleTip.setAttributeNS(null, 'transform', 'translate(' + xPos + ',' + yPos + ')');
+   }
+}
+/*****
+*   ViewBox.js
+*   copyright 2002, Kevin Lindsey
+*****/
+ViewBox.VERSION = "1.0";
+/*****
+*   constructor
+*****/
+function ViewBox(svgNode) {
+    if ( arguments.length > 0 ) {
+        this.init(svgNode);
+    }
+}
+/*****
+*   init
+*****/
+ViewBox.prototype.init = function(svgNode) {
+    var viewBox = svgNode.getAttributeNS(null, "viewBox");
+    var preserveAspectRatio = svgNode.getAttributeNS(null, "preserveAspectRatio");
+      if ( viewBox != null && viewBox != "" ) {
+        var params = viewBox.split(/\s*,\s*|\s+/);
+        this.x      = parseFloat( params[0] );
+        this.y      = parseFloat( params[1] );
+        this.width  = parseFloat( params[2] );
+        this.height = parseFloat( params[3] );
+    }
+    else {
+        this.x      = 0;
+        this.y      = 0;
+        this.width  = window.innerWidth;
+        this.height = window.innerHeight;
+    }
+    if (preserveAspectRatio != null && preserveAspectRatio != "" )
+    {
+        var params = preserveAspectRatio.split(/\s+/);
+        var align  = params[0];
+        if ( align == "none" ) {
+            this.alignX = "none";
+            this.alignY = "none";
+        } else {
+            this.alignX = align.substring(1,4);
+            this.alignY = align.substring(5,9);
+        }
+        if ( params.length == 2 ) {
+            this.meetOrSlice = params[1];
+        } else {
+            this.meetOrSlice = "meet";
+        }
+    } else {
+        this.align  = "xMidYMid";
+        this.alignX = "Mid";
+        this.alignY = "Mid";
+        this.meetOrSlice = "meet";
+    }
+}
+ViewBox.prototype.getTM = function() {
+    var matrix       = SVGMain_SVGRoot.createSVGMatrix();
+    if (isNaN(parseFloat(SVGMain_SVGWidth)))
+       var width = window.innerWidth;
+    else
+       var width = SVGMain_SVGWidth;
+    if (isNaN(parseFloat(SVGMain_SVGHeight)))
+       var height = window.innerHeight
+    else
+       var height = SVGMain_SVGHeight;
+    var x_ratio = this.width  / width;
+    var y_ratio = this.height / height;
+    matrix = matrix.translate(this.x, this.y);
+    if ( this.alignX == "none" ) {
+        matrix = matrix.scaleNonUniform( x_ratio, y_ratio );
+    } else {
+        if ( x_ratio < y_ratio && this.meetOrSlice == "meet" ||
+             x_ratio > y_ratio && this.meetOrSlice == "slice")
+        {
+           var x_trans = 0;
+           var x_diff  = width*y_ratio - this.width;
+           if ( this.alignX == "Mid" )
+              x_trans = -x_diff/2;
+           else if ( this.alignX == "Max" )
+              x_trans = -x_diff;
+           matrix = matrix.translate(x_trans, 0);
+           matrix = matrix.scale( y_ratio );
+        }
+        else if ( x_ratio > y_ratio && this.meetOrSlice == "meet" ||
+                  x_ratio < y_ratio && this.meetOrSlice == "slice"   )
+        {
+            var y_trans = 0;
+            var y_diff  = height*x_ratio - this.height;
+            if ( this.alignY == "Mid" )
+               y_trans = -y_diff/2;
+            else if ( this.alignY == "Max" )
+                y_trans = -y_diff;
+            matrix = matrix.translate(0, y_trans);
+            matrix = matrix.scale( x_ratio );
+        }
+        else
+            matrix = matrix.scale( x_ratio );
+    }
+    return matrix;
+}
+]]></script>
+</svg>
