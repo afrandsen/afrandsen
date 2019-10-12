@@ -150,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.6" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrugbasedrug"><i class="fa fa-check"></i><b>2.1.6</b> Model – base+drug+base*drug</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="exercise-16.html"><a href="exercise-16.html#analysis-in-sas"><i class="fa fa-check"></i><b>2.2</b> Analysis in SAS</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="exercise-16.html"><a href="exercise-16.html#additive-model-base"><i class="fa fa-check"></i><b>2.2.1</b> Additive Model – base</a></li>
+<li class="chapter" data-level="2.2.1" data-path="exercise-16.html"><a href="exercise-16.html#model-base-1"><i class="fa fa-check"></i><b>2.2.1</b> Model – base</a></li>
 <li class="chapter" data-level="2.2.2" data-path="exercise-16.html"><a href="exercise-16.html#model-drug-1"><i class="fa fa-check"></i><b>2.2.2</b> Model – drug</a></li>
 <li class="chapter" data-level="2.2.3" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-1"><i class="fa fa-check"></i><b>2.2.3</b> Model – base+drug</a></li>
 <li class="chapter" data-level="2.2.4" data-path="exercise-16.html"><a href="exercise-16.html#model-basedrug-gamma-1"><i class="fa fa-check"></i><b>2.2.4</b> Model – base+drug (gamma)</a></li>
@@ -669,8 +669,8 @@ a
 </div>
 <div id="analysis-in-sas" class="section level2">
 <h2><span class="header-section-number">2.2</span> Analysis in SAS</h2>
-<div id="additive-model-base" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Additive Model – base</h3>
+<div id="model-base-1" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Model – base</h3>
 <p>The following show the analysis for the first model. The SAS code, SAS outputs and figures for the rest of the models are available in Appendix <a href="sas-of-exercise-16.html#sas-of-exercise-16">A</a>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">PROC</span> GENMOD<span class="kw"> DATA</span> = fev PLOTS(UNPACK) = ALL;</a>
 <a class="sourceLine" id="cb7-2" title="2">CLASS drug;</a>
