@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://afrandsen.rbind.io"
 languageCode = "en-us"
 title = "R, Bikes and Training"
 theme = "hugo-xmin"
