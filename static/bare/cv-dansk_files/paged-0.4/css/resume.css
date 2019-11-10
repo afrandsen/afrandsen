@@ -22,7 +22,7 @@
 
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 10px;
-  --decorator-outer-offset-left: -5.5px;
+  --decorator-outer-offset-left: -5.1px;
   --decorator-border-width: 1px;
   --decorator-outer-dim: 9px;
   --decorator-border: 1px solid #ccc;
@@ -350,7 +350,7 @@ h1, h2{
 }
 
 .aside .level2{
-  margin-top: 0.5in;
+  margin-top: 0.3in;
 }
 
 #contact ul{
