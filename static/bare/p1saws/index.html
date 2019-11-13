@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Survival Analysis with SAS</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andreas Kracht Frandsen" />
+    <meta name="date" content="2019-10-24" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <script src="libs/pdfmake/pdfmake.min.js"></script>
+    <script src="libs/pdfmake/vfs_fonts.js"></script>
+    <link href="libs/dt-ext-buttons/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="libs/dt-ext-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="libs/dt-ext-buttons/js/buttons.flash.min.js"></script>
+    <script src="libs/dt-ext-buttons/js/buttons.html5.min.js"></script>
+    <script src="libs/dt-ext-buttons/js/buttons.colVis.min.js"></script>
+    <script src="libs/dt-ext-buttons/js/buttons.print.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Survival Analysis with SAS
+## <div class="line-block">Exercise 4.9<br />
+# 🐁 + ☢ = ?</div>
+### Andreas Kracht Frandsen
+### 2019-10-24
+
+---
+
+
+# Import data &amp;#128001;
+
+ - Perfect data set.
+
+--
+
+158, 192, 193, 194, 195, 202, 212, 215, 229, 230, 237, 240, 244,  
+247, 259, 300, 301, 337, 415, 444, 485, 496, 529, 537, 624, 707, 800  
+430, 590, 606, 638, 655, 679, 691, 693, 696, 747, 752, 760, 778,  
+821, 986  
+136, 246, 255, 376, 421, 565, 616, 617, 652, 655, 658, 660, 662,  
+675, 681, 734, 736, 737, 757, 769, 777, 801, 807, 825, 855, 857,  
+864, 868, 870, 873, 882, 895, 910, 934, 942, 1015, 1019
+
+--
+
+ - SAS can help.
+
+```sas
+DATA mice;
+  INFILE '~/Survival Analysis/KLMO/exercise4.9.txt' DLM=',';
+  INPUT time : @@;
+  IF _N_ &lt;= 27 THEN cause = 1;
+  ELSE IF _N_ &gt; 27 AND _N_ &lt;= 42 THEN cause = 2;
+  ELSE cause = 0;
+RUN;
+```
+
+---
+
+# Exercise 4.9, Klein &amp; Moeschberger &amp;#128001;
+
+Hoel and Walburg (1972) report results of an experiment to study the effects of radiation on life lengths of mice. Mice were given a dose of 300 rads of radiation at 5–6 weeks of age and followed to death. At death each mouse was necropsied to determine if the cause of death was thymic lymphoma, reticulum cell sarcoma, or another cause. The ages of the mice at death are shown below:
+
+
+
+--
+
+<div id="htmlwidget-86d17f9caf6ba352fca9" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-86d17f9caf6ba352fca9">{"x":{"filter":"none","extensions":["Buttons"],"caption":"<caption style=\"caption-side: bottom; text-align: center;\">\n  <em>Table 1: Age at Death and Cause of Death. Other: 0, Thymic: 1, Reticulum: 2.<\/em>\n<\/caption>","data":[[158,192,193,194,195,202,212,215,229,230,237,240,244,247,259,300,301,337,415,444,485,496,529,537,624,707,800,430,590,606,638,655,679,691,693,696,747,752,760,778,821,986,136,246,255,376,421,565,616,617,652,655,658,660,662,675,681,734,736,737,757,769,777,801,807,825,855,857,864,868,870,873,882,895,910,934,942,1015,1019],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>&amp;#128001; &amp;#10013;<\/th>\n      <th>&amp;#9762;<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","pdf","csv"],"pageLength":3,"columnDefs":[{"className":"dt-right","targets":[0,1]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[3,10,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':value == 0 ? \"pink\" : value == 1 ? \"darkgrey\" : value == 2 ? \"magenta\" : \"\"});\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'background':isNaN(parseFloat(value)) || value <= 136.000000 ? '' : 'linear-gradient(90.000000deg, transparent ' + (1019.000000 - value)/883.000000 * 100 + '%, steelblue ' + (1019.000000 - value)/883.000000 * 100 + '%)','background-size':'100% 90%','background-repeat':'no-repeat','background-position':'center'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+
+---
+
+# Tasks &amp;#128001;
+
+1. For each of the three competing risks estimate the cumulative incidence function at 200, 300,..., 1,000 days by considering the two other
+risks as a single competing risk.
+
+2. Show that the sum of the three cumulative incidence functions found in part 1 is equal to the Kaplan-Meier estimate of the overall survival function for this set of data.
+
+3. Repeat part 1 using the complement of the marginal Kaplan-Meier estimates. What are the quantities estimating and how different from the results found in part 1 are these estimates?
+
+4. Compute the conditional probability function for thymic lymphoma at 500 and 800 days. What are the quantities estimating?
+
+---
+
+# 1. CI's &amp;#128001;
+
+```sas
+PROC LIFETEST DATA = mice
+              PLOTS = CIF(TEST)
+              OUTCIF = mice_ci
+              TIMELIST = 200 TO 1000 BY 100
+              REDUCEOUT;
+  TIME time*cause(3) / EVENTCODE;
+RUN;
+```
+
+--
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="cifplot.svg" alt="CI of Failcode=2, thus for cause Reticulum Cell Sarcoma." width="45%" /&gt;
+&lt;p class="caption"&gt;CI of Failcode=2, thus for cause Reticulum Cell Sarcoma.&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+# 2. Sum of CI's &amp;#128001;
+
+ - KME of overall survival function.
+ 
+```sas
+PROC LIFETEST DATA = mice
+              TIMELIST = 200 TO 1000 BY 100
+              OUTSURV = mice_okme
+              REDUCEOUT;
+  TIME time;
+RUN;
+```
+
+At time 200, we have
+
+`\begin{equation}
+\text{KME}_{O}(200)=0.924=1-(0.0633+0.0127)=1-\sum_{i=0}^2\text{CI}_{i}(200).
+\end{equation}`
+
+---
+
+# 3. Marginal KME's &amp;#128001;
+
+ - Thymic Marginal KME.
+ 
+ The marginal KME for Thymic Lymphoma estimates the probability of having died from this cause in a hypothetical world where no other cause of death is possible. Notice (0, 2) in the `TIME` statement.
+
+```sas
+PROC LIFETEST DATA = mice
+              TIMELIST = 200 TO 1000 BY 100
+              OUTSURV = mice_tkme
+              REDUCEOUT;
+  TIME time*cause(0, 2);
+RUN;
+```
+
+ - Reticulum KME.
+
+ Replace with (0, 1).
+
+ - Other KME.
+
+ Replace with (1, 2).
+ 
+---
+
+# 4. Conditional Probability &amp;#128001;
+
+`\begin{align}
+\text{CP}_{1}(500)&amp;=\frac{\text{CI}_{1}(500)}{1-\left(\text{CI}_{0}(500)+\text{CI}_{2}(500)\right)}\\
+                  &amp;=\frac{0.2785}{1-\left(0.0127+0.0633\right)}\\
+                  &amp;=0.3014.
+\end{align}`
+
+`\begin{align}
+\text{CP}_{1}(800)&amp;=\frac{\text{CI}_{1}(800)}{1-\left(\text{CI}_{0}(800)+\text{CI}_{2}(500)\right)}\\
+                  &amp;=\frac{0.3418}{1-\left(0.1646+0.2658\right)}\\
+                  &amp;=0.6001.
+\end{align}`
+
+These are estimates of the conditional probability of dying from Thymic Lymphoma among survivors who have not died from one of the other two causes of death.
+
+---
+
+# Results &amp;#128001;
+
+[SAS ODS PDF Output](summary.pdf).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

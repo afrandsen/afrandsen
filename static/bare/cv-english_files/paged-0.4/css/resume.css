@@ -431,6 +431,18 @@ p a:hover {
   border-bottom: none;
 }
 
+a { 
+  color: black; 
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
 li a {
   color: black; 
   text-decoration: none;
