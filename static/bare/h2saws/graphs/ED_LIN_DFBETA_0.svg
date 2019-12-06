@@ -1,0 +1,833 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" baseProfile="full" version="1.1" id="SVGMain" onload='SVGMain_Init("SVGMain")' viewBox="-1 -1 865 649">
+<desc id="desc_SVGMain">The SGPlot Procedure</desc>
+<defs>
+<clipPath id="SVGMain_clipPage1">
+<rect x="-1" y="-1" width="865" height="649"></rect>
+</clipPath>
+</defs>
+<g id="SVGMain_Page1" clip-path="url(#SVGMain_clipPage1)">
+<g transform=" scale(1.0, 1.0)">
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 14.0, 14.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath0">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath0)">
+<defs>
+<clipPath id="SVGMain_ClipPath1">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath1)">
+<rect x="81.40262" y="0.49919" width="753.09916" height="565.08856" style="fill: #FFFFFF; "></rect>
+<defs>
+<clipPath id="SVGMain_ClipPath2">
+<rect x="80.0" y="-1.0" width="756.0" height="568.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath2)">
+<circle cx="678.63357" cy="174.31281" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="242.87903" cy="224.80344" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="493.93424" cy="126.96872" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="526.49465" cy="179.66733" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="280.07927" cy="165.14944" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="307.18181" cy="100.00602" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="203.36337" cy="193.51583" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="267.44595" cy="174.17412" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="361.66557" cy="230.59393" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="658.67297" cy="78.16671" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="292.56489" cy="157.43303" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="447.45156" cy="167.76702" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="246.91452" cy="169.70916" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="686.03498" cy="168.87743" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="315.92327" cy="137.14504" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="265.09185" cy="138.94047" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="355.98639" cy="189.75566" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="637.59939" cy="230.00341" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="383.22649" cy="159.5845" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="429.39472" cy="167.11349" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="336.75218" cy="282.29407" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="348.1926" cy="158.23038" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="592.23611" cy="185.33286" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="192.58173" cy="189.48886" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="246.08421" cy="161.72849" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="253.39749" cy="178.70696" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="473.4732" cy="209.92875" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="567.10697" cy="239.45816" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="307.08865" cy="311.03591" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="449.99451" cy="309.47492" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="274.84253" cy="201.52739" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="337.87473" cy="222.30238" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="411.7148" cy="168.05071" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="279.24458" cy="198.49346" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="342.986" cy="202.36201" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="337.65408" cy="229.31316" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="609.55128" cy="150.53646" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="280.29121" cy="256.84266" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="392.78853" cy="175.73683" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="334.9711" cy="132.07369" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="339.28804" cy="337.38634" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="270.65124" cy="74.65244" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="282.54213" cy="177.66498" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="450.71601" cy="7.98711" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="239.55985" cy="151.27401" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="478.65205" cy="142.44308" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="239.38959" cy="181.82191" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="293.36026" cy="174.95349" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="312.21099" cy="103.91313" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="333.66173" cy="178.25436" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="296.89028" cy="165.18209" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="279.50696" cy="189.60449" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="429.05277" cy="101.66324" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="446.08807" cy="236.25604" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="310.57455" cy="80.32497" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="218.96292" cy="325.97506" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="505.81843" cy="142.53039" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="216.20221" cy="168.36675" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="277.17514" cy="260.886" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="328.0159" cy="272.68343" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="329.10762" cy="89.93633" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="554.70652" cy="261.91606" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="533.47144" cy="209.33753" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="358.70692" cy="126.02188" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="235.21604" cy="149.01514" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="285.76812" cy="186.66838" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="227.3723" cy="178.62912" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="181.20866" cy="143.95155" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="453.78299" cy="208.22752" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="188.62304" cy="203.53328" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="330.9118" cy="155.55955" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="221.37855" cy="120.57467" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="276.25357" cy="108.86416" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="265.41914" cy="178.07694" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="549.65147" cy="157.27827" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="484.27845" cy="233.04222" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="450.28455" cy="233.15675" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="368.56233" cy="216.97091" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="216.88273" cy="176.89825" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="351.1851" cy="66.33991" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="369.48617" cy="153.39564" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="301.57053" cy="115.149" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="486.23977" cy="246.41959" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="313.33793" cy="224.63718" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="338.42287" cy="185.03632" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="366.65066" cy="189.99581" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="164.24769" cy="313.2784" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="339.60869" cy="137.285" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="326.368" cy="191.67811" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="186.62319" cy="326.3981" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="422.04483" cy="253.64403" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="641.34137" cy="123.38386" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="265.92062" cy="109.44428" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="423.13487" cy="191.9749" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="616.2288" cy="288.55994" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="265.54384" cy="180.90474" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="505.39931" cy="68.91394" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="190.81731" cy="134.66058" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="302.30087" cy="172.28278" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="441.39211" cy="216.38023" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="267.52596" cy="161.90848" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="239.87637" cy="203.88586" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="441.80293" cy="241.37232" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="288.16201" cy="229.86989" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="158.82879" cy="167.81626" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="305.36122" cy="92.46559" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="503.01716" cy="300.09605" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="291.54891" cy="190.53261" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="272.86681" cy="167.75991" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="281.01406" cy="277.11885" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="199.55859" cy="175.92989" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="348.90137" cy="175.89636" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="298.54579" cy="195.70852" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="262.15721" cy="157.71287" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="184.29394" cy="174.37114" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="355.84303" cy="269.91837" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="377.29189" cy="212.88419" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="310.53164" cy="199.47696" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="220.89646" cy="139.47761" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="201.33195" cy="171.34128" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="661.9951" cy="123.06803" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="245.68753" cy="202.5088" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="569.57829" cy="179.12834" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="270.16044" cy="192.23464" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="266.98163" cy="178.4638" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="391.27936" cy="186.33738" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="186.84104" cy="178.16184" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="455.67035" cy="257.87449" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="252.47123" cy="229.59329" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="336.83289" cy="254.28535" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="404.85376" cy="133.68576" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="197.08588" cy="172.36829" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="259.4646" cy="103.83543" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="264.67273" cy="158.92439" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="292.88469" cy="150.85853" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="304.25051" cy="209.30746" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="304.11985" cy="236.209" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="248.32407" cy="183.52439" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="365.07867" cy="154.35244" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="213.89385" cy="195.83736" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="260.69384" cy="175.53842" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="290.39784" cy="152.87695" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="297.78271" cy="240.02752" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="386.86004" cy="180.51329" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="298.76223" cy="182.93568" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="221.07958" cy="160.05497" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="467.97106" cy="558.09983" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="246.16053" cy="358.30858" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="337.44396" cy="87.94597" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="216.51843" cy="157.42163" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="329.24941" cy="207.25603" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="445.809" cy="102.4167" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="280.17597" cy="179.88548" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="785.68222" cy="166.4211" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="403.77093" cy="103.38647" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="367.49545" cy="137.25291" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="283.77444" cy="179.57019" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="310.60259" cy="129.30626" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="274.56057" cy="236.32324" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="304.65022" cy="210.28948" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="228.06209" cy="172.26898" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="433.03477" cy="160.79337" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="208.58415" cy="148.76618" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="487.4968" cy="297.11719" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="351.31846" cy="184.02935" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="260.88379" cy="163.32351" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="275.07075" cy="108.4348" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="190.7863" cy="185.92907" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="151.24231" cy="313.45324" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="207.12891" cy="187.08764" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="167.24677" cy="191.43895" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="288.43238" cy="184.39114" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="221.75057" cy="150.42277" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="232.16214" cy="199.21456" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="248.15547" cy="191.41581" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="249.29095" cy="268.58742" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="246.04416" cy="198.58966" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="269.65919" cy="239.12652" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="211.56298" cy="177.90988" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="167.69082" cy="179.73415" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="264.44351" cy="170.93628" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="266.0308" cy="203.99836" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="223.32812" cy="173.05125" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="224.7877" cy="301.82042" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="289.76278" cy="177.52383" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="516.61068" cy="236.55059" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="312.96414" cy="339.70596" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="360.62156" cy="235.45783" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="255.99461" cy="187.80478" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="243.64595" cy="195.95142" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="506.2444" cy="239.5106" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="249.19084" cy="192.56694" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="358.37487" cy="150.73753" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="117.34914" cy="185.34112" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="234.35745" cy="150.01124" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="387.04417" cy="206.67579" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="206.08361" cy="180.42523" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="305.74431" cy="138.94579" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="269.16607" cy="171.26973" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="214.4664" cy="161.95985" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="330.68559" cy="143.87529" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="270.21011" cy="211.3712" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="166.7398" cy="176.94469" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="289.95316" cy="98.50798" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="280.91097" cy="198.86657" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="284.48932" cy="212.17377" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="439.52768" cy="366.945" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="350.81081" cy="110.29073" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="194.47805" cy="191.1983" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="293.60887" cy="183.39478" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="264.76979" cy="191.18363" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="202.72374" cy="184.55644" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="300.17984" cy="183.66539" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="335.80939" cy="66.74815" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="238.64326" cy="273.19862" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="297.31547" cy="207.36763" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="300.45717" cy="330.43829" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="187.36169" cy="171.83148" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="152.90091" cy="182.86982" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="382.50561" cy="116.6422" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="260.49119" cy="198.1186" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="385.83227" cy="258.93501" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="667.91082" cy="174.7229" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="208.23214" cy="174.94009" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="228.10688" cy="171.94662" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="249.23106" cy="197.68154" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="307.77398" cy="120.41297" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="240.45348" cy="167.75966" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="510.18691" cy="132.87408" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="312.39342" cy="137.35162" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="607.69912" cy="190.05084" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="374.89169" cy="173.1053" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="309.66658" cy="163.75058" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="307.44743" cy="143.71434" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="230.44199" cy="162.73582" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="190.98985" cy="176.93339" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="389.87597" cy="222.02157" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="404.17639" cy="271.95239" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="404.53702" cy="245.38742" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="269.3651" cy="196.50215" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="226.17854" cy="183.55599" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="390.65407" cy="245.29948" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="430.02935" cy="89.25304" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="281.61508" cy="234.52463" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="224.77878" cy="182.37251" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="197.57993" cy="174.85192" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="352.33721" cy="176.62496" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="290.28485" cy="195.7672" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="341.18093" cy="172.22393" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="311.10873" cy="158.58683" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="276.52076" cy="196.279" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="349.34701" cy="242.60712" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="479.7797" cy="427.60569" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="214.86182" cy="184.251" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="203.72749" cy="173.07959" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="177.66292" cy="173.66677" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="237.81416" cy="196.01743" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="269.08319" cy="188.74447" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="372.74501" cy="214.76394" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="375.13022" cy="267.47456" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="309.83802" cy="189.73739" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="294.98967" cy="171.1126" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="357.53031" cy="143.06858" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="368.82972" cy="153.88835" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="308.61247" cy="180.17185" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="328.75867" cy="197.91732" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="761.07793" cy="145.22433" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="522.28316" cy="182.26608" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="267.1907" cy="179.94701" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="187.23463" cy="169.8525" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="262.98829" cy="187.12044" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="318.14244" cy="157.66365" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="254.81916" cy="183.36953" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="313.17683" cy="180.35383" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="183.28834" cy="181.28221" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="263.93748" cy="185.61509" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="286.68037" cy="163.55027" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="195.58792" cy="175.4683" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="248.72411" cy="193.78868" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="220.68951" cy="184.30736" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="827.01075" cy="161.86312" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="203.48713" cy="174.98045" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="230.85759" cy="195.44612" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="255.76959" cy="185.32424" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="268.7012" cy="181.52364" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="254.42411" cy="174.22949" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="311.02608" cy="198.45052" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="273.86003" cy="186.6075" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="324.46943" cy="34.95141" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="302.41933" cy="212.12322" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="291.24187" cy="178.51246" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="301.33655" cy="183.98491" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="613.36908" cy="205.04181" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="409.82846" cy="212.80236" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="206.31608" cy="181.48294" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="291.59905" cy="157.78167" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="361.66272" cy="188.61321" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="311.52199" cy="188.84947" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="245.64126" cy="175.02909" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="613.04149" cy="190.23962" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="276.83999" cy="179.63364" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="212.41504" cy="178.39321" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="369.69786" cy="207.80178" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="217.41416" cy="176.41244" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="270.04688" cy="178.06203" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="333.79079" cy="194.57549" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="236.75565" cy="172.57355" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="316.10295" cy="200.66488" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="451.31629" cy="200.65624" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="341.53208" cy="200.68881" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="314.34418" cy="174.27638" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+<circle cx="227.89308" cy="180.48978" r="3.0" style="stroke: #000000; stroke-width: 1; fill: none; "></circle>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath3">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath3)">
+<path d="M80.90322 566.08695L835.00119 566.08695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M835.00119 566.08695L835.00119 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M80.90322 0.0L835.00119 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M80.90322 566.08695L80.90322 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M80.90322 566.08695L835.00119 566.08695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M88.89366 566.08695L88.89366 572.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 85.39366, 588.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000034;</text>
+</g>
+<path d="M322.68784 566.08695L322.68784 572.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 319.18784, 588.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000036;</text>
+</g>
+<path d="M556.48201 566.08695L556.48201 572.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 552.98202, 588.48695)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000038;</text>
+</g>
+<path d="M790.27619 566.08695L790.27619 572.48695" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 783.27619, 588.48695)">
+<text textLength="14.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x000030;</text>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 406.95161, 614.48695)">
+<text textLength="103.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x00004C;&#x000069;&#x00006E;&#x000065;&#x000061;&#x000072;&#x000020;&#x000050;&#x000072;&#x000065;&#x000064;&#x000069;&#x000063;&#x000074;&#x00006F;&#x000072;</text>
+</g>
+<path d="M80.90322 566.08695L80.90322 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M80.90322 515.97794L74.50056 515.97794" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.49889, 519.97794)">
+<text textLength="36.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000030;&#x00002E;&#x000030;&#x000030;&#x000033;</text>
+</g>
+<path d="M80.90322 406.45341L74.50056 406.45341" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.49889, 410.45341)">
+<text textLength="36.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000030;&#x00002E;&#x000030;&#x000030;&#x000032;</text>
+</g>
+<path d="M80.90322 296.92889L74.50056 296.92889" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.49889, 300.92889)">
+<text textLength="36.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x00002D;&#x000030;&#x00002E;&#x000030;&#x000030;&#x000031;</text>
+</g>
+<path d="M80.90322 187.40436L74.50056 187.40436" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.49889, 191.40436)">
+<text textLength="32.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000030;&#x000030;&#x000030;</text>
+</g>
+<path d="M80.90322 77.87984L74.50056 77.87984" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 38.49889, 81.87984)">
+<text textLength="32.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000030;&#x000030;&#x000031;</text>
+</g>
+<g transform="matrix(0.0, -1.0, 1.0, 0.0, 14.49223, 396.04347)">
+<text textLength="226.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000044;&#x000069;&#x000066;&#x000066;&#x000065;&#x000072;&#x000065;&#x00006E;&#x000063;&#x000065;&#x000020;&#x000069;&#x00006E;&#x000020;&#x000074;&#x000068;&#x000065;&#x000020;&#x000070;&#x000061;&#x000072;&#x000061;&#x00006D;&#x000065;&#x000074;&#x000065;&#x000072;&#x000020;&#x000066;&#x00006F;&#x000072;&#x000020;&#x000061;&#x000067;&#x000065;</text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath4">
+<rect x="80.0" y="-1.0" width="756.0" height="568.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath4)">
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath5">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath5)">
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="864" height="648" fill="#FFFFFF" fill-opacity="0" aria-hidden="true">
+<desc>The SGPlot Procedure</desc>
+</rect>
+</g>
+<g id="SVGMain_singleTip1" visibility="hidden" pointer-events="none">
+   <rect id="SVGMain_singleBox1" x="0" y="0" width="88" height="20" rx="2" ry="2" fill="white" stroke="black" stroke-width="1.08" opacity="0.8"></rect>
+   <text id="SVGMain_singleText1" x="5" y="10" font-family="'Albany AMT', sans-serif" font-size="8"><tspan id="SVGMain_tiptspan1" x="5" class="tiptext"><![CDATA[ ]]></tspan></text>
+</g>
+<defs>
+<style type="text/css"><![CDATA[
+    tspan.tiptext { white-space: pre }
+]]></style>
+</defs>
+<defs>
+<style type="text/css"><![CDATA[
+  @font-face {
+      font-family: "SVGMain_Albany AMT Font3";
+      src: url("#SVGMain_Font3") format("svg")
+      }
+]]></style>
+<font id="SVGMain_Font3" horiz-adv-x="3776" >
+   <font-face      font-family="SVGMain_Albany AMT Font3"
+    units-per-em="2048" ascent="1854" descent="-434" >
+      <font-face-src>
+         <font-face-name name="SVGMain_Albany AMT Font3"></font-face-name>
+      </font-face-src>
+   </font-face>
+<missing-glyph><path d="M0 0v4992h3456v-4992h-3456" fill="none"></path>
+</missing-glyph>
+<glyph unicode="&#40;" horiz-adv-x="680" 
+d="M597 -294L524 -341Q317 -110 222 101 T128 576Q128 838 222 1050 T524 1493L597 1446Q444 1242 371 
+1034 T298 578Q298 332 369 124 T597 -294Z" ></glyph>
+<glyph unicode="&#47;" horiz-adv-x="552" 
+d="M565 1450L122 0L-10 0L432 1450L565 1450Z" ></glyph>
+<glyph unicode="&#104;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 650Q853 766 790 831 T620 896Q451 896 298 725 L298 0L128 0L128 
+1493L298 1493L298 896Q470 1066 662 1066 Q830 1066 927 973 T1024 708Z" ></glyph>
+<glyph unicode="&#65;" horiz-adv-x="1360" 
+d="M1333 0L1153 0L946 512L375 512L169 0L-10 0L573 1450L749 1450L1333 0ZM878 682L661 
+1222L444 682L878 682Z" ></glyph>
+<glyph unicode="&#103;" horiz-adv-x="1147" 
+d="M1024 -22Q1024 -220 904 -323 T562 -426Q336 -426 128 -298 L192 -170Q395 -256 574 -256 Q706 -256 780 
+-187 T853 6L853 170Q736 0 538 0 Q328 0 206 147 T85 554Q85 782 211 924 T526 1066Q
+738 1066 853 938 L853 1066L1024 1066L1024 -22ZM853 361L853 768Q816 822 737 859 T566 896Q418 
+896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+<glyph unicode="&#52;" horiz-adv-x="1147" 
+d="M1066 298L853 298L853 0L682 0L682 298L42 298L42 469L674 1450L853 1450L853 469L1066 
+469L1066 298ZM682 469L682 1157L240 469L682 469Z" ></glyph>
+<glyph unicode="&#54;" horiz-adv-x="1147" 
+d="M256 815Q306 891 403 936 T606 981Q800 981 933 849 T1066 507Q1066 282 942 141 T596 0Q348 
+0 216 180 T85 704Q85 1069 231 1260 T635 1450Q823 1450 981 1365 L922 1194Q776 1280 626 1280 Q
+450 1280 355 1163 T256 815ZM589 170Q736 170 816 256 T896 492Q896 637 812 724 T582 810Q543 
+810 502 800 T424 770T354 724T289 657T256 601Q256 434 343 302 T589 170Z" ></glyph>
+<glyph unicode="&#56;" horiz-adv-x="1147" 
+d="M796 771Q924 730 995 638 T1066 425Q1066 244 929 122 T576 0Q360 0 222 122 T85 427Q85 
+545 156 636 T353 771Q252 800 190 884 T128 1074Q128 1234 247 1342 T574 1450Q778 1450 901 1343 T
+1024 1074Q1024 967 962 884 T796 771ZM576 853Q695 853 774 911 T853 1070Q853 1164 776 1222 T574 
+1280Q450 1280 374 1223 T298 1070Q298 968 382 911 T576 853ZM577 170Q712 170 804 244 T896 430Q
+896 535 801 609 T577 682Q446 682 351 608 T256 430Q256 314 344 242 T577 170Z" ></glyph>
+<glyph unicode="&#49;" horiz-adv-x="1147" 
+d="M725 0L554 0L554 1201Q435 1066 213 1066 L213 1237Q480 1237 597 1450 L725 1450L725 0Z" ></glyph>
+<glyph unicode="&#48;" horiz-adv-x="1147" 
+d="M1066 734Q1066 358 943 178 T576 0Q329 0 207 180 T85 734Q85 1092 207 1271 T576 1450Q820 
+1450 943 1271 T1066 734ZM575 170Q734 170 815 296 T896 726Q896 1014 820 1147 T573 1280Q414 1280 
+335 1141 T256 726Q256 448 336 309 T575 170Z" ></glyph>
+<glyph unicode="&#76;" horiz-adv-x="1147" 
+d="M1109 0L170 0L170 1450L341 1450L341 170L1109 170L1109 0Z" ></glyph>
+<glyph unicode="&#105;" horiz-adv-x="425" 
+d="M298 0L128 0L128 1066L298 1066L298 0ZM212 1493Q248 1493 273 1461 T298 1385Q298 1342 273 
+1311 T212 1280Q178 1280 153 1311 T128 1385Q128 1430 152 1462 T212 1493Z" ></glyph>
+<glyph unicode="&#110;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 650Q853 766 790 831 T620 896Q451 896 298 725 L298 0L128 0L128 
+1066L298 1066L298 896Q470 1066 662 1066 Q830 1066 927 973 T1024 708Z" ></glyph>
+<glyph unicode="&#101;" horiz-adv-x="1147" 
+d="M1109 170Q876 0 654 0 Q386 0 235 143 T85 535Q85 773 221 919 T591 1066Q800 1066 933 
+928 T1066 558L1066 512L256 512Q264 346 363 258 T638 170Q845 170 1045 298 ZM896 640Q882 757 
+795 826 T589 896Q458 896 370 829 T256 640Z" ></glyph>
+<glyph unicode="&#97;" horiz-adv-x="1147" 
+d="M1077 0L906 0Q884 22 869 62 T853 128Q660 0 429 0 Q276 0 180 74 T85 282Q85 
+387 142 460 T314 573T606 625L853 640L853 668Q853 796 790 846 T569 896Q493 896 381 870 T
+192 810L128 981Q218 1019 348 1043 T587 1066Q810 1066 917 972 T1024 686L1024 248Q1024 84 1077 
+0ZM853 298L853 512Q616 500 542 493 T398 464T292 402T256 304Q256 244 310 207 T449 170Q
+557 170 671 206 T853 298Z" ></glyph>
+<glyph unicode="&#114;" horiz-adv-x="680" 
+d="M682 1024L618 853Q574 896 538 896 Q486 896 438 852 T345 724T298 638L298 0L128 0L128 
+1066L298 1066L298 810Q371 960 428 1013 T562 1066Q634 1066 682 1024Z" ></glyph>
+<glyph unicode="&#32;" horiz-adv-x="552" 
+></glyph>
+<glyph unicode="&#80;" horiz-adv-x="1360" 
+d="M170 1450L754 1450Q972 1450 1104 1333 T1237 1035Q1237 851 1106 724 T747 597L341 597L341 0L170 
+0L170 1450ZM341 768L737 768Q894 768 980 838 T1066 1032Q1066 1142 979 1211 T737 1280L341 1280L
+341 768Z" ></glyph>
+<glyph unicode="&#100;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 170Q736 0 538 0 Q331 0 208 148 T85 554Q85 782 211 924 T526 
+1066Q742 1066 853 938 L853 1493L1024 1493L1024 0ZM853 361L853 768Q816 822 737 859 T566 896Q
+418 896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+<glyph unicode="&#99;" horiz-adv-x="1020" 
+d="M85 535Q85 786 230 926 T591 1066Q774 1066 938 938 L888 810Q744 896 590 896 Q444 896 350 
+797 T256 534Q256 368 349 269 T584 170Q728 170 886 256 L938 128Q771 0 585 0 Q363 0 
+224 146 T85 535Z" ></glyph>
+<glyph unicode="&#116;" horiz-adv-x="552" 
+d="M597 42Q497 0 437 0 Q298 0 234 73 T170 304L170 896L42 896L42 1066L170 1066L170 
+1365L341 1365L341 1066L554 1066L554 896L341 896L341 331Q341 170 461 170 Q513 170 576 170 Z" ></glyph>
+<glyph unicode="&#111;" horiz-adv-x="1147" 
+d="M576 1066Q802 1066 934 920 T1066 533Q1066 292 934 146 T576 0Q349 0 217 145 T85 533Q85 
+776 217 921 T576 1066ZM576 170Q724 170 810 276 T896 533Q896 697 812 796 T576 896Q423 896 
+339 797 T256 533Q256 380 342 275 T576 170Z" ></glyph>
+<glyph unicode="&#45;" horiz-adv-x="680" 
+d="M597 426L85 426L85 597L597 597L597 426Z" ></glyph>
+<glyph unicode="&#46;" horiz-adv-x="552" 
+d="M255 256Q309 256 346 219 T384 127Q384 73 346 36 T255 0Q200 0 164 36 T128 127Q128 
+182 164 219 T255 256Z" ></glyph>
+<glyph unicode="&#51;" horiz-adv-x="1147" 
+d="M757 779Q880 741 952 648 T1024 430Q1024 252 877 126 T509 0Q254 0 42 128 L96 298Q294 
+170 509 170 Q656 170 755 244 T853 432Q853 554 756 618 T473 682L426 682L426 853Q810 853 
+810 1062 Q810 1164 728 1222 T505 1280Q324 1280 140 1194 L85 1365Q289 1450 504 1450 Q725 1450 853 
+1346 T981 1066Q981 871 757 783 Z" ></glyph>
+<glyph unicode="&#50;" horiz-adv-x="1147" 
+d="M1024 0L85 0L85 152Q336 390 502 539 T760 802T853 1035Q853 1148 771 1214 T559 1280Q380 
+1280 180 1194 L128 1365Q338 1450 566 1450 Q770 1450 897 1335 T1024 1039Q1024 904 941 773 T682 480L
+346 170L1024 170L1024 0Z" ></glyph>
+<glyph unicode="&#68;" horiz-adv-x="1487" 
+d="M170 1450L679 1450Q1018 1450 1213 1260 T1408 726Q1408 400 1212 200 T685 0L170 0L170 1450ZM341 
+170L680 170Q948 170 1093 314 T1237 724Q1237 992 1091 1136 T680 1280L341 1280L341 170Z" ></glyph>
+<glyph unicode="&#102;" horiz-adv-x="552" 
+d="M640 1408L618 1280Q523 1322 463 1322 Q395 1322 368 1281 T341 1152L341 1066L597 1066L597 896L341 
+896L341 0L170 0L170 896L0 896L0 1066L170 1066L170 1184Q170 1352 239 1423 T455 1493Q537 
+1493 640 1408Z" ></glyph>
+<glyph unicode="&#112;" horiz-adv-x="1147" 
+d="M298 938Q430 1066 626 1066 Q814 1066 940 924 T1066 554Q1066 299 940 149 T620 0Q423 0 298 
+128 L298 -426L128 -426L128 1066L298 1066L298 938ZM298 768L298 298Q341 245 421 208 T586 170Q
+730 170 813 267 T896 538Q896 709 814 802 T586 896Q511 896 433 860 T298 768Z" ></glyph>
+<glyph unicode="&#109;" horiz-adv-x="1700" 
+d="M1578 0L1408 0L1408 650Q1408 772 1357 834 T1204 896Q1140 896 1068 862 T936 768Q938 751 938 
+709 L938 0L768 0L768 650Q768 772 720 834 T576 896Q432 896 298 725 L298 0L128 0L
+128 1066L298 1066L298 896Q438 1066 620 1066 Q835 1066 910 896 Q1055 1066 1249 1066 Q1408 1066 1493 
+974 T1578 708Z" ></glyph>
+</font>
+</defs>
+<script type="text/ecmascript"><![CDATA[
+var SVGMain_SVGRoot = null;
+var SVGMain_viewBox = null;
+var SVGMain_TrueCoords = null;
+var SVGMain_singleTip = null;
+var SVGMain_singleBox = null;
+var SVGMain_singleText = null;
+var SVGMain_tiptspan = null;
+var SVGMain_attrScale = 1;
+var SVGMain_rightEdge = null;
+var SVGMain_SVGHeight = null;
+var SVGMain_SVGWidth = null;
+function SVGMain_Init(anchor) {
+   SVGMain_SVGRoot = document.getElementById(anchor);
+   SVGMain_TrueCoords = SVGMain_SVGRoot.createSVGPoint();
+   SVGMain_singleTip = document.getElementById(anchor + '_singleTip1');
+   SVGMain_singleBox = document.getElementById(anchor + '_singleBox1');
+   SVGMain_singleText = document.getElementById(anchor + '_singleText1');
+   SVGMain_tiptspan = document.getElementById(anchor + '_tiptspan1');
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_SVGRoot.addEventListener('mousemove', SVGMain_ShowTooltip, false);
+   SVGMain_SVGRoot.addEventListener('mouseout', SVGMain_HideTooltip, false);
+   SVGMain_SVGHeight = SVGMain_SVGRoot.getAttributeNS(null, "height");
+   SVGMain_SVGWidth = SVGMain_SVGRoot.getAttributeNS(null, "width");
+   if (!isNaN(parseFloat(SVGMain_SVGHeight)) && !isNaN(parseFloat(SVGMain_SVGWidth)))
+      SVGMain_GetHW();
+   SVGMain_viewBox  = new ViewBox(SVGMain_SVGRoot);
+}
+function SVGMain_GetHW()
+{
+    if (SVGMain_SVGWidth != null && SVGMain_SVGWidth != "") {
+       if (SVGMain_SVGWidth.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGWidth.replace(/%/,""))/100;
+          SVGMain_SVGWidth = window.innerWidth * factor;
+       }
+       else if (SVGMain_SVGWidth.match(/in/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96;
+       else if (SVGMain_SVGWidth.match(/cm/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth);
+    }
+    if (SVGMain_SVGHeight != null && SVGMain_SVGHeight != "") {
+       if (SVGMain_SVGHeight.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGHeight.replace(/%/,""))/100;
+          SVGMain_SVGHeight = window.innerHeight * factor;
+       }
+       else if (SVGMain_SVGHeight.match(/in/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96;
+       else if (SVGMain_SVGHeight.match(/cm/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight);
+    }
+}
+function SVGMain_GetScaleFactors(evt)
+{
+   var zoomFactor = 1;
+   windowWidth  = (top.innerWidth==undefined)  ? window.innerWidth  : top.innerWidth;
+   windowHeight = (top.innerHeight==undefined) ? window.innerHeight : top.innerHeight;
+   SVGMain_rightEdge = (SVGMain_SVGWidth) ? SVGMain_SVGWidth - window.pageXOffset : windowWidth;
+   if (parseFloat(SVGMain_SVGWidth) > 0 || parseFloat(SVGMain_SVGHeight) > 0)
+      var tipScale = 1.38888;
+   else {
+      var tipXScale  = (screen.width/windowWidth) / SVGMain_SVGRoot.currentScale;
+      var tipYScale  = (screen.height/windowHeight) / SVGMain_SVGRoot.currentScale;
+      var tipScale   = (tipXScale + tipYScale)/2.0;
+   }
+   SVGMain_attrScale = tipScale;
+   if (navigator.appName == 'Adobe SVG Viewer') {
+      if (screen.deviceXDPI != null && screen.logicalXDPI != null)
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+      SVGMain_attrScale = zoomFactor*tipScale;
+   }
+   else if (navigator.userAgent != null && navigator.userAgent != '') {
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("msie") != -1 || ua.indexOf("trident") != -1) {
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("ipad") != -1) {
+         zoomFactor = SVGMain_SVGRoot.clientWidth / window.innerWidth;
+         SVGMain_attrScale = 1.5 / zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("opera") != -1)
+         SVGMain_attrScale = tipScale;
+      else if (ua.indexOf("firefox") != -1)
+         SVGMain_attrScale = tipScale;
+      else {
+         if (SVGMain_SVGWidth > 0 || SVGMain_SVGHeight > 0)
+            zoomFactor = 1;
+         else
+            zoomFactor = parseInt(document.defaultView.getComputedStyle(SVGMain_SVGRoot, null).width,10)/
+                                  SVGMain_SVGRoot.clientWidth;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge *= zoomFactor;
+      }
+   }
+}
+function SVGMain_GetTrueCoords(evt)
+{
+   var trans = SVGMain_SVGRoot.currentTranslate;
+   var scale = SVGMain_SVGRoot.currentScale;
+   SVGMain_GetScaleFactors();
+   var p1    = SVGMain_SVGRoot.createSVGPoint();
+   var p2;
+   if (!SVGMain_SVGRoot.getScreenCTM) {
+      var m = SVGMain_viewBox.getTM();
+      m = m.scale( 1/scale );
+      m = m.translate(-trans.x, -trans.y);
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      p2 = p1.matrixTransform(m);
+   }
+   else {
+      var m = SVGMain_SVGRoot.getScreenCTM();
+      if (navigator.userAgent.toLowerCase().indexOf("ipad") != -1) {
+         p1.x = evt.clientX + window.pageXOffset;
+         p1.y = evt.clientY + window.pageYOffset;
+      }
+      else {
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      }
+      p2 = p1.matrixTransform(m.inverse());
+   }
+   SVGMain_TrueCoords.x = Math.round(p2.x*100) / 100;
+   SVGMain_TrueCoords.y = Math.round(p2.y*100) / 100;
+}
+function SVGMain_HideTooltip( evt )
+{
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_singleTip.setAttributeNS(null, 'visibility', 'hidden');
+}
+function SVGMain_ShowTooltip( evt )
+{
+   SVGMain_GetTrueCoords( evt );
+   var targetElement = evt.target;
+   var tspanCount = targetElement.getElementsByTagName('desc').length;
+   if (tspanCount == 1) {
+      var targetTspan = targetElement.getElementsByTagName('desc').item(0);
+      if ( targetTspan) {
+         if (targetTspan.firstChild != null)
+            SVGMain_tiptspan.firstChild.nodeValue = targetTspan.firstChild.nodeValue; }
+   }
+   if ( '' != SVGMain_tiptspan.firstChild.nodeValue )
+   {
+      var outline = SVGMain_singleText.getBBox();
+      SVGMain_singleBox.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleText.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleTip.setAttributeNS(null, 'visibility', 'visible');
+      if (evt.clientX + ((outline.width + 10)/1.08) * SVGMain_attrScale > SVGMain_rightEdge) {
+         var xPos = SVGMain_TrueCoords.x - parseInt((outline.width + 10)*SVGMain_attrScale);
+         if (xPos < 0)
+            xPos = 0;
+      }
+      else
+         var xPos = SVGMain_TrueCoords.x;
+      if (SVGMain_TrueCoords.y < 21) {
+         var yPos = SVGMain_TrueCoords.y + ((outline.height + 21)/1.08)*SVGMain_attrScale;
+         if (yPos > windowHeight)
+            yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      }
+      else
+         var yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      if (Number(outline.width == 0))
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width);
+      else
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width + 10);
+      SVGMain_singleBox.setAttributeNS(null, 'height', outline.height + 10);
+      SVGMain_singleTip.setAttributeNS(null, 'transform', 'translate(' + xPos + ',' + yPos + ')');
+   }
+}
+/*****
+*   ViewBox.js
+*   copyright 2002, Kevin Lindsey
+*****/
+ViewBox.VERSION = "1.0";
+/*****
+*   constructor
+*****/
+function ViewBox(svgNode) {
+    if ( arguments.length > 0 ) {
+        this.init(svgNode);
+    }
+}
+/*****
+*   init
+*****/
+ViewBox.prototype.init = function(svgNode) {
+    var viewBox = svgNode.getAttributeNS(null, "viewBox");
+    var preserveAspectRatio = svgNode.getAttributeNS(null, "preserveAspectRatio");
+      if ( viewBox != null && viewBox != "" ) {
+        var params = viewBox.split(/\s*,\s*|\s+/);
+        this.x      = parseFloat( params[0] );
+        this.y      = parseFloat( params[1] );
+        this.width  = parseFloat( params[2] );
+        this.height = parseFloat( params[3] );
+    }
+    else {
+        this.x      = 0;
+        this.y      = 0;
+        this.width  = window.innerWidth;
+        this.height = window.innerHeight;
+    }
+    if (preserveAspectRatio != null && preserveAspectRatio != "" )
+    {
+        var params = preserveAspectRatio.split(/\s+/);
+        var align  = params[0];
+        if ( align == "none" ) {
+            this.alignX = "none";
+            this.alignY = "none";
+        } else {
+            this.alignX = align.substring(1,4);
+            this.alignY = align.substring(5,9);
+        }
+        if ( params.length == 2 ) {
+            this.meetOrSlice = params[1];
+        } else {
+            this.meetOrSlice = "meet";
+        }
+    } else {
+        this.align  = "xMidYMid";
+        this.alignX = "Mid";
+        this.alignY = "Mid";
+        this.meetOrSlice = "meet";
+    }
+}
+ViewBox.prototype.getTM = function() {
+    var matrix       = SVGMain_SVGRoot.createSVGMatrix();
+    if (isNaN(parseFloat(SVGMain_SVGWidth)))
+       var width = window.innerWidth;
+    else
+       var width = SVGMain_SVGWidth;
+    if (isNaN(parseFloat(SVGMain_SVGHeight)))
+       var height = window.innerHeight
+    else
+       var height = SVGMain_SVGHeight;
+    var x_ratio = this.width  / width;
+    var y_ratio = this.height / height;
+    matrix = matrix.translate(this.x, this.y);
+    if ( this.alignX == "none" ) {
+        matrix = matrix.scaleNonUniform( x_ratio, y_ratio );
+    } else {
+        if ( x_ratio < y_ratio && this.meetOrSlice == "meet" ||
+             x_ratio > y_ratio && this.meetOrSlice == "slice")
+        {
+           var x_trans = 0;
+           var x_diff  = width*y_ratio - this.width;
+           if ( this.alignX == "Mid" )
+              x_trans = -x_diff/2;
+           else if ( this.alignX == "Max" )
+              x_trans = -x_diff;
+           matrix = matrix.translate(x_trans, 0);
+           matrix = matrix.scale( y_ratio );
+        }
+        else if ( x_ratio > y_ratio && this.meetOrSlice == "meet" ||
+                  x_ratio < y_ratio && this.meetOrSlice == "slice"   )
+        {
+            var y_trans = 0;
+            var y_diff  = height*x_ratio - this.height;
+            if ( this.alignY == "Mid" )
+               y_trans = -y_diff/2;
+            else if ( this.alignY == "Max" )
+                y_trans = -y_diff;
+            matrix = matrix.translate(0, y_trans);
+            matrix = matrix.scale( x_ratio );
+        }
+        else
+            matrix = matrix.scale( x_ratio );
+    }
+    return matrix;
+}
+]]></script>
+</svg>

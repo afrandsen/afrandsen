@@ -1,0 +1,999 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" baseProfile="full" version="1.1" id="SVGMain" onload='SVGMain_Init("SVGMain")' viewBox="-1 -1 865 649">
+<desc id="desc_SVGMain">The SGPanel Procedure</desc>
+<defs>
+<clipPath id="SVGMain_clipPage1">
+<rect x="-1" y="-1" width="865" height="649"></rect>
+</clipPath>
+</defs>
+<g id="SVGMain_Page1" clip-path="url(#SVGMain_clipPage1)">
+<g transform=" scale(1.0, 1.0)">
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<rect x="0.0" y="0.0" width="863.0" height="647.0" style="fill: #FFFFFF; "></rect>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 14.0, 14.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath0">
+<rect x="-1.0" y="-1.0" width="837.0" height="621.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath0)">
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 595.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath1">
+<rect x="-1.0" y="-1.0" width="837.0" height="6.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath1)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 321.0, 600.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath2">
+<rect x="-1.0" y="-1.0" width="195.0" height="21.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath2)">
+<rect x="0.0" y="0.0" width="193.0" height="19.0" style="fill: #FFFFFF; "></rect>
+<rect x="0.0" y="0.0" width="193.0" height="19.0" style="stroke: #000000; stroke-width: 1; fill: none; "></rect>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 190.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath3">
+<rect x="-1.0" y="-1.0" width="4.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath3)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 148.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath4">
+<rect x="-1.0" y="-1.0" width="7.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath4)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 106.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath5">
+<rect x="-1.0" y="-1.0" width="7.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath5)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 46.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath6">
+<rect x="-1.0" y="-1.0" width="25.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath6)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 1.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath7">
+<rect x="-1.0" y="-1.0" width="7.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath7)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 173.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath8">
+<rect x="-1.0" y="-1.0" width="18.0" height="17.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath8)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="5.0" y="12.0" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000032;</text>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 154.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath9">
+<rect x="-1.0" y="-1.0" width="20.0" height="16.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath9)">
+<path d="M6.0 4.0L12.0 10.0" style="stroke: #01665E; stroke-width: 1; fill: none; stroke-linecap: square; "></path>
+<path d="M12.0 4.0L6.0 10.0" style="stroke: #01665E; stroke-width: 1; fill: none; stroke-linecap: square; "></path>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 131.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath10">
+<rect x="-1.0" y="-1.0" width="18.0" height="17.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath10)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="5.0" y="12.0" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;</text>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 112.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath11">
+<rect x="-1.0" y="-1.0" width="20.0" height="16.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath11)">
+<path d="M6.0 7.0L12.0 7.0" style="stroke: #B2182B; stroke-width: 1; fill: none; stroke-linecap: square; "></path>
+<path d="M9.0 4.0L9.0 10.0" style="stroke: #B2182B; stroke-width: 1; fill: none; stroke-linecap: square; "></path>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 89.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath12">
+<rect x="-1.0" y="-1.0" width="18.0" height="17.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath12)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="5.0" y="12.0" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;</text>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 70.0, 2.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath13">
+<rect x="-1.0" y="-1.0" width="20.0" height="16.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath13)">
+<circle cx="9.0" cy="7.0" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; stroke-linecap: square; "></circle>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 7.0, 1.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath14">
+<rect x="-1.0" y="-1.0" width="40.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath14)">
+<text textLength="39.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="14.0" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000064;&#x000074;&#x000068;&#x000069;&#x000063;&#x00006B;</text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath15">
+<rect x="-1.0" y="-1.0" width="837.0" height="596.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath15)">
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 70.0, 570.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath16">
+<rect x="-1.0" y="-1.0" width="767.0" height="26.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath16)">
+<text textLength="57.0" lengthAdjust="spacingAndGlyphs" x="354.0" y="21.0" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000073;&#x000075;&#x000072;&#x000076;&#x000074;&#x000069;&#x00006D;&#x000065;</text>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 453.0, 18.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath17">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath17)">
+<defs>
+<clipPath id="SVGMain_ClipPath18">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath18)">
+<rect x="0.49869" y="0.49904" width="381.0052" height="521.00381" style="fill: #FFFFFF; "></rect>
+<defs>
+<clipPath id="SVGMain_ClipPath19">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath19)">
+<circle cx="203.94115" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="269.84666" cy="378.0827" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="218.5259" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="181.68022" cy="460.31235" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="238.59363" cy="411.53205" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="189.3564" cy="460.31235" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="164.46364" cy="477.65646" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="11.26895" cy="493.26616" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="211.50767" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="172.35914" cy="477.65646" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="11.81725" cy="493.26616" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="238.48397" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="195.49735" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="266.88585" cy="411.53205" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="187.93082" cy="460.31235" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="193.30415" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="7.97916" cy="493.26616" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="313.05261" cy="342.06032" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="209.64346" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="115.11674" cy="477.65646" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="228.0663" cy="440.80023" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<path d="M111.02015 345.14804L117.02015 345.14804" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M114.02015 342.14804L114.02015 348.14804" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M91.93935 366.43399L97.93935 366.43399" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M94.93935 363.43399L94.93935 369.43399" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M90.40411 386.79446L96.40411 386.79446" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M93.40411 383.79446L93.40411 389.79446" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M87.4433 406.30659L93.4433 406.30659" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M90.4433 403.30659L90.4433 409.30659" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M83.71487 425.03822L89.71487 425.03822" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M86.71487 422.03822L86.71487 428.03822" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M121.43782 322.84847L127.43782 322.84847" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M124.43782 319.84847L124.43782 325.84847" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M51.69422 443.04941L57.69422 443.04941" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M54.69422 440.04941L54.69422 446.04941" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M30.42022 460.39352L36.42023 460.39352" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M33.42023 457.39352L33.42023 463.39352" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M286.25644 7.98473L292.25644 7.98473" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M289.25644 4.98473L289.25644 10.98473" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M232.52316 125.05746L238.52316 125.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M235.52316 122.05746L235.52316 128.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M4.97916 493.26616L10.97916 493.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M7.97916 490.26616L7.97916 496.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M230.7686 191.95616L236.7686 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M233.7686 188.95616L233.7686 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M221.00888 191.95616L227.00888 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M224.00888 188.95616L224.00888 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M216.29351 191.95616L222.29351 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M219.29351 188.95616L219.29351 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M215.41624 191.95616L221.41624 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M218.41624 188.95616L218.41624 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M227.36915 191.95616L233.36915 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M230.36915 188.95616L230.36915 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M208.94631 191.95616L214.94631 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M211.94631 188.95616L211.94631 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M203.68264 191.95616L209.68264 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M206.68264 188.95616L206.68264 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M230.98792 125.05746L236.98792 125.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M233.98792 122.05746L233.98792 128.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M27.34975 477.1182L33.34975 477.1182" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M30.34975 474.1182L30.34975 480.1182" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M278.36094 125.05746L284.36094 125.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M281.36094 122.05746L281.36094 128.05746" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M200.06387 191.95616L206.06387 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M203.06387 188.95616L203.06387 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M171.22335 191.95616L177.22335 191.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M174.22335 188.95616L174.22335 194.95616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M170.12676 221.22435L176.12676 221.22435" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M173.12676 218.22435L173.12676 224.22435" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M162.34091 248.77087L168.34091 248.77087" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M165.34091 245.77087L165.34091 251.77087" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M139.64134 274.78703L145.64134 274.78703" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M142.64134 271.78703L142.64134 277.78703" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M122.8634 299.43392L128.8634 299.43392" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M125.8634 296.43392L125.8634 302.43392" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M119.13497 235.55448L125.13497 241.55448" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M125.13497 235.55448L119.13497 241.55448" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M77.24494 282.38357L83.24494 288.38357" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M83.24494 282.38357L77.24494 288.38357" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M73.95515 324.95548L79.95515 330.95548" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M79.95515 324.95548L73.95515 330.95548" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M73.07787 363.97972L79.07787 369.97972" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M79.07787 363.97972L73.07787 369.97972" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M62.98917 400.0021L68.98917 406.0021" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M68.98917 400.0021L62.98917 406.0021" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M59.04142 433.45145L65.04142 439.45145" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M65.04142 433.45145L59.04142 439.45145" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M28.00771 433.45145L34.00771 439.45145" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M34.00771 433.45145L28.00771 439.45145" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M25.26622 462.71964L31.26622 468.71964" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M31.26622 462.71964L25.26622 468.71964" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M4.97916 490.26616L10.97916 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M10.97916 490.26616L4.97916 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M7.97916 512.79216L313.05261 395.71009" style="stroke: #2A25D9; stroke-width: 2; fill: none; "></path>
+<path d="M7.97916 508.76526L289.25644 64.15289" style="stroke: #B2182B; stroke-width: 2; fill: none; stroke-dasharray: 12,4; "></path>
+<path d="M289.0 65.0L289.25644 64.15289" style="stroke: #B2182B; stroke-width: 2; fill: none; "></path>
+<path d="M7.97916 507.36477L122.13497 242.16392" style="stroke: #01665E; stroke-width: 2; fill: none; stroke-dasharray: 16,6,4,6; "></path>
+<path d="M122.0 243.0L122.13497 242.16392" style="stroke: #01665E; stroke-width: 2; fill: none; "></path>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath20">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath20)">
+<path d="M0.0 522.0019L382.0026 522.0019" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M382.0026 522.0019L382.0026 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 0.0L382.0026 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 522.0019L0.0 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 522.0019L382.0026 522.0019" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath21">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath21)">
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath22">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath22)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 453.0, 0.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath23">
+<rect x="-1.0" y="-1.0" width="384.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath23)">
+<rect x="0.0" y="0.0" width="382.0" height="17.0" style="fill: #FFFFFF; "></rect>
+<text textLength="44.0" lengthAdjust="spacingAndGlyphs" x="169.5" y="12.76855" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000073;&#x000065;&#x000078;&#x000020;&#x00003D;&#x000020;&#x000031;</text>
+<rect x="0.0" y="0.0" width="382.0" height="17.0" style="stroke: #000000; stroke-width: 1; fill: none; "></rect>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 70.0, 18.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath24">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath24)">
+<defs>
+<clipPath id="SVGMain_ClipPath25">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath25)">
+<rect x="0.49869" y="0.49904" width="381.0052" height="521.00381" style="fill: #FFFFFF; "></rect>
+<defs>
+<clipPath id="SVGMain_ClipPath26">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath26)">
+<circle cx="203.94115" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="238.70329" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="173.5654" cy="474.5323" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="209.64346" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="229.93051" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="191.98824" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="197.2519" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="209.31448" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="205.80536" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="173.78471" cy="474.5323" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="216.22304" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="222.47365" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="177.07451" cy="474.5323" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="233.43962" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="187.93082" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="192.75585" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="188.69844" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="201.19965" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="177.73247" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="204.59911" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="97.57118" cy="487.10444" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="183.98307" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="212.38495" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="179.37736" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="178.7194" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="187.16321" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="220.93841" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="103.60247" cy="480.86056" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="227.84698" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="189.3564" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="231.46575" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="236.61976" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="7.97916" cy="493.26616" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="211.28835" cy="459.52985" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="239.14193" cy="437.24277" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="134.74584" cy="474.5323" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="186.39559" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="189.13708" cy="467.74548" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="175.21029" cy="474.5323" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="46.90838" cy="493.26616" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<circle cx="219.95147" cy="449.56621" r="3.0" style="stroke: #2A25D9; stroke-width: 1; fill: none; "></circle>
+<path d="M268.49156 282.32969L274.49156 282.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M271.49156 279.32969L271.49156 285.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M253.24885 282.32969L259.24885 282.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M256.24885 279.32969L256.24885 285.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M252.37157 282.32969L258.37157 282.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M255.37157 279.32969L255.37157 285.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M225.50493 332.99274L231.50493 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M228.50493 329.99274L228.50493 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M220.24127 332.99274L226.24127 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M223.24127 329.99274L223.24127 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M214.86794 332.99274L220.86794 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M217.86794 329.99274L217.86794 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M192.49735 332.99274L198.49735 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M195.49735 329.99274L195.49735 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M176.04838 332.99274L182.04838 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M179.04838 329.99274L179.04838 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M144.35671 351.72438L150.35671 351.72438" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M147.35671 348.72438L147.35671 354.72438" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M196.33544 332.99274L202.33544 332.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M199.33544 329.99274L199.33544 335.99274" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M142.27318 369.73557L148.27318 369.73557" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M145.27318 366.73557L145.27318 372.73557" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M120.67021 387.07968L126.67021 387.07968" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M123.67021 384.07968L123.67021 390.07968" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M100.27349 403.80435L106.27349 403.80435" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M103.27349 400.80435L103.27349 406.80435" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M99.06723 419.95232L105.06723 419.95232" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M102.06723 416.95232L102.06723 422.95232" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M231.09758 308.34585L237.09758 308.34585" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M234.09758 305.34585L234.09758 311.34585" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M271.01373 282.32969L277.01373 282.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M274.01373 279.32969L274.01373 285.32969" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M96.32574 435.56201L102.32574 435.56201" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M99.32574 432.56201L99.32574 438.56201" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M56.40959 450.66817L62.40959 450.66817" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M59.40959 447.66817L59.40959 453.66817" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M47.30783 465.30226L53.30783 465.30226" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M50.30783 462.30226L50.30783 468.30226" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M37.32879 479.4929L43.32879 479.4929" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M40.32879 476.4929L40.32879 482.4929" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M15.83548 493.26616L21.83548 493.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M18.83548 490.26616L18.83548 496.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M4.97916 493.26616L10.97916 493.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M7.97916 490.26616L7.97916 496.26616" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M371.02343 157.82377L377.02343 157.82377" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M374.02343 154.82377L374.02343 160.82377" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M366.52738 209.85609L372.52738 209.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M369.52738 206.85609L369.52738 212.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M358.96086 209.85609L364.96086 209.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M361.96086 206.85609L361.96086 212.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M338.56414 209.85609L344.56414 209.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M341.56414 206.85609L341.56414 212.85609" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M297.33208 248.88034L303.33208 248.88034" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M300.33208 245.88034L300.33208 251.88034" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M275.50978 248.88034L281.50978 248.88034" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M278.50978 245.88034L278.50978 251.88034" style="stroke: #B2182B; stroke-width: 1; fill: none; "></path>
+<path d="M182.73763 257.82175L188.73763 263.82175" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M188.73763 257.82175L182.73763 263.82175" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M148.85276 316.35812L154.85276 322.35812" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M154.85276 316.35812L148.85276 322.35812" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M112.66504 368.39044L118.66504 374.39044" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M118.66504 368.39044L112.66504 374.39044" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M187.78198 190.92305L193.78198 196.92305" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M193.78198 190.92305L187.78198 196.92305" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M95.55812 415.21954L101.55812 421.21954" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M101.55812 415.21954L95.55812 421.21954" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M78.12222 415.21954L84.12222 421.21954" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M84.12222 415.21954L78.12222 421.21954" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M35.57423 454.24378L41.57423 460.24378" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M41.57423 454.24378L35.57423 460.24378" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M30.42022 490.26616L36.42023 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M36.42023 490.26616L30.42022 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M6.07576 490.26616L12.07576 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M12.07576 490.26616L6.07576 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M4.97916 490.26616L10.97916 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M10.97916 490.26616L4.97916 496.26616" style="stroke: #01665E; stroke-width: 1; fill: none; "></path>
+<path d="M7.97916 505.48396L239.14193 451.96202" style="stroke: #2A25D9; stroke-width: 2; fill: none; "></path>
+<path d="M7.97916 496.07707L374.02343 187.05527" style="stroke: #B2182B; stroke-width: 2; fill: none; stroke-dasharray: 12,4; "></path>
+<path d="M373.0 188.0L374.02343 187.05527" style="stroke: #B2182B; stroke-width: 2; fill: none; "></path>
+<path d="M7.97916 514.01717L190.78198 246.0162" style="stroke: #01665E; stroke-width: 2; fill: none; stroke-dasharray: 16,6,4,6; "></path>
+<path d="M190.0 247.0L190.78198 246.0162" style="stroke: #01665E; stroke-width: 2; fill: none; "></path>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath27">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath27)">
+<path d="M0.0 522.0019L382.0026 522.0019" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M382.0026 522.0019L382.0026 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 0.0L382.0026 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 522.0019L0.0 0.0" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 0.0L0.0 522.0019" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<path d="M0.0 522.0019L382.0026 522.0019" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath28">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath28)">
+</g>
+<defs>
+<clipPath id="SVGMain_ClipPath29">
+<rect x="-1.0" y="-1.0" width="384.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath29)">
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 70.0, 0.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath30">
+<rect x="-1.0" y="-1.0" width="384.0" height="19.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath30)">
+<rect x="0.0" y="0.0" width="382.0" height="17.0" style="fill: #FFFFFF; "></rect>
+<text textLength="44.0" lengthAdjust="spacingAndGlyphs" x="169.5" y="12.76855" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000073;&#x000065;&#x000078;&#x000020;&#x00003D;&#x000020;&#x000030;</text>
+<rect x="0.0" y="0.0" width="382.0" height="17.0" style="stroke: #000000; stroke-width: 1; fill: none; "></rect>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 453.0, 541.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath31">
+<rect x="-1.0" y="-1.0" width="384.0" height="30.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath31)">
+<path d="M7.97916 0.0L7.97916 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 4.47916, 22.39999)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;</text>
+</g>
+<path d="M117.63892 0.0L117.63892 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 103.63892, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x000030;&#x000030;&#x000030;</text>
+</g>
+<path d="M227.29868 0.0L227.29868 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 213.29868, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000032;&#x000030;&#x000030;&#x000030;</text>
+</g>
+<path d="M336.95843 0.0L336.95843 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 322.95843, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000033;&#x000030;&#x000030;&#x000030;</text>
+</g>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 70.0, 541.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath32">
+<rect x="-1.0" y="-1.0" width="384.0" height="30.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath32)">
+<path d="M7.97916 0.0L7.97916 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 4.47916, 22.39999)">
+<text textLength="7.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;</text>
+</g>
+<path d="M117.63892 0.0L117.63892 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 103.63892, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x000030;&#x000030;&#x000030;</text>
+</g>
+<path d="M227.29868 0.0L227.29868 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 213.29868, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000032;&#x000030;&#x000030;&#x000030;</text>
+</g>
+<path d="M336.95843 0.0L336.95843 6.4" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 322.95843, 22.39999)">
+<text textLength="28.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000033;&#x000030;&#x000030;&#x000030;</text>
+</g>
+</g>
+</g>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 18.0)">
+<defs>
+<clipPath id="SVGMain_ClipPath33">
+<rect x="-1.0" y="-1.0" width="71.0" height="524.0" ></rect>
+</clipPath>
+</defs>
+<g clip-path="url(#SVGMain_ClipPath33)">
+<path d="M70.0 493.26616L63.67807 493.26616" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.72687, 497.26616)">
+<text textLength="25.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000030;&#x000030;</text>
+</g>
+<path d="M70.0 376.19343L63.67807 376.19343" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.72687, 380.19343)">
+<text textLength="25.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000032;&#x000035;</text>
+</g>
+<path d="M70.0 259.1207L63.67807 259.1207" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.72687, 263.1207)">
+<text textLength="25.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000035;&#x000030;</text>
+</g>
+<path d="M70.0 142.04797L63.67807 142.04797" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.72687, 146.04797)">
+<text textLength="25.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000030;&#x00002E;&#x000037;&#x000035;</text>
+</g>
+<path d="M70.0 24.97523L63.67807 24.97523" style="stroke: #000000; stroke-width: 1; fill: none; "></path>
+<g transform="matrix(1.0, 0.0, 0.0, 1.0, 34.72687, 28.97523)">
+<text textLength="25.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 13px; white-space: pre; ">&#x000031;&#x00002E;&#x000030;&#x000030;</text>
+</g>
+<g transform="matrix(0.0, -1.0, 1.0, 0.0, 14.92206, 266.50095)">
+<text textLength="11.0" lengthAdjust="spacingAndGlyphs" x="0.0" y="0.5" style="fill: #000000; font-family: 'SVGMain_Albany AMT Font3', 'Albany AMT', sans-serif; font-size: 15px; white-space: pre; ">&#x000048;</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<rect x="0" y="0" width="864" height="648" fill="#FFFFFF" fill-opacity="0" aria-hidden="true">
+<desc>The SGPanel Procedure</desc>
+</rect>
+</g>
+<g id="SVGMain_singleTip1" visibility="hidden" pointer-events="none">
+   <rect id="SVGMain_singleBox1" x="0" y="0" width="88" height="20" rx="2" ry="2" fill="white" stroke="black" stroke-width="1.08" opacity="0.8"></rect>
+   <text id="SVGMain_singleText1" x="5" y="10" font-family="'Albany AMT', sans-serif" font-size="8"><tspan id="SVGMain_tiptspan1" x="5" class="tiptext"><![CDATA[ ]]></tspan></text>
+</g>
+<defs>
+<style type="text/css"><![CDATA[
+    tspan.tiptext { white-space: pre }
+]]></style>
+</defs>
+<defs>
+<style type="text/css"><![CDATA[
+  @font-face {
+      font-family: "SVGMain_Albany AMT Font3";
+      src: url("#SVGMain_Font3") format("svg")
+      }
+]]></style>
+<font id="SVGMain_Font3" horiz-adv-x="3776" >
+   <font-face      font-family="SVGMain_Albany AMT Font3"
+    units-per-em="2048" ascent="1854" descent="-434" >
+      <font-face-src>
+         <font-face-name name="SVGMain_Albany AMT Font3"></font-face-name>
+      </font-face-src>
+   </font-face>
+<missing-glyph><path d="M0 0v4992h3456v-4992h-3456" fill="none"></path>
+</missing-glyph>
+<glyph unicode="&#40;" horiz-adv-x="680" 
+d="M597 -294L524 -341Q317 -110 222 101 T128 576Q128 838 222 1050 T524 1493L597 1446Q444 1242 371 
+1034 T298 578Q298 332 369 124 T597 -294Z" ></glyph>
+<glyph unicode="&#47;" horiz-adv-x="552" 
+d="M565 1450L122 0L-10 0L432 1450L565 1450Z" ></glyph>
+<glyph unicode="&#104;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 650Q853 766 790 831 T620 896Q451 896 298 725 L298 0L128 0L128 
+1493L298 1493L298 896Q470 1066 662 1066 Q830 1066 927 973 T1024 708Z" ></glyph>
+<glyph unicode="&#65;" horiz-adv-x="1360" 
+d="M1333 0L1153 0L946 512L375 512L169 0L-10 0L573 1450L749 1450L1333 0ZM878 682L661 
+1222L444 682L878 682Z" ></glyph>
+<glyph unicode="&#103;" horiz-adv-x="1147" 
+d="M1024 -22Q1024 -220 904 -323 T562 -426Q336 -426 128 -298 L192 -170Q395 -256 574 -256 Q706 -256 780 
+-187 T853 6L853 170Q736 0 538 0 Q328 0 206 147 T85 554Q85 782 211 924 T526 1066Q
+738 1066 853 938 L853 1066L1024 1066L1024 -22ZM853 361L853 768Q816 822 737 859 T566 896Q418 
+896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+<glyph unicode="&#50;" horiz-adv-x="1147" 
+d="M1024 0L85 0L85 152Q336 390 502 539 T760 802T853 1035Q853 1148 771 1214 T559 1280Q380 
+1280 180 1194 L128 1365Q338 1450 566 1450 Q770 1450 897 1335 T1024 1039Q1024 904 941 773 T682 480L
+346 170L1024 170L1024 0Z" ></glyph>
+<glyph unicode="&#49;" horiz-adv-x="1147" 
+d="M725 0L554 0L554 1201Q435 1066 213 1066 L213 1237Q480 1237 597 1450 L725 1450L725 0Z" ></glyph>
+<glyph unicode="&#48;" horiz-adv-x="1147" 
+d="M1066 734Q1066 358 943 178 T576 0Q329 0 207 180 T85 734Q85 1092 207 1271 T576 1450Q820 
+1450 943 1271 T1066 734ZM575 170Q734 170 815 296 T896 726Q896 1014 820 1147 T573 1280Q414 1280 
+335 1141 T256 726Q256 448 336 309 T575 170Z" ></glyph>
+<glyph unicode="&#100;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 170Q736 0 538 0 Q331 0 208 148 T85 554Q85 782 211 924 T526 
+1066Q742 1066 853 938 L853 1493L1024 1493L1024 0ZM853 361L853 768Q816 822 737 859 T566 896Q
+418 896 337 802 T256 538Q256 364 341 267 T573 170Q631 170 694 200 T805 285T853 341Z" ></glyph>
+<glyph unicode="&#116;" horiz-adv-x="552" 
+d="M597 42Q497 0 437 0 Q298 0 234 73 T170 304L170 896L42 896L42 1066L170 1066L170 
+1365L341 1365L341 1066L554 1066L554 896L341 896L341 331Q341 170 461 170 Q513 170 576 170 Z" ></glyph>
+<glyph unicode="&#105;" horiz-adv-x="425" 
+d="M298 0L128 0L128 1066L298 1066L298 0ZM212 1493Q248 1493 273 1461 T298 1385Q298 1342 273 
+1311 T212 1280Q178 1280 153 1311 T128 1385Q128 1430 152 1462 T212 1493Z" ></glyph>
+<glyph unicode="&#99;" horiz-adv-x="1020" 
+d="M85 535Q85 786 230 926 T591 1066Q774 1066 938 938 L888 810Q744 896 590 896 Q444 896 350 
+797 T256 534Q256 368 349 269 T584 170Q728 170 886 256 L938 128Q771 0 585 0 Q363 0 
+224 146 T85 535Z" ></glyph>
+<glyph unicode="&#107;" horiz-adv-x="1020" 
+d="M1024 0L822 0L425 545L298 426L298 0L128 0L128 1493L298 1493L298 644L749 1066L981 
+1066L544 657L1024 0Z" ></glyph>
+<glyph unicode="&#115;" horiz-adv-x="1020" 
+d="M832 810Q668 896 512 896 Q388 896 322 867 T256 786Q256 750 305 726 T448 668L588 618Q788 
+546 863 478 T938 306Q938 162 822 81 T510 0Q278 0 85 85 L149 256Q328 170 506 170 Q
+768 170 768 300 Q768 350 706 385 T465 483Q322 536 267 556 T169 610T105 685T85 779Q85 
+908 196 987 T516 1066Q604 1066 709 1044 T896 981Z" ></glyph>
+<glyph unicode="&#117;" horiz-adv-x="1147" 
+d="M1024 0L853 0L853 170Q682 0 489 0 Q321 0 224 93 T128 358L128 1066L298 1066L298 
+416Q298 301 361 236 T532 170Q700 170 853 341 L853 1066L1024 1066L1024 0Z" ></glyph>
+<glyph unicode="&#114;" horiz-adv-x="680" 
+d="M682 1024L618 853Q574 896 538 896 Q486 896 438 852 T345 724T298 638L298 0L128 0L128 
+1066L298 1066L298 810Q371 960 428 1013 T562 1066Q634 1066 682 1024Z" ></glyph>
+<glyph unicode="&#118;" horiz-adv-x="1062" 
+d="M1034 1066L613 0L453 0L32 1066L212 1066L533 252L854 1066L1034 1066Z" ></glyph>
+<glyph unicode="&#109;" horiz-adv-x="1700" 
+d="M1578 0L1408 0L1408 650Q1408 772 1357 834 T1204 896Q1140 896 1068 862 T936 768Q938 751 938 
+709 L938 0L768 0L768 650Q768 772 720 834 T576 896Q432 896 298 725 L298 0L128 0L
+128 1066L298 1066L298 896Q438 1066 620 1066 Q835 1066 910 896 Q1055 1066 1249 1066 Q1408 1066 1493 
+974 T1578 708Z" ></glyph>
+<glyph unicode="&#101;" horiz-adv-x="1147" 
+d="M1109 170Q876 0 654 0 Q386 0 235 143 T85 535Q85 773 221 919 T591 1066Q800 1066 933 
+928 T1066 558L1066 512L256 512Q264 346 363 258 T638 170Q845 170 1045 298 ZM896 640Q882 757 
+795 826 T589 896Q458 896 370 829 T256 640Z" ></glyph>
+<glyph unicode="&#120;" horiz-adv-x="1020" 
+d="M992 0L796 0L512 419L229 0L32 0L414 565L74 1066L271 1066L512 710L752 1066L949 
+1066L610 564L992 0Z" ></glyph>
+<glyph unicode="&#32;" horiz-adv-x="552" 
+></glyph>
+<glyph unicode="&#61;" horiz-adv-x="1190" 
+d="M1066 810L128 810L128 981L1066 981L1066 810ZM1066 384L128 384L128 554L1066 554L1066 384Z" ></glyph>
+<glyph unicode="&#51;" horiz-adv-x="1147" 
+d="M757 779Q880 741 952 648 T1024 430Q1024 252 877 126 T509 0Q254 0 42 128 L96 298Q294 
+170 509 170 Q656 170 755 244 T853 432Q853 554 756 618 T473 682L426 682L426 853Q810 853 
+810 1062 Q810 1164 728 1222 T505 1280Q324 1280 140 1194 L85 1365Q289 1450 504 1450 Q725 1450 853 
+1346 T981 1066Q981 871 757 783 Z" ></glyph>
+<glyph unicode="&#46;" horiz-adv-x="552" 
+d="M255 256Q309 256 346 219 T384 127Q384 73 346 36 T255 0Q200 0 164 36 T128 127Q128 
+182 164 219 T255 256Z" ></glyph>
+<glyph unicode="&#53;" horiz-adv-x="1147" 
+d="M341 905Q442 938 544 938 Q782 938 924 812 T1066 477Q1066 268 924 134 T551 0Q296 0 85 
+128 L139 298Q338 170 550 170 Q699 170 797 256 T896 477Q896 609 795 688 T538 768Q433 768 
+336 725 L170 758L170 1450L1024 1450L1024 1280L341 1280L341 905Z" ></glyph>
+<glyph unicode="&#55;" horiz-adv-x="1147" 
+d="M1024 1306L397 0L213 0L827 1280L85 1280L85 1450L1024 1450L1024 1306Z" ></glyph>
+<glyph unicode="&#72;" horiz-adv-x="1487" 
+d="M1322 0L1152 0L1152 682L341 682L341 0L170 0L170 1450L341 1450L341 853L1152 853L1152 
+1450L1322 1450L1322 0Z" ></glyph>
+</font>
+</defs>
+<script type="text/ecmascript"><![CDATA[
+var SVGMain_SVGRoot = null;
+var SVGMain_viewBox = null;
+var SVGMain_TrueCoords = null;
+var SVGMain_singleTip = null;
+var SVGMain_singleBox = null;
+var SVGMain_singleText = null;
+var SVGMain_tiptspan = null;
+var SVGMain_attrScale = 1;
+var SVGMain_rightEdge = null;
+var SVGMain_SVGHeight = null;
+var SVGMain_SVGWidth = null;
+function SVGMain_Init(anchor) {
+   SVGMain_SVGRoot = document.getElementById(anchor);
+   SVGMain_TrueCoords = SVGMain_SVGRoot.createSVGPoint();
+   SVGMain_singleTip = document.getElementById(anchor + '_singleTip1');
+   SVGMain_singleBox = document.getElementById(anchor + '_singleBox1');
+   SVGMain_singleText = document.getElementById(anchor + '_singleText1');
+   SVGMain_tiptspan = document.getElementById(anchor + '_tiptspan1');
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_SVGRoot.addEventListener('mousemove', SVGMain_ShowTooltip, false);
+   SVGMain_SVGRoot.addEventListener('mouseout', SVGMain_HideTooltip, false);
+   SVGMain_SVGHeight = SVGMain_SVGRoot.getAttributeNS(null, "height");
+   SVGMain_SVGWidth = SVGMain_SVGRoot.getAttributeNS(null, "width");
+   if (!isNaN(parseFloat(SVGMain_SVGHeight)) && !isNaN(parseFloat(SVGMain_SVGWidth)))
+      SVGMain_GetHW();
+   SVGMain_viewBox  = new ViewBox(SVGMain_SVGRoot);
+}
+function SVGMain_GetHW()
+{
+    if (SVGMain_SVGWidth != null && SVGMain_SVGWidth != "") {
+       if (SVGMain_SVGWidth.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGWidth.replace(/%/,""))/100;
+          SVGMain_SVGWidth = window.innerWidth * factor;
+       }
+       else if (SVGMain_SVGWidth.match(/in/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96;
+       else if (SVGMain_SVGWidth.match(/cm/))
+          SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGWidth = parseFloat(SVGMain_SVGWidth);
+    }
+    if (SVGMain_SVGHeight != null && SVGMain_SVGHeight != "") {
+       if (SVGMain_SVGHeight.match(/%/)) {
+          var factor = parseFloat(SVGMain_SVGHeight.replace(/%/,""))/100;
+          SVGMain_SVGHeight = window.innerHeight * factor;
+       }
+       else if (SVGMain_SVGHeight.match(/in/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96;
+       else if (SVGMain_SVGHeight.match(/cm/))
+          SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight.replace(/in/,""))*96/2.54;
+       else
+           SVGMain_SVGHeight = parseFloat(SVGMain_SVGHeight);
+    }
+}
+function SVGMain_GetScaleFactors(evt)
+{
+   var zoomFactor = 1;
+   windowWidth  = (top.innerWidth==undefined)  ? window.innerWidth  : top.innerWidth;
+   windowHeight = (top.innerHeight==undefined) ? window.innerHeight : top.innerHeight;
+   SVGMain_rightEdge = (SVGMain_SVGWidth) ? SVGMain_SVGWidth - window.pageXOffset : windowWidth;
+   if (parseFloat(SVGMain_SVGWidth) > 0 || parseFloat(SVGMain_SVGHeight) > 0)
+      var tipScale = 1.38888;
+   else {
+      var tipXScale  = (screen.width/windowWidth) / SVGMain_SVGRoot.currentScale;
+      var tipYScale  = (screen.height/windowHeight) / SVGMain_SVGRoot.currentScale;
+      var tipScale   = (tipXScale + tipYScale)/2.0;
+   }
+   SVGMain_attrScale = tipScale;
+   if (navigator.appName == 'Adobe SVG Viewer') {
+      if (screen.deviceXDPI != null && screen.logicalXDPI != null)
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+      SVGMain_attrScale = zoomFactor*tipScale;
+   }
+   else if (navigator.userAgent != null && navigator.userAgent != '') {
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("msie") != -1 || ua.indexOf("trident") != -1) {
+         zoomFactor = screen.deviceXDPI/screen.logicalXDPI;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("ipad") != -1) {
+         zoomFactor = SVGMain_SVGRoot.clientWidth / window.innerWidth;
+         SVGMain_attrScale = 1.5 / zoomFactor;
+         SVGMain_rightEdge /= zoomFactor;
+      }
+      else if (ua.indexOf("opera") != -1)
+         SVGMain_attrScale = tipScale;
+      else if (ua.indexOf("firefox") != -1)
+         SVGMain_attrScale = tipScale;
+      else {
+         if (SVGMain_SVGWidth > 0 || SVGMain_SVGHeight > 0)
+            zoomFactor = 1;
+         else
+            zoomFactor = parseInt(document.defaultView.getComputedStyle(SVGMain_SVGRoot, null).width,10)/
+                                  SVGMain_SVGRoot.clientWidth;
+         SVGMain_attrScale = tipScale/zoomFactor;
+         SVGMain_rightEdge *= zoomFactor;
+      }
+   }
+}
+function SVGMain_GetTrueCoords(evt)
+{
+   var trans = SVGMain_SVGRoot.currentTranslate;
+   var scale = SVGMain_SVGRoot.currentScale;
+   SVGMain_GetScaleFactors();
+   var p1    = SVGMain_SVGRoot.createSVGPoint();
+   var p2;
+   if (!SVGMain_SVGRoot.getScreenCTM) {
+      var m = SVGMain_viewBox.getTM();
+      m = m.scale( 1/scale );
+      m = m.translate(-trans.x, -trans.y);
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      p2 = p1.matrixTransform(m);
+   }
+   else {
+      var m = SVGMain_SVGRoot.getScreenCTM();
+      if (navigator.userAgent.toLowerCase().indexOf("ipad") != -1) {
+         p1.x = evt.clientX + window.pageXOffset;
+         p1.y = evt.clientY + window.pageYOffset;
+      }
+      else {
+      p1.x = evt.clientX;
+      p1.y = evt.clientY;
+      }
+      p2 = p1.matrixTransform(m.inverse());
+   }
+   SVGMain_TrueCoords.x = Math.round(p2.x*100) / 100;
+   SVGMain_TrueCoords.y = Math.round(p2.y*100) / 100;
+}
+function SVGMain_HideTooltip( evt )
+{
+   SVGMain_tiptspan.firstChild.nodeValue = null;
+   SVGMain_singleTip.setAttributeNS(null, 'visibility', 'hidden');
+}
+function SVGMain_ShowTooltip( evt )
+{
+   SVGMain_GetTrueCoords( evt );
+   var targetElement = evt.target;
+   var tspanCount = targetElement.getElementsByTagName('desc').length;
+   if (tspanCount == 1) {
+      var targetTspan = targetElement.getElementsByTagName('desc').item(0);
+      if ( targetTspan) {
+         if (targetTspan.firstChild != null)
+            SVGMain_tiptspan.firstChild.nodeValue = targetTspan.firstChild.nodeValue; }
+   }
+   if ( '' != SVGMain_tiptspan.firstChild.nodeValue )
+   {
+      var outline = SVGMain_singleText.getBBox();
+      SVGMain_singleBox.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleText.setAttributeNS(null, 'transform', 'scale(' + SVGMain_attrScale + ',' + SVGMain_attrScale + ')' );
+      SVGMain_singleTip.setAttributeNS(null, 'visibility', 'visible');
+      if (evt.clientX + ((outline.width + 10)/1.08) * SVGMain_attrScale > SVGMain_rightEdge) {
+         var xPos = SVGMain_TrueCoords.x - parseInt((outline.width + 10)*SVGMain_attrScale);
+         if (xPos < 0)
+            xPos = 0;
+      }
+      else
+         var xPos = SVGMain_TrueCoords.x;
+      if (SVGMain_TrueCoords.y < 21) {
+         var yPos = SVGMain_TrueCoords.y + ((outline.height + 21)/1.08)*SVGMain_attrScale;
+         if (yPos > windowHeight)
+            yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      }
+      else
+         var yPos = SVGMain_TrueCoords.y - parseInt((outline.height + 10)*SVGMain_attrScale);
+      if (Number(outline.width == 0))
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width);
+      else
+         SVGMain_singleBox.setAttributeNS(null, 'width', outline.width + 10);
+      SVGMain_singleBox.setAttributeNS(null, 'height', outline.height + 10);
+      SVGMain_singleTip.setAttributeNS(null, 'transform', 'translate(' + xPos + ',' + yPos + ')');
+   }
+}
+/*****
+*   ViewBox.js
+*   copyright 2002, Kevin Lindsey
+*****/
+ViewBox.VERSION = "1.0";
+/*****
+*   constructor
+*****/
+function ViewBox(svgNode) {
+    if ( arguments.length > 0 ) {
+        this.init(svgNode);
+    }
+}
+/*****
+*   init
+*****/
+ViewBox.prototype.init = function(svgNode) {
+    var viewBox = svgNode.getAttributeNS(null, "viewBox");
+    var preserveAspectRatio = svgNode.getAttributeNS(null, "preserveAspectRatio");
+      if ( viewBox != null && viewBox != "" ) {
+        var params = viewBox.split(/\s*,\s*|\s+/);
+        this.x      = parseFloat( params[0] );
+        this.y      = parseFloat( params[1] );
+        this.width  = parseFloat( params[2] );
+        this.height = parseFloat( params[3] );
+    }
+    else {
+        this.x      = 0;
+        this.y      = 0;
+        this.width  = window.innerWidth;
+        this.height = window.innerHeight;
+    }
+    if (preserveAspectRatio != null && preserveAspectRatio != "" )
+    {
+        var params = preserveAspectRatio.split(/\s+/);
+        var align  = params[0];
+        if ( align == "none" ) {
+            this.alignX = "none";
+            this.alignY = "none";
+        } else {
+            this.alignX = align.substring(1,4);
+            this.alignY = align.substring(5,9);
+        }
+        if ( params.length == 2 ) {
+            this.meetOrSlice = params[1];
+        } else {
+            this.meetOrSlice = "meet";
+        }
+    } else {
+        this.align  = "xMidYMid";
+        this.alignX = "Mid";
+        this.alignY = "Mid";
+        this.meetOrSlice = "meet";
+    }
+}
+ViewBox.prototype.getTM = function() {
+    var matrix       = SVGMain_SVGRoot.createSVGMatrix();
+    if (isNaN(parseFloat(SVGMain_SVGWidth)))
+       var width = window.innerWidth;
+    else
+       var width = SVGMain_SVGWidth;
+    if (isNaN(parseFloat(SVGMain_SVGHeight)))
+       var height = window.innerHeight
+    else
+       var height = SVGMain_SVGHeight;
+    var x_ratio = this.width  / width;
+    var y_ratio = this.height / height;
+    matrix = matrix.translate(this.x, this.y);
+    if ( this.alignX == "none" ) {
+        matrix = matrix.scaleNonUniform( x_ratio, y_ratio );
+    } else {
+        if ( x_ratio < y_ratio && this.meetOrSlice == "meet" ||
+             x_ratio > y_ratio && this.meetOrSlice == "slice")
+        {
+           var x_trans = 0;
+           var x_diff  = width*y_ratio - this.width;
+           if ( this.alignX == "Mid" )
+              x_trans = -x_diff/2;
+           else if ( this.alignX == "Max" )
+              x_trans = -x_diff;
+           matrix = matrix.translate(x_trans, 0);
+           matrix = matrix.scale( y_ratio );
+        }
+        else if ( x_ratio > y_ratio && this.meetOrSlice == "meet" ||
+                  x_ratio < y_ratio && this.meetOrSlice == "slice"   )
+        {
+            var y_trans = 0;
+            var y_diff  = height*x_ratio - this.height;
+            if ( this.alignY == "Mid" )
+               y_trans = -y_diff/2;
+            else if ( this.alignY == "Max" )
+                y_trans = -y_diff;
+            matrix = matrix.translate(0, y_trans);
+            matrix = matrix.scale( x_ratio );
+        }
+        else
+            matrix = matrix.scale( x_ratio );
+    }
+    return matrix;
+}
+]]></script>
+</svg>

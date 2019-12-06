@@ -1,0 +1,3781 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A SAS of Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen</title>
+  <meta name="description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A SAS of Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="github-repo" content="afrandsen/afrandsen" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A SAS of Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen" />
+  
+  <meta name="twitter:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-50-1.html"/>
+<link rel="next" href="sas-of-exercise-1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Handin 2 - Survival Analysis with SAS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>1</b> Exercise 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="exercise-1.html"><a href="exercise-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="exercise-1.html"><a href="exercise-1.html#models"><i class="fa fa-check"></i><b>1.2</b> Models</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="exercise-1.html"><a href="exercise-1.html#edema"><i class="fa fa-check"></i><b>1.2.1</b> Edema</a></li>
+<li class="chapter" data-level="1.2.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin"><i class="fa fa-check"></i><b>1.2.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="exercise-1.html"><a href="exercise-1.html#analysis-in-sas"><i class="fa fa-check"></i><b>1.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="exercise-1.html"><a href="exercise-1.html#edema-1"><i class="fa fa-check"></i><b>1.3.1</b> Edema</a></li>
+<li class="chapter" data-level="1.3.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin-1"><i class="fa fa-check"></i><b>1.3.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="exercise-1.html"><a href="exercise-1.html#model-conclusion"><i class="fa fa-check"></i><b>1.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exercise-50-1.html"><a href="exercise-50-1.html"><i class="fa fa-check"></i><b>2</b> Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#models-1"><i class="fa fa-check"></i><b>2.2</b> Models</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates"><i class="fa fa-check"></i><b>2.2.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick"><i class="fa fa-check"></i><b>2.2.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick"><i class="fa fa-check"></i><b>2.2.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick"><i class="fa fa-check"></i><b>2.2.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#analysis-in-sas-1"><i class="fa fa-check"></i><b>2.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates-1"><i class="fa fa-check"></i><b>2.3.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.3.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick-1"><i class="fa fa-check"></i><b>2.3.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.3.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick-1"><i class="fa fa-check"></i><b>2.3.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.3.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick-1"><i class="fa fa-check"></i><b>2.3.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-conclusion-1"><i class="fa fa-check"></i><b>2.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html"><i class="fa fa-check"></i><b>A</b> SAS of Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="A.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-code"><i class="fa fa-check"></i><b>A.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by"><i class="fa fa-check"></i><b>A.1.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.1.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction"><i class="fa fa-check"></i><b>A.1.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.1.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick"><i class="fa fa-check"></i><b>A.1.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.1.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-2"><i class="fa fa-check"></i><b>A.1.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-output"><i class="fa fa-check"></i><b>A.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-1"><i class="fa fa-check"></i><b>A.2.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.2.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-1"><i class="fa fa-check"></i><b>A.2.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.2.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-1"><i class="fa fa-check"></i><b>A.2.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.2.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-3"><i class="fa fa-check"></i><b>A.2.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-plots"><i class="fa fa-check"></i><b>A.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-2"><i class="fa fa-check"></i><b>A.3.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.3.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-2"><i class="fa fa-check"></i><b>A.3.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.3.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-2"><i class="fa fa-check"></i><b>A.3.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.3.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-4"><i class="fa fa-check"></i><b>A.3.4</b> Model dthick</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html"><i class="fa fa-check"></i><b>B</b> SAS of Exercise 1</a><ul>
+<li class="chapter" data-level="B.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-code-1"><i class="fa fa-check"></i><b>B.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-2"><i class="fa fa-check"></i><b>B.1.1</b> Edema</a></li>
+<li class="chapter" data-level="B.1.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin"><i class="fa fa-check"></i><b>B.1.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-output-1"><i class="fa fa-check"></i><b>B.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-3"><i class="fa fa-check"></i><b>B.2.1</b> Edema</a></li>
+<li class="chapter" data-level="B.2.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-1"><i class="fa fa-check"></i><b>B.2.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-plots-1"><i class="fa fa-check"></i><b>B.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-4"><i class="fa fa-check"></i><b>B.3.1</b> Edema</a></li>
+<li class="chapter" data-level="B.3.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-2"><i class="fa fa-check"></i><b>B.3.2</b> Bilirubin</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sas-of-exercise-50-1" class="section level1">
+<h1><span class="header-section-number">A</span> SAS of Exercise 50 (1)</h1>
+<div id="sas-code" class="section level2">
+<h2><span class="header-section-number">A.1</span> SAS Code</h2>
+<div id="model-by" class="section level3">
+<h3><span class="header-section-number">A.1.1</span> Model BY</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">LIBNAME</span> SUPP <span class="st">&#39;~/Survival Analysis/Supplementary Notes/&#39;</span>;</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="co">* BY STATEMENT;</span></a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="co">** WEIBULL BY.;</span></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb5-8" title="8">MODEL survtime*status(<span class="dv">0</span>) = / DIST = WEIBULL COVB;</a>
+<a class="sourceLine" id="cb5-9" title="9">PPLOT;</a>
+<a class="sourceLine" id="cb5-10" title="10"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-11" title="11"></a>
+<a class="sourceLine" id="cb5-12" title="12"><span class="co">** EXPONENTIAL BY.;</span></a>
+<a class="sourceLine" id="cb5-13" title="13"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb5-15" title="15">MODEL survtime*status(<span class="dv">0</span>) = / DIST = EXPONENTIAL COVB;</a>
+<a class="sourceLine" id="cb5-16" title="16">PPLOT;</a>
+<a class="sourceLine" id="cb5-17" title="17"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-18" title="18"></a>
+<a class="sourceLine" id="cb5-19" title="19"><span class="co">** GAMMA BY.;</span></a>
+<a class="sourceLine" id="cb5-20" title="20"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb5-21" title="21"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb5-22" title="22">MODEL survtime*status(<span class="dv">0</span>) = / DIST = <span class="fu">GAMMA</span> COVB;</a>
+<a class="sourceLine" id="cb5-23" title="23">PPLOT;</a>
+<a class="sourceLine" id="cb5-24" title="24"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-25" title="25"></a>
+<a class="sourceLine" id="cb5-26" title="26"><span class="co">** LOGNORMAL BY.;</span></a>
+<a class="sourceLine" id="cb5-27" title="27"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb5-28" title="28"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb5-29" title="29">MODEL survtime*status(<span class="dv">0</span>) = / DIST = LOGNORMAL COVB;</a>
+<a class="sourceLine" id="cb5-30" title="30">PPLOT;</a>
+<a class="sourceLine" id="cb5-31" title="31"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb5-32" title="32"></a>
+<a class="sourceLine" id="cb5-33" title="33"><span class="co">** LLOGISTIC BY.;</span></a>
+<a class="sourceLine" id="cb5-34" title="34"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb5-35" title="35"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb5-36" title="36">MODEL survtime*status(<span class="dv">0</span>) = / DIST = LLOGISTIC COVB;</a>
+<a class="sourceLine" id="cb5-37" title="37">PPLOT;</a>
+<a class="sourceLine" id="cb5-38" title="38"><span class="kw">RUN</span>;</a></code></pre></div>
+
+</div>
+<div id="model-interaction" class="section level3">
+<h3><span class="header-section-number">A.1.2</span> Model Interaction</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb6-1" title="1"><span class="co">* VEKSEL.;</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co">** EXPONENTIAL.;</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb6-5" title="5">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb6-6" title="6">MODEL survtime*status(<span class="dv">0</span>) = sex dthick sex*dthick / DIST = EXPONENTIAL NOINT;</a>
+<a class="sourceLine" id="cb6-7" title="7">PPLOT;</a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb6-9" title="9"></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="co">** WEIBULL.;</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb6-12" title="12">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb6-13" title="13">MODEL survtime*status(<span class="dv">0</span>) = sex dthick sex*dthick / DIST = WEIBULL NOINT;</a>
+<a class="sourceLine" id="cb6-14" title="14">PPLOT;</a>
+<a class="sourceLine" id="cb6-15" title="15"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb6-16" title="16"></a>
+<a class="sourceLine" id="cb6-17" title="17"><span class="co">** GAMMA.;</span></a>
+<a class="sourceLine" id="cb6-18" title="18"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb6-19" title="19">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb6-20" title="20">MODEL survtime*status(<span class="dv">0</span>) = sex dthick sex*dthick / DIST = <span class="fu">GAMMA</span> NOINT;</a>
+<a class="sourceLine" id="cb6-21" title="21">PPLOT;</a>
+<a class="sourceLine" id="cb6-22" title="22"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb6-23" title="23"></a>
+<a class="sourceLine" id="cb6-24" title="24"><span class="co">** LOGNORMAL.;</span></a>
+<a class="sourceLine" id="cb6-25" title="25"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb6-26" title="26">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb6-27" title="27">MODEL survtime*status(<span class="dv">0</span>) = sex dthick sex*dthick / DIST = LNORMAL NOINT;</a>
+<a class="sourceLine" id="cb6-28" title="28">PPLOT;</a>
+<a class="sourceLine" id="cb6-29" title="29"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb6-30" title="30"></a>
+<a class="sourceLine" id="cb6-31" title="31"><span class="co">** LLOGISTIC.;</span></a>
+<a class="sourceLine" id="cb6-32" title="32"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb6-33" title="33">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb6-34" title="34">MODEL survtime*status(<span class="dv">0</span>) = sex dthick sex*dthick / DIST = LLOGISTIC NOINT;</a>
+<a class="sourceLine" id="cb6-35" title="35">PPLOT;</a>
+<a class="sourceLine" id="cb6-36" title="36"><span class="kw">RUN</span>;</a></code></pre></div>
+
+</div>
+<div id="model-sex-dthick" class="section level3">
+<h3><span class="header-section-number">A.1.3</span> Model sex dthick</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb7-1" title="1"><span class="co">* SEX DTHICK.;</span></a>
+<a class="sourceLine" id="cb7-2" title="2"></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co">** EXPONENTIAL.;</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb7-5" title="5">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb7-6" title="6">MODEL survtime*status(<span class="dv">0</span>) = sex dthick / DIST = EXPONENTIAL NOINT;</a>
+<a class="sourceLine" id="cb7-7" title="7">PPLOT;</a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb7-9" title="9"></a>
+<a class="sourceLine" id="cb7-10" title="10"><span class="co">** WEIBULL.;</span></a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb7-12" title="12">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb7-13" title="13">MODEL survtime*status(<span class="dv">0</span>) = sex dthick / DIST = WEIBULL NOINT;</a>
+<a class="sourceLine" id="cb7-14" title="14">PPLOT;</a>
+<a class="sourceLine" id="cb7-15" title="15"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb7-16" title="16"></a>
+<a class="sourceLine" id="cb7-17" title="17"><span class="co">** GAMMA.;</span></a>
+<a class="sourceLine" id="cb7-18" title="18"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb7-19" title="19">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb7-20" title="20">MODEL survtime*status(<span class="dv">0</span>) = sex dthick / DIST = <span class="fu">GAMMA</span> NOINT;</a>
+<a class="sourceLine" id="cb7-21" title="21">PPLOT;</a>
+<a class="sourceLine" id="cb7-22" title="22"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb7-23" title="23"></a>
+<a class="sourceLine" id="cb7-24" title="24"><span class="co">** LOGNORMAL.;</span></a>
+<a class="sourceLine" id="cb7-25" title="25"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb7-26" title="26">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb7-27" title="27">MODEL survtime*status(<span class="dv">0</span>) = sex dthick / DIST = LNORMAL NOINT;</a>
+<a class="sourceLine" id="cb7-28" title="28">PPLOT;</a>
+<a class="sourceLine" id="cb7-29" title="29"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb7-30" title="30"></a>
+<a class="sourceLine" id="cb7-31" title="31"><span class="co">** LLOGISTIC.;</span></a>
+<a class="sourceLine" id="cb7-32" title="32"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb7-33" title="33">CLASS dthick sex;</a>
+<a class="sourceLine" id="cb7-34" title="34">MODEL survtime*status(<span class="dv">0</span>) = sex dthick / DIST = LLOGISTIC NOINT;</a>
+<a class="sourceLine" id="cb7-35" title="35">PPLOT;</a>
+<a class="sourceLine" id="cb7-36" title="36"><span class="kw">RUN</span>;</a></code></pre></div>
+
+</div>
+<div id="model-dthick-2" class="section level3">
+<h3><span class="header-section-number">A.1.4</span> Model dthick</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb8-1" title="1"><span class="co">* DTHICK.;</span></a>
+<a class="sourceLine" id="cb8-2" title="2"></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co">** EXPONENTIAL.;</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb8-5" title="5">CLASS dthick;</a>
+<a class="sourceLine" id="cb8-6" title="6">MODEL survtime*status(<span class="dv">0</span>) = dthick / DIST = EXPONENTIAL NOINT;</a>
+<a class="sourceLine" id="cb8-7" title="7">PPLOT;</a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb8-9" title="9"></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="co">** WEIBULL.;</span></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb8-12" title="12">CLASS dthick;</a>
+<a class="sourceLine" id="cb8-13" title="13">MODEL survtime*status(<span class="dv">0</span>) = dthick / DIST = WEIBULL NOINT;</a>
+<a class="sourceLine" id="cb8-14" title="14">PPLOT;</a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb8-16" title="16"></a>
+<a class="sourceLine" id="cb8-17" title="17"><span class="co">** GAMMA.;</span></a>
+<a class="sourceLine" id="cb8-18" title="18"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb8-19" title="19">CLASS dthick;</a>
+<a class="sourceLine" id="cb8-20" title="20">MODEL survtime*status(<span class="dv">0</span>) = dthick / DIST = <span class="fu">GAMMA</span> NOINT;</a>
+<a class="sourceLine" id="cb8-21" title="21">PPLOT;</a>
+<a class="sourceLine" id="cb8-22" title="22"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb8-23" title="23"></a>
+<a class="sourceLine" id="cb8-24" title="24"><span class="co">** LOGNORMAL.;</span></a>
+<a class="sourceLine" id="cb8-25" title="25"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb8-26" title="26">CLASS dthick;</a>
+<a class="sourceLine" id="cb8-27" title="27">MODEL survtime*status(<span class="dv">0</span>) = dthick / DIST = LNORMAL NOINT;</a>
+<a class="sourceLine" id="cb8-28" title="28">PPLOT;</a>
+<a class="sourceLine" id="cb8-29" title="29"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb8-30" title="30"></a>
+<a class="sourceLine" id="cb8-31" title="31"><span class="co">** LLOGISTIC.;</span></a>
+<a class="sourceLine" id="cb8-32" title="32"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom <span class="kw">ORDER</span> =<span class="kw"> DATA</span>;</a>
+<a class="sourceLine" id="cb8-33" title="33">CLASS dthick;</a>
+<a class="sourceLine" id="cb8-34" title="34">MODEL survtime*status(<span class="dv">0</span>) = dthick / DIST = LLOGISTIC NOINT;</a>
+<a class="sourceLine" id="cb8-35" title="35">PPLOT;</a>
+<a class="sourceLine" id="cb8-36" title="36"><span class="kw">RUN</span>;</a></code></pre></div>
+
+</div>
+</div>
+<div id="sas-output" class="section level2">
+<h2><span class="header-section-number">A.2</span> SAS Output</h2>
+<div id="model-by-1" class="section level3">
+<h3><span class="header-section-number">A.2.1</span> Model BY</h3>
+<div id="exponential" class="section level4">
+<h4><span class="header-section-number">A.2.1.1</span> Exponential</h4>
+<pre><code>--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 77
+                           Noncensored Values                      7
+                           Right Censored Values                  70
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -27.63950553
+
+
+                            Number of Observations Read          77
+                            Number of Observations Used          77
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              55.279
+                             AIC (smaller is better)        57.279
+                             AICC (smaller is better)       57.332
+                             BIC (smaller is better)        59.623
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         156.375
+                       Exponential AIC (smaller is better)       158.375
+                       Exponential AICC (smaller is better)      158.428
+                       Exponential BIC (smaller is better)       160.718
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1  10.1696   0.3780   9.4288  10.9104  723.95     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Weibull Scale  1 26097.86 9864.062 12441.73 54743.02                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale             2.6484        0.1037
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 32
+                           Noncensored Values                      6
+                           Right Censored Values                  26
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -17.49283652
+
+
+                            Number of Observations Read          32
+                            Number of Observations Used          32
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              34.986
+                             AIC (smaller is better)        36.986
+                             AICC (smaller is better)       37.119
+                             BIC (smaller is better)        38.451
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         125.076
+                       Exponential AIC (smaller is better)       127.076
+                       Exponential AICC (smaller is better)      127.209
+                       Exponential BIC (smaller is better)       128.541
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   9.4230   0.4082   8.6228  10.2231  532.75     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+            Weibull Scale  1 12369.17 5049.691 5556.980 27532.27                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale              .             .    
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 35
+                           Noncensored Values                     15
+                           Right Censored Values                  20
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -37.84968653
+
+
+                            Number of Observations Read          35
+                            Number of Observations Used          35
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              75.699
+                             AIC (smaller is better)        77.699
+                             AICC (smaller is better)       77.821
+                             BIC (smaller is better)        79.255
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         287.562
+                       Exponential AIC (smaller is better)       289.562
+                       Exponential AICC (smaller is better)      289.683
+                       Exponential BIC (smaller is better)       291.117
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.5854   0.2582   8.0793   9.0914 1105.63     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+            Weibull Scale  1 5352.867 1382.104 3227.061 8879.034                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale             0.3232        0.5697
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 29
+                           Noncensored Values                     16
+                           Right Censored Values                  13
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -35.49576534
+
+
+                            Number of Observations Read          29
+                            Number of Observations Used          29
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              70.992
+                             AIC (smaller is better)        72.992
+                             AICC (smaller is better)       73.140
+                             BIC (smaller is better)        74.359
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         288.348
+                       Exponential AIC (smaller is better)       290.348
+                       Exponential AICC (smaller is better)      290.496
+                       Exponential BIC (smaller is better)       291.715
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.0109   0.2500   7.5209   8.5009 1026.79     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+            Weibull Scale  1 3013.562 753.3905 1846.204 4919.042                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale             0.8821        0.3476
+
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 15
+                           Noncensored Values                      6
+                           Right Censored Values                   9
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -14.91093859
+
+
+                            Number of Observations Read          15
+                            Number of Observations Used          15
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              29.822
+                             AIC (smaller is better)        31.822
+                             AICC (smaller is better)       32.130
+                             BIC (smaller is better)        32.530
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         111.847
+                       Exponential AIC (smaller is better)       113.847
+                       Exponential AICC (smaller is better)      114.155
+                       Exponential BIC (smaller is better)       114.555
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.3206   0.4082   7.5204   9.1207  415.39     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+            Weibull Scale  1 4107.500 1676.880 1845.338 9142.798                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale             0.0877        0.7672
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 17
+                           Noncensored Values                      7
+                           Right Censored Values                  10
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    1
+                           Name of Distribution          Exponential
+                           Log Likelihood               -22.67873152
+
+
+                            Number of Observations Read          17
+                            Number of Observations Used          17
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              45.357
+                             AIC (smaller is better)        47.357
+                             AICC (smaller is better)       47.624
+                             BIC (smaller is better)        48.191
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                         131.663
+                       Exponential AIC (smaller is better)       133.663
+                       Exponential AICC (smaller is better)      133.929
+                       Exponential BIC (smaller is better)       134.496
+
+
+          Algorithm converged.                                                       
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.4045   0.3780   7.6637   9.1453  494.45     &lt;.0001
+            Scale          0   1.0000   0.0000   1.0000   1.0000                   
+            Weibull Scale  1 4467.000 1688.367 2129.570 9370.007                   
+            Weibull Shape  0   1.0000   0.0000   1.0000   1.0000                   
+
+
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Scale             1.1046        0.2933</code></pre>
+
+</div>
+<div id="weibull" class="section level4">
+<h4><span class="header-section-number">A.2.1.2</span> Weibull</h4>
+<pre><code>--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 77
+                           Noncensored Values                      7
+                           Right Censored Values                  70
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood               -27.08972224
+
+
+                            Number of Observations Read          77
+                            Number of Observations Used          77
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              54.179
+                             AIC (smaller is better)        58.179
+                             AICC (smaller is better)       58.342
+                             BIC (smaller is better)        62.867
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     155.275
+                         Weibull AIC (smaller is better)       159.275
+                         Weibull AICC (smaller is better)      159.437
+                         Weibull BIC (smaller is better)       163.963
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   9.4392   0.5770   8.3083  10.5700  267.65     &lt;.0001
+            Scale          1   0.6819   0.2291   0.3529   1.3175                   
+            Weibull Scale  1 12571.52 7253.398 4057.604 38949.88                   
+            Weibull Shape  1   1.4665   0.4928   0.7590   2.8335                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.332895      0.118282
+                             Scale          0.118282      0.052503
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 32
+                           Noncensored Values                      6
+                           Right Censored Values                  26
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood               -15.84057136
+
+
+                            Number of Observations Read          32
+                            Number of Observations Used          32
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              31.681
+                             AIC (smaller is better)        35.681
+                             AICC (smaller is better)       36.095
+                             BIC (smaller is better)        38.613
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     121.771
+                         Weibull AIC (smaller is better)       125.771
+                         Weibull AICC (smaller is better)      126.185
+                         Weibull BIC (smaller is better)       128.702
+
+
+          Algorithm converged.                                                       
+          
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.6450   0.3000   8.0570   9.2330  830.36     &lt;.0001
+            Scale          1   0.4785   0.1653   0.2431   0.9419                   
+            Weibull Scale  1 5681.601 1704.520 3155.763 10229.09                   
+            Weibull Shape  1   2.0898   0.7221   1.0617   4.1135                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.090004      0.037644
+                             Scale          0.037644      0.027334
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 35
+                           Noncensored Values                     15
+                           Right Censored Values                  20
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood               -37.71626057
+
+
+                            Number of Observations Read          35
+                            Number of Observations Used          35
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              75.433
+                             AIC (smaller is better)        79.433
+                             AICC (smaller is better)       79.808
+                             BIC (smaller is better)        82.543
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     287.295
+                         Weibull AIC (smaller is better)       291.295
+                         Weibull AICC (smaller is better)      291.670
+                         Weibull BIC (smaller is better)       294.405
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.5117   0.2621   7.9980   9.0253 1054.71     &lt;.0001
+            Scale          1   0.8869   0.2009   0.5689   1.3827                   
+            Weibull Scale  1 4972.388 1303.203 2974.921 8311.026                   
+            Weibull Shape  1   1.1275   0.2555   0.7232   1.7578                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.068690      0.025615
+                             Scale          0.025615      0.040374
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 29
+                           Noncensored Values                     16
+                           Right Censored Values                  13
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood               -35.17381834
+
+
+                            Number of Observations Read          29
+                            Number of Observations Used          29
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              70.348
+                             AIC (smaller is better)        74.348
+                             AICC (smaller is better)       74.809
+                             BIC (smaller is better)        77.082
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     287.704
+                         Weibull AIC (smaller is better)       291.704
+                         Weibull AICC (smaller is better)      292.166
+                         Weibull BIC (smaller is better)       294.439
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.9436   0.2196   7.5132   8.3741 1308.22     &lt;.0001
+            Scale          1   0.8350   0.1802   0.5470   1.2746                   
+            Weibull Scale  1 2817.496 618.7853 1831.978 4333.175                   
+            Weibull Shape  1   1.1976   0.2584   0.7846   1.8280                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.048234      0.012295
+                             Scale          0.012295      0.032468
+
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 15
+                           Noncensored Values                      6
+                           Right Censored Values                   9
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood               -14.87332442
+
+
+                            Number of Observations Read          15
+                            Number of Observations Used          15
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              29.747
+                             AIC (smaller is better)        33.747
+                             AICC (smaller is better)       34.747
+                             BIC (smaller is better)        35.163
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     111.772
+                         Weibull AIC (smaller is better)       115.772
+                         Weibull AICC (smaller is better)      116.772
+                         Weibull BIC (smaller is better)       117.188
+
+
+          Algorithm converged. 
+          
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.2665   0.4114   7.4601   9.0728  403.74     &lt;.0001
+            Scale          1   0.9090   0.3092   0.4667   1.7706                   
+            Weibull Scale  1 3891.215 1600.865 1737.387 8715.129                   
+            Weibull Shape  1   1.1001   0.3742   0.5648   2.1426                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.169254      0.054901
+                             Scale          0.054901      0.095606
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 17
+                           Noncensored Values                      7
+                           Right Censored Values                  10
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution              Weibull
+                           Log Likelihood                 -21.836253
+
+
+                            Number of Observations Read          17
+                            Number of Observations Used          17
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              43.673
+                             AIC (smaller is better)        47.673
+                             AICC (smaller is better)       48.530
+                             BIC (smaller is better)        49.339
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                     129.978
+                         Weibull AIC (smaller is better)       133.978
+                         Weibull AICC (smaller is better)      134.835
+                         Weibull BIC (smaller is better)       135.644
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.7285   0.6684   7.4184  10.0386  170.51     &lt;.0001
+            Scale          1   1.4901   0.4996   0.7723   2.8748                   
+            Weibull Scale  1 6176.570 4128.650 1666.374 22894.03                   
+            Weibull Shape  1   0.6711   0.2250   0.3479   1.2948                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.446809      0.179877
+                             Scale          0.179877      0.249602</code></pre>
+
+</div>
+<div id="gamma" class="section level4">
+<h4><span class="header-section-number">A.2.1.3</span> Gamma</h4>
+<pre><code>--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 77
+                           Noncensored Values                      7
+                           Right Censored Values                  70
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood               -27.20094593
+
+
+                            Number of Observations Read          77
+                            Number of Observations Used          77
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              54.402
+                             AIC (smaller is better)        60.402
+                             AICC (smaller is better)       60.731
+                             BIC (smaller is better)        67.433
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   155.497
+                          Gamma AIC (smaller is better)       161.497
+                          Gamma AICC (smaller is better)      161.826
+                          Gamma BIC (smaller is better)       168.529
+
+
+          WARNING: Negative of Hessian not positive definite.                        
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   9.4582   0.5691   8.3428  10.5736  276.23     &lt;.0001
+            Scale          1   0.1946   0.0659   0.1002   0.3780                   
+
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Shape          0   3.6775   0.0000   3.6775   3.6775                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.323849      0.033551             0
+                      Scale          0.033551      0.004344             0
+                      Shape                 0             0             0
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 32
+                           Noncensored Values                      6
+                           Right Censored Values                  26
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood               -14.95487059
+
+
+                            Number of Observations Read          32
+                            Number of Observations Used          32
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              29.910
+                             AIC (smaller is better)        35.910
+                             AICC (smaller is better)       36.767
+                             BIC (smaller is better)        40.307
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   120.000
+                          Gamma AIC (smaller is better)       126.000
+                          Gamma AICC (smaller is better)      126.857
+                          Gamma BIC (smaller is better)       130.397
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.9988   0.7536   6.5219   9.4758  112.67     &lt;.0001
+            Scale          1   1.0041   0.3188   0.5389   1.8707                   
+            Shape          1  -2.1769   2.6030  -7.2787   2.9249                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.567863      0.104417      1.813478
+                      Scale          0.104417      0.101618      0.134515
+                      Shape          1.813478      0.134515      6.775616
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 35
+                           Noncensored Values                     15
+                           Right Censored Values                  20
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood               -36.39090049
+
+
+                            Number of Observations Read          35
+                            Number of Observations Used          35
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              72.782
+                             AIC (smaller is better)        78.782
+                             AICC (smaller is better)       79.556
+                             BIC (smaller is better)        83.448
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   284.644
+                          Gamma AIC (smaller is better)       290.644
+                          Gamma AICC (smaller is better)      291.418
+                          Gamma BIC (smaller is better)       295.310
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.5516   0.8543   5.8772   9.2259   78.14     &lt;.0001
+            Scale          1   1.4240   0.2927   0.9518   2.1305                   
+            Shape          1  -1.3142   1.5106  -4.2750   1.6466                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.729779      0.109884      1.210989
+                      Scale          0.109884      0.085680      0.120488
+                      Shape          1.210989      0.120488      2.282034
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 29
+                           Noncensored Values                     16
+                           Right Censored Values                  13
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood               -34.06830627
+
+
+                            Number of Observations Read          29
+                            Number of Observations Used          29
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              68.137
+                             AIC (smaller is better)        74.137
+                             AICC (smaller is better)       75.097
+                             BIC (smaller is better)        78.239
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   285.493
+                          Gamma AIC (smaller is better)       291.493
+                          Gamma AICC (smaller is better)      292.453
+                          Gamma BIC (smaller is better)       295.595
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.3750   0.5525   6.2922   8.4578  178.21     &lt;.0001
+            Scale          1   1.2151   0.2622   0.7961   1.8547                   
+            Shape          1  -0.5277   1.0922  -2.6683   1.6129                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.305204     -0.039864      0.535195
+                      Scale         -0.039864      0.068736     -0.142320
+                      Shape          0.535195     -0.142320      1.192794
+                      
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 15
+                           Noncensored Values                      6
+                           Right Censored Values                   9
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood                -13.9700331
+
+
+                            Number of Observations Read          15
+                            Number of Observations Used          15
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              27.940
+                             AIC (smaller is better)        33.940
+                             AICC (smaller is better)       36.122
+                             BIC (smaller is better)        36.064
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   109.965
+                          Gamma AIC (smaller is better)       115.965
+                          Gamma AICC (smaller is better)      118.147
+                          Gamma BIC (smaller is better)       118.089
+
+
+          Algorithm converged.  
+          
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.2418   0.9467   5.3863   9.0974   58.51     &lt;.0001
+            Scale          1   1.3211   0.4160   0.7127   2.4490                   
+            Shape          1  -1.3544   1.6902  -4.6671   1.9583                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.896282      0.173345      1.418341
+                      Scale          0.173345      0.173075      0.151023
+                      Shape          1.418341      0.151023      2.856697
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 17
+                           Noncensored Values                      7
+                           Right Censored Values                  10
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution                Gamma
+                           Log Likelihood               -18.04451077
+
+
+                            Number of Observations Read          17
+                            Number of Observations Used          17
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              36.089
+                             AIC (smaller is better)        42.089
+                             AICC (smaller is better)       43.935
+                             BIC (smaller is better)        44.589
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                   122.394
+                          Gamma AIC (smaller is better)       128.394
+                          Gamma AICC (smaller is better)      130.240
+                          Gamma BIC (smaller is better)       130.894
+
+
+          WARNING: The relative gradient convergence criterion of 0.0078918566 is    
+          greater than the limit of 0.0001. The convergence is questionable.         
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   5.3241   0.1849   4.9616   5.6865  828.92     &lt;.0001
+            Scale          1   0.4168   0.3322   0.0874   1.9873                   
+            Shape          1 -10.5590   7.9662 -26.1724   5.0544                   
+
+
+                                  Estimated Covariance Matrix
+
+                                    Intercept         Scale         Shape
+
+                      Intercept      0.034196      0.047922      1.155276
+                      Scale          0.047922      0.110328      2.357232
+                      Shape          1.155276      2.357232     63.459745</code></pre>
+
+</div>
+<div id="log-logistic" class="section level4">
+<h4><span class="header-section-number">A.2.1.4</span> Log logistic</h4>
+<pre><code>--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 77
+                           Noncensored Values                      7
+                           Right Censored Values                  70
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -26.98241584
+
+
+                            Number of Observations Read          77
+                            Number of Observations Used          77
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              53.965
+                             AIC (smaller is better)        57.965
+                             AICC (smaller is better)       58.127
+                             BIC (smaller is better)        62.652
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       155.060
+                        LLogistic AIC (smaller is better)       159.060
+                        LLogistic AICC (smaller is better)      159.223
+                        LLogistic BIC (smaller is better)       163.748
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   9.3180   0.5547   8.2308  10.4051  282.20     &lt;.0001
+            Scale          1   0.6500   0.2172   0.3377   1.2511                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.307667      0.106391
+                             Scale          0.106391      0.047159
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 32
+                           Noncensored Values                      6
+                           Right Censored Values                  26
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -15.65090834
+
+
+                            Number of Observations Read          32
+                            Number of Observations Used          32
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              31.302
+                             AIC (smaller is better)        35.302
+                             AICC (smaller is better)       35.716
+                             BIC (smaller is better)        38.233
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       121.392
+                        LLogistic AIC (smaller is better)       125.392
+                        LLogistic AICC (smaller is better)      125.805
+                        LLogistic BIC (smaller is better)       128.323
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.4965   0.2879   7.9323   9.0608  871.16     &lt;.0001
+            Scale          1   0.4285   0.1469   0.2188   0.8391                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.082868      0.030407
+                             Scale          0.030407      0.021591
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 35
+                           Noncensored Values                     15
+                           Right Censored Values                  20
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -37.24994243
+
+
+                            Number of Observations Read          35
+                            Number of Observations Used          35
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              74.500
+                             AIC (smaller is better)        78.500
+                             AICC (smaller is better)       78.875
+                             BIC (smaller is better)        81.611
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       286.362
+                        LLogistic AIC (smaller is better)       290.362
+                        LLogistic AICC (smaller is better)      290.737
+                        LLogistic BIC (smaller is better)       293.473
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.1658   0.2689   7.6388   8.6928  922.29     &lt;.0001
+            Scale          1   0.7418   0.1647   0.4801   1.1462                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.072298      0.017690
+                             Scale          0.017690      0.027119
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 29
+                           Noncensored Values                     16
+                           Right Censored Values                  13
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -34.41573453
+
+
+                            Number of Observations Read          29
+                            Number of Observations Used          29
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              68.831
+                             AIC (smaller is better)        72.831
+                             AICC (smaller is better)       73.293
+                             BIC (smaller is better)        75.566
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       286.188
+                        LLogistic AIC (smaller is better)       290.188
+                        LLogistic AICC (smaller is better)      290.650
+                        LLogistic BIC (smaller is better)       292.923
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.5751   0.2295   7.1254   8.0249 1089.76     &lt;.0001
+            Scale          1   0.6506   0.1401   0.4266   0.9923                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.052656      0.008601
+                             Scale          0.008601      0.019638
+
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 15
+                           Noncensored Values                      6
+                           Right Censored Values                   9
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood                -14.4344073
+
+
+                            Number of Observations Read          15
+                            Number of Observations Used          15
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              28.869
+                             AIC (smaller is better)        32.869
+                             AICC (smaller is better)       33.869
+                             BIC (smaller is better)        34.285
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       110.894
+                        LLogistic AIC (smaller is better)       114.894
+                        LLogistic AICC (smaller is better)      115.894
+                        LLogistic BIC (smaller is better)       116.310
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   7.8452   0.4095   7.0425   8.6479  366.95     &lt;.0001
+            Scale          1   0.7077   0.2440   0.3600   1.3911                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.167726      0.039469
+                             Scale          0.039469      0.059547
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 17
+                           Noncensored Values                      7
+                           Right Censored Values                  10
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -21.30076219
+
+
+                            Number of Observations Read          17
+                            Number of Observations Used          17
+
+
+                                     Parameter Information
+
+                                     Parameter    Effect
+
+                                     Intercept    Intercept
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood              42.602
+                             AIC (smaller is better)        46.602
+                             AICC (smaller is better)       47.459
+                             BIC (smaller is better)        48.268
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                       128.907
+                        LLogistic AIC (smaller is better)       132.907
+                        LLogistic AICC (smaller is better)      133.764
+                        LLogistic BIC (smaller is better)       134.573
+
+
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+            Intercept      1   8.0663   0.6463   6.7996   9.3329  155.78     &lt;.0001
+            Scale          1   1.2004   0.3887   0.6364   2.2643                   
+
+
+                                  Estimated Covariance Matrix
+
+                                           Intercept         Scale
+
+                             Intercept      0.417677      0.115043
+                             Scale          0.115043      0.151054</code></pre>
+
+</div>
+</div>
+<div id="model-interaction-1" class="section level3">
+<h3><span class="header-section-number">A.2.2</span> Model Interaction</h3>
+<div id="exponential-1" class="section level4">
+<h4><span class="header-section-number">A.2.2.1</span> Exponential</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    6
+                           Name of Distribution          Exponential
+                           Log Likelihood                -156.067464
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             312.135
+                             AIC (smaller is better)       324.135
+                             AICC (smaller is better)      324.559
+                             BIC (smaller is better)       344.073
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                        1100.869
+                       Exponential AIC (smaller is better)      1112.869
+                       Exponential AICC (smaller is better)     1113.293
+                       Exponential BIC (smaller is better)      1132.807
+
+
+          Algorithm converged.                                                       
+
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept          0         .             .    
+                        sex                1        2.0459        0.1526
+                        dthick             2       21.8820        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        dthick*sex         2        1.3225        0.5162
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                        Standard   95% Confidence     Chi-
+          Parameter         DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+          Intercept          0   0.0000   0.0000   0.0000   0.0000     .        .    
+          sex           1    1   9.4230   0.4082   8.6228  10.2231  532.75     &lt;.0001
+          sex           0    1  10.1696   0.3780   9.4288  10.9104  723.95     &lt;.0001
+          dthick        2    1  -1.8490   0.5563  -2.9395  -0.7586   11.05     0.0009
+          dthick        1    1  -1.5842   0.4577  -2.4814  -0.6871   11.98     0.0005
+          dthick        0    0   0.0000    .        .        .         .        .    
+          dthick*sex    2 1  1   0.8305   0.7868  -0.7115   2.3726    1.11     0.2911
+          dthick*sex    2 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    1 1  1   0.1721   0.6623  -1.1260   1.4703    0.07     0.7949
+          dthick*sex    1 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 1  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 0  0   0.0000    .        .        .         .        .    
+          Scale              0   1.0000   0.0000   1.0000   1.0000                   
+          Weibull Shape      0   1.0000   0.0000   1.0000   1.0000                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .    
+                             Scale             1.2212        0.2691</code></pre>
+
+</div>
+<div id="weibull-1" class="section level4">
+<h4><span class="header-section-number">A.2.2.2</span> Weibull</h4>
+<pre><code>                                      The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    7
+                           Name of Distribution              Weibull
+                           Log Likelihood               -155.5631564
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             311.126
+                             AIC (smaller is better)       325.126
+                             AICC (smaller is better)      325.695
+                             BIC (smaller is better)       348.387
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                    1099.861
+                         Weibull AIC (smaller is better)      1113.861
+                         Weibull AICC (smaller is better)     1114.429
+                         Weibull BIC (smaller is better)      1137.122
+
+
+          Algorithm converged.                                                       
+
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept          0         .             .    
+                        sex                1        2.0883        0.1484
+                        dthick             2       17.6303        0.0001
+
+                                     The LIFEREG Procedure
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        dthick*sex         2        1.4431        0.4860
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                        Standard   95% Confidence     Chi-
+          Parameter         DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+          Intercept          0   0.0000   0.0000   0.0000   0.0000     .        .    
+          sex           1    1   9.2492   0.3953   8.4745  10.0238  547.59     &lt;.0001
+          sex           0    1   9.9089   0.4109   9.1036  10.7143  581.56     &lt;.0001
+          dthick        2    1  -1.6547   0.5253  -2.6843  -0.6250    9.92     0.0016
+          dthick        1    1  -1.3969   0.4412  -2.2616  -0.5321   10.02     0.0015
+          dthick        0    0   0.0000    .        .        .         .        .    
+          dthick*sex    2 1  1   0.7474   0.7024  -0.6294   2.1241    1.13     0.2873
+          dthick*sex    2 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    1 1  1   0.1117   0.5904  -1.0455   1.2689    0.04     0.8499
+          dthick*sex    1 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 1  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 0  0   0.0000    .        .        .         .        .    
+          Scale              1   0.8875   0.1028   0.7073   1.1137                   
+          Weibull Shape      1   1.1267   0.1305   0.8979   1.4138                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .</code></pre>
+
+</div>
+<div id="gamma-1" class="section level4">
+<h4><span class="header-section-number">A.2.2.3</span> Gamma</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    8
+                           Name of Distribution                Gamma
+                           Log Likelihood               -146.9425207
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             293.885
+                             AIC (smaller is better)       309.885
+                             AICC (smaller is better)      310.620
+                             BIC (smaller is better)       336.469
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                  1082.619
+                          Gamma AIC (smaller is better)      1098.619
+                          Gamma AICC (smaller is better)     1099.354
+                          Gamma BIC (smaller is better)      1125.203
+
+
+          Algorithm converged.                                                       
+
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept          0         .             .    
+                        sex                1        2.5341        0.1114
+                        dthick             2       43.2433        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        dthick*sex         2        0.4217        0.8099
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                        Standard   95% Confidence     Chi-
+          Parameter         DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+          Intercept          0   0.0000   0.0000   0.0000   0.0000     .        .    
+          sex           1    1   8.4235   0.3449   7.7474   9.0995  596.34     &lt;.0001
+          sex           0    1   8.6025   0.3371   7.9418   9.2633  651.16     &lt;.0001
+          dthick        2    1  -1.4460   0.4285  -2.2858  -0.6061   11.39     0.0007
+          dthick        1    1  -1.2256   0.3035  -1.8204  -0.6308   16.31     &lt;.0001
+          dthick        0    0   0.0000    .        .        .         .        .    
+          dthick*sex    2 1  1  -0.3285   0.6164  -1.5366   0.8795    0.28     0.5940
+          dthick*sex    2 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    1 1  1  -0.2613   0.4832  -1.2084   0.6858    0.29     0.5887
+          dthick*sex    1 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 1  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 0  0   0.0000    .        .        .         .        .    
+          Scale              1   1.4052   0.1499   1.1400   1.7320                   
+          Shape              1  -1.6587   0.4760  -2.5917  -0.7257                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+<div id="lognormal" class="section level4">
+<h4><span class="header-section-number">A.2.2.4</span> Lognormal</h4>
+<pre><code>                                     The LIFEREG Procedure
+            
+                                       Model Information
+            
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    7
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -150.2189745
+            
+            
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+            
+            
+                                    Class Level Information
+            
+                                  Name        Levels    Values
+            
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+            
+            
+                                        Fit Statistics
+            
+                             -2 Log Likelihood             300.438
+                             AIC (smaller is better)       314.438
+                             AICC (smaller is better)      315.006
+                             BIC (smaller is better)       337.699
+            
+            
+                              Fit Statistics (Unlogged Response)
+            
+                        -2 Log Likelihood                      1089.172
+                        Lognormal AIC (smaller is better)      1103.172
+                        Lognormal AICC (smaller is better)     1103.741
+                        Lognormal BIC (smaller is better)      1126.433
+            
+            
+            Algorithm converged.                                                       
+            
+            
+                                  Type III Analysis of Effects
+            
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+            
+                        Intercept          0         .             .    
+                        sex                1        2.3593        0.1245
+                        dthick             2       26.1773        &lt;.0001
+            
+                                     The LIFEREG Procedure
+
+            
+                                  Type III Analysis of Effects
+            
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+            
+                        dthick*sex         2        0.2643        0.8762
+            
+            
+                      Analysis of Maximum Likelihood Parameter Estimates
+            
+                                        Standard   95% Confidence     Chi-
+            Parameter         DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+            
+            Intercept          0   0.0000   0.0000   0.0000   0.0000     .        .    
+            sex           1    1   9.0622   0.3575   8.3615   9.7628  642.65     &lt;.0001
+            sex           0    1   9.5056   0.3171   8.8841  10.1271  898.72     &lt;.0001
+            dthick        2    1  -1.5838   0.4856  -2.5355  -0.6321   10.64     0.0011
+            dthick        1    1  -1.3145   0.3728  -2.0452  -0.5838   12.43     0.0004
+            dthick        0    0   0.0000    .        .        .         .        .    
+            dthick*sex    2 1  1   0.2416   0.6747  -1.0807   1.5639    0.13     0.7203
+            dthick*sex    2 0  0   0.0000    .        .        .         .        .    
+            dthick*sex    1 1  1  -0.0866   0.5492  -1.1631   0.9899    0.02     0.8747
+            dthick*sex    1 0  0   0.0000    .        .        .         .        .    
+            dthick*sex    0 1  0   0.0000    .        .        .         .        .    
+            dthick*sex    0 0  0   0.0000    .        .        .         .        .    
+            Scale              1   1.2752   0.1338   1.0382   1.5662                   
+            
+            
+                                 Lagrange Multiplier Statistics
+            
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+            
+                             Intercept          .             .  </code></pre>
+
+</div>
+<div id="log-logistic-1" class="section level4">
+<h4><span class="header-section-number">A.2.2.5</span> Log logistic</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    7
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -152.6828213
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             305.366
+                             AIC (smaller is better)       319.366
+                             AICC (smaller is better)      319.934
+                             BIC (smaller is better)       342.627
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                      1094.100
+                        LLogistic AIC (smaller is better)      1108.100
+                        LLogistic AICC (smaller is better)     1108.668
+                        LLogistic BIC (smaller is better)      1131.361
+
+
+          Algorithm converged.                                                       
+
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept          0         .             .    
+                        sex                1        2.4295        0.1191
+                        dthick             2       22.6161        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                                  Type III Analysis of Effects
+
+                                                      Wald
+                        Effect            DF    Chi-Square    Pr &gt; ChiSq
+
+                        dthick*sex         2        0.4958        0.7804
+
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                        Standard   95% Confidence     Chi-
+          Parameter         DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+          Intercept          0   0.0000   0.0000   0.0000   0.0000     .        .    
+          sex           1    1   8.9501   0.3573   8.2498   9.6504  627.44     &lt;.0001
+          sex           0    1   9.5085   0.3496   8.8233  10.1938  739.65     &lt;.0001
+          dthick        2    1  -1.6459   0.5048  -2.6352  -0.6565   10.63     0.0011
+          dthick        1    1  -1.3479   0.4050  -2.1418  -0.5541   11.08     0.0009
+          dthick        0    0   0.0000    .        .        .         .        .    
+          dthick*sex    2 1  1   0.4362   0.7054  -0.9462   1.8187    0.38     0.5363
+          dthick*sex    2 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    1 1  1   0.0104   0.5650  -1.0970   1.1178    0.00     0.9853
+          dthick*sex    1 0  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 1  0   0.0000    .        .        .         .        .    
+          dthick*sex    0 0  0   0.0000    .        .        .         .        .    
+          Scale              1   0.7339   0.0836   0.5870   0.9176                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+</div>
+<div id="model-sex-dthick-1" class="section level3">
+<h3><span class="header-section-number">A.2.3</span> Model sex dthick</h3>
+<div id="exponential-2" class="section level4">
+<h4><span class="header-section-number">A.2.3.1</span> Exponential</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    4
+                           Name of Distribution          Exponential
+                           Log Likelihood               -156.7148099
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             313.430
+                             AIC (smaller is better)       321.430
+                             AICC (smaller is better)      321.630
+                             BIC (smaller is better)       334.722
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                        1102.164
+                       Exponential AIC (smaller is better)      1110.164
+                       Exponential AICC (smaller is better)     1110.364
+                       Exponential BIC (smaller is better)      1123.456
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        sex               1        3.0122        0.0826
+                        dthick            2       21.9040        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           sex           1  1   9.5823   0.3221   8.9511  10.2135  885.29     &lt;.0001
+           sex           0  1  10.0507   0.2970   9.4686  10.6328 1145.21     &lt;.0001
+           dthick        2  1  -1.3958   0.3992  -2.1783  -0.6133   12.22     0.0005
+           dthick        1  1  -1.5187   0.3314  -2.1683  -0.8691   21.00     &lt;.0001
+           dthick        0  0   0.0000    .        .        .         .        .    
+           Scale            0   1.0000   0.0000   1.0000   1.0000                   
+           Weibull Shape    0   1.0000   0.0000   1.0000   1.0000                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .    
+                             Scale             1.0616        0.3029</code></pre>
+
+</div>
+<div id="weibull-2" class="section level4">
+<h4><span class="header-section-number">A.2.3.2</span> Weibull</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    5
+                           Name of Distribution              Weibull
+                           Log Likelihood               -156.2704132
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             312.541
+                             AIC (smaller is better)       322.541
+                             AICC (smaller is better)      322.842
+                             BIC (smaller is better)       339.156
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                    1101.275
+                         Weibull AIC (smaller is better)      1111.275
+                         Weibull AICC (smaller is better)     1111.577
+                         Weibull BIC (smaller is better)      1127.890
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        sex               1        3.2010        0.0736
+                        dthick            2       17.4469        0.0002
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           sex           1  1   9.3906   0.3428   8.7187  10.0625  750.34     &lt;.0001
+           sex           0  1   9.8267   0.3443   9.1518  10.5015  814.43     &lt;.0001
+           dthick        2  1  -1.2496   0.3855  -2.0052  -0.4940   10.51     0.0012
+           dthick        1  1  -1.3670   0.3318  -2.0173  -0.7166   16.97     &lt;.0001
+           dthick        0  0   0.0000    .        .        .         .        .    
+           Scale            1   0.8946   0.1032   0.7135   1.1216                   
+           Weibull Shape    1   1.1178   0.1290   0.8916   1.4015                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+<div id="gamma-2" class="section level4">
+<h4><span class="header-section-number">A.2.3.3</span> Gamma</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    6
+                           Name of Distribution                Gamma
+                           Log Likelihood               -147.1404642
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             294.281
+                             AIC (smaller is better)       306.281
+                             AICC (smaller is better)      306.705
+                             BIC (smaller is better)       326.219
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                  1083.015
+                          Gamma AIC (smaller is better)      1095.015
+                          Gamma AICC (smaller is better)     1095.439
+                          Gamma BIC (smaller is better)      1114.953
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        sex               1        2.3238        0.1274
+                        dthick            2       40.7558        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           sex           1  1   8.3653   0.3071   7.7634   8.9672  741.94     &lt;.0001
+           sex           0  1   8.7104   0.2957   8.1309   9.2900  867.78     &lt;.0001
+           dthick        2  1  -1.5908   0.3111  -2.2006  -0.9811   26.15     &lt;.0001
+           dthick        1  1  -1.3246   0.2439  -1.8026  -0.8466   29.50     &lt;.0001
+           dthick        0  0   0.0000    .        .        .         .        .    
+           Scale            1   1.4239   0.1477   1.1619   1.7451                   
+           Shape            1  -1.5590   0.3959  -2.3350  -0.7831                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .</code></pre>
+
+</div>
+<div id="lognormal-1" class="section level4">
+<h4><span class="header-section-number">A.2.3.4</span> Lognormal</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    5
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -150.3511243
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             300.702
+                             AIC (smaller is better)       310.702
+                             AICC (smaller is better)      311.004
+                             BIC (smaller is better)       327.317
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                      1089.437
+                        Lognormal AIC (smaller is better)      1099.437
+                        Lognormal AICC (smaller is better)     1099.738
+                        Lognormal BIC (smaller is better)      1116.052
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        sex               1        3.1687        0.0751
+                        dthick            2       26.4328        &lt;.0001
+
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           sex           1  1   9.0703   0.2961   8.4900   9.6506  938.50     &lt;.0001
+           sex           0  1   9.5030   0.2849   8.9446  10.0615 1112.32     &lt;.0001
+           dthick        2  1  -1.4493   0.3464  -2.1282  -0.7703   17.50     &lt;.0001
+           dthick        1  1  -1.3581   0.2890  -1.9245  -0.7917   22.08     &lt;.0001
+           dthick        0  0   0.0000    .        .        .         .        .    
+           Scale            1   1.2763   0.1335   1.0397   1.5667                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .    
+</code></pre>
+
+</div>
+<div id="log-logistic-2" class="section level4">
+<h4><span class="header-section-number">A.2.3.5</span> Log logistic</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    5
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -152.9302109
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+                                  sex              2    1 0   
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             305.860
+                             AIC (smaller is better)       315.860
+                             AICC (smaller is better)      316.162
+                             BIC (smaller is better)       332.475
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                      1094.595
+                        LLogistic AIC (smaller is better)      1104.595
+                        LLogistic AICC (smaller is better)     1104.896
+                        LLogistic BIC (smaller is better)      1121.210
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        sex               1        3.5789        0.0585
+                        dthick            2       22.7538        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           sex           1  1   9.0052   0.3021   8.4131   9.5973  888.45     &lt;.0001
+           sex           0  1   9.4718   0.2989   8.8859  10.0577 1003.93     &lt;.0001
+           dthick        2  1  -1.4284   0.3689  -2.1513  -0.7054   15.00     0.0001
+           dthick        1  1  -1.3507   0.3036  -1.9458  -0.7556   19.79     &lt;.0001
+           dthick        0  0   0.0000    .        .        .         .        .    
+           Scale            1   0.7350   0.0834   0.5884   0.9182                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+</div>
+<div id="model-dthick-3" class="section level3">
+<h3><span class="header-section-number">A.2.4</span> Model dthick</h3>
+<div id="exponential-3" class="section level4">
+<h4><span class="header-section-number">A.2.4.1</span> Exponential</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    3
+                           Name of Distribution          Exponential
+                           Log Likelihood               -158.2113372
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    0 1 2 
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             316.423
+                             AIC (smaller is better)       322.423
+                             AICC (smaller is better)      322.542
+                             BIC (smaller is better)       332.392
+
+
+                              Fit Statistics (Unlogged Response)
+
+                       -2 Log Likelihood                        1105.157
+                       Exponential AIC (smaller is better)      1111.157
+                       Exponential AICC (smaller is better)     1111.276
+                       Exponential BIC (smaller is better)      1121.126
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        dthick            3     4332.8852        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           dthick        0  1   9.8915   0.2774   9.3479  10.4351 1271.94     &lt;.0001
+           dthick        1  1   8.3298   0.1796   7.9778   8.6818 2150.94     &lt;.0001
+           dthick        2  1   8.3666   0.2774   7.8230   8.9102  910.00     &lt;.0001
+           Scale            0   1.0000   0.0000   1.0000   1.0000                   
+           Weibull Shape    0   1.0000   0.0000   1.0000   1.0000                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .    
+                             Scale             0.7752        0.3786</code></pre>
+
+</div>
+<div id="weibull-3" class="section level4">
+<h4><span class="header-section-number">A.2.4.2</span> Weibull</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    4
+                           Name of Distribution              Weibull
+                           Log Likelihood               -157.8781413
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    0 1 2 
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             315.756
+                             AIC (smaller is better)       323.756
+                             AICC (smaller is better)      323.956
+                             BIC (smaller is better)       337.048
+
+
+                              Fit Statistics (Unlogged Response)
+
+                         -2 Log Likelihood                    1104.491
+                         Weibull AIC (smaller is better)      1112.491
+                         Weibull AICC (smaller is better)     1112.691
+                         Weibull BIC (smaller is better)      1125.783
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        dthick            3     3430.9239        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           dthick        0  1   9.7050   0.3295   9.0591  10.3508  867.33     &lt;.0001
+           dthick        1  1   8.2816   0.1717   7.9451   8.6181 2327.11     &lt;.0001
+           dthick        2  1   8.3139   0.2585   7.8072   8.8205 1034.27     &lt;.0001
+           Scale            1   0.9083   0.1048   0.7244   1.1388                   
+           Weibull Shape    1   1.1010   0.1271   0.8781   1.3804                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+<div id="gamma-3" class="section level4">
+<h4><span class="header-section-number">A.2.4.3</span> Gamma</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    5
+                           Name of Distribution                Gamma
+                           Log Likelihood               -148.3148934
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    0 1 2 
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             296.630
+                             AIC (smaller is better)       306.630
+                             AICC (smaller is better)      306.931
+                             BIC (smaller is better)       323.245
+
+
+                              Fit Statistics (Unlogged Response)
+
+                          -2 Log Likelihood                  1085.364
+                          Gamma AIC (smaller is better)      1095.364
+                          Gamma AICC (smaller is better)     1095.666
+                          Gamma BIC (smaller is better)      1111.979
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        dthick            3      767.0002        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           dthick        0  1   8.5484   0.3131   7.9347   9.1620  745.44     &lt;.0001
+           dthick        1  1   7.1409   0.3143   6.5248   7.7570  516.12     &lt;.0001
+           dthick        2  1   6.8325   0.3794   6.0889   7.5762  324.26     &lt;.0001
+           Scale            1   1.4307   0.1526   1.1608   1.7633                   
+           Shape            1  -1.7025   0.5071  -2.6963  -0.7086                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             . </code></pre>
+
+</div>
+<div id="lognormal-2" class="section level4">
+<h4><span class="header-section-number">A.2.4.4</span> Lognormal</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    4
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -151.9378754
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    2 1 0 
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             303.876
+                             AIC (smaller is better)       311.876
+                             AICC (smaller is better)      312.076
+                             BIC (smaller is better)       325.168
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                      1092.610
+                        Lognormal AIC (smaller is better)      1100.610
+                        Lognormal AICC (smaller is better)     1100.810
+                        Lognormal BIC (smaller is better)      1113.902
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        dthick            3     2777.7928        &lt;.0001
+
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           dthick        2  1   7.8205   0.2778   7.2760   8.3650  792.47     &lt;.0001
+           dthick        1  1   7.9504   0.1940   7.5701   8.3307 1679.19     &lt;.0001
+           dthick        0  1   9.3787   0.2679   8.8536   9.9038 1225.26     &lt;.0001
+           Scale            1   1.2964   0.1358   1.0558   1.5919                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .</code></pre>
+
+</div>
+<div id="log-logistic-3" class="section level4">
+<h4><span class="header-section-number">A.2.4.5</span> Log logistic</h4>
+<pre><code>                                     The LIFEREG Procedure
+
+                                       Model Information
+
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                205
+                           Noncensored Values                     57
+                           Right Censored Values                 148
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    4
+                           Name of Distribution            LLogistic
+                           Log Likelihood               -154.7119641
+
+
+                            Number of Observations Read         205
+                            Number of Observations Used         205
+
+
+                                    Class Level Information
+
+                                  Name        Levels    Values
+
+                                  dthick           3    0 1 2 
+
+
+                                        Fit Statistics
+
+                             -2 Log Likelihood             309.424
+                             AIC (smaller is better)       317.424
+                             AICC (smaller is better)      317.624
+                             BIC (smaller is better)       330.716
+
+
+                              Fit Statistics (Unlogged Response)
+
+                        -2 Log Likelihood                      1098.158
+                        LLogistic AIC (smaller is better)      1106.158
+                        LLogistic AICC (smaller is better)     1106.358
+                        LLogistic BIC (smaller is better)      1119.450
+
+
+          Algorithm converged.                                                       
+
+
+                                 Type III Analysis of Effects
+
+                                                     Wald
+                        Effect           DF    Chi-Square    Pr &gt; ChiSq
+
+                        Intercept         0         .             .    
+                        dthick            3     3088.0718        &lt;.0001
+
+                                     The LIFEREG Procedure
+
+                      Analysis of Maximum Likelihood Parameter Estimates
+
+                                       Standard   95% Confidence     Chi-
+           Parameter       DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+
+           Intercept        0   0.0000   0.0000   0.0000   0.0000     .        .    
+           dthick        0  1   9.3316   0.2809   8.7812   9.8821 1103.97     &lt;.0001
+           dthick        1  1   7.9092   0.1836   7.5494   8.2689 1856.41     &lt;.0001
+           dthick        2  1   7.8108   0.2822   7.2578   8.3639  766.19     &lt;.0001
+           Scale            1   0.7490   0.0851   0.5994   0.9359                   
+
+
+                                 Lagrange Multiplier Statistics
+
+                             Parameter     Chi-Square    Pr &gt; ChiSq
+
+                             Intercept          .             .</code></pre>
+
+</div>
+</div>
+</div>
+<div id="sas-plots" class="section level2">
+<h2><span class="header-section-number">A.3</span> SAS Plots</h2>
+<div id="model-by-2" class="section level3">
+<h3><span class="header-section-number">A.3.1</span> Model BY</h3>
+<div id="exponential-4" class="section level4">
+<h4><span class="header-section-number">A.3.1.1</span> Exponential</h4>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-1"></span>
+<img src="graphs/BY_EXP_PP_1.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.1: Probability Plot – BY – sex = 0, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-2"></span>
+<img src="graphs/BY_EXP_PP_2.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.2: Probability Plot – BY – sex = 0, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-3"></span>
+<img src="graphs/BY_EXP_PP_3.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.3: Probability Plot – BY – sex = 0, dthick = 2.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-4"></span>
+<img src="graphs/BY_EXP_PP_4.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.4: Probability Plot – BY – sex = 1, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-5"></span>
+<img src="graphs/BY_EXP_PP_5.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.5: Probability Plot – BY – sex = 1, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-PP-6"></span>
+<img src="graphs/BY_EXP_PP_6.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.6: Probability Plot – BY – sex = 1, dthick = 2.
+</p>
+</div>
+
+</div>
+<div id="weibull-4" class="section level4">
+<h4><span class="header-section-number">A.3.1.2</span> Weibull</h4>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-1"></span>
+<img src="graphs/BY_WEI_PP_1.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.7: Probability Plot – BY – sex = 0, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-2"></span>
+<img src="graphs/BY_WEI_PP_2.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.8: Probability Plot – BY – sex = 0, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-3"></span>
+<img src="graphs/BY_WEI_PP_3.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.9: Probability Plot – BY – sex = 0, dthick = 2.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-4"></span>
+<img src="graphs/BY_WEI_PP_4.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.10: Probability Plot – BY – sex = 1, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-5"></span>
+<img src="graphs/BY_WEI_PP_5.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.11: Probability Plot – BY – sex = 1, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-PP-6"></span>
+<img src="graphs/BY_WEI_PP_6.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.12: Probability Plot – BY – sex = 1, dthick = 2.
+</p>
+</div>
+
+</div>
+<div id="gamma-4" class="section level4">
+<h4><span class="header-section-number">A.3.1.3</span> Gamma</h4>
+<p>No plot possible for first group.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-GAM-PP-2"></span>
+<img src="graphs/BY_GAM_PP_2.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.13: Probability Plot – BY – sex = 0, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-GAM-PP-3"></span>
+<img src="graphs/BY_GAM_PP_3.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.14: Probability Plot – BY – sex = 0, dthick = 2.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-GAM-PP-4"></span>
+<img src="graphs/BY_GAM_PP_4.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.15: Probability Plot – BY – sex = 1, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-GAM-PP-5"></span>
+<img src="graphs/BY_GAM_PP_5.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.16: Probability Plot – BY – sex = 1, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-GAM-PP-6"></span>
+<img src="graphs/BY_GAM_PP_6.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.17: Probability Plot – BY – sex = 1, dthick = 2.
+</p>
+</div>
+
+</div>
+<div id="log-logistic-4" class="section level4">
+<h4><span class="header-section-number">A.3.1.4</span> Log logistic</h4>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-1"></span>
+<img src="graphs/BY_LL_PP_1.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.18: Probability Plot – BY – sex = 0, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-2"></span>
+<img src="graphs/BY_LL_PP_2.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.19: Probability Plot – BY – sex = 0, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-3"></span>
+<img src="graphs/BY_LL_PP_3.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.20: Probability Plot – BY – sex = 0, dthick = 2.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-4"></span>
+<img src="graphs/BY_LL_PP_4.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 0." width="100%" />
+<p class="caption">
+Figure A.21: Probability Plot – BY – sex = 1, dthick = 0.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-5"></span>
+<img src="graphs/BY_LL_PP_5.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 1." width="100%" />
+<p class="caption">
+Figure A.22: Probability Plot – BY – sex = 1, dthick = 1.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-PP-6"></span>
+<img src="graphs/BY_LL_PP_6.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 2." width="100%" />
+<p class="caption">
+Figure A.23: Probability Plot – BY – sex = 1, dthick = 2.
+</p>
+</div>
+
+</div>
+</div>
+<div id="model-interaction-2" class="section level3">
+<h3><span class="header-section-number">A.3.2</span> Model Interaction</h3>
+<div id="exponential-5" class="section level4">
+<h4><span class="header-section-number">A.3.2.1</span> Exponential</h4>
+<div class="figure" style="text-align: center"><span id="fig:INT-EXP-PP"></span>
+<img src="graphs/INT_EXP_PP.svg" alt="Probability Plot -- Interaction." width="100%" />
+<p class="caption">
+Figure A.24: Probability Plot – Interaction.
+</p>
+</div>
+
+</div>
+<div id="weibull-5" class="section level4">
+<h4><span class="header-section-number">A.3.2.2</span> Weibull</h4>
+<div class="figure" style="text-align: center"><span id="fig:INT-WEI-PP"></span>
+<img src="graphs/INT_WEI_PP.svg" alt="Probability Plot -- Interaction." width="100%" />
+<p class="caption">
+Figure A.25: Probability Plot – Interaction.
+</p>
+</div>
+
+</div>
+<div id="gamma-5" class="section level4">
+<h4><span class="header-section-number">A.3.2.3</span> Gamma</h4>
+<div class="figure" style="text-align: center"><span id="fig:INT-GAM-PP"></span>
+<img src="graphs/INT_GAM_PP.svg" alt="Probability Plot -- Interaction." width="100%" />
+<p class="caption">
+Figure A.26: Probability Plot – Interaction.
+</p>
+</div>
+
+</div>
+<div id="lognormal-3" class="section level4">
+<h4><span class="header-section-number">A.3.2.4</span> Lognormal</h4>
+<div class="figure" style="text-align: center"><span id="fig:INT-LN-PP"></span>
+<img src="graphs/INT_LN_PP.svg" alt="Probability Plot -- Interaction." width="100%" />
+<p class="caption">
+Figure A.27: Probability Plot – Interaction.
+</p>
+</div>
+
+</div>
+<div id="log-logistic-5" class="section level4">
+<h4><span class="header-section-number">A.3.2.5</span> Log logistic</h4>
+<div class="figure" style="text-align: center"><span id="fig:INT-LL-PP"></span>
+<img src="graphs/INT_LL_PP.svg" alt="Probability Plot -- Interaction." width="100%" />
+<p class="caption">
+Figure A.28: Probability Plot – Interaction.
+</p>
+</div>
+
+</div>
+</div>
+<div id="model-sex-dthick-2" class="section level3">
+<h3><span class="header-section-number">A.3.3</span> Model sex dthick</h3>
+<div id="exponential-6" class="section level4">
+<h4><span class="header-section-number">A.3.3.1</span> Exponential</h4>
+<div class="figure" style="text-align: center"><span id="fig:DTSEX-EXP-PP"></span>
+<img src="graphs/DTSEX_EXP_PP.svg" alt="Probability Plot -- dthick sex." width="100%" />
+<p class="caption">
+Figure A.29: Probability Plot – dthick sex.
+</p>
+</div>
+</div>
+<div id="weibull-6" class="section level4">
+<h4><span class="header-section-number">A.3.3.2</span> Weibull</h4>
+<div class="figure" style="text-align: center"><span id="fig:DTSEX-WEI-PP"></span>
+<img src="graphs/DTSEX_WEI_PP.svg" alt="Probability Plot -- dthick sex." width="100%" />
+<p class="caption">
+Figure A.30: Probability Plot – dthick sex.
+</p>
+</div>
+
+</div>
+<div id="gamma-6" class="section level4">
+<h4><span class="header-section-number">A.3.3.3</span> Gamma</h4>
+<div class="figure" style="text-align: center"><span id="fig:DTSEX-GAM-PP"></span>
+<img src="graphs/DTSEX_GAM_PP.svg" alt="Probability Plot -- dthick sex." width="100%" />
+<p class="caption">
+Figure A.31: Probability Plot – dthick sex.
+</p>
+</div>
+
+</div>
+<div id="lognormal-4" class="section level4">
+<h4><span class="header-section-number">A.3.3.4</span> Lognormal</h4>
+<div class="figure" style="text-align: center"><span id="fig:DTSEX-LN-PP"></span>
+<img src="graphs/DTSEX_LN_PP.svg" alt="Probability Plot -- dthick sex." width="100%" />
+<p class="caption">
+Figure A.32: Probability Plot – dthick sex.
+</p>
+</div>
+
+</div>
+<div id="log-logistic-6" class="section level4">
+<h4><span class="header-section-number">A.3.3.5</span> Log logistic</h4>
+<div class="figure" style="text-align: center"><span id="fig:DTSEX-LL-PP"></span>
+<img src="graphs/DTSEX_LL_PP.svg" alt="Probability Plot -- dthick sex." width="100%" />
+<p class="caption">
+Figure A.33: Probability Plot – dthick sex.
+</p>
+</div>
+
+</div>
+</div>
+<div id="model-dthick-4" class="section level3">
+<h3><span class="header-section-number">A.3.4</span> Model dthick</h3>
+<div id="exponential-7" class="section level4">
+<h4><span class="header-section-number">A.3.4.1</span> Exponential</h4>
+<div class="figure" style="text-align: center"><span id="fig:DT-EXP-PP"></span>
+<img src="graphs/DT_EXP_PP.svg" alt="Probability Plot -- dthick." width="100%" />
+<p class="caption">
+Figure A.34: Probability Plot – dthick.
+</p>
+</div>
+
+</div>
+<div id="weibull-7" class="section level4">
+<h4><span class="header-section-number">A.3.4.2</span> Weibull</h4>
+<div class="figure" style="text-align: center"><span id="fig:DT-WEI-PP"></span>
+<img src="graphs/DT_WEI_PP.svg" alt="Probability Plot -- dthick." width="100%" />
+<p class="caption">
+Figure A.35: Probability Plot – dthick.
+</p>
+</div>
+
+</div>
+<div id="gamma-7" class="section level4">
+<h4><span class="header-section-number">A.3.4.3</span> Gamma</h4>
+<div class="figure" style="text-align: center"><span id="fig:DT-GAM-PP"></span>
+<img src="graphs/DT_GAM_PP.svg" alt="Probability Plot -- dthick." width="100%" />
+<p class="caption">
+Figure A.36: Probability Plot – dthick.
+</p>
+</div>
+
+</div>
+<div id="lognormal-5" class="section level4">
+<h4><span class="header-section-number">A.3.4.4</span> Lognormal</h4>
+<div class="figure" style="text-align: center"><span id="fig:DT-LN-PP"></span>
+<img src="graphs/DT_LN_PP.svg" alt="Probability Plot -- dthick." width="100%" />
+<p class="caption">
+Figure A.37: Probability Plot – dthick.
+</p>
+</div>
+
+</div>
+<div id="log-logistic-7" class="section level4">
+<h4><span class="header-section-number">A.3.4.5</span> Log logistic</h4>
+<div class="figure" style="text-align: center"><span id="fig:DT-LL-PP"></span>
+<img src="graphs/DT_LL_PP.svg" alt="Probability Plot -- dthick." width="100%" />
+<p class="caption">
+Figure A.38: Probability Plot – dthick.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-50-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sas-of-exercise-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/afrandsen/survival-analysis/edit/master/Handins/Handin_2/03-appendix.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Handin_2_Andreas_Kracht_Frandsen.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

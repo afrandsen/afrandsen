@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen</title>
+  <meta name="description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="github-repo" content="afrandsen/afrandsen" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Exercise 50 (1) | Handin 2 – Andreas Kracht Frandsen" />
+  
+  <meta name="twitter:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-1.html"/>
+<link rel="next" href="sas-of-exercise-50-1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Handin 2 - Survival Analysis with SAS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>1</b> Exercise 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="exercise-1.html"><a href="exercise-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="exercise-1.html"><a href="exercise-1.html#models"><i class="fa fa-check"></i><b>1.2</b> Models</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="exercise-1.html"><a href="exercise-1.html#edema"><i class="fa fa-check"></i><b>1.2.1</b> Edema</a></li>
+<li class="chapter" data-level="1.2.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin"><i class="fa fa-check"></i><b>1.2.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="exercise-1.html"><a href="exercise-1.html#analysis-in-sas"><i class="fa fa-check"></i><b>1.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="exercise-1.html"><a href="exercise-1.html#edema-1"><i class="fa fa-check"></i><b>1.3.1</b> Edema</a></li>
+<li class="chapter" data-level="1.3.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin-1"><i class="fa fa-check"></i><b>1.3.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="exercise-1.html"><a href="exercise-1.html#model-conclusion"><i class="fa fa-check"></i><b>1.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exercise-50-1.html"><a href="exercise-50-1.html"><i class="fa fa-check"></i><b>2</b> Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#models-1"><i class="fa fa-check"></i><b>2.2</b> Models</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates"><i class="fa fa-check"></i><b>2.2.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick"><i class="fa fa-check"></i><b>2.2.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick"><i class="fa fa-check"></i><b>2.2.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick"><i class="fa fa-check"></i><b>2.2.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#analysis-in-sas-1"><i class="fa fa-check"></i><b>2.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates-1"><i class="fa fa-check"></i><b>2.3.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.3.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick-1"><i class="fa fa-check"></i><b>2.3.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.3.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick-1"><i class="fa fa-check"></i><b>2.3.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.3.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick-1"><i class="fa fa-check"></i><b>2.3.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-conclusion-1"><i class="fa fa-check"></i><b>2.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html"><i class="fa fa-check"></i><b>A</b> SAS of Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="A.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-code"><i class="fa fa-check"></i><b>A.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by"><i class="fa fa-check"></i><b>A.1.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.1.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction"><i class="fa fa-check"></i><b>A.1.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.1.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick"><i class="fa fa-check"></i><b>A.1.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.1.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-2"><i class="fa fa-check"></i><b>A.1.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-output"><i class="fa fa-check"></i><b>A.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-1"><i class="fa fa-check"></i><b>A.2.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.2.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-1"><i class="fa fa-check"></i><b>A.2.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.2.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-1"><i class="fa fa-check"></i><b>A.2.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.2.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-3"><i class="fa fa-check"></i><b>A.2.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-plots"><i class="fa fa-check"></i><b>A.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-2"><i class="fa fa-check"></i><b>A.3.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.3.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-2"><i class="fa fa-check"></i><b>A.3.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.3.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-2"><i class="fa fa-check"></i><b>A.3.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.3.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-4"><i class="fa fa-check"></i><b>A.3.4</b> Model dthick</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html"><i class="fa fa-check"></i><b>B</b> SAS of Exercise 1</a><ul>
+<li class="chapter" data-level="B.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-code-1"><i class="fa fa-check"></i><b>B.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-2"><i class="fa fa-check"></i><b>B.1.1</b> Edema</a></li>
+<li class="chapter" data-level="B.1.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin"><i class="fa fa-check"></i><b>B.1.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-output-1"><i class="fa fa-check"></i><b>B.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-3"><i class="fa fa-check"></i><b>B.2.1</b> Edema</a></li>
+<li class="chapter" data-level="B.2.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-1"><i class="fa fa-check"></i><b>B.2.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-plots-1"><i class="fa fa-check"></i><b>B.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-4"><i class="fa fa-check"></i><b>B.3.1</b> Edema</a></li>
+<li class="chapter" data-level="B.3.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-2"><i class="fa fa-check"></i><b>B.3.2</b> Bilirubin</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-50-1" class="section level1">
+<h1><span class="header-section-number">2</span> Exercise 50 (1)</h1>
+<p><em>Consider the data set melanom which is available from data_melanom.sas on the course home page.</em></p>
+<p><em>Analyze the data using an accelerated failure time model where the explanatory variables are sex and dthick; the latter is a discretized version of the tumor thickness with three values corresponding to thickness less than 2 milimeter, thickness between 2 and 5 milimeters, and thickness greater than 5 milimeter.</em></p>
+<p><em>- sex, which is 0 if the patient is a woman, 1 otherwise.</em></p>
+<p><em>- survtime, which is the observed survival time in days.</em></p>
+<p><em>- status, which is 0 if the observation is censured, 1 otherwise.</em></p>
+<p><em>- invasion, unknown factor, takes the values 0, 1, 2.</em></p>
+<p><em>- ici, indicator of infectioncellinfiltrat, takes the values 0, 1, 2, 3.</em></p>
+<p><em>- ecells, which is 1 if the tumor contains cells of type epithelioid, 0 otherwise.</em></p>
+<p><em>- ulcerat, which is 1 if ulceration is present, 0 otherwise.</em></p>
+<p><em>- thick, tumor thichness in mm.</em></p>
+<p><em>- age, the age of the person.</em></p>
+<p><em>- logthick, logarithm to thick, wrong values thus not used.</em></p>
+<p><em>- thick25, which is 1 if the tumor is between 2 mm and 5 mm, 0 otherwise.</em></p>
+<p><em>- thick5, which is 1 if the tumor is greater than 5 mm, 0 otherwise.</em></p>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>In this exercise we consider the survival time of malignant melanoma, which is a type of cancer that develops from the pigment-containing cells known as melanocytes. The primary cause of melanoma is ultraviolet light (UV) exposure in those with low levels of skin pigment. The UV light may be from the sun or other sources, such as tanning devices. Those with many moles, a history of affected family members, and who have poor immune function are at greater risk, <span class="citation">(Wikipedia, The Free Encyclopedia <a href="#ref-WikiM2019" role="doc-biblioref">2019</a><a href="#ref-WikiM2019" role="doc-biblioref">a</a>)</span>.</p>
+<p>The tumor thickness known as Breslow thickness or Breslow depth, is a significant factor in predicting how far a melanoma has advanced. In general, a thinner Breslow depth indicates a smaller chance that the tumor has spread and a better outlook for treatment success. The thicker the melanoma measures, the greater its chance of spreading, <span class="citation">(Skin Cancer Foundation <a href="#ref-Skin2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>To examine the we use the dataset <code>melanom</code> which is obtained from the course website. Table <a href="exercise-50-1.html#tab:melanom">2.1</a> shows the relevant variables and the first 10 observations.</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:melanom">Table 2.1: </span>The first 10 observations of melanom.sas7bdat.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+sex
+</th>
+<th style="text-align:right;">
+survtime
+</th>
+<th style="text-align:right;">
+status
+</th>
+<th style="text-align:right;">
+invasion
+</th>
+<th style="text-align:right;">
+ici
+</th>
+<th style="text-align:right;">
+ecells
+</th>
+<th style="text-align:right;">
+ulcerat
+</th>
+<th style="text-align:right;">
+thick
+</th>
+<th style="text-align:right;">
+age
+</th>
+<th style="text-align:right;">
+thick25
+</th>
+<th style="text-align:right;">
+thick5
+</th>
+<th style="text-align:right;">
+dthick
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.65
+</td>
+<td style="text-align:right;">
+55.97
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1.34
+</td>
+<td style="text-align:right;">
+41.18
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+355
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+<td style="text-align:right;">
+64.23
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+817
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.32
+</td>
+<td style="text-align:right;">
+67.02
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+872
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.97
+</td>
+<td style="text-align:right;">
+65.66
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+977
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.62
+</td>
+<td style="text-align:right;">
+58.37
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1156
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.34
+</td>
+<td style="text-align:right;">
+56.62
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1427
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1.29
+</td>
+<td style="text-align:right;">
+64.28
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1499
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1.29
+</td>
+<td style="text-align:right;">
+73.36
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1510
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1.94
+</td>
+<td style="text-align:right;">
+69.61
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="models-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Models</h2>
+<p>We will study the following specifications of our Accelerated Failure Time model:</p>
+<ul>
+<li><p>Model with no covariates, Section <a href="exercise-50-1.html#model-no-covariates">2.2.1</a>.</p></li>
+<li><p>Model with sex, dthick and sex*dthick as covariates, Section <a href="exercise-50-1.html#model-sexdthicksexdthick">2.2.2</a></p></li>
+<li><p>Model with sex and dthick as covariates, Section <a href="exercise-50-1.html#model-sexdthick">2.2.3</a></p></li>
+<li><p>Model with dthick as the only covariate, Section <a href="exercise-50-1.html#model-dthick">2.2.4</a></p></li>
+</ul>
+<p>Using SAS to obtain parameter estimates and test values for several distributions, Section <a href="exercise-50-1.html#analysis-in-sas-1">2.3</a>. Next visual inspection of various plots (Probability Plot, Cumulative Hazard, etc.) and information criteria (AIC), will be used to determine which models perform worse than others.</p>
+<div id="model-no-covariates" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Model – No Covariates</h3>
+<p>Using no covariates and assuming the usual linear model for log time, we obtain the following model for our response</p>
+<p><span class="math display">\[Y_{ijk}=\ln(X_{ijk})=\mu_{ij}+\sigma_{ij}W_{ijk},\]</span></p>
+<p>where <span class="math inline">\(i=0, 1\)</span>, <span class="math inline">\(j=0, 1, 2\)</span> and <span class="math inline">\(k=1,\dots,n_{ij}\)</span>. Depending upon the observation: a male or a female, and whether the tumor thickness is less than 2 milimeter, between 2 and 5 milimeters, or greater than 5 milimeter. Thus we have both different intercepts and slopes, thus we have multiple AFM’s. For the lognormal distribution, which will be investigated further in Section <a href="exercise-50-1.html#analysis-in-sas-1">2.3</a>, we have <span class="math inline">\(W_{ijk}\sim N(0,1)\)</span>.</p>
+</div>
+<div id="model-sexdthicksexdthick" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Model – sex+dthick+sex*dthick</h3>
+<p>Using sex, dthick and sex*dthick as the only covariates and assuming the linear model for log time, we obtain the following model for our response</p>
+<p><span class="math display">\[Y_{ijk}=\ln(X_{ijk})=\mu_{ij}+\sigma W_{ijk},\]</span></p>
+<p>where <span class="math inline">\(i=0, 1\)</span>, <span class="math inline">\(j=0, 1, 2\)</span> and <span class="math inline">\(k=1,\dots,n_{ij}\)</span>. Thus with the same slope for all groups.</p>
+</div>
+<div id="model-sexdthick" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Model – sex+dthick</h3>
+<p>Using sex and dthick as the only covariates and assuming the linear model for log time, we obtain the following model for our response</p>
+<p><span class="math display">\[Y_{ijk}=\ln(X_{ijk})=\alpha_i+\beta_j+\sigma W_{ijk},\]</span></p>
+<p>where <span class="math inline">\(i=0, 1\)</span>, <span class="math inline">\(j=0, 1, 2\)</span> and <span class="math inline">\(k=1,\dots,n_{ij}\)</span>. Thus with the same slope for all groups.</p>
+</div>
+<div id="model-dthick" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Model – dthick</h3>
+<p>Using sex and dthick as the only covariates and assuming the linear model for log time, we obtain the following model for our response</p>
+<p><span class="math display">\[Y_{ijk}=\ln(X_{ijk})=\beta_j+\sigma W_{ijk},\]</span></p>
+<p>where <span class="math inline">\(j=0, 1, 2\)</span> and <span class="math inline">\(k=1,\dots,n_{ij}\)</span>. Thus with the same slope for all groups.</p>
+</div>
+</div>
+<div id="analysis-in-sas-1" class="section level2">
+<h2><span class="header-section-number">2.3</span> Analysis in SAS</h2>
+<div id="model-no-covariates-1" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Model – No Covariates</h3>
+<p>First we test the adequacy of a given model in the univariate setting. The key tool is to find a function of the cumulative hazard rate which is linear in some function of time.</p>
+<p>Using relevant functions we can test our fit for some different distributions <span class="citation">(Klein and Moeschberger <a href="#ref-Klein2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>For the Exponential distribution we can plot <span class="math inline">\(\hat{H}\)</span> against <span class="math inline">\(x\)</span>, thus the cumulative hazard rate against the observed survival time.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-EXP-CH"></span>
+<img src="graphs/BY_EXP_CH.svg" alt="Cumulative Hazard -- Exponential." width="100%" />
+<p class="caption">
+Figure 2.1: Cumulative Hazard – Exponential.
+</p>
+</div>
+<p>Though I have added a regression line in Figure <a href="exercise-50-1.html#fig:BY-EXP-CH">2.1</a> the linearity in group dthick=2 is arguable. Thus from a visual perspective the Exponential distribution does not look adequate for our data.</p>
+<p>In the Weibull case we plot <span class="math inline">\(\ln\left(\hat{H}\right)\)</span> against <span class="math inline">\(\ln\left(x\right)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-WEI-CH"></span>
+<img src="graphs/BY_WEI_CH.svg" alt="Cumulative Hazard -- Weibull." width="100%" />
+<p class="caption">
+Figure 2.2: Cumulative Hazard – Weibull.
+</p>
+</div>
+<p>In Figure <a href="exercise-50-1.html#fig:BY-WEI-CH">2.2</a> we see better results, because of more linearity in our data. This was also expected since the Weibull model have one extra parameter.</p>
+<p>For the lognormal case we plot <span class="math inline">\(\Phi^{-1}\left(1-\exp\left(-\hat{H}\right)\right)\)</span> against <span class="math inline">\(\ln\left(x\right)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-CH"></span>
+<img src="graphs/BY_LN_CH.svg" alt="Cumulative Hazard -- Lognormal." width="100%" />
+<p class="caption">
+Figure 2.3: Cumulative Hazard – Lognormal.
+</p>
+</div>
+<p>In Figure <a href="exercise-50-1.html#fig:BY-LN-CH">2.3</a> we again see better results than Figure <a href="exercise-50-1.html#fig:BY-EXP-CH">2.1</a> and linearity in our data comparable to the Weibull distribution in Figure <a href="exercise-50-1.html#fig:BY-WEI-CH">2.2</a>.</p>
+<p>Lastly for the log logistic case we plot <span class="math inline">\(\ln\left(\exp\left(H\right)-1\right)\)</span> against <span class="math inline">\(\ln\left(x\right)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LL-CH"></span>
+<img src="graphs/BY_LL_CH.svg" alt="Cumulative Hazard -- Log Logistic." width="100%" />
+<p class="caption">
+Figure 2.4: Cumulative Hazard – Log Logistic.
+</p>
+</div>
+<p>The data in Figure <a href="exercise-50-1.html#fig:BY-LL-CH">2.4</a> seems to be very linear as well for all groups.</p>
+<p>The following show the analysis for the first model using the lognormal distribution. The SAS code, SAS outputs and figures for the rest of the models and distributions<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> are available in Appendix <a href="sas-of-exercise-50-1.html#sas-of-exercise-50-1">A</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">PROC</span> LIFEREG<span class="kw"> DATA</span> = SUPP.melanom;</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">BY</span> dthick sex;</a>
+<a class="sourceLine" id="cb3-3" title="3">MODEL survtime*status(<span class="dv">0</span>) = / DIST = LNORMAL COVB;</a>
+<a class="sourceLine" id="cb3-4" title="4">PPLOT;</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">RUN</span>;</a></code></pre></div>
+<p>The following listing show some of the output from the above <code>LIFEREG</code> procedure.</p>
+<pre><code>--------------------------------------- dthick=0 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 77
+                           Noncensored Values                      7
+                           Right Censored Values                  70
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood                -26.4917833
+          
+          
+                            Number of Observations Read          77
+                            Number of Observations Used          77
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              52.984
+                             AIC (smaller is better)        56.984
+                             AICC (smaller is better)       57.146
+                             BIC (smaller is better)        61.671
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       154.079
+                        Lognormal AIC (smaller is better)       158.079
+                        Lognormal AICC (smaller is better)      158.241
+                        Lognormal BIC (smaller is better)       162.767
+          
+          
+          Algorithm converged.                                                       
+         
+--------------------------------------- dthick=0 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   9.5335   0.6414   8.2763  10.7907  220.90     &lt;.0001
+            Scale          1   1.2946   0.4101   0.6959   2.4086                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.411446      0.241076
+                             Scale          0.241076      0.168163
+          
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 32
+                           Noncensored Values                      6
+                           Right Censored Values                  26
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -15.33369667
+          
+          
+                            Number of Observations Read          32
+                            Number of Observations Used          32
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              30.667
+                             AIC (smaller is better)        34.667
+                             AICC (smaller is better)       35.081
+                             BIC (smaller is better)        37.599
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       120.757
+                        Lognormal AIC (smaller is better)       124.757
+                        Lognormal AICC (smaller is better)      125.171
+                        Lognormal BIC (smaller is better)       127.689
+          
+          
+          Algorithm converged.                                                       
+        
+--------------------------------------- dthick=0 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   8.5494   0.3231   7.9160   9.1827  699.94     &lt;.0001
+            Scale          1   0.7788   0.2500   0.4152   1.4610                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.104425      0.063540
+                             Scale          0.063540      0.062494
+          
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 35
+                           Noncensored Values                     15
+                           Right Censored Values                  20
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -36.78640676
+          
+          
+                            Number of Observations Read          35
+                            Number of Observations Used          35
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              73.573
+                             AIC (smaller is better)        77.573
+                             AICC (smaller is better)       77.948
+                             BIC (smaller is better)        80.684
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       285.435
+                        Lognormal AIC (smaller is better)       289.435
+                        Lognormal AICC (smaller is better)      289.810
+                        Lognormal BIC (smaller is better)       292.546
+          
+          
+          Algorithm converged.                                                       
+      
+--------------------------------------- dthick=1 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   8.1900   0.2889   7.6238   8.7562  803.70     &lt;.0001
+            Scale          1   1.2733   0.2589   0.8548   1.8967                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.083459      0.038214
+                             Scale          0.038214      0.067033
+          
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 29
+                           Noncensored Values                     16
+                           Right Censored Values                  13
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -34.18891236
+          
+          
+                            Number of Observations Read          29
+                            Number of Observations Used          29
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              68.378
+                             AIC (smaller is better)        72.378
+                             AICC (smaller is better)       72.839
+                             BIC (smaller is better)        75.112
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       285.734
+                        Lognormal AIC (smaller is better)       289.734
+                        Lognormal AICC (smaller is better)      290.196
+                        Lognormal BIC (smaller is better)       292.469
+          
+          
+          Algorithm converged.                                                       
+    
+--------------------------------------- dthick=1 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   7.5971   0.2444   7.1181   8.0760  966.51     &lt;.0001
+            Scale          1   1.1232   0.2182   0.7675   1.6438                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.059716      0.019947
+                             Scale          0.019947      0.047628
+          
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 15
+                           Noncensored Values                      6
+                           Right Censored Values                   9
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -14.25175082
+          
+          
+                            Number of Observations Read          15
+                            Number of Observations Used          15
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              28.504
+                             AIC (smaller is better)        32.504
+                             AICC (smaller is better)       33.504
+                             BIC (smaller is better)        33.920
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       110.528
+                        Lognormal AIC (smaller is better)       114.528
+                        Lognormal AICC (smaller is better)      115.528
+                        Lognormal BIC (smaller is better)       115.945
+          
+          
+          Algorithm converged.                                                       
+          
+--------------------------------------- dthick=2 sex=0 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   7.8886   0.4341   7.0378   8.7395  330.23     &lt;.0001
+            Scale          1   1.2154   0.3832   0.6552   2.2547                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.188448      0.081166
+                             Scale          0.081166      0.146836
+          
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                                       Model Information
+          
+                           Data Set                     SUPP.MELANOM
+                           Dependent Variable          Log(survtime)
+                           Censoring Variable                 status
+                           Censoring Value(s)                      0
+                           Number of Observations                 17
+                           Noncensored Values                      7
+                           Right Censored Values                  10
+                           Left Censored Values                    0
+                           Interval Censored Values                0
+                           Number of Parameters                    2
+                           Name of Distribution            Lognormal
+                           Log Likelihood               -20.84339775
+          
+          
+                            Number of Observations Read          17
+                            Number of Observations Used          17
+          
+          
+                                     Parameter Information
+          
+                                     Parameter    Effect
+          
+                                     Intercept    Intercept
+          
+          
+                                        Fit Statistics
+          
+                             -2 Log Likelihood              41.687
+                             AIC (smaller is better)        45.687
+                             AICC (smaller is better)       46.544
+                             BIC (smaller is better)        47.353
+          
+          
+                              Fit Statistics (Unlogged Response)
+          
+                        -2 Log Likelihood                       127.992
+                        Lognormal AIC (smaller is better)       131.992
+                        Lognormal AICC (smaller is better)      132.849
+                        Lognormal BIC (smaller is better)       133.658
+          
+          
+          Algorithm converged.                                                       
+
+--------------------------------------- dthick=2 sex=1 -------------------------------------
+          
+                                     The LIFEREG Procedure
+          
+                      Analysis of Maximum Likelihood Parameter Estimates
+          
+                                      Standard   95% Confidence     Chi-
+            Parameter     DF Estimate    Error       Limits       Square Pr &gt; ChiSq
+          
+            Intercept      1   8.1159   0.6506   6.8408   9.3911  155.63     &lt;.0001
+            Scale          1   1.9436   0.5989   1.0625   3.5555                   
+          
+          
+                                  Estimated Covariance Matrix
+          
+                                           Intercept         Scale
+          
+                             Intercept      0.423251      0.216675
+                             Scale          0.216675      0.358691</code></pre>
+<p>Because we only have <span class="math inline">\(205\)</span> observations with <span class="math inline">\(148\)</span> censored values and a high grouping we obtain few observations in each group. We cannot remove the intercept <span class="math inline">\(\mu_{ij}\)</span> from our model as there is a significant effect in each group (<span class="math inline">\(p&lt;0.0001\)</span>), which is as expected.</p>
+<p>Under <code>Estimate</code> we can find the estimate of the intercept, base coefficient and the variance. Thus we obtain the following estimates of our model.
+<span class="math display">\[\hat{\mu}=\begin{pmatrix}9.5335\\8.5494\\ 8.1900\\ 7.5971\\7.8886\\8.1159 \end{pmatrix}, \quad \hat{\sigma}=\begin{pmatrix}1.2946\\0.7788\\ 1.2733\\ 1.1232\\1.2154\\1.9436 \end{pmatrix}.\]</span></p>
+<p>The associated total AIC of the model is <span class="math inline">\(319.793\)</span>. The associated total -2 log likelihood is <span class="math inline">\(295.793\)</span>.</p>
+<p>If we take a look at the associated plots provided by <code>LIFEREG</code>, we notice some issues with our model. First we take a look at the probability plot for group <span class="math inline">\(i=0\)</span>, <span class="math inline">\(j=0\)</span>. Probability plots use an inverse distribution scale so that a CDF plots as a straight line, a line representing the maximum likelihood fit from the <code>MODEL</code> statement and pointwise parametric confidence bands for the cumulative probabilities are also included in the plot. Thus the plotted points should approximatly fall as a straight line.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-1"></span>
+<img src="graphs/BY_LN_PP_1.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 0." width="100%" />
+<p class="caption">
+Figure 2.5: Probability Plot – BY – sex = 0, dthick = 0.
+</p>
+</div>
+<p>As it can be seen above in Figure <a href="exercise-50-1.html#fig:BY-LN-PP-1">2.5</a> our confidence bands are quite big. This is also present in the following Probability plots for the majority of the rest of the groups. The points fall almost as a straight line, with the exception of the first point. Figure <a href="exercise-50-1.html#fig:BY-LN-PP-2">2.6</a> gives the Probability plot for group <span class="math inline">\(i=0\)</span>, <span class="math inline">\(j=1\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-2"></span>
+<img src="graphs/BY_LN_PP_2.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 1." width="100%" />
+<p class="caption">
+Figure 2.6: Probability Plot – BY – sex = 0, dthick = 1.
+</p>
+</div>
+<p>The heavy censoring is present for all of the groups. Figure <a href="exercise-50-1.html#fig:BY-LN-PP-3">2.7</a> gives the Probability plot for group <span class="math inline">\(i=0\)</span>, <span class="math inline">\(j=2\)</span>. Eventhough our confidence bands are big, all of the points fall within them.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-3"></span>
+<img src="graphs/BY_LN_PP_3.svg" alt="Probability Plot -- BY -- sex = 0, dthick = 2." width="100%" />
+<p class="caption">
+Figure 2.7: Probability Plot – BY – sex = 0, dthick = 2.
+</p>
+</div>
+<p>The non censored values lies pretty well. Figure <a href="exercise-50-1.html#fig:BY-LN-PP-4">2.8</a> gives the Probability Plot for group <span class="math inline">\(i=1\)</span>, <span class="math inline">\(j=0\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-4"></span>
+<img src="graphs/BY_LN_PP_4.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 0." width="100%" />
+<p class="caption">
+Figure 2.8: Probability Plot – BY – sex = 1, dthick = 0.
+</p>
+</div>
+<p>Figure <a href="exercise-50-1.html#fig:BY-LN-PP-5">2.9</a> gives the Probability Plot for group <span class="math inline">\(i=1\)</span>, <span class="math inline">\(j=1\)</span>. What is noticable as noticed earlier is the few observations in every group.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-5"></span>
+<img src="graphs/BY_LN_PP_5.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 1." width="100%" />
+<p class="caption">
+Figure 2.9: Probability Plot – BY – sex = 1, dthick = 1.
+</p>
+</div>
+<p>Figure <a href="exercise-50-1.html#fig:BY-LN-PP-6">2.10</a> gives the Probability Plot for group <span class="math inline">\(i=1\)</span>, <span class="math inline">\(j=2\)</span>. The points does not fall as a straight line.</p>
+<div class="figure" style="text-align: center"><span id="fig:BY-LN-PP-6"></span>
+<img src="graphs/BY_LN_PP_6.svg" alt="Probability Plot -- BY -- sex = 1, dthick = 2." width="100%" />
+<p class="caption">
+Figure 2.10: Probability Plot – BY – sex = 1, dthick = 2.
+</p>
+</div>
+<p>As a final conclusion the lognormal distribution seem to outperform the other distributions in this model, as it also can we seen in Table <a href="exercise-50-1.html#tab:AIC">2.3</a> and Section <a href="sas-of-exercise-50-1.html#model-by-2">A.3.1</a>.</p>
+</div>
+<div id="model-sexdthicksexdthick-1" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Model – sex+dthick+sex*dthick</h3>
+<p>In this model and the following we set <span class="math inline">\(i=0\)</span> and <span class="math inline">\(j=0\)</span> to be our reference group, then we can estimate the rest of the coefficients.</p>
+<p>We obtain the following estimates of our model.</p>
+<p><span class="math display">\[\hat{\mu}=\begin{pmatrix}9.5056\\9.5056-1.3145\\ 9.5056-1.5838    \\ 9.0622\\9.0622-1.3145-0.0866\\9.0622-1.5838+0.2416 \end{pmatrix}, \quad \hat{\sigma}=1.2752.\]</span></p>
+<p>In the SAS output <a href="sas-of-exercise-50-1.html#lognormal">A.2.2.4</a> we see a significant effect of dthick (<span class="math inline">\(\chi^2\approx 26.1773\)</span>, <span class="math inline">\(p&lt;0.0001\)</span>). We notice that a Wald test suggests removal of both sex (<span class="math inline">\(\chi^2 \approx 2.3593\)</span>, <span class="math inline">\(p\approx 0.1245\)</span>) and sex*dthick (<span class="math inline">\(\chi^2 \approx 0.2643\)</span>, <span class="math inline">\(p\approx 0.8762\)</span>).</p>
+<p>The associated AIC of the model is <span class="math inline">\(314.438\)</span>. The associated -2 log Likelihood is <span class="math inline">\(300.438\)</span>.</p>
+<p>To test for reduction to this model from Section <a href="exercise-50-1.html#model-no-covariates">2.2.1</a> we use the Likelihood Ratio test. It yields</p>
+<p><span class="math display">\[\text{LR}=300.438-295.793=4.645,\quad p=1-\chi^2(|\text{LR}|, 5)\approx 0.46.\]</span></p>
+<p>Thus we can’t reject reduction to this model, and we thereby move to this model.</p>
+<p>In Figure <a href="sas-of-exercise-50-1.html#fig:INT-LN-PP">A.27</a> we notice that our points lay outside of the confidence bands, but fall in an approximatly straight line.</p>
+<p>As a final conclusion the Weibull distribution seem to outperform the other distributions in this model with regards to the probability plot, as it can be seen in Section <a href="sas-of-exercise-50-1.html#model-interaction-2">A.3.2</a>. The Gamma distribution seem to be the best with regards to the AIC’s, as it also can we seen in Table <a href="exercise-50-1.html#tab:AIC">2.3</a>.</p>
+</div>
+<div id="model-sexdthick-1" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Model – sex+dthick</h3>
+<p>We obtain the following estimates of our model.</p>
+<p><span class="math display">\[\hat{\alpha}=\begin{pmatrix}9.5030\\9.0703\end{pmatrix}, \quad \hat{\beta}=\begin{pmatrix}0\\-1.3581 \\-1.4493\end{pmatrix}, \quad \hat{\sigma}=1.2763.\]</span></p>
+<p>In the SAS output <a href="sas-of-exercise-50-1.html#lognormal-1">A.2.3.4</a> we see a significant effect of dthick (<span class="math inline">\(\chi^2\approx 26.4328\)</span>, <span class="math inline">\(p&lt;0.0001\)</span>). We notice that a Wald test barely suggests removal of sex (<span class="math inline">\(\chi^2 \approx 3.1687\)</span>, <span class="math inline">\(p\approx 0.0751\)</span>).</p>
+<p>The associated AIC of the model is <span class="math inline">\(310.702\)</span>. The associated -2 log likelihood is <span class="math inline">\(300.702\)</span>.</p>
+<p>In Figure <a href="sas-of-exercise-50-1.html#fig:DTSEX-LN-PP">A.32</a> we notice that our points again lay outside of the confidence bands, but fall in an approximatly straight line.</p>
+<p>As a final conclusion the Weibull distribution again seem to outperform the other distributions in this model with regards to the probability plot, as it can be seen in Section <a href="sas-of-exercise-50-1.html#model-sex-dthick-2">A.3.3</a>. The Gamma distribution again seem to be the best with regards to the AIC’s, as it also can we seen in Table <a href="exercise-50-1.html#tab:AIC">2.3</a>.</p>
+</div>
+<div id="model-dthick-1" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Model – dthick</h3>
+<p>We obtain the following estimates of our model.</p>
+<p><span class="math display">\[\hat{\beta}=\begin{pmatrix}9.3787\\7.9504 \\7.8205\end{pmatrix}, \quad \hat{\sigma}=1.2964.\]</span></p>
+<p>In the SAS output <a href="sas-of-exercise-50-1.html#lognormal-2">A.2.4.4</a> we see a significant effect of dthick (<span class="math inline">\(\chi^2\approx 2777.7928\)</span>, <span class="math inline">\(p&lt;0.0001\)</span>). We also see that all dthick are statistically different from zero (0: <span class="math inline">\(\chi^2 \approx 1225.26\)</span>, <span class="math inline">\(p &lt; 0.0001\)</span>; 1: <span class="math inline">\(\chi^2 \approx 1679.19\)</span>, <span class="math inline">\(p &lt; 0.0001\)</span>; 2: <span class="math inline">\(\chi^2 \approx 792.47\)</span>, <span class="math inline">\(p &lt; 0.0001\)</span>). Thus in a comparable statistical analysis with an intercept and using <span class="math inline">\(j=0\)</span> as the reference, both <span class="math inline">\(j=1\)</span> and <span class="math inline">\(j=2\)</span> would be statistically different from <span class="math inline">\(j=0\)</span>.</p>
+<p>The associated AIC of the model is <span class="math inline">\(311.876\)</span>. The associated -2 log likelihood is <span class="math inline">\(303.876\)</span>.</p>
+<p>From the parameter estimates we notice that: the survival time for observations with tumors less than 2 mm in thickness is longer than for observations with tumors bigger than 2 mm in thickness, and that the survival time for observations with tumors between 2 mm and 5 mm in thickness is longer than for observations with tumors bigger than 5 mm in thickness.</p>
+<p>In Figure <a href="sas-of-exercise-50-1.html#fig:DT-LN-PP">A.37</a> we notice that our points again lay outside of the confidence bands, though closer this time, and fall in an approximatly straight line.</p>
+<p>As a final conclusion the Weibull distribution again seem to outperform the other distributions in this model with regards to the probability plot, as it can be seen in Section <a href="sas-of-exercise-50-1.html#model-dthick-4">A.3.4</a>. The Gamma distribution again seem to be the best with regards to the AIC’s, as it also can we seen in Table <a href="exercise-50-1.html#tab:AIC">2.3</a>.</p>
+</div>
+</div>
+<div id="model-conclusion-1" class="section level2">
+<h2><span class="header-section-number">2.4</span> Model Conclusion</h2>
+<p>The AIC seem to favourite the sex+dthick model, while parameter removal through tests ends up in the dthick model. Table <a href="exercise-50-1.html#tab:tabMALL">2.2</a> gives the summary of the final dthick model.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tabMALL">Table 2.2: </span>Summary of all distributions in final model.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Distribution
+</th>
+<th style="text-align:left;">
+Explanatory Variables
+</th>
+<th style="text-align:left;">
+Fitted Linear Predictor
+</th>
+<th style="text-align:left;">
+AIC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Exponential
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9.8915_{0} +8.3298_{1}+8.3666_{2}+ W_{ij}\)</span>
+</td>
+<td style="text-align:left;">
+322.423
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weibull
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9.7050_{0} +8.2816_{1}+8.3139_{2}+0.9083\cdot W_{ij}\)</span>
+</td>
+<td style="text-align:left;">
+323.756
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gamma
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(8.5484_{0} +7.1409_{1}+6.8325_{2}+1.4307\cdot W_{ij}\)</span>
+</td>
+<td style="text-align:left;">
+306.630
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lognormal
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9.3787_{0} +7.9504_{1}+7.8205_{2}+1.2964\cdot W_{ij}\)</span>
+</td>
+<td style="text-align:left;">
+311.876
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Logistic
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(9.3316_{0} +7.9092_{1}+7.8108_{2}+0.7490\cdot W_{ij}\)</span>
+</td>
+<td style="text-align:left;">
+317.424
+</td>
+</tr>
+</tbody>
+</table>
+<p>Figure <a href="exercise-50-1.html#fig:DT-ALL">2.11</a> gives a visual summary of the final dthick model.</p>
+<div class="figure" style="text-align: center"><span id="fig:DT-ALL"></span>
+<img src="graphs/DT_ALL.svg" alt="Summary of predictions in all distributions in final model." width="100%" />
+<p class="caption">
+Figure 2.11: Summary of predictions in all distributions in final model.
+</p>
+</div>
+<p>Table <a href="exercise-50-1.html#tab:AIC">2.3</a> gives a summary of all models and all distributions.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:AIC">Table 2.3: </span>Summary of all models.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Distribution
+</th>
+<th style="text-align:left;">
+Explanatory Variables
+</th>
+<th style="text-align:left;">
+AIC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Exponential
+</td>
+<td style="text-align:left;">
+No covariates
+</td>
+<td style="text-align:left;">
+324.135
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weibull
+</td>
+<td style="text-align:left;">
+No covariates
+</td>
+<td style="text-align:left;">
+329.061
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gamma*
+</td>
+<td style="text-align:left;">
+No covariates
+</td>
+<td style="text-align:left;">
+325.260
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lognormal
+</td>
+<td style="text-align:left;">
+No covariates
+</td>
+<td style="text-align:left;">
+319.793
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Logistic
+</td>
+<td style="text-align:left;">
+No covariates
+</td>
+<td style="text-align:left;">
+324.060
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exponential
+</td>
+<td style="text-align:left;">
+sex+dthick+sex*dthick
+</td>
+<td style="text-align:left;">
+324.135
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weibull
+</td>
+<td style="text-align:left;">
+sex+dthick+sex*dthick
+</td>
+<td style="text-align:left;">
+325.126
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gamma
+</td>
+<td style="text-align:left;">
+sex+dthick+sex*dthick
+</td>
+<td style="text-align:left;">
+309.885
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lognormal
+</td>
+<td style="text-align:left;">
+sex+dthick+sex*dthick
+</td>
+<td style="text-align:left;">
+314.438
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Logistic
+</td>
+<td style="text-align:left;">
+sex+dthick+sex*dthick
+</td>
+<td style="text-align:left;">
+319.366
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exponential
+</td>
+<td style="text-align:left;">
+sex+dthick
+</td>
+<td style="text-align:left;">
+321.430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weibull
+</td>
+<td style="text-align:left;">
+sex+dthick
+</td>
+<td style="text-align:left;">
+322.541
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gamma
+</td>
+<td style="text-align:left;">
+sex+dthick
+</td>
+<td style="text-align:left;">
+306.281
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lognormal
+</td>
+<td style="text-align:left;">
+sex+dthick
+</td>
+<td style="text-align:left;">
+310.702
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Logistic
+</td>
+<td style="text-align:left;">
+sex+dthick
+</td>
+<td style="text-align:left;">
+315.860
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exponential
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+322.423
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weibull
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+323.756
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gamma
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+306.630
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lognormal
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+311.876
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Logistic
+</td>
+<td style="text-align:left;">
+dthick
+</td>
+<td style="text-align:left;">
+317.424
+</td>
+</tr>
+</tbody>
+</table>
+<p>For the Gamma distribution in the no covariates model SAS gave warnings regarding the negative Hessian and convergence issues.</p>
+
+
+</div>
+</div>
+
+
+
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Klein2003">
+<p>Klein, John P., and Melvin L. Moeschberger. 2003. <em>Survival Analysis: Techniques for Censored and Truncated Data</em>. 2nd ed. Springer.</p>
+</div>
+<div id="ref-Skin2019">
+<p>Skin Cancer Foundation. 2019. “Melanoma Stages.” <a href="https://www.skincancer.org/skin-cancer-information/melanoma/the-stages-of-melanoma/">https://www.skincancer.org/skin-cancer-information/melanoma/the-stages-of-melanoma/</a>.</p>
+</div>
+<div id="ref-WikiM2019">
+<p>Wikipedia, The Free Encyclopedia. 2019a. “Melanoma.” <a href="https://en.wikipedia.org/wiki/Melanoma">https://en.wikipedia.org/wiki/Melanoma</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Normal and logistic have been left out, due to abnormal AIC’s.<a href="exercise-50-1.html#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sas-of-exercise-50-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/afrandsen/survival-analysis/edit/master/Handins/Handin_2/02-exercise50.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Handin_2_Andreas_Kracht_Frandsen.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

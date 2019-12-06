@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Exercise 1 | Handin 2 – Andreas Kracht Frandsen</title>
+  <meta name="description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Exercise 1 | Handin 2 – Andreas Kracht Frandsen" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  <meta name="github-repo" content="afrandsen/afrandsen" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Exercise 1 | Handin 2 – Andreas Kracht Frandsen" />
+  
+  <meta name="twitter:description" content="Handin 2 of Survival Analysis with SAS, Aarhus University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="exercise-50-1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Handin 2 - Survival Analysis with SAS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>1</b> Exercise 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="exercise-1.html"><a href="exercise-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="exercise-1.html"><a href="exercise-1.html#models"><i class="fa fa-check"></i><b>1.2</b> Models</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="exercise-1.html"><a href="exercise-1.html#edema"><i class="fa fa-check"></i><b>1.2.1</b> Edema</a></li>
+<li class="chapter" data-level="1.2.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin"><i class="fa fa-check"></i><b>1.2.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="exercise-1.html"><a href="exercise-1.html#analysis-in-sas"><i class="fa fa-check"></i><b>1.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="exercise-1.html"><a href="exercise-1.html#edema-1"><i class="fa fa-check"></i><b>1.3.1</b> Edema</a></li>
+<li class="chapter" data-level="1.3.2" data-path="exercise-1.html"><a href="exercise-1.html#functional-form-of-bilirubin-1"><i class="fa fa-check"></i><b>1.3.2</b> Functional Form of Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="exercise-1.html"><a href="exercise-1.html#model-conclusion"><i class="fa fa-check"></i><b>1.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exercise-50-1.html"><a href="exercise-50-1.html"><i class="fa fa-check"></i><b>2</b> Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#models-1"><i class="fa fa-check"></i><b>2.2</b> Models</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates"><i class="fa fa-check"></i><b>2.2.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.2.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick"><i class="fa fa-check"></i><b>2.2.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick"><i class="fa fa-check"></i><b>2.2.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick"><i class="fa fa-check"></i><b>2.2.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#analysis-in-sas-1"><i class="fa fa-check"></i><b>2.3</b> Analysis in SAS</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-no-covariates-1"><i class="fa fa-check"></i><b>2.3.1</b> Model – No Covariates</a></li>
+<li class="chapter" data-level="2.3.2" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthicksexdthick-1"><i class="fa fa-check"></i><b>2.3.2</b> Model – sex+dthick+sex*dthick</a></li>
+<li class="chapter" data-level="2.3.3" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-sexdthick-1"><i class="fa fa-check"></i><b>2.3.3</b> Model – sex+dthick</a></li>
+<li class="chapter" data-level="2.3.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-dthick-1"><i class="fa fa-check"></i><b>2.3.4</b> Model – dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="exercise-50-1.html"><a href="exercise-50-1.html#model-conclusion-1"><i class="fa fa-check"></i><b>2.4</b> Model Conclusion</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html"><i class="fa fa-check"></i><b>A</b> SAS of Exercise 50 (1)</a><ul>
+<li class="chapter" data-level="A.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-code"><i class="fa fa-check"></i><b>A.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="A.1.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by"><i class="fa fa-check"></i><b>A.1.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.1.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction"><i class="fa fa-check"></i><b>A.1.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.1.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick"><i class="fa fa-check"></i><b>A.1.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.1.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-2"><i class="fa fa-check"></i><b>A.1.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-output"><i class="fa fa-check"></i><b>A.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="A.2.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-1"><i class="fa fa-check"></i><b>A.2.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.2.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-1"><i class="fa fa-check"></i><b>A.2.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.2.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-1"><i class="fa fa-check"></i><b>A.2.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.2.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-3"><i class="fa fa-check"></i><b>A.2.4</b> Model dthick</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#sas-plots"><i class="fa fa-check"></i><b>A.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="A.3.1" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-by-2"><i class="fa fa-check"></i><b>A.3.1</b> Model BY</a></li>
+<li class="chapter" data-level="A.3.2" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-interaction-2"><i class="fa fa-check"></i><b>A.3.2</b> Model Interaction</a></li>
+<li class="chapter" data-level="A.3.3" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-sex-dthick-2"><i class="fa fa-check"></i><b>A.3.3</b> Model sex dthick</a></li>
+<li class="chapter" data-level="A.3.4" data-path="sas-of-exercise-50-1.html"><a href="sas-of-exercise-50-1.html#model-dthick-4"><i class="fa fa-check"></i><b>A.3.4</b> Model dthick</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html"><i class="fa fa-check"></i><b>B</b> SAS of Exercise 1</a><ul>
+<li class="chapter" data-level="B.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-code-1"><i class="fa fa-check"></i><b>B.1</b> SAS Code</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-2"><i class="fa fa-check"></i><b>B.1.1</b> Edema</a></li>
+<li class="chapter" data-level="B.1.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin"><i class="fa fa-check"></i><b>B.1.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-output-1"><i class="fa fa-check"></i><b>B.2</b> SAS Output</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-3"><i class="fa fa-check"></i><b>B.2.1</b> Edema</a></li>
+<li class="chapter" data-level="B.2.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-1"><i class="fa fa-check"></i><b>B.2.2</b> Bilirubin</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#sas-plots-1"><i class="fa fa-check"></i><b>B.3</b> SAS Plots</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#edema-4"><i class="fa fa-check"></i><b>B.3.1</b> Edema</a></li>
+<li class="chapter" data-level="B.3.2" data-path="sas-of-exercise-1.html"><a href="sas-of-exercise-1.html#bilirubin-2"><i class="fa fa-check"></i><b>B.3.2</b> Bilirubin</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-1" class="section level1">
+<h1><span class="header-section-number">1</span> Exercise 1</h1>
+<p><em>One expects that the waiting time from diagnosis to death is explained by a Cox’ regression model, where the explanatory variables are age, log of albumin level, log of protime and edema. Further, the level of bilirubin could an explanatory variable, but one is in doubt whether a log transformation is necessary of this variable.</em></p>
+<p><em>1. Shall bilirubin be included linearly or through a logarithmic transformation? Or would another transformation be more appropriate?</em></p>
+<p><em>2. Can edema be included linearly or is it necessary to model this variable through three groups?</em></p>
+<p><em>3. Can some variables be excluded through tests?</em></p>
+<p><em>4. Does your model fit?</em></p>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">1.1</span> Introduction</h2>
+<p>In this exercise we consider the survival time of Primary biliary cholangitis (first known as Primary biliary cirrhosis<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>), which is an autoimmune disease of the liver. Slow, progressive destruction of the small bile ducts of the liver, causing bile and other toxins to build up in the liver results in the disease. The disease is more common in women than men. The most common symptoms are tiredness and itching, <span class="citation">(Wikipedia, The Free Encyclopedia <a href="#ref-Wiki2019" role="doc-biblioref">2019</a><a href="#ref-Wiki2019" role="doc-biblioref">b</a>)</span>.</p>
+<p>As the disease progresses to cirrhosis, an elevated bilirubin level, a prolonged prothrombin time, and a decreased albumin level can be found. The increased bilirubin level is an ominous sign of disease progression, and liver transplantation must be considered, <span class="citation">(Nikolaos T. Pyrsopoulos <a href="#ref-Pyrs2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>To examine the disease we use the dataset <code>pbc</code> which is obtained from <span class="citation">(Department of Statistics at Carnegie Mellon University <a href="#ref-pbc" role="doc-biblioref">1991</a>)</span>. Table <a href="exercise-1.html#tab:pbc">1.1</a> shows the relevant variables and the first 10 observations.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:pbc">Table 1.1: </span>The first 10 observations of the relevant subset of pbc.dat.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+futime
+</th>
+<th style="text-align:right;">
+status
+</th>
+<th style="text-align:right;">
+age
+</th>
+<th style="text-align:right;">
+edema
+</th>
+<th style="text-align:right;">
+bili
+</th>
+<th style="text-align:right;">
+albumin
+</th>
+<th style="text-align:right;">
+protime
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+400
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+21464
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+14.5
+</td>
+<td style="text-align:right;">
+2.60
+</td>
+<td style="text-align:right;">
+12.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+4500
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+20617
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.1
+</td>
+<td style="text-align:right;">
+4.14
+</td>
+<td style="text-align:right;">
+10.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+1012
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+25594
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+3.48
+</td>
+<td style="text-align:right;">
+12.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+1925
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+19994
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:right;">
+2.54
+</td>
+<td style="text-align:right;">
+10.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+1504
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+13918
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+3.4
+</td>
+<td style="text-align:right;">
+3.53
+</td>
+<td style="text-align:right;">
+10.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2503
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+24201
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.8
+</td>
+<td style="text-align:right;">
+3.98
+</td>
+<td style="text-align:right;">
+11.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+1832
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+20284
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+4.09
+</td>
+<td style="text-align:right;">
+9.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+2466
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+19379
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.3
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+11.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+2400
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+15526
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+3.2
+</td>
+<td style="text-align:right;">
+3.08
+</td>
+<td style="text-align:right;">
+11.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+25772
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+12.6
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+11.5
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="models" class="section level2">
+<h2><span class="header-section-number">1.2</span> Models</h2>
+<p>We will study the following specifications of our Cox Proportional Hazard model:</p>
+<ul>
+<li><p>Specification of edema in our model, Section <a href="exercise-1.html#edema">1.2.1</a>.</p></li>
+<li><p>Functional form of bilirubin, Section <a href="exercise-1.html#functional-form-of-bilirubin">1.2.2</a>.</p></li>
+</ul>
+<p>Using SAS to obtain parameter estimates and test values, Section <a href="exercise-1.html#analysis-in-sas">1.3</a>. Next visual inspection of various plots (XBeta, Deviance Residuals, Martingale Residuals, etc.) and information criteria (AIC), will be used to determine which models perform worse than others.</p>
+<div id="edema" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Edema</h3>
+<p>We need to determine if edema shall be included linearly or through three groups. This will result in two different models.</p>
+<div id="linearly" class="section level4">
+<h4><span class="header-section-number">1.2.1.1</span> Linearly</h4>
+<p>Using edema linearly as a covariate, we obtain the following Cox Proportional Hazard model</p>
+<p><span class="math display">\[h(t|z)= h_0(t)\exp\left(\beta^T Z\right),\]</span></p>
+<p>where <span class="math inline">\(h_0(t)\)</span> is the baseline hazard, and <span class="math inline">\(Z\)</span> is our vector of covariates which we will write as</p>
+<p><span class="math display">\[Z=\left(\text{age}, \ln(\text{alb}), \ln(\text{pro}), \text{edema}\right)^T.\]</span></p>
+<p>Where we have used the given covariates from the exercise text.</p>
+</div>
+<div id="grouping" class="section level4">
+<h4><span class="header-section-number">1.2.1.2</span> Grouping</h4>
+<p>Using edema in three groups as a covariate, where we use the first edema group as reference, we obtain the following Cox Proportional Hazard model</p>
+<p><span class="math display">\[h(t|z)= h_0(t)\exp\left(\beta^T Z\right),\]</span></p>
+<p>where <span class="math inline">\(h_0(t)\)</span> is the baseline hazard, and <span class="math inline">\(Z\)</span> is our vector of covariates which we will write as</p>
+<p><span class="math display">\[Z=\left(\text{age}, \ln(\text{alb}), \ln(\text{pro}), \mathbb{1}_{\text{edema}=0.5}, \mathbb{1}_{\text{edema}=1}\right)^T.\]</span></p>
+<p>Where we have used the given covariates from the exercise text and made coded covariates that handles the grouping of edema.</p>
+</div>
+</div>
+<div id="functional-form-of-bilirubin" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Functional Form of Bilirubin</h3>
+<p>We need to determine if bilirubin shall be included linearly or through a transforming function. This will result in different models. I will test the logarithmic transform of bilirubin.</p>
+<div id="linearly-1" class="section level4">
+<h4><span class="header-section-number">1.2.2.1</span> Linearly</h4>
+<p>Using bilirubin linearly as a covariate, we obtain the following Cox Proportional Hazard model, assuming that edema is included linearly</p>
+<p><span class="math display">\[h(t|z)= h_0(t)\exp\left(\beta^T Z\right),\]</span></p>
+<p>where <span class="math inline">\(h_0(t)\)</span> is the baseline hazard, and <span class="math inline">\(Z\)</span> is our vector of covariates which we will write as</p>
+<p><span class="math display">\[Z=\left(\text{age}, \ln(\text{alb}), \ln(\text{pro}), \text{edema}, \text{bili}\right)^T.\]</span></p>
+</div>
+<div id="logarithmic-transform" class="section level4">
+<h4><span class="header-section-number">1.2.2.2</span> Logarithmic Transform</h4>
+<p>Using bilirubin with a logarithmic transform as a covariate, we obtain the following Cox Proportional Hazard model, assuming that edema is included linearly</p>
+<p><span class="math display">\[h(t|z)= h_0(t)\exp\left(\beta^T Z\right),\]</span></p>
+<p>where <span class="math inline">\(h_0(t)\)</span> is the baseline hazard, and <span class="math inline">\(Z\)</span> is our vector of covariates which we will write as</p>
+<p><span class="math display">\[Z=\left(\text{age}, \ln(\text{alb}), \ln(\text{pro}), \text{edema}, \ln(\text{bili})\right)^T.\]</span></p>
+</div>
+</div>
+</div>
+<div id="analysis-in-sas" class="section level2">
+<h2><span class="header-section-number">1.3</span> Analysis in SAS</h2>
+<div id="edema-1" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Edema</h3>
+<div id="linearly-2" class="section level4">
+<h4><span class="header-section-number">1.3.1.1</span> Linearly</h4>
+<p>The following show the analysis for edema included linearly. The SAS code, SAS outputs and figures for the rest of the models are available in Appendix <a href="sas-of-exercise-1.html#sas-of-exercise-1">B</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sas"><code class="sourceCode sas"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">DATA</span> pbc;</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">INFILE</span> <span class="st">&#39;~/Survival Analysis/Handin_2/pbc.dat&#39;</span>;</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">INPUT</span> id futime status drug age sex ascites hepato spiders edema</a>
+<a class="sourceLine" id="cb1-4" title="4">      bili chol albumin copper alk_phos sgot trig platelet protime stage;</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="kw">IF</span> id &lt; <span class="dv">313</span>;</a>
+<a class="sourceLine" id="cb1-6" title="6">cen = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="kw">IF</span> status = <span class="dv">2</span> <span class="kw">THEN</span> cen = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb1-8" title="8">age = age / <span class="dv">365.25</span>;</a>
+<a class="sourceLine" id="cb1-9" title="9">log_alb = <span class="fu">log</span>(albumin);</a>
+<a class="sourceLine" id="cb1-10" title="10">log_pro = <span class="fu">log</span>(protime);</a>
+<a class="sourceLine" id="cb1-11" title="11">log_bil = <span class="fu">log</span>(bili);</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="kw">IF</span> edema = <span class="dv">0</span> <span class="kw">OR</span> edema = <span class="dv">0.5</span> <span class="kw">THEN</span> edema_test = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="kw">IF</span> edema = <span class="dv">1</span> <span class="kw">THEN</span> edema_test = <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="kw">KEEP</span> futime status cen age bili albumin protime log_alb log_pro log_bil edema id edema_test;</a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="kw">RUN</span>;</a>
+<a class="sourceLine" id="cb1-16" title="16"></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="kw">PROC</span> PHREG<span class="kw"> DATA</span> = pbc ZPH PLOTS(OVERLAY) = SURVIVAL;</a>
+<a class="sourceLine" id="cb1-18" title="18">MODEL futime*cen(<span class="dv">0</span>) = age log_alb log_pro edema / RL TYPE3(ALL);</a>
+<a class="sourceLine" id="cb1-19" title="19">ASSESS PH / RESAMPLE;</a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="kw">RUN</span>;</a></code></pre></div>
+<p>The following listing show some of the output from the above <code>PHREG</code> procedure.</p>
+<pre><code>                                          The PHREG Procedure
+
+                                           Model Information
+
+                                   Data Set                 WORK.PBC
+                                   Dependent Variable       futime  
+                                   Censoring Variable       cen     
+                                   Censoring Value(s)       0       
+                                   Ties Handling            BRESLOW 
+
+
+                                Number of Observations Read         312
+                                Number of Observations Used         312
+
+
+                           Summary of the Number of Event and Censored Values
+
+                                                                   Percent
+                                 Total       Event    Censored    Censored
+
+                                   312         125         187       59.94
+
+
+                                           Convergence Status
+
+                             Convergence criterion (GCONV=1E-8) satisfied.          
+
+
+                                         Model Fit Statistics
+
+                                                 Without           With
+                                Criterion     Covariates     Covariates
+
+                                -2 LOG L        1279.960       1159.869
+                                AIC             1279.960       1167.869
+                                SBC             1279.960       1179.182
+
+
+                                Testing Global Null Hypothesis: BETA=0
+
+                        Test                 Chi-Square       DF     Pr &gt; ChiSq
+
+                        Likelihood Ratio       120.0910        4         &lt;.0001
+                        Score                  178.2996        4         &lt;.0001
+                        Wald                   145.0707        4         &lt;.0001
+
+
+                                             Type 3 Tests
+
+                                                   LR Statistics
+                              Effect       DF    Chi-Square    Pr &gt; ChiSq
+
+                              age           1        6.7402        0.0094
+                              log_alb       1       31.2793        &lt;.0001
+                              log_pro       1       18.8875        &lt;.0001
+                              edema         1       15.3399        &lt;.0001
+
+
+                                          The PHREG Procedure
+
+                                             Type 3 Tests
+
+                                                 Score Statistics
+                              Effect       DF    Chi-Square    Pr &gt; ChiSq
+
+                              age           1        6.8929        0.0087
+                              log_alb       1       37.0276        &lt;.0001
+                              log_pro       1       22.5796        &lt;.0001
+                              edema         1       17.7021        &lt;.0001
+
+                                             Type 3 Tests
+
+                                                  Wald Statistics
+                              Effect       DF    Chi-Square    Pr &gt; ChiSq
+
+                              age           1        6.8590        0.0088
+                              log_alb       1       37.1068        &lt;.0001
+                              log_pro       1       22.8438        &lt;.0001
+                              edema         1       16.7701        &lt;.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+
+                Parameter Standard                       Hazard      95% Hazard Ratio
+Parameter    DF Estimate    Error  Chi-Square Pr &gt; ChiSq  Ratio      Confidence Limits
+
+age           1 0.02421   0.00924   6.8590    0.0088       1.025       1.006       1.043
+log_alb       1 -4.06081  0.66663  37.1068    &lt;.0001       0.017       0.005       0.064
+log_pro       1 4.11720   0.86143  22.8438    &lt;.0001      61.387      11.346     332.143
+edema         1 1.20371   0.29394  16.7701    &lt;.0001       3.332       1.873       5.929</code></pre>
+<p>First of all we observe high censoring in our data, 187 observations are censored leaving us with only 125 events. We cannot remove any of our covariates from our model given the likelihood ratio test (all <span class="math inline">\(p\)</span> values, except the one for age, are <span class="math inline">\(&lt; 0.0001\)</span>).</p>
+<p>The AIC of this model is <span class="math inline">\(1167.869\)</span>.</p>
+<p>The relative risk of edema in the model is <span class="math inline">\(\hat{\text{HR}}(\text{edema+1}|\text{edema})=3.332\)</span> with a <span class="math inline">\(95 \%\)</span> confidence interval of <span class="math inline">\(C_{95}(\hat{\text{HR}})=\left( 1.873, 5.929\right)\)</span>.</p>
+<p>The following ZPH plots seem to fluctuate for age and log(alb), but log(pro) seems downward sloping and edema seems to stay at a level.</p>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-ZPH-0"></span>
+<img src="graphs/ED_LIN_ZPH_0.svg" alt="ZPH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.1: ZPH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-ZPH-1"></span>
+<img src="graphs/ED_LIN_ZPH_1.svg" alt="ZPH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.2: ZPH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-ZPH-2"></span>
+<img src="graphs/ED_LIN_ZPH_2.svg" alt="ZPH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.3: ZPH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-ZPH-3"></span>
+<img src="graphs/ED_LIN_ZPH_3.svg" alt="ZPH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.4: ZPH – Edema – Linearly.
+</p>
+</div>
+The assesment of proportional hazards seems appropriate for age and log(alb), but log(pro) and edema are extreme.
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-PH-0"></span>
+<img src="graphs/ED_LIN_PH_0.svg" alt="ASSESS PH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.5: ASSESS PH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-PH-1"></span>
+<img src="graphs/ED_LIN_PH_1.svg" alt="ASSESS PH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.6: ASSESS PH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-PH-2"></span>
+<img src="graphs/ED_LIN_PH_2.svg" alt="ASSESS PH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.7: ASSESS PH – Edema – Linearly.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-PH-3"></span>
+<img src="graphs/ED_LIN_PH_3.svg" alt="ASSESS PH -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.8: ASSESS PH – Edema – Linearly.
+</p>
+</div>
+<p>In Figure <a href="exercise-1.html#fig:ED-LIN-RESDEV-0">1.9</a> we see the product of the heavy censoring: some of the points cluster at 0.</p>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-RESDEV-0"></span>
+<img src="graphs/ED_LIN_RESDEV_0.svg" alt="RESDEV -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.9: RESDEV – Edema – Linearly.
+</p>
+</div>
+<p>In Figure <a href="exercise-1.html#fig:ED-LIN-RESDEV-1">1.10</a> we observe a great amount of possible outliers. Most noticable are observations 87 and 83.</p>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-RESDEV-1"></span>
+<img src="graphs/ED_LIN_RESDEV_1.svg" alt="RESDEV -- OBSERVATIONS -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.10: RESDEV – OBSERVATIONS – Edema – Linearly.
+</p>
+</div>
+In Figure <a href="exercise-1.html#fig:ED-LIN-DFBETA-0">1.11</a> we see again see the heavy censoring having an impact: some of the points cluster at 0.
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-DFBETA-0"></span>
+<img src="graphs/ED_LIN_DFBETA_0.svg" alt="DFBETA -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.11: DFBETA – Edema – Linearly.
+</p>
+</div>
+<p>In Figure <a href="exercise-1.html#fig:ED-LIN-DFBETA-1">1.12</a> we observe observations 147 and 253 as possible outliers.</p>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-DFBETA-1"></span>
+<img src="graphs/ED_LIN_DFBETA_1.svg" alt="DFBETA -- OBSERVATIONS -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.12: DFBETA – OBSERVATIONS – Edema – Linearly.
+</p>
+</div>
+<p>Figure <a href="exercise-1.html#fig:ED-LIN-SURV">1.13</a> gives the survival plot of this model.</p>
+<div class="figure" style="text-align: center"><span id="fig:ED-LIN-SURV"></span>
+<img src="graphs/ED_LIN_SURV.svg" alt="Survival Plot -- Edema -- Linearly." width="100%" />
+<p class="caption">
+Figure 1.13: Survival Plot – Edema – Linearly.
+</p>
+</div>
+</div>
+<div id="grouping-1" class="section level4">
+<h4><span class="header-section-number">1.3.1.2</span> Grouping</h4>
+<p>We cannot remove any of our covariates from our model given the likelihood ratio test.</p>
+<p>The AIC of this model is <span class="math inline">\(1167.852\)</span>.</p>
+<p>The relative risk of edema in the model is <span class="math inline">\(\hat{\text{HR}_1}(\text{edema}=1|\text{edema}=0)= 3.930\)</span> with a <span class="math inline">\(95 \%\)</span> confidence interval of <span class="math inline">\(C_{95}(\hat{\text{HR}_1})=\left( 2.157, 7.160\right)\)</span> and <span class="math inline">\(\hat{\text{HR}_{0.5}}(\text{edema}=0.5|\text{edema}=0)= 1.344\)</span> with a <span class="math inline">\(95 \%\)</span> confidence interval of <span class="math inline">\(C_{95}(\hat{\text{HR}_{0.5}})=\left( 0.789, 2.290\right)\)</span>. For edema=0.5 the test <span class="math inline">\(H_0:\hat{\text{HR}_{0.5}}=0\)</span> suggest that edema=0.5 isn’t statistically significant (<span class="math inline">\(\chi^2\approx 1.1863\)</span>, $p0.2761 $).</p>
+<p>The ZPH plots, in Section <a href="sas-of-exercise-1.html#edema-4">B.3.1</a>, seem to fluctuate for age and log(alb), but log(pro), edema=0.5 seems downward sloping and edema=1 seems to stay at a level.</p>
+<p>The assesment of proportional hazards, in Section <a href="sas-of-exercise-1.html#edema-4">B.3.1</a>, seems appropriate for age and log(alb), but log(pro), edema=0.5 and edema=1 are extreme.</p>
+<p>In Figure <a href="sas-of-exercise-1.html#fig:ED-GRO-RESDEV-0">B.12</a> we notice clusting at 0 again.</p>
+<p>In Figure <a href="sas-of-exercise-1.html#fig:ED-GRO-RESDEV-1">B.13</a> we again notice the same observations as outliers (87, 83, etc.).</p>
+<p>Figure <a href="sas-of-exercise-1.html#fig:ED-GRO-DFBETA-0">B.14</a> and Figure <a href="sas-of-exercise-1.html#fig:ED-GRO-DFBETA-1">B.15</a> also seems to have the same conclusions as Figure <a href="exercise-1.html#fig:ED-LIN-DFBETA-0">1.11</a> and Figure <a href="exercise-1.html#fig:ED-LIN-DFBETA-1">1.12</a>.</p>
+<p>One could merge the first two groups of edema into one group since <span class="math inline">\(\hat{\text{HR}_{0.5}}\)</span> isn’t statistically significant, but then the interpretation of the parameters would be harder.</p>
+</div>
+</div>
+<div id="functional-form-of-bilirubin-1" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Functional Form of Bilirubin</h3>
+<div id="linearly-3" class="section level4">
+<h4><span class="header-section-number">1.3.2.1</span> Linearly</h4>
+<p>We cannot remove any of our covariates from our model given the likelihood ratio test.</p>
+<p>The AIC of this model is <span class="math inline">\(1124.549\)</span>.</p>
+<p>The relative risk of bilirubin in the model is <span class="math inline">\(\hat{\text{HR}}(\text{bilirubin}+1|\text{bilirubin})= 1.123\)</span> with a <span class="math inline">\(95 \%\)</span> confidence interval of <span class="math inline">\(C_{95}(\hat{\text{HR}})=\left( 1.091 , 1.157\right)\)</span>. One might see inclusion of <span class="math inline">\(1\)</span> in a higher confidence level.</p>
+<p>The ZPH plots, in Section <a href="sas-of-exercise-1.html#bilirubin-2">B.3.2</a>, seem to fluctuate for age and log(alb), but log(pro) and edema seems downward sloping and bilirubin seems upward sloping.</p>
+<p>The functional form assesment of the linear inclusion seem to perform bad. Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-FF">B.16</a> is critical and the associated <span class="math inline">\(p\)</span> value is <span class="math inline">\(p&lt;0.0001\)</span>.</p>
+<p>The assesment of proportional hazard for bilirubin in Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-PH-4">B.26</a> is not good.</p>
+<p>The deviance residual plots, Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-RESDEV-0">B.27</a> and Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-RESDEV-1">B.28</a>, and DFBETA plots, Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-DFBETA-0">B.29</a> and Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-DFBETA-1">B.30</a>, shows clusting and some of the same outliers as in the two previous analyzed models.</p>
+<p>The Martingale residual plot in Figure <a href="sas-of-exercise-1.html#fig:BIL-LIN-MART">B.31</a> seems to have upward sloping points suggested by the added <code>PBSPLINE</code>.</p>
+</div>
+<div id="logarithmic-transform-1" class="section level4">
+<h4><span class="header-section-number">1.3.2.2</span> Logarithmic transform</h4>
+<p>We cannot remove any of our covariates from our model given the likelihood ratio test.</p>
+<p>The AIC of this model is <span class="math inline">\(1090.825\)</span>.</p>
+<p>The relative risk of log(bilirubin) in the model is <span class="math inline">\(\hat{\text{HR}}(\ln(\text{bilirubin})+1|\ln(\text{bilirubin}))= 2.409\)</span> with a <span class="math inline">\(95 \%\)</span> confidence interval of <span class="math inline">\(C_{95}(\hat{\text{HR}_1})=\left( 1.985 , 2.923\right)\)</span>.</p>
+<p>The ZPH plots, in Section <a href="sas-of-exercise-1.html#bilirubin-2">B.3.2</a>, seem to fluctuate for age and log(alb), but log(pro) and edema seems downward sloping and log(bilirubin) seems to be shifted a bit up, but still fluctuating.</p>
+<p>The functional form assesment of the logarithmic inclusion seem to perform bad. Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-FF">B.33</a> is better than for linear inclusiong and the associated <span class="math inline">\(p\)</span> value is <span class="math inline">\(p\approx 0.02010\)</span>. Thus the logarithmic transform seems appropriate.</p>
+<p>The assesment of proportional hazard for log(bilirubin) in Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-PH-4">B.43</a> is better than for linear inclusion.</p>
+<p>The deviance residual plots, Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-RESDEV-0">B.44</a> and Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-RESDEV-1">B.45</a>, and DFBETA plots, Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-DFBETA-0">B.46</a> and Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-DFBETA-1">B.47</a>, are comparable to the linear inclusion case.</p>
+<p>The Martingale residual plot in Figure <a href="sas-of-exercise-1.html#fig:BIL-LOG-MART">B.48</a> seems to have fluctuating points suggested by the added <code>PBSPLINE</code>.</p>
+</div>
+</div>
+</div>
+<div id="model-conclusion" class="section level2">
+<h2><span class="header-section-number">1.4</span> Model Conclusion</h2>
+<p>The last analyzed model with both edema included linearly and log(bilirubin) seems to outperform the other models with regards to their AIC score. Table <a href="exercise-1.html#tab:EB-AIC">1.2</a> gives a summary of all analyzed models. As noted in the introduction there seems to be time dependency on bilirubin and thus the logarithmic transformation is appropriate. The other covariates are all statistically significant as well.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:EB-AIC">Table 1.2: </span>Summary of all models.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Extra covariates
+</th>
+<th style="text-align:left;">
+AIC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Edema
+</td>
+<td style="text-align:left;">
+1167.869
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edema (3)
+</td>
+<td style="text-align:left;">
+1167.852
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edema+Bilirubin
+</td>
+<td style="text-align:left;">
+1124.549
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edema+log(Bilirubin)
+</td>
+<td style="text-align:left;">
+1090.825
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-pbc">
+<p>Department of Statistics at Carnegie Mellon University. 1991. “Primary Biliary Cirrhosis.” <a href="http://lib.stat.cmu.edu/datasets/pbc">http://lib.stat.cmu.edu/datasets/pbc</a>.</p>
+</div>
+<div id="ref-Pyrs2017">
+<p>Nikolaos T. Pyrsopoulos. 2017. “Primary Biliary Cholangitis (Primary Biliary Cirrhosis) Workup.” <a href="https://emedicine.medscape.com/article/171117-workup">https://emedicine.medscape.com/article/171117-workup</a>.</p>
+</div>
+<div id="ref-Wiki2019">
+<p>Wikipedia, The Free Encyclopedia. 2019b. “Primary Biliary cholangitis.” <a href="https://en.wikipedia.org/wiki/Primary_biliary_cholangitis">https://en.wikipedia.org/wiki/Primary_biliary_cholangitis</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Cirrhosis is a feature only in advanced disease.<a href="exercise-1.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-50-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/afrandsen/survival-analysis/edit/master/Handins/Handin_2/01-exercise01.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Handin_2_Andreas_Kracht_Frandsen.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
