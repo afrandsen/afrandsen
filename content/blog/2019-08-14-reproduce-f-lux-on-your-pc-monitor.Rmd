@@ -1,6 +1,6 @@
 ---
 title: Reproduce f.lux on Your PC Monitor
-author: Andreas Frandsen
+author: Andreas Kracht Frandsen
 date: '2019-08-14'
 lastmod: 0
 slug: reproduce-f-lux-on-your-pc-monitor

@@ -1,13 +1,13 @@
 ---
 title: afrandsen
-description: "Andreas Frandsen's Personal Website."
+description: "Andreas Kracht Frandsen's Personal Website."
 ---
 
 [<img src="/images/logo.svg" style="max-width:15%;min-width:40px;float:right;" alt="afrandsen" />](https://afrandsen.rbind.io)
 
 # Welcome to My Personal Website
 
-## Andreas Frandsen
+## Andreas Kracht Frandsen
 
 I'm studying MSc in Mathematics and Economics at the Department of Mathematics, Aarhus University. My main area of interest is quantitative finance. My bachelor thesis was *Long-term Asset Investment: An Empirical Analysis of Risk Across Investment Horizons*. I work as a student assistant at [Jyske Bank](https://www.jyskebank.dk/), Market Risk and Models. I'm the developer of the fairly simple open-source game *tdf_manager* (Tour de Frandsen Manager 2019). I have created the training stress model *TES* (*Transformed Exponentially Smoothed*), for cycling, running and swimming. I usually optimize one of my many bikes and occassionally ride them. I absolutely hate [SAS](https://www.sas.com/en_us/home.html) even though I use it everyday. I love [R](https://www.r-project.org/) and I try to convince people to become useR's. I can't code all day, so I play piano to keep the fingers moving or read books to keep the head going. I'm a big fan of [Git](https://git-scm.com/), [GitHub](https://github.com/), [GoldenCheetah](https://www.goldencheetah.org/) and [Overleaf](https://www.overleaf.com/). 
 
