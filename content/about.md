@@ -1,5 +1,5 @@
 ---
-author: Andreas Frandsen
+author: Andreas Kracht Frandsen
 title: About
 description: "About Andreas Kracht Frandsen/afrandsen."
 ---
