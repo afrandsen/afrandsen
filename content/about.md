@@ -6,6 +6,9 @@ description: "About Andreas Kracht Frandsen/afrandsen."
 
 My name is Andreas Kracht Frandsen. You can read more about me on my homepage or in my [curriculum vitae](https://afrandsen.rbind.io/bare/cv-english/). This blog is about R, bikes and training. All my opinions here are my own, so I ain't representing anyone else. I feel good when contributing to open-source software that I use often, either through pull requests or direct contact to the author(s).
 
+<img src="/images/big_shot.jpg" width="100%">
+<p class="caption">Thrilling.</p>
+
 ## Contact me
 
 You can find me and my repositories on [GitHub](https://github.com/afrandsen) and my gists on [Gist](https://gist.github.com/afrandsen). Where I will be happy to answer any questions. Subscribe to the RSS feed of [blog posts](https://afrandsen.rbind.io/index.xml) or all [comments](https://afrandsen.disqus.com/latest.rss) to stay tuned.
