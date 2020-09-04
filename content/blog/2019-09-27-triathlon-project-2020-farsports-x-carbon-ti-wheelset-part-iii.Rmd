@@ -105,6 +105,13 @@ No chips or ugly layup in the rim bed area. Thus the tubes should lay safe in th
 
 Next I take a look at the Shimano Dura Ace R9100 SPD-SL pedals.
 
+## Contact Details
+As stated above Angela from Farsports was very helpful, and I can recommend talking to her if you want to buy new wheels. Below are some contact details:
+
+  - Skype: farsports14.
+  - Mail: angela@farsports.cn.
+  - Website: [www.farsports.com](www.farsports.com).
+
 ## Components
 
 The following lists the components and blog posts regarding the triathlon build.
@@ -114,6 +121,6 @@ The following lists the components and blog posts regarding the triathlon build.
 - [X] [Farsports X Carbon-TI -- Part III](https://afrandsen.rbind.io/blog/2019/09/triathlon-project-2020-farsports-x-carbon-ti-wheelset-part-iii/)
 - [X] Shimano Dura Ace R9100 SPD-SL
 - [X] Continential Grand Prix 5000 23 mm
-- [ ] Giant Trinity Advanced Pro 2 2020
+- [x] Giant Trinity Advanced Pro 2 2020
 
 *Disclaimer: I am not affiliated with Farsports. And I have funded the above product on my own.*
