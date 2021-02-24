@@ -11,7 +11,11 @@ My name is Andreas Kracht Frandsen. You can read more about me on my homepage or
 
 ## Contact me
 
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
 You can find me and my repositories on [GitHub](https://github.com/afrandsen) and my gists on [Gist](https://gist.github.com/afrandsen). Where I will be happy to answer any questions. Subscribe to the RSS feed of [blog posts](https://afrandsen.rbind.io/index.xml) or all [comments](https://afrandsen.disqus.com/latest.rss) to stay tuned.
+
+<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="da_DK" data-type="horizontal" data-theme="light" data-vanity="andreas-kracht-frandsen"><a class="LI-simple-link" href='https://dk.linkedin.com/in/andreas-kracht-frandsen?trk=profile-badge'>Andreas Kracht Frandsen</a></div>
 
 ## About this site
 
