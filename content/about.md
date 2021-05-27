@@ -13,7 +13,7 @@ My name is Andreas Kracht Frandsen. You can read more about me on my homepage or
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
-You can find me and my repositories on [GitHub](https://github.com/afrandsen) and my gists on [Gist](https://gist.github.com/afrandsen). Where I will be happy to answer any questions. Subscribe to the RSS feed of [blog posts](https://afrandsen.rbind.io/index.xml) or all [comments](https://afrandsen.disqus.com/latest.rss) to stay tuned. 
+You can find me and my repositories on [GitHub](https://github.com/afrandsen) and my gists on [Gist](https://gist.github.com/afrandsen). Where I will be happy to answer any questions. Subscribe to the RSS feed of [blog posts](https://afrandsen.rbind.io/index.xml) or all [comments](https://afrandsen.disqus.com/latest.rss) to stay tuned.
 
 ## About this site
 
