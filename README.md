@@ -10,4 +10,4 @@ The websit is built via the R package [blogdown](https://github.com/rstudio/blog
 
 ## Certificates
 
-<a href='https://www.credly.com/badges/9c3ab9bb-48bd-4e74-a270-1553e327f46a/public_url'><img src='static/images/sas-certified-specialist-base-programming-using-sas-9-4.png' align="left" height="138.5" title="SAS Certified Specialist Base Programming Using SAS 9.4" /></a>
+<a href='https://www.credly.com/badges/9c3ab9bb-48bd-4e74-a270-1553e327f46a/public_url'><img src='static/images/sas-certified-specialist-base-programming-using-sas-9-4.png' align="left" height="138.5" title="SAS Certified Specialist: Base Programming Using SAS 9.4" /></a>
