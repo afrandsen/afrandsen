@@ -76,6 +76,10 @@ a{
   text-decoration: none;
 }
 
+.cert-logo {
+  border-bottom: none;
+}
+
 img{
   max-width: 100%;
 }
