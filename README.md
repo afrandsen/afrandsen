@@ -6,7 +6,7 @@ The content of all pages is licensed under [CC BY-NC-SA 4.0](https://creativecom
 
 Check it out: [https://afrandsen.rbind.io](https://afrandsen.rbind.io).
 
-The websit is built via the R package [blogdown](https://github.com/rstudio/blogdown).
+The website is built via the R package [blogdown](https://github.com/rstudio/blogdown).
 
 ## Certificates
 
