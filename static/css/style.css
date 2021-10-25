@@ -198,6 +198,23 @@ a.symbol:hover {
   text-align: center;
 }
 
+/* About me image */
+.big-shot {
+  max-width: 100%;
+  background: url("/images/big_shot.jpg") no-repeat;
+  background-size: contain;
+  width: 4608px;
+  padding-bottom: 75%;
+}
+
+.big-shot:hover {
+  max-width: 100%;
+  background: url("/images/big_shot_2021.jpg") no-repeat;
+  background-size: contain;
+  width: 4608px;
+  padding-bottom: 75%;
+}
+
 /* code */
 pre {
   border: 1px solid #ddd;
