@@ -3,7 +3,7 @@ title: afrandsen
 description: "Andreas Kracht Frandsen's Personal Website."
 ---
 
-[<img src="/images/logo.svg" style="max-width:15%;min-width:40px;float:right;" alt="afrandsen" />](https://afrandsen.rbind.io)
+[<img src="/images/AKF.png" style="max-width:15%;min-width:40px;float:right;" alt="afrandsen" />](https://afrandsen.rbind.io)
 
 # Welcome to My Personal Website
 
