@@ -203,8 +203,8 @@ a.symbol:hover {
   max-width: 100%;
   background: url("/images/big_shot_2023.jpg") no-repeat;
   background-size: contain;
-  width: 2048px;
-  padding-bottom: 75%;
+  width: 4608px;
+  padding-bottom: 100%;
 }
 
 .big-shot:hover {
