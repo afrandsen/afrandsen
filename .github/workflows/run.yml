@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies (if needed)
         run: |
-          pip install -r requirements.txt || true
+          pip install -r run/requirements.txt || true
 
       - name: Run test.py
         run: python run/test.py
