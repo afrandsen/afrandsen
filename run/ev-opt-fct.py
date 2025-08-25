@@ -321,8 +321,7 @@ df_out = optimize_ev_charging(
         CHARGER_KW, CHARGER_MIN_A, CHARGER_VOLT, PHASES,
         EFF_KWH_PER_KM, INITIAL_SOC_PCT,
         SOLAR_EFF, PANEL_AREA, PANEL_EFF,
-        SYSTEMTARIF, NETTARIF_TSO, ELAFGIFT, LOOAD_TILLAEG,
-        REFUSION, LAT, LON, TILT, AZIMUTH
+        SYSTEMTARIF, NETTARIF_TSO, ELAFGIFT, LOOAD_TILLAEG, LAT, LON, TILT, AZIMUTH
     )
 
 # soc before/after (to mirror the R output logic)
