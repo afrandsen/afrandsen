@@ -474,13 +474,18 @@ print(
 # plt.show()
 
 # --- Export function ---
+
 def export_interactive_table(df, filename="table.html", table_id="table", drop_cols=None, mask=None, scale=0.85):
     if drop_cols:
         df = df.drop(columns=[c for c in drop_cols if c in df.columns])
     if mask is not None:
         df = df.loc[mask].copy()
 
-    with open(filename, "w", encoding="utf-8") as f:
+    folder_path = "static/bare/ev"
+    os.makedirs(folder_path, exist_ok=True)
+    filepath = os.path.join(folder_path, filename)
+
+    with open(filepath, "w", encoding="utf-8") as f:
         f.write("""
         <html>
         <head>
