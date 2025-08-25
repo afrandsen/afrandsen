@@ -1,8 +1,8 @@
 name: Run ev-opt-fct.py
 
 on:
-  push:
-  pull_request:
+  schedule:
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:

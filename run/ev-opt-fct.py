@@ -506,8 +506,8 @@ def export_interactive_table(df, filename="table.html", table_id="table", drop_c
         <body>
         """)
         f.write(f"""
-        <div style="transform: scale({scale}); transform-origin: top left; width: 120%;">
-        {df.to_html(index=False, table_id=table_id, border=0, classes="display")}
+        <div style="transform: scale({scale}); transform-origin: top left; width: 110%;">
+        {df.to_html(index=False, table_id=table_id, border=0, classes="display compact")}
         </div>
         """)
         f.write(f"""
