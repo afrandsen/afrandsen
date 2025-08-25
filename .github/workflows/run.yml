@@ -26,4 +26,17 @@ jobs:
           pip install -r run/requirements.txt || true
 
       - name: Run ev-opt-fct.py
-        run: python run/ev-opt-fct.py
+        run: |
+          mkdir -p ./static/bare/ev
+          python run/ev-opt-fct.py
+
+      - name: Commit html
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add /static/bare/*
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+          git diff --cached --quiet || git commit -m "Update EV - $TIMESTAMP"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

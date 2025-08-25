@@ -473,16 +473,6 @@ print(
 # plt.tight_layout()
 # plt.show()
 
-import os
-
-# --- Folder setup ---
-run = os.path.dirname(os.path.abspath(__file__))  # folder where the Python script is
-root_folder = os.path.dirname(run)
-static_folder = os.path.join(os.path.dirname(root_folder), "static")
-bare_folder = os.path.join(static_folder, "bare")
-export_folder = os.path.join(bare_folder, "ev")
-os.makedirs(export_folder, exist_ok=True)
-
 # --- Export function ---
 def export_interactive_table(df, filename="table.html", table_id="table", drop_cols=None, mask=None, scale=0.85):
     if drop_cols:
@@ -490,9 +480,7 @@ def export_interactive_table(df, filename="table.html", table_id="table", drop_c
     if mask is not None:
         df = df.loc[mask].copy()
 
-    filepath = os.path.join(export_folder, filename)
-
-    with open(filepath, "w", encoding="utf-8") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         f.write("""
         <html>
         <head>
@@ -540,7 +528,7 @@ mask_events = (
 # --- Export tables ---
 export_interactive_table(
     df_out,
-    "ev_charging_schedule_interactive.html",
+    "ev_schedule.html",
     "schedule",
     drop_cols=["available", "date"],
     mask=mask_events
@@ -548,8 +536,6 @@ export_interactive_table(
 
 export_interactive_table(
     daily_summary,
-    "ev_charging_summary_interactive.html",
+    "ev_summary.html",
     "summary"
 )
-
-print(f"HTML files exported to: {export_folder}")
