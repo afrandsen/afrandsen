@@ -9,14 +9,14 @@ from pandas.api.types import is_datetime64_any_dtype
 from datetime import datetime, timedelta
 
 INITIAL_SOC_PCT = float(os.getenv("INITIAL_SOC_PCT"))
+SOC_MIN_PCT = float(os.getenv("SOC_MIN_PCT"))
+SOC_MAX_PCT = float(os.getenv("SOC_MAX_PCT"))
 LAT = float(os.getenv("LAT"))
 LON = float(os.getenv("LON"))
 trips_json = os.getenv("TRIPS")
 trips = pd.DataFrame(json.loads(trips_json))
 
 BATTERY_KWH=75
-SOC_MIN_PCT=0.30
-SOC_MAX_PCT=0.80
 CHARGER_KW=11
 CHARGER_MIN_A=6
 CHARGER_VOLT=400
