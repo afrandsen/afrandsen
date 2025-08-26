@@ -12,6 +12,7 @@ jobs:
       LAT: ${{ secrets.LAT }}
       LON: ${{ secrets.LON }}
       TRIPS: ${{ secrets.TRIPS }}
+      INITIAL_SOC_PCT: ${{ vars.INITIAL_SOC_PCT }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
