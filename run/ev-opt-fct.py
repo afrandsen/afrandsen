@@ -8,12 +8,11 @@ from pytz import timezone
 from pandas.api.types import is_datetime64_any_dtype
 from datetime import datetime, timedelta
 
+INITIAL_SOC_PCT = float(os.getenv("INITIAL_SOC_PCT"))
 LAT = float(os.getenv("LAT"))
 LON = float(os.getenv("LON"))
 trips_json = os.getenv("TRIPS")
 trips = pd.DataFrame(json.loads(trips_json))
-
-INITIAL_SOC_PCT=0.62
 
 BATTERY_KWH=75
 SOC_MIN_PCT=0.30
