@@ -474,7 +474,15 @@ print(
 
 # --- Export function ---
 
-def export_interactive_table(df, filename="table.html", table_id="table", drop_cols=None, mask=None, scale=0.85):
+def export_interactive_table(
+    df, 
+    filename="table.html", 
+    table_id="table", 
+    drop_cols=None, 
+    mask=None, 
+    scale=0.85, 
+    footer_text=None   # <-- new argument
+):
     if drop_cols:
         df = df.drop(columns=[c for c in drop_cols if c in df.columns])
     if mask is not None:
@@ -500,6 +508,11 @@ def export_interactive_table(df, filename="table.html", table_id="table", drop_c
             table.dataTable thead th {
                 font-size: 13px;
             }
+            .summary-text {
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: bold;
+            }
           </style>
         </head>
         <body>
@@ -509,6 +522,9 @@ def export_interactive_table(df, filename="table.html", table_id="table", drop_c
         {df.to_html(index=False, table_id=table_id, border=0, classes="display compact")}
         </div>
         """)
+        # Add footer text if provided
+        if footer_text:
+            f.write(f'<div class="summary-text">{footer_text}</div>')
         f.write(f"""
         <script>
           $(document).ready(function() {{
@@ -522,24 +538,34 @@ def export_interactive_table(df, filename="table.html", table_id="table", drop_c
         </html>
         """)
 
-# --- Mask for schedule (same as console output) ---
+# --- Construct cost summary string ---
+summary_text = (
+    f"Total cost: {total_cost:.2f} kr. "
+    f"Total effective cost: {effective_cost:.2f} kr. "
+    f"Total charging: {total_charge:.2f} kWh ({from_grid:.2f} grid, {from_solar:.2f} solar). "
+    f"Cost per kWh: {avg_cost:.2f} kr/kWh. Eff. cost per kWh: {avg_cost_eff:.2f} kr/kWh."
+)
+
 mask_events = (
     (df_out["trip_kwh_at_departure"].values > 0) |
     (df_out["grid_charge_kwh"].values > 0) |
     (df_out["solar_charge_kwh"].values > 0)
 )
 
-# --- Export tables ---
+# --- Export tables with summary text ---
 export_interactive_table(
     df_out,
     "ev_schedule.html",
     "schedule",
     drop_cols=["available", "date"],
-    mask=mask_events
+    mask=mask_events,
+    footer_text=summary_text   # 👈 add summary
 )
 
 export_interactive_table(
     daily_summary,
     "ev_summary.html",
-    "summary"
+    "summary",
+    footer_text=summary_text   # 👈 add summary
 )
+
