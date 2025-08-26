@@ -13,6 +13,11 @@
             table.dataTable thead th {
                 font-size: 13px;
             }
+            .summary-text {
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: bold;
+            }
           </style>
         </head>
         <body>
@@ -123,7 +128,7 @@
   </tbody>
 </table>
         </div>
-        
+        <div class="summary-text">Total cost: 86.36 kr. Total effective cost: 82.94 kr. Total charging: 70.74 kWh (63.89 grid, 6.85 solar). Cost per kWh: 1.22 kr/kWh. Eff. cost per kWh: 1.17 kr/kWh.</div>
         <script>
           $(document).ready(function() {
               $('#summary').DataTable({
