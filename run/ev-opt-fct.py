@@ -87,7 +87,7 @@ def combine_actuals_and_forecast(prices_actual, prices_forecast, tz="Europe/Cope
     df = pd.concat([prices_actual, future], ignore_index=True).sort_values("date").reset_index(drop=True)
 
     # Alternativ now = pd.Timestamp.now(tz=tz).floor("h")
-    now = pd.Timestamp.now(tz="UTC").floor("15min") - timedelta(hours=2)
+    now = pd.Timestamp.now(tz="UTC").floor("15min")
 
     # filter from current hour and forward
     df = df[df["date"] >= now]
