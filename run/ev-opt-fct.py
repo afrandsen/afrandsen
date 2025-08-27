@@ -307,7 +307,6 @@ def optimize_ev_charging(
         "minute": df["minute_local"].values,
         "price_kr_per_kwh": np.round(df["total_price_kr_kwh"].values, 5),
         "available": df["available"].values,
-        "trip_kwh_at_departure": np.round(trip_energy_vec, 3),
         "grid_charge_kwh":  np.round(grid_opt, 4),
         "solar_charge_kwh": np.round(solar_opt, 4),
         "total_charge_kwh": np.round(grid_opt + solar_opt, 4),
