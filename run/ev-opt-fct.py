@@ -34,10 +34,6 @@ TILT=25
 AZIMUTH=0
 tz = "Europe/Copenhagen"
 
-# Read prices.json with fields: date (ISO8601 UTC), price (øre/kWh)
-#prices = pd.read_json("prices.json")
-#assert {"date", "price"}.issubset(prices.columns)
-
 def fetch_dk1_prices_dkk():
     today = datetime.now().date()
     start = today
@@ -87,7 +83,7 @@ def combine_actuals_and_forecast(prices_actual, prices_forecast, tz="Europe/Cope
     df = pd.concat([prices_actual, future], ignore_index=True).sort_values("date").reset_index(drop=True)
 
     # Alternativ now = pd.Timestamp.now(tz=tz).floor("h")
-    now = pd.Timestamp.now(tz="UTC").floor("15min")
+    now = pd.Timestamp.now(tz="UTC").floor("15min") - timedelta(hours=2)
 
     # filter from current hour and forward
     df = df[df["date"] >= now]
@@ -171,8 +167,9 @@ def optimize_ev_charging(
 
     # filter from current hour and forward
     df = df.loc[df["datetime_local"] >= now].copy()
-
+    df.reset_index(drop=True, inplace=True)
     H = len(df)
+    assert df.index.min() == 0, "Index not starting at 0 after reset!"
 
     # --- Parse trip times (accept HH:MM) ---
     trips = trips.copy()
@@ -252,6 +249,8 @@ def optimize_ev_charging(
             (df["wday_label"].values == t["day"].lower()) &
             ((df["hour_local"].values * 60 + df["minute_local"].values) == dep_minutes)
         ]
+        print("trip", t['day'], t['away_start'], " -> matched pos(s):", idx_dep.tolist())
+        print("datetime at matched pos(s):", df.loc[idx_dep, "datetime_local"].tolist())
         if len(idx_dep) >= 1:
             trip_energy_vec[idx_dep[0]] += need_kwh
         if SOC_MIN + need_kwh > SOC_MAX:
