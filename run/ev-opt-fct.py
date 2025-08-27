@@ -87,7 +87,7 @@ def combine_actuals_and_forecast(prices_actual, prices_forecast, tz="Europe/Cope
     df = pd.concat([prices_actual, future], ignore_index=True).sort_values("date").reset_index(drop=True)
 
     # Alternativ now = pd.Timestamp.now(tz=tz).floor("h")
-    now = pd.Timestamp.now(tz="UTC").floor("15min") - timedelta(hours=2)
+    now = pd.Timestamp.now(tz="UTC").floor("15min")
 
     # filter from current hour and forward
     df = df[df["date"] >= now]
@@ -240,7 +240,7 @@ def optimize_ev_charging(
 
     df["solar_energy"] = df["solar_energy_real"].fillna(df["solar_energy_syn"])
     df["irradiance"] = df["irradiance_real"].fillna(df["irradiance_syn"])
-    
+
     #####
 
     # --- Trip energy vector ---
@@ -293,13 +293,6 @@ def optimize_ev_charging(
     grid_opt  = np.array([pulp.value(grid[h])  for h in range(H)])
     solar_opt = np.array([pulp.value(solar[h]) for h in range(H)])
     soc_opt   = np.array([pulp.value(soc[h])   for h in range(H)])
-    
-    trip_energy_df = pd.DataFrame({
-    "trip_kwh_at_departure": pd.Series(trip_energy_vec)
-    })
-
-    trip_energy_df["datetime_local"] = df["datetime_local"]
-    
     df_out = pd.DataFrame({
         "datetime_local": df["datetime_local"],
         "weekday": df["wday_label"].values,
@@ -307,6 +300,7 @@ def optimize_ev_charging(
         "minute": df["minute_local"].values,
         "price_kr_per_kwh": np.round(df["total_price_kr_kwh"].values, 5),
         "available": df["available"].values,
+        "trip_kwh_at_departure": np.round(trip_energy_vec, 3),
         "grid_charge_kwh":  np.round(grid_opt, 4),
         "solar_charge_kwh": np.round(solar_opt, 4),
         "total_charge_kwh": np.round(grid_opt + solar_opt, 4),
@@ -315,12 +309,6 @@ def optimize_ev_charging(
         "soc_kwh": np.round(soc_opt, 3),
         "cost_kr": np.round(grid_opt * df["total_price_kr_kwh"].values, 4),
     })
-
-    df_out = df_out.merge(
-        trip_energy_df[["datetime_local", "trip_kwh_at_departure"]],
-        on="datetime_local",
-        how="left"
-    )
 
     return df_out
 
@@ -580,4 +568,3 @@ export_interactive_table(
     "summary",
     footer_text=summary_text   # 👈 add summary
 )
-
