@@ -293,6 +293,13 @@ def optimize_ev_charging(
     grid_opt  = np.array([pulp.value(grid[h])  for h in range(H)])
     solar_opt = np.array([pulp.value(solar[h]) for h in range(H)])
     soc_opt   = np.array([pulp.value(soc[h])   for h in range(H)])
+    
+    trip_energy_df = pd.DataFrame({
+    "trip_kwh_at_departure": pd.Series(trip_energy_vec)
+    })
+
+    trip_energy_df["datetime_local"] = df["datetime_local"]
+    
     df_out = pd.DataFrame({
         "datetime_local": df["datetime_local"],
         "weekday": df["wday_label"].values,
@@ -309,6 +316,12 @@ def optimize_ev_charging(
         "soc_kwh": np.round(soc_opt, 3),
         "cost_kr": np.round(grid_opt * df["total_price_kr_kwh"].values, 4),
     })
+
+    df_out = df_out.merge(
+        trip_energy_df[["datetime_local", "trip_kwh_at_departure"]],
+        on="datetime_local",
+        how="left"
+    )
 
     return df_out
 
