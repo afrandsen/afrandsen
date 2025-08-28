@@ -7,6 +7,7 @@ import requests
 from pytz import timezone
 from pandas.api.types import is_datetime64_any_dtype
 from datetime import datetime, timedelta
+import time
 
 INITIAL_SOC_PCT = float(os.getenv("INITIAL_SOC_PCT"))
 SOC_MIN_PCT = float(os.getenv("SOC_MIN_PCT"))
@@ -36,26 +37,75 @@ tz = "Europe/Copenhagen"
 
 def fetch_dk1_prices_dkk():
     today = datetime.now().date()
-    start = today
-    end = today + timedelta(days=2)  # today + tomorrow
+    end = today + timedelta(days=1)  # today + tomorrow
 
-    url = "https://api.energidataservice.dk/dataset/Elspotprices"
-    params = {
-        "filter": '{"PriceArea":"DK1"}',
-        "start": start.isoformat(),
-        "end": end.isoformat(),
-        "sort": "HourUTC asc"
-    }
+    # --- 1) Try Energidataservice ---
+    try:
+        url = "https://api.energidataservice.dk/dataset/Elspotprices"
+        params = {
+            "filter": '{"PriceArea":"DK1"}',
+            "start": today.isoformat(),
+            "end": end.isoformat(),
+            "sort": "HourUTC asc"
+        }
 
-    r = requests.get(url, params=params, timeout=30)
-    r.raise_for_status()
-    data = r.json()
+        r = requests.get(url, params=params, timeout=30)
+        r.raise_for_status()
+        data = r.json()
 
-    df = pd.DataFrame(data["records"])
-    df["date"] = pd.to_datetime(df["HourUTC"], utc=True)
-    df["price"] = (df["SpotPriceDKK"]/10)*1.25 
+        df = pd.DataFrame(data["records"])
+        if df.empty:
+            raise ValueError("Empty dataframe from Energidataservice")
 
-    return df[["date", "price"]].sort_values("date").reset_index(drop=True)
+        df["date"] = pd.to_datetime(df["HourUTC"], utc=True)
+        # SpotPriceDKK is in øre/MWh → convert to DKK/kWh with moms
+        df["price"] = (df["SpotPriceDKK"] / 10) * 1.25  
+
+        df["source"] = "Energidataservice"
+        return df[["date", "price", "source"]].sort_values("date").reset_index(drop=True)
+
+    except Exception as e:
+        print(f"Energidataservice failed, trying Nordpool: {e}")
+
+    # --- 2) Try Nordpool package with 10 retries ---
+    try:
+        from nordpool import elspot
+        p = elspot.Prices(currency="DKK")
+
+        dfs = []
+        for offset in range(2):  # today + tomorrow
+            date_str = (today + timedelta(days=offset)).strftime("%Y-%m-%d")
+
+            rows = None
+            for attempt in range(10):
+                try:
+                    data = p.hourly(end_date=date_str, areas=["DK1"])
+                    values = data["areas"]["DK1"]["values"]
+                    rows = []
+                    for v in values:
+                        if v["value"] is None:
+                            continue
+                        rows.append({
+                            "date": pd.to_datetime(v["start"], utc=True),
+                            "price": (v["value"] / 10.0) * 1.25,  # DKK/MWh → oere/kWh
+                            "source": "Nordpool"
+                        })
+                    print(f"✅ Nordpool success for {date_str} on attempt {attempt+1}")
+                    break  # success → break retry loop
+                except Exception as e:
+                    print(f"Nordpool fetch failed {date_str} (attempt {attempt+1}/10): {e}")
+                    time.sleep(2)  # wait 2 sec before next retry
+
+            if rows is None:  # all 10 attempts failed
+                raise RuntimeError(f"Nordpool failed 10 times for {date_str}")
+
+            dfs.append(pd.DataFrame(rows))
+
+        df = pd.concat(dfs, ignore_index=True)
+        return df.sort_values("date").reset_index(drop=True)
+
+    except Exception as e:
+        raise RuntimeError(f"Both Energidataservice and Nordpool failed after retries: {e}")
 
 prices_actual = fetch_dk1_prices_dkk()
 prices_actual["source"] = "Nordpool"
