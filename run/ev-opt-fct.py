@@ -71,11 +71,11 @@ def fetch_dk1_prices_dkk():
     try:
         from nordpool import elspot
         p = elspot.Prices(currency="DKK")
-
+    
         dfs = []
         for offset in range(2):  # today + tomorrow
             date_str = (today + timedelta(days=offset)).strftime("%Y-%m-%d")
-
+    
             rows = None
             for attempt in range(10):
                 try:
@@ -87,23 +87,31 @@ def fetch_dk1_prices_dkk():
                             continue
                         rows.append({
                             "date": pd.to_datetime(v["start"], utc=True),
-                            "price": (v["value"] / 10.0) * 1.25,  # DKK/MWh → oere/kWh
+                            "price": (v["value"] / 10.0) * 1.25,  # DKK/MWh → DKK/kWh (with moms)
                             "source": "Nordpool"
                         })
                     print(f"✅ Nordpool success for {date_str} on attempt {attempt+1}")
                     break  # success → break retry loop
                 except Exception as e:
                     print(f"Nordpool fetch failed {date_str} (attempt {attempt+1}/10): {e}")
-                    time.sleep(2)  # wait 2 sec before next retry
-
-            if rows is None:  # all 10 attempts failed
-                raise RuntimeError(f"Nordpool failed 10 times for {date_str}")
-
+                    time.sleep(2)
+    
+            if rows is None:
+                # If tomorrow is missing → just skip it
+                if offset == 1:
+                    print(f"⚠️ Nordpool prices not yet available for {date_str}, skipping")
+                    continue
+                else:
+                    raise RuntimeError(f"Nordpool failed 10 times for {date_str}")
+    
             dfs.append(pd.DataFrame(rows))
-
+    
+        if not dfs:
+            raise RuntimeError("No Nordpool data available at all")
+    
         df = pd.concat(dfs, ignore_index=True)
         return df.sort_values("date").reset_index(drop=True)
-
+    
     except Exception as e:
         raise RuntimeError(f"Both Energidataservice and Nordpool failed after retries: {e}")
 
