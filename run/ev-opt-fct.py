@@ -1,6 +1,5 @@
 import os
 import json
-import math
 import numpy as np
 import pandas as pd
 import requests
@@ -34,6 +33,8 @@ REFUSION=0.5
 TILT=25
 AZIMUTH=0
 tz = "Europe/Copenhagen"
+CHARGE_EFF = 0.95
+
 
 def fetch_dk1_prices_dkk():
     today = datetime.now().date()
@@ -175,7 +176,8 @@ def optimize_ev_charging(
     lon=0,
     tilt=25,
     azimuth=0,
-    tz="Europe/Copenhagen"
+    tz="Europe/Copenhagen",
+    charge_eff=0.95
 ):
     import numpy as np, pandas as pd, math, pulp, requests
     from pytz import timezone
@@ -325,11 +327,15 @@ def optimize_ev_charging(
     prices_k = df["total_price_kr_kwh"].values
     prob += pulp.lpSum(grid[h] * float(prices_k[h]) for h in range(H))
 
+    # SOC dynamics with charging efficiency
     for h in range(H):
         if h == 0:
-            prob += soc[h] - grid[h] - solar[h] == (SOC0 - float(trip_energy_vec[h]))
+            # soc0 + charge_eff*(grid+solar) - trip = soc[0]
+            prob += soc[h] - charge_eff * (grid[h] + solar[h]) == (SOC0 - float(trip_energy_vec[h]))
         else:
-            prob += soc[h] - soc[h-1] - grid[h] - solar[h] == (-float(trip_energy_vec[h]))
+            # soc[h-1] + charge_eff*(grid+solar) - trip = soc[h]
+            prob += soc[h] - soc[h-1] - charge_eff * (grid[h] + solar[h]) == (-float(trip_energy_vec[h]))
+
     avail = df["available"].values.astype(float)
     solar_cap = df["solar_energy"].values
     for h in range(H):
@@ -350,6 +356,11 @@ def optimize_ev_charging(
     grid_opt  = np.array([pulp.value(grid[h])  for h in range(H)])
     solar_opt = np.array([pulp.value(solar[h]) for h in range(H)])
     soc_opt   = np.array([pulp.value(soc[h])   for h in range(H)])
+
+    # Derived “stored in battery” (post-losses)
+    grid_to_batt  = grid_opt  * charge_eff
+    solar_to_batt = solar_opt * charge_eff
+
     df_out = pd.DataFrame({
         "datetime_local": df["datetime_local"],
         "weekday": df["wday_label"].values,
@@ -358,39 +369,62 @@ def optimize_ev_charging(
         "price_kr_per_kwh": np.round(df["total_price_kr_kwh"].values, 5),
         "available": df["available"].values,
         "trip_kwh_at_departure": np.round(trip_energy_vec, 3),
+
+        # DRAWN (same column names as before for backward compatibility)
         "grid_charge_kwh":  np.round(grid_opt, 4),
         "solar_charge_kwh": np.round(solar_opt, 4),
         "total_charge_kwh": np.round(grid_opt + solar_opt, 4),
+
+        # STORED in battery (new columns)
+        "grid_to_batt_kwh":  np.round(grid_to_batt, 4),
+        "solar_to_batt_kwh": np.round(solar_to_batt, 4),
+        "total_to_batt_kwh": np.round(grid_to_batt + solar_to_batt, 4),
+
+        # Current draw → amps (based on drawn power)
         "amp": np.round((((grid_opt + solar_opt) / 0.25) * 1000) / (math.sqrt(phases) * charger_volt), 0),
+
         "irradiance": df["irradiance"].values,
         "soc_kwh": np.round(soc_opt, 3),
+
+        # Cost (only grid is paid here)
         "cost_kr": np.round(grid_opt * df["total_price_kr_kwh"].values, 4),
     })
+
+    # Add charge_eff so it’s visible downstream if needed
+    df_out["charge_eff"] = charge_eff
 
     return df_out
 
 
-df_out = optimize_ev_charging(
-        trips,
-        prices,
-        BATTERY_KWH, SOC_MIN_PCT, SOC_MAX_PCT,
-        CHARGER_KW, CHARGER_MIN_A, CHARGER_VOLT, PHASES,
-        EFF_KWH_PER_KM, INITIAL_SOC_PCT,
-        SOLAR_EFF, PANEL_AREA, PANEL_EFF,
-        SYSTEMTARIF, NETTARIF_TSO, ELAFGIFT, LOOAD_TILLAEG, LAT, LON, TILT, AZIMUTH
-    )
 
-# soc before/after (to mirror the R output logic)
+df_out = optimize_ev_charging(
+    trips,
+    prices,
+    BATTERY_KWH, SOC_MIN_PCT, SOC_MAX_PCT,
+    CHARGER_KW, CHARGER_MIN_A, CHARGER_VOLT, PHASES,
+    EFF_KWH_PER_KM, INITIAL_SOC_PCT,
+    SOLAR_EFF, PANEL_AREA, PANEL_EFF,
+    SYSTEMTARIF, NETTARIF_TSO, ELAFGIFT, LOOAD_TILLAEG,
+    LAT, LON, TILT, AZIMUTH,
+    tz,
+    CHARGE_EFF
+)
+
+
+# SoC before/after around charging/trip events (use stored energy, not drawn)
+stored_this_slot = df_out["total_to_batt_kwh"].values
+trip_this_slot   = df_out["trip_kwh_at_departure"].values
+
 soc_kwh_before = np.where(
     (df_out["grid_charge_kwh"].values + df_out["solar_charge_kwh"].values) > 0,
-    df_out["soc_kwh"].values - df_out["total_charge_kwh"].values,
-    df_out["soc_kwh"].values + df_out["trip_kwh_at_departure"].values,
+    df_out["soc_kwh"].values - stored_this_slot,   # remove what was stored to get 'before'
+    df_out["soc_kwh"].values + trip_this_slot,     # add back the trip to get 'before'
 )
 
 df_out["soc_kwh_before"] = soc_kwh_before
-
 df_out["soc_pct_before"] = np.round((df_out["soc_kwh_before"].values / BATTERY_KWH) * 100.0, 1)
 df_out["soc_pct_after"]  = np.round((df_out["soc_kwh"].values / BATTERY_KWH) * 100.0, 1)
+
 
 mask_events = (
     (df_out["trip_kwh_at_departure"].values > 0) |
@@ -425,31 +459,43 @@ for _, row in df_out.loc[mask_events].iterrows():
         f"{row['soc_pct_after']:>11.1f}"
     )
 
-# Totals
-total_cost = float((df_out["cost_kr"]).sum())
-effective_cost = total_cost - float(df_out["solar_charge_kwh"].sum()) * REFUSION
+# Totals (drawn vs stored)
+total_cost = float(df_out["cost_kr"].sum())
 
-total_charge = float(df_out["total_charge_kwh"].sum())
-from_grid = float(df_out["grid_charge_kwh"].sum())
-from_solar = float(df_out["solar_charge_kwh"].sum())
+from_grid_drawn  = float(df_out["grid_charge_kwh"].sum())
+from_solar_drawn = float(df_out["solar_charge_kwh"].sum())
+total_drawn      = float(df_out["total_charge_kwh"].sum())
 
-avg_cost = (total_cost / total_charge) if total_charge > 0 else float("nan")
-avg_cost_eff = (effective_cost / total_charge) if total_charge > 0 else float("nan")
+from_grid_stored  = float(df_out["grid_to_batt_kwh"].sum())
+from_solar_stored = float(df_out["solar_to_batt_kwh"].sum())
+total_stored      = float(df_out["total_to_batt_kwh"].sum())
 
-# --- Daily summary ---
+# Effective cost (your logic kept: refusion applied to solar 'drawn')
+effective_cost = total_cost - from_solar_drawn * REFUSION
+
+# Averages per kWh drawn and per kWh stored (both useful)
+avg_cost_per_kWh_drawn  = (total_cost / total_drawn) if total_drawn > 0 else float("nan")
+avg_cost_per_kWh_stored = (total_cost / total_stored) if total_stored > 0 else float("nan")
+
+avg_eff_per_kWh_drawn  = (effective_cost / total_drawn) if total_drawn > 0 else float("nan")
+avg_eff_per_kWh_stored = (effective_cost / total_stored) if total_stored > 0 else float("nan")
+
+
 df_out["date"] = df_out["datetime_local"].dt.date
 df_out["weekday"] = df_out["datetime_local"].dt.day_name()
 
-# base aggregations
 daily_summary = df_out.groupby(["date", "weekday"]).agg(
-    grid_kWh=("grid_charge_kwh", "sum"),
-    solar_kWh=("solar_charge_kwh", "sum"),
-    total_kWh=("total_charge_kwh", "sum"),
+    grid_drawn_kWh=("grid_charge_kwh", "sum"),
+    solar_drawn_kWh=("solar_charge_kwh", "sum"),
+    total_drawn_kWh=("total_charge_kwh", "sum"),
+    grid_stored_kWh=("grid_to_batt_kwh", "sum"),
+    solar_stored_kWh=("solar_to_batt_kwh", "sum"),
+    total_stored_kWh=("total_to_batt_kwh", "sum"),
     trip_kWh=("trip_kwh_at_departure", "sum"),
     cost=("cost_kr", "sum"),
 ).reset_index()
 
-# get start/end SoC properly
+# SoC start/end
 soc_start = (
     df_out.sort_values("datetime_local")
     .groupby("date")["soc_pct_before"]
@@ -464,12 +510,16 @@ soc_end = (
 daily_summary["soc_start"] = daily_summary["date"].map(soc_start)
 daily_summary["soc_end"] = daily_summary["date"].map(soc_end)
 
-# effective cost
-daily_summary["effective_cost"] = daily_summary["cost"] - daily_summary["solar_kWh"] * REFUSION
+# Effective cost (refusion on solar drawn)
+daily_summary["effective_cost"] = daily_summary["cost"] - daily_summary["solar_drawn_kWh"] * REFUSION
 
-# average costs
-daily_summary["cost_per_kWh"] = daily_summary["cost"] / daily_summary["total_kWh"].replace(0, np.nan)
-daily_summary["eff_cost_per_kWh"] = daily_summary["effective_cost"] / daily_summary["total_kWh"].replace(0, np.nan)
+# Average costs per kWh (drawn vs stored)
+daily_summary["cost_per_kWh_drawn"]  = daily_summary["cost"] / daily_summary["total_drawn_kWh"].replace(0, np.nan)
+daily_summary["cost_per_kWh_stored"] = daily_summary["cost"] / daily_summary["total_stored_kWh"].replace(0, np.nan)
+
+daily_summary["eff_cost_per_kWh_drawn"]  = daily_summary["effective_cost"] / daily_summary["total_drawn_kWh"].replace(0, np.nan)
+daily_summary["eff_cost_per_kWh_stored"] = daily_summary["effective_cost"] / daily_summary["total_stored_kWh"].replace(0, np.nan)
+
 
 # print
 print("\n=== Daily Summary ===")
@@ -485,23 +535,25 @@ for _, row in daily_summary.iterrows():
     print(
         f"{row['date']} | "
         f"{row['weekday']:<9} | "
-        f"{row['grid_kWh']:8.2f} | "
-        f"{row['solar_kWh']:9.2f} | "
-        f"{row['total_kWh']:9.2f} | "
+        f"{row['grid_drawn_kWh']:8.2f} | "
+        f"{row['solar_drawn_kWh']:9.2f} | "
+        f"{row['total_drawn_kWh']:9.2f} | "
         f"{row['trip_kWh']:8.2f} | "
         f"{row['soc_start']:10.1f} | "
         f"{row['soc_end']:8.1f} | "
         f"{row['cost']:8.2f} | "
         f"{row['effective_cost']:10.2f} | "
-        f"{row['cost_per_kWh']:9.2f} | "
-        f"{row['eff_cost_per_kWh']:9.2f}"
+        f"{row['cost_per_kWh_drawn']:9.2f} | "
+        f"{row['eff_cost_per_kWh_drawn']:9.2f}"
     )
 
 print(
     f"Total cost: {total_cost:.2f} kr. "
     f"Total effective cost: {effective_cost:.2f} kr. "
-    f"Total charging: {total_charge:.2f} kWh ({from_grid:.2f} grid, {from_solar:.2f} solar). "
-    f"Cost per kWh: {avg_cost:.2f} kr/kWh. Eff. cost per kWh: {avg_cost_eff:.2f} kr/kWh."
+    f"Energy drawn: {total_drawn:.2f} kWh ({from_grid_drawn:.2f} grid, {from_solar_drawn:.2f} solar). "
+    f"Energy stored: {total_stored:.2f} kWh ({from_grid_stored:.2f} grid, {from_solar_stored:.2f} solar). "
+    f"Avg cost: {avg_cost_per_kWh_drawn:.2f} kr/kWh drawn, {avg_cost_per_kWh_stored:.2f} kr/kWh stored. "
+    f"Eff. avg: {avg_eff_per_kWh_drawn:.2f} (drawn), {avg_eff_per_kWh_stored:.2f} (stored)."
 )
 
 # import matplotlib.pyplot as plt
@@ -599,8 +651,10 @@ def export_interactive_table(
 summary_text = (
     f"Total cost: {total_cost:.2f} kr. "
     f"Total effective cost: {effective_cost:.2f} kr. "
-    f"Total charging: {total_charge:.2f} kWh ({from_grid:.2f} grid, {from_solar:.2f} solar). "
-    f"Cost per kWh: {avg_cost:.2f} kr/kWh. Eff. cost per kWh: {avg_cost_eff:.2f} kr/kWh."
+    f"Energy drawn: {total_drawn:.2f} kWh ({from_grid_drawn:.2f} grid, {from_solar_drawn:.2f} solar). "
+    f"Energy stored: {total_stored:.2f} kWh ({from_grid_stored:.2f} grid, {from_solar_stored:.2f} solar). "
+    f"Avg cost: {avg_cost_per_kWh_drawn:.2f} kr/kWh drawn, {avg_cost_per_kWh_stored:.2f} kr/kWh stored. "
+    f"Eff. avg: {avg_eff_per_kWh_drawn:.2f} (drawn), {avg_eff_per_kWh_stored:.2f} (stored)."
 )
 
 mask_events = (
