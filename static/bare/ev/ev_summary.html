@@ -28,16 +28,21 @@
     <tr style="text-align: right;">
       <th>date</th>
       <th>weekday</th>
-      <th>grid_kWh</th>
-      <th>solar_kWh</th>
-      <th>total_kWh</th>
+      <th>grid_drawn_kWh</th>
+      <th>solar_drawn_kWh</th>
+      <th>total_drawn_kWh</th>
+      <th>grid_stored_kWh</th>
+      <th>solar_stored_kWh</th>
+      <th>total_stored_kWh</th>
       <th>trip_kWh</th>
       <th>cost</th>
       <th>soc_start</th>
       <th>soc_end</th>
       <th>effective_cost</th>
-      <th>cost_per_kWh</th>
-      <th>eff_cost_per_kWh</th>
+      <th>cost_per_kWh_drawn</th>
+      <th>cost_per_kWh_stored</th>
+      <th>eff_cost_per_kWh_drawn</th>
+      <th>eff_cost_per_kWh_stored</th>
     </tr>
   </thead>
   <tbody>
@@ -47,27 +52,37 @@
       <td>1.0392</td>
       <td>0.0000</td>
       <td>1.0392</td>
+      <td>0.9873</td>
+      <td>0.0000</td>
+      <td>0.9873</td>
       <td>0.000</td>
       <td>1.9137</td>
       <td>29.0</td>
-      <td>30.4</td>
+      <td>30.3</td>
       <td>1.91370</td>
       <td>1.841513</td>
+      <td>1.938317</td>
       <td>1.841513</td>
+      <td>1.938317</td>
     </tr>
     <tr>
       <td>2025-09-01</td>
       <td>Monday</td>
-      <td>46.9277</td>
+      <td>49.6754</td>
       <td>0.0821</td>
-      <td>47.0099</td>
+      <td>49.7575</td>
+      <td>47.1918</td>
+      <td>0.0779</td>
+      <td>47.2697</td>
       <td>17.152</td>
-      <td>66.9600</td>
-      <td>30.4</td>
-      <td>70.2</td>
-      <td>66.91895</td>
-      <td>1.424381</td>
-      <td>1.423508</td>
+      <td>70.9841</td>
+      <td>30.3</td>
+      <td>70.5</td>
+      <td>70.94305</td>
+      <td>1.426601</td>
+      <td>1.501683</td>
+      <td>1.425776</td>
+      <td>1.500814</td>
     </tr>
     <tr>
       <td>2025-09-02</td>
@@ -75,13 +90,18 @@
       <td>3.1636</td>
       <td>0.9933</td>
       <td>4.1568</td>
+      <td>3.0053</td>
+      <td>0.9436</td>
+      <td>3.9492</td>
       <td>17.152</td>
       <td>5.3666</td>
-      <td>70.2</td>
+      <td>70.5</td>
       <td>52.9</td>
       <td>4.86995</td>
       <td>1.291041</td>
+      <td>1.358908</td>
       <td>1.171562</td>
+      <td>1.233148</td>
     </tr>
     <tr>
       <td>2025-09-03</td>
@@ -89,31 +109,44 @@
       <td>10.2552</td>
       <td>0.7448</td>
       <td>11.0000</td>
+      <td>9.7424</td>
+      <td>0.7076</td>
+      <td>10.4500</td>
       <td>17.152</td>
       <td>11.3460</td>
       <td>52.9</td>
-      <td>44.7</td>
+      <td>43.9</td>
       <td>10.97360</td>
       <td>1.031455</td>
+      <td>1.085742</td>
       <td>0.997600</td>
+      <td>1.050105</td>
     </tr>
     <tr>
       <td>2025-09-04</td>
       <td>Thursday</td>
-      <td>15.8800</td>
+      <td>17.2947</td>
       <td>0.0000</td>
-      <td>15.8800</td>
+      <td>17.2947</td>
+      <td>16.4300</td>
+      <td>0.0000</td>
+      <td>16.4300</td>
       <td>9.728</td>
-      <td>18.4820</td>
-      <td>44.7</td>
+      <td>20.1286</td>
+      <td>43.9</td>
       <td>52.9</td>
-      <td>18.48200</td>
-      <td>1.163854</td>
-      <td>1.163854</td>
+      <td>20.12860</td>
+      <td>1.163859</td>
+      <td>1.225113</td>
+      <td>1.163859</td>
+      <td>1.225113</td>
     </tr>
     <tr>
       <td>2025-09-05</td>
       <td>Friday</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
@@ -122,6 +155,8 @@
       <td>52.9</td>
       <td>30.0</td>
       <td>0.00000</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -131,6 +166,9 @@
       <td>0.0000</td>
       <td>0.0000</td>
       <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
       <td>0.000</td>
       <td>0.0000</td>
       <td>30.0</td>
@@ -138,11 +176,13 @@
       <td>0.00000</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
         </div>
-        <div class="summary-text">Total cost: 104.07 kr. Total effective cost: 103.16 kr. Total charging: 79.09 kWh (77.27 grid, 1.82 solar). Cost per kWh: 1.32 kr/kWh. Eff. cost per kWh: 1.30 kr/kWh.</div>
+        <div class="summary-text">Total cost: 109.74 kr. Total effective cost: 108.83 kr. Energy drawn: 83.25 kWh (81.43 grid, 1.82 solar). Energy stored: 79.09 kWh (77.36 grid, 1.73 solar). Avg cost: 1.32 kr/kWh drawn, 1.39 kr/kWh stored. Eff. avg: 1.31 (drawn), 1.38 (stored).</div>
         <script>
           $(document).ready(function() {
               $('#summary').DataTable({
