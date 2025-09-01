@@ -2,7 +2,7 @@ name: Run ev-opt-fct.py
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
