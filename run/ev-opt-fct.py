@@ -41,32 +41,32 @@ def fetch_dk1_prices_dkk():
     end = today + timedelta(days=1)  # today + tomorrow
 
     # --- 1) Try Energidataservice ---
-    try:
-        url = "https://api.energidataservice.dk/dataset/Elspotprices"
-        params = {
-            "filter": '{"PriceArea":"DK1"}',
-            "start": today.isoformat(),
-            "end": end.isoformat(),
-            "sort": "HourUTC asc"
-        }
+    # try:
+    #     url = "https://api.energidataservice.dk/dataset/Elspotprices"
+    #     params = {
+    #         "filter": '{"PriceArea":"DK1"}',
+    #         "start": today.isoformat(),
+    #         "end": end.isoformat(),
+    #         "sort": "HourUTC asc"
+    #     }
 
-        r = requests.get(url, params=params, timeout=30)
-        r.raise_for_status()
-        data = r.json()
+    #     r = requests.get(url, params=params, timeout=30)
+    #     r.raise_for_status()
+    #     data = r.json()
 
-        df = pd.DataFrame(data["records"])
-        if df.empty:
-            raise ValueError("Empty dataframe from Energidataservice")
+    #     df = pd.DataFrame(data["records"])
+    #     if df.empty:
+    #         raise ValueError("Empty dataframe from Energidataservice")
 
-        df["date"] = pd.to_datetime(df["HourUTC"], utc=True)
-        # SpotPriceDKK is in øre/MWh → convert to DKK/kWh with moms
-        df["price"] = (df["SpotPriceDKK"] / 10) * 1.25  
+    #     df["date"] = pd.to_datetime(df["HourUTC"], utc=True)
+    #     # SpotPriceDKK is in øre/MWh → convert to DKK/kWh with moms
+    #     df["price"] = (df["SpotPriceDKK"] / 10) * 1.25  
 
-        df["source"] = "Energidataservice"
-        return df[["date", "price", "source"]].sort_values("date").reset_index(drop=True)
+    #     df["source"] = "Energidataservice"
+    #     return df[["date", "price", "source"]].sort_values("date").reset_index(drop=True)
 
-    except Exception as e:
-        print(f"Energidataservice failed, trying Nordpool: {e}")
+    # except Exception as e:
+    #     print(f"Energidataservice failed, trying Nordpool: {e}")
 
     # --- 2) Try Nordpool package with 10 retries ---
     try:
@@ -117,7 +117,6 @@ def fetch_dk1_prices_dkk():
         raise RuntimeError(f"Both Energidataservice and Nordpool failed after retries: {e}")
 
 prices_actual = fetch_dk1_prices_dkk()
-prices_actual["source"] = "Nordpool"
 
 def fetch_forecast_prices(url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json"):
     r = requests.get(url, timeout=30)
