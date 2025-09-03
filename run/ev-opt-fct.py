@@ -321,7 +321,15 @@ def optimize_ev_charging(
     prob = pulp.LpProblem("ev_charging_opt", pulp.LpMinimize)
     grid  = pulp.LpVariable.dicts("grid",  range(H), lowBound=0, cat=pulp.LpContinuous)
     solar = pulp.LpVariable.dicts("solar", range(H), lowBound=0, cat=pulp.LpContinuous)
-    soc   = pulp.LpVariable.dicts("soc",   range(H), lowBound=SOC_MIN, upBound=SOC_MAX, cat=pulp.LpContinuous)
+    first_trip_idx = np.where(trip_energy_vec > 0)[0]
+    soc = {}
+    for h in range(H):
+        if h == 0:
+            soc[h] = pulp.LpVariable(f"soc_{h}", lowBound=SOC0, upBound=SOC_MAX, cat=pulp.LpContinuous)
+        elif h < first_trip_idx[0]:
+            soc[h] = pulp.LpVariable(f"soc_{h}", lowBound=SOC0, upBound=SOC_MAX, cat=pulp.LpContinuous)
+        else:
+            soc[h] = pulp.LpVariable(f"soc_{h}", lowBound=SOC_MIN, upBound=SOC_MAX, cat=pulp.LpContinuous)
     z     = pulp.LpVariable.dicts("z",     range(H), cat=pulp.LpBinary)
     prices_k = df["total_price_kr_kwh"].values
     prob += pulp.lpSum(grid[h] * float(prices_k[h]) for h in range(H))
