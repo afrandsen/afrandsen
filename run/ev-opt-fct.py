@@ -274,7 +274,8 @@ def optimize_ev_charging(
     tilt=25,
     azimuth=0,
     tz="Europe/Copenhagen",
-    charge_eff=0.95
+    charge_eff=0.95,
+    refusion=0.5
 ):
     import numpy as np, pandas as pd, math, pulp, requests
     from pytz import timezone
@@ -440,7 +441,7 @@ def optimize_ev_charging(
             soc[h] = pulp.LpVariable(f"soc_{h}", lowBound=SOC_MIN, upBound=SOC_MAX, cat=pulp.LpContinuous)
     z     = pulp.LpVariable.dicts("z",     range(H), cat=pulp.LpBinary)
     prices_k = df["total_price_kr_kwh"].values
-    prob += pulp.lpSum(grid[h] * float(prices_k[h]) for h in range(H))
+    prob += pulp.lpSum(grid[h] * float(prices_k[h]) - refusion * solar[h] for h in range(H))
 
     # SOC dynamics with charging efficiency
     for h in range(H):
@@ -522,7 +523,8 @@ df_out = optimize_ev_charging(
     SYSTEMTARIF, NETTARIF_TSO, ELAFGIFT, LOOAD_TILLAEG,
     LAT, LON, TILT, AZIMUTH,
     tz,
-    CHARGE_EFF
+    CHARGE_EFF,
+    REFUSION
 )
 
 
