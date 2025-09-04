@@ -16,6 +16,9 @@ LON = float(os.getenv("LON"))
 trips_json = os.getenv("TRIPS")
 trips = pd.DataFrame(json.loads(trips_json))
 
+token_id = os.getenv("SOLAX_TOKEN_ID")
+wifi_sn = os.getenv("SOLAX_WIFI_SN")
+
 BATTERY_KWH=75
 CHARGER_KW=11
 CHARGER_MIN_A=6
@@ -35,6 +38,36 @@ AZIMUTH=0
 tz = "Europe/Copenhagen"
 CHARGE_EFF = 0.95
 
+def override_with_inverter(df, tz, token_id, wifi_sn):
+    url = "https://global.solaxcloud.com/api/v2/dataAccess/realtimeInfo/get"
+    headers = {"tokenId": token_id, "Content-Type": "application/json"}
+    payload = {"wifiSn": wifi_sn}
+
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=15)
+        response.raise_for_status()
+        data = response.json()
+
+        if data.get("success") and "acpower" in data["result"]:
+            ac_power_w = float(data["result"]["acpower"])
+            solar_kwh_now = ac_power_w / 1000.0 * 0.25
+
+            now_slot = pd.Timestamp.now(tz=tz).floor("15min")
+            mask = df["datetime_local"] == now_slot
+
+            if mask.any():
+                df.loc[mask, "solar_energy"] = solar_kwh_now
+                print(f"✅ Overrode solar_energy at {now_slot} with inverter data ({solar_kwh_now:.3f} kWh)")
+            else:
+                print(f"⚠️ Current slot {now_slot} not in df timeline")
+
+        else:
+            print("⚠️ Inverter API returned no data or missing acpower")
+
+    except Exception as e:
+        print(f"⚠️ Failed to fetch inverter data: {e}")
+
+    return df
 
 def fetch_dk1_prices_dkk():
     today = datetime.now().date()
@@ -297,7 +330,8 @@ def optimize_ev_charging(
     df["solar_energy"] = df["solar_energy_real"].fillna(df["solar_energy_syn"])
     df["irradiance"] = df["irradiance_real"].fillna(df["irradiance_syn"])
 
-    #####
+    # Override current slot with inverter data if possible
+    df = override_with_inverter(df, tz, token_id, wifi_sn)
 
     # --- Trip energy vector ---
     trip_energy_vec = np.zeros(H)

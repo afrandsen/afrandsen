@@ -13,6 +13,8 @@ jobs:
       INITIAL_SOC_PCT: ${{ vars.INITIAL_SOC_PCT }}
       SOC_MIN_PCT: ${{ vars.SOC_MIN_PCT }}
       SOC_MAX_PCT: ${{ vars.SOC_MAX_PCT }}
+      SOLAX_TOKEN_ID: ${{ secrets.SOLAX_TOKEN_ID }}
+      SOLAX_WIFI_SN: ${{ secrets.SOLAX_WIFI_SN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
