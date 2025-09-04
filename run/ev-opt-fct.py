@@ -38,6 +38,55 @@ AZIMUTH=0
 tz = "Europe/Copenhagen"
 CHARGE_EFF = 0.95
 
+def _fetch_open_meteo_with_retries(url, value_path, attempts=10, sleep_sec=2):
+    """Fetch Open-Meteo JSON and pull a numeric array at value_path (list of keys).
+       Retries like the Nordpool logic. Returns (times, values) or (None, None) on total failure."""
+    for attempt in range(1, attempts + 1):
+        try:
+            r = requests.get(url, timeout=30)
+            r.raise_for_status()
+            j = r.json()
+
+            # Walk nested keys (e.g., ["minutely_15", "global_tilted_irradiance_instant"])
+            node = j
+            for k in value_path[:-1]:
+                node = node[k]
+            values = node[value_path[-1]]
+
+            # Get corresponding time array living alongside the values
+            # For minutely_15 → j["minutely_15"]["time"]
+            # For hourly      → j["hourly"]["time"]
+            time_key = value_path[0]  # "minutely_15" or "hourly"
+            times = j[time_key]["time"]
+
+            if values is None or len(values) == 0:
+                raise ValueError("Empty values from Open-Meteo")
+
+            print(f"✅ Open-Meteo success for {time_key} on attempt {attempt}")
+            return times, values
+
+        except Exception as e:
+            print(f"Open-Meteo fetch failed (attempt {attempt}/{attempts}): {e}")
+            time.sleep(sleep_sec)
+
+    print("⚠️ Open-Meteo total failure for URL:", url)
+    return None, None
+
+def _align_gti_to_quarters(times, values, tz, repeat_to_quarters=False):
+    """Return quarter-resolution Series aligned to given times.
+       If repeat_to_quarters=True (hourly input), repeat each hour 4×."""
+    ts = pd.to_datetime(times).tz_localize(tz)
+    arr = np.array(values, dtype=float)
+
+    if repeat_to_quarters:
+        ts_q = ts.repeat(4) + pd.to_timedelta(np.tile([0, 15, 30, 45], len(ts)), unit="m")
+        arr_q = arr.repeat(4)
+    else:
+        ts_q = ts
+        arr_q = arr
+
+    return pd.Series(arr_q, index=ts_q)
+
 def override_with_inverter(df, tz, token_id, wifi_sn):
     url = "https://global.solaxcloud.com/api/v2/dataAccess/realtimeInfo/get"
     headers = {"tokenId": token_id, "Content-Type": "application/json"}
@@ -280,55 +329,64 @@ def optimize_ev_charging(
         available[idx_day[mask]] = 0
     df["available"] = available
 
-    # --- Solar irradiance ---
+    # --- Solar irradiance (Open-Meteo) with retries & fallback ---
     start_date = df["datetime_local"].min().strftime("%Y-%m-%d")
     end_date   = df["datetime_local"].max().strftime("%Y-%m-%d")
-    url = (
-        "https://api.open-meteo.com/v1/forecast"
+
+    base = "https://api.open-meteo.com/v1/forecast"
+    common = (
         f"?latitude={lat}&longitude={lon}"
-        "&hourly=global_tilted_irradiance_instant"
         f"&tilt={tilt}&azimuth={azimuth}"
         f"&start={start_date}&end={end_date}"
         "&timezone=Europe/Copenhagen"
     )
-    resp = requests.get(url, timeout=30)
-    resp.raise_for_status()
-    j = resp.json()
-    irradiance = np.array(j["hourly"]["global_tilted_irradiance_instant"], dtype=float)
-    irr_times = pd.to_datetime(j["hourly"]["time"]).tz_localize(tz)
-    irr_q_times = irr_times.repeat(4) + pd.to_timedelta(np.tile([0,15,30,45], len(irr_times)), unit="m")
-    irr_q_vals  = irradiance.repeat(4)
-    match_idx = pd.Series(irr_q_vals, index=irr_q_times)
-    irradiance_aligned = match_idx.reindex(df["datetime_local"]).values
-    if np.isnan(irradiance_aligned).any():
-        raise RuntimeError("Irradiance alignment error at quarter level.")
-    solar_energy = (irradiance_aligned / 1000.0) * panel_area * panel_eff * solar_eff * 0.25
-    df["irradiance_syn"] = irradiance_aligned
-    df["solar_energy_syn"] = solar_energy
 
-
-    ##
-    url = (
-        "https://api.open-meteo.com/v1/forecast"
-        f"?latitude={lat}&longitude={lon}"
-        "&minutely_15=global_tilted_irradiance_instant"
-        f"&tilt={tilt}&azimuth={azimuth}"
-        f"&start={start_date}&end={end_date}"
-        "&timezone=Europe/Copenhagen"
+    # Try 15-minute first
+    url_15 = f"{base}{common}&minutely_15=global_tilted_irradiance_instant"
+    t15, v15 = _fetch_open_meteo_with_retries(
+        url_15,
+        ["minutely_15", "global_tilted_irradiance_instant"],
+        attempts=10, sleep_sec=2
     )
-    resp_real = requests.get(url, timeout=30)
-    resp_real.raise_for_status()
-    j_real = resp_real.json()
-    irradiance_real = np.array(j_real["minutely_15"]["global_tilted_irradiance_instant"], dtype=float)
-    irr_times_real = pd.to_datetime(j_real["minutely_15"]["time"]).tz_localize(tz)
-    match_idx_real = pd.Series(irradiance_real, index=irr_times_real)
-    irradiance_aligned_real = match_idx_real.reindex(df["datetime_local"]).values
-    solar_energy_real = (irradiance_aligned_real / 1000.0) * panel_area * panel_eff * solar_eff * 0.25
-    df["irradiance_real"] = irradiance_aligned_real
-    df["solar_energy_real"] = solar_energy_real
 
-    df["solar_energy"] = df["solar_energy_real"].fillna(df["solar_energy_syn"])
-    df["irradiance"] = df["irradiance_real"].fillna(df["irradiance_syn"])
+    # Then try hourly (as fallback and/or for filling gaps)
+    url_h = f"{base}{common}&hourly=global_tilted_irradiance_instant"
+    th, vh = _fetch_open_meteo_with_retries(
+        url_h,
+        ["hourly", "global_tilted_irradiance_instant"],
+        attempts=10, sleep_sec=2
+    )
+
+    if t15 is None and th is None:
+        raise RuntimeError("Open-Meteo irradiance unavailable after retries (both 15-min and hourly).")
+
+    # Build quarter-resolution series for whichever we have
+    ser_15 = _align_gti_to_quarters(t15, v15, tz, repeat_to_quarters=False) if t15 is not None else None
+    ser_h  = _align_gti_to_quarters(th,  vh,  tz, repeat_to_quarters=True)  if th  is not None else None
+
+    # Prefer 15-min; fill gaps with hourly if available; else just hourly.
+    if ser_15 is not None and ser_h is not None:
+        ser_q = ser_15.combine_first(ser_h)
+        source_used = "minutely_15 + hourly fallback"
+    elif ser_15 is not None:
+        ser_q = ser_15
+        source_used = "minutely_15"
+    else:
+        ser_q = ser_h
+        source_used = "hourly (upsampled to 15-min)"
+
+    # Align to model timeline (15-min local)
+    irr_q_vals = ser_q.reindex(df["datetime_local"]).values
+    if np.isnan(irr_q_vals).all():
+        raise RuntimeError("Irradiance alignment error: all NaN after reindexing to timeline.")
+
+    # Convert W/m² → kWh per 15-min slot: (W/m² / 1000) * area * panel_eff * solar_eff * 0.25h
+    solar_energy_q = (irr_q_vals / 1000.0) * panel_area * panel_eff * solar_eff * 0.25
+
+    df["irradiance"]   = irr_q_vals
+    df["solar_energy"] = solar_energy_q
+
+    print(f"✅ Using Open-Meteo irradiance source: {source_used}")
 
     # Override current slot with inverter data if possible
     df = override_with_inverter(df, tz, token_id, wifi_sn)
