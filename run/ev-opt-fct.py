@@ -200,18 +200,34 @@ def fetch_dk1_prices_dkk():
 
 prices_actual = fetch_dk1_prices_dkk()
 
-def fetch_forecast_prices(url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json"):
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()
-    j = r.json()  # dict {timestamp: price}
+def fetch_forecast_prices(
+    url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json",
+    attempts=10,
+    sleep_sec=2
+):
+    """Fetch forecast spot prices (DK1) with retry logic. Returns DataFrame or raises if all attempts fail."""
+    for attempt in range(1, attempts + 1):
+        try:
+            r = requests.get(url, timeout=30)
+            r.raise_for_status()
+            j = r.json()  # dict {timestamp: price}
 
-    # Convert dict → DataFrame
-    df = pd.DataFrame(list(j.items()), columns=["date", "price"])
+            # Convert dict → DataFrame
+            df = pd.DataFrame(list(j.items()), columns=["date", "price"])
 
-    # Parse datetime
-    df["date"] = pd.to_datetime(df["date"], utc=True)
+            # Parse datetime
+            df["date"] = pd.to_datetime(df["date"], utc=True)
 
-    return df.sort_values("date").reset_index(drop=True)
+            print(f"✅ Forecast price fetch success on attempt {attempt}")
+            return df.sort_values("date").reset_index(drop=True)
+
+        except Exception as e:
+            print(f"⚠️ Forecast fetch failed (attempt {attempt}/{attempts}): {e}")
+            time.sleep(sleep_sec)
+
+    # If we get here → total failure
+    raise RuntimeError(f"Forecast prices unavailable after {attempts} attempts")
+
 
 prices_forecast = fetch_forecast_prices()
 prices_forecast["source"] = "Forecast"
