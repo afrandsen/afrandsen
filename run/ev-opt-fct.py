@@ -111,8 +111,12 @@ def override_with_inverter(df, tz, token_id, wifi_sn, attempts=3, sleep_sec=2):
                 mask = df["datetime_local"] == now_slot
 
                 if mask.any():
+                    old_val = df.loc[mask, "solar_energy"].values[0]
                     df.loc[mask, "solar_energy"] = solar_kwh_now
-                    print(f"✅ Overrode solar_energy at {now_slot} with inverter data ({solar_kwh_now:.3f} kWh)")
+                    print(
+                        f"✅ Overrode solar_energy at {now_slot}: "
+                        f"{old_val:.3f} → {solar_kwh_now:.3f} kWh (from inverter)"
+                    )
                 else:
                     print(f"⚠️ Current slot {now_slot} not in df timeline")
                 return df  # success → return early
