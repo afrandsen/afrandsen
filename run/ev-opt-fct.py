@@ -87,35 +87,45 @@ def _align_gti_to_quarters(times, values, tz, repeat_to_quarters=False):
 
     return pd.Series(arr_q, index=ts_q)
 
-def override_with_inverter(df, tz, token_id, wifi_sn):
+def override_with_inverter(df, tz, token_id, wifi_sn, attempts=3, sleep_sec=2):
+    """
+    Try to override current 15-min slot with inverter data (SolaxCloud).
+    Retries up to `attempts` times with sleep between.
+    Returns the modified DataFrame.
+    """
     url = "https://global.solaxcloud.com/api/v2/dataAccess/realtimeInfo/get"
     headers = {"tokenId": token_id, "Content-Type": "application/json"}
     payload = {"wifiSn": wifi_sn}
 
-    try:
-        response = requests.post(url, headers=headers, json=payload, timeout=15)
-        response.raise_for_status()
-        data = response.json()
+    for attempt in range(1, attempts + 1):
+        try:
+            response = requests.post(url, headers=headers, json=payload, timeout=15)
+            response.raise_for_status()
+            data = response.json()
 
-        if data.get("success") and "acpower" in data["result"]:
-            ac_power_w = float(data["result"]["acpower"])
-            solar_kwh_now = ac_power_w / 1000.0 * 0.25
+            if data.get("success") and "acpower" in data.get("result", {}):
+                ac_power_w = float(data["result"]["acpower"])
+                solar_kwh_now = ac_power_w / 1000.0 * 0.25
 
-            now_slot = pd.Timestamp.now(tz=tz).floor("15min")
-            mask = df["datetime_local"] == now_slot
+                now_slot = pd.Timestamp.now(tz=tz).floor("15min")
+                mask = df["datetime_local"] == now_slot
 
-            if mask.any():
-                df.loc[mask, "solar_energy"] = solar_kwh_now
-                print(f"✅ Overrode solar_energy at {now_slot} with inverter data ({solar_kwh_now:.3f} kWh)")
+                if mask.any():
+                    df.loc[mask, "solar_energy"] = solar_kwh_now
+                    print(f"✅ Overrode solar_energy at {now_slot} with inverter data ({solar_kwh_now:.3f} kWh)")
+                else:
+                    print(f"⚠️ Current slot {now_slot} not in df timeline")
+                return df  # success → return early
+
             else:
-                print(f"⚠️ Current slot {now_slot} not in df timeline")
+                raise ValueError("Inverter API returned no data or missing acpower")
 
-        else:
-            print("⚠️ Inverter API returned no data or missing acpower")
+        except Exception as e:
+            print(f"⚠️ Inverter fetch failed (attempt {attempt}/{attempts}): {e}")
+            if attempt < attempts:
+                time.sleep(sleep_sec)
 
-    except Exception as e:
-        print(f"⚠️ Failed to fetch inverter data: {e}")
-
+    print("⚠️ Inverter override failed after all retries")
     return df
 
 def fetch_dk1_prices_dkk(attempts=3):
