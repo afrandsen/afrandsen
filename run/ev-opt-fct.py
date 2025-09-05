@@ -579,7 +579,7 @@ for _, row in df_out.loc[mask_events].iterrows():
         f"{int(row['minute']):<6d} | "
         f"{row['irradiance']:>10.0f} | "
         f"{row['price_kr_per_kwh']:>12.2f} | "
-        f"{row['effective_net_cost_kr']:>16.2f} | "
+        f"{row['effective_price_kr_per_kwh_drawn']:>16.2f} | "
         f"{row['effective_price_kr_per_kwh_drawn_with_refusion']:>20.2f} | "
         f"{row['grid_charge_kwh']:>8.2f} | "
         f"{row['solar_charge_kwh']:>9.2f} | "
