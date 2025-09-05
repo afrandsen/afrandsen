@@ -565,7 +565,7 @@ mask_events = (
 print("\n=== Optimal Charging & Trip Events (15-min) ===")
 header = (
     f"{'datetime_local':<16} | {'weekday':<9} | {'hour':<2} | {'minute':<2} | {'irradiance':<10} | "
-    f"{'price_kr/kWh':>12} | f"{'eff_price_kr/kWh':>12} | f"{'eff_price_kr_ref/kWh':>12} | {'grid_kWh':>8} | {'solar_kWh':>9} | {'total_kwh':>9} | "
+    f"{'price_kr/kWh':>12} | {'eff_price_kr/kWh':>12} | {'eff_price_kr_ref/kWh':>12} | {'grid_kWh':>8} | {'solar_kWh':>9} | {'total_kwh':>9} | "
     f"{'amp':>3} | {'trip_kWh':>8} | {'soc_kWh':>7} | {'soc_%_before':>12} | {'soc_%_after':>11}"
 )
 print(header)
