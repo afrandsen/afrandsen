@@ -441,7 +441,7 @@ def optimize_ev_charging(
             soc[h] = pulp.LpVariable(f"soc_{h}", lowBound=SOC_MIN, upBound=SOC_MAX, cat=pulp.LpContinuous)
     z     = pulp.LpVariable.dicts("z",     range(H), cat=pulp.LpBinary)
     prices_k = df["total_price_kr_kwh"].values
-    prob += pulp.lpSum(grid[h] * float(prices_k[h]) - refusion * solar[h] for h in range(H))
+    prob += pulp.lpSum(grid[h] * float(prices_k[h]) for h in range(H))
 
     # SOC dynamics with charging efficiency
     for h in range(H):
