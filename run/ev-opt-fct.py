@@ -542,6 +542,19 @@ df_out["soc_kwh_before"] = soc_kwh_before
 df_out["soc_pct_before"] = np.round((df_out["soc_kwh_before"].values / BATTERY_KWH) * 100.0, 1)
 df_out["soc_pct_after"]  = np.round((df_out["soc_kwh"].values / BATTERY_KWH) * 100.0, 1)
 
+# naive effective price per kWh drawn (cost / drawn energy)
+# (NaN if nothing drawn that slot)
+df_out["effective_price_kr_per_kwh_drawn"] = (
+    df_out["cost_kr"] / df_out["total_charge_kwh"].replace(0, np.nan)
+)
+
+# If you want to apply REFUSION credit for solar used (value you gave as REFUSION [kr/kWh]),
+# incorporate it as a negative cost for solar_kWh used (visual only; the solver was not
+# informed of this). REFUSION variable in your script is in kr/kWh? If REFUSION is kr/kWh:
+df_out["effective_net_cost_kr"] = df_out["cost_kr"] - (df_out["solar_charge_kwh"] * REFUSION)
+df_out["effective_price_kr_per_kwh_drawn_with_refusion"] = (
+    df_out["effective_net_cost_kr"] / df_out["total_charge_kwh"].replace(0, np.nan)
+)
 
 mask_events = (
     (df_out["trip_kwh_at_departure"].values > 0) |
@@ -552,7 +565,7 @@ mask_events = (
 print("\n=== Optimal Charging & Trip Events (15-min) ===")
 header = (
     f"{'datetime_local':<16} | {'weekday':<9} | {'hour':<2} | {'minute':<2} | {'irradiance':<10} | "
-    f"{'price_kr/kWh':>12} | {'grid_kWh':>8} | {'solar_kWh':>9} | {'total_kwh':>9} | "
+    f"{'price_kr/kWh':>12} | f"{'eff_price_kr/kWh':>12} | f"{'eff_price_kr_ref/kWh':>12} | {'grid_kWh':>8} | {'solar_kWh':>9} | {'total_kwh':>9} | "
     f"{'amp':>3} | {'trip_kWh':>8} | {'soc_kWh':>7} | {'soc_%_before':>12} | {'soc_%_after':>11}"
 )
 print(header)
@@ -566,6 +579,8 @@ for _, row in df_out.loc[mask_events].iterrows():
         f"{int(row['minute']):<6d} | "
         f"{row['irradiance']:>10.0f} | "
         f"{row['price_kr_per_kwh']:>12.2f} | "
+        f"{row['effective_net_cost_kr']:>12.2f} | "
+        f"{row['effective_price_kr_per_kwh_drawn_with_refusion']:>12.2f} | "
         f"{row['grid_charge_kwh']:>8.2f} | "
         f"{row['solar_charge_kwh']:>9.2f} | "
         f"{row['total_charge_kwh']:>9.2f} | "
