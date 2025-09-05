@@ -368,7 +368,7 @@ def optimize_ev_charging(
     common = (
         f"?latitude={lat}&longitude={lon}"
         f"&tilt={tilt}&azimuth={azimuth}"
-        f"&start={start_date}&end={end_date}"
+        f"&start_date={start_date}&end_date={end_date}"
         "&timezone=Europe/Copenhagen"
     )
 
