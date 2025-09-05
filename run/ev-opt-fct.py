@@ -18,6 +18,8 @@ trips = pd.DataFrame(json.loads(trips_json))
 
 token_id = os.getenv("SOLAX_TOKEN_ID")
 wifi_sn = os.getenv("SOLAX_WIFI_SN")
+carnot_apikey = os.getenv("CARNOT_APIKEY")
+carnot_username = os.getenv("CARNOT_USERNAME")
 
 BATTERY_KWH=75
 CHARGER_KW=11
@@ -214,37 +216,85 @@ def fetch_dk1_prices_dkk(attempts=3):
 
 prices_actual = fetch_dk1_prices_dkk()
 
-def fetch_forecast_prices(
-    url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json",
+def fetch_combined_forecast(
+    github_url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json",
+    carnot_url="https://openapi.carnot.dk/openapi/get_predict",
+    apikey="YOUR_API_KEY",
+    username="YOUR_USERNAME",
+    daysahead=3,
     attempts=3,
     sleep_sec=2
 ):
-    """Fetch forecast spot prices (DK1) with retry logic. Returns DataFrame or raises if all attempts fail."""
+    """
+    Get forecast prices with priority:
+      1) GitHub JSON
+      2) Fill missing hours with Carnot.dk
+
+    Returns: DataFrame with ["date", "price", "source"]
+    """
+    import pandas as pd, requests, time
+
+    df_github, df_carnot = None, None
+
+    # --- 1) Try GitHub JSON ---
     for attempt in range(1, attempts + 1):
         try:
-            r = requests.get(url, timeout=30)
+            r = requests.get(github_url, timeout=30)
             r.raise_for_status()
             j = r.json()  # dict {timestamp: price}
-
-            # Convert dict → DataFrame
-            df = pd.DataFrame(list(j.items()), columns=["date", "price"])
-
-            # Parse datetime
-            df["date"] = pd.to_datetime(df["date"], utc=True)
-
-            print(f"✅ Forecast price fetch success on attempt {attempt}")
-            return df.sort_values("date").reset_index(drop=True)
-
+            df_github = pd.DataFrame(list(j.items()), columns=["date", "price"])
+            df_github["date"] = pd.to_datetime(df_github["date"], utc=True)
+            df_github["source"] = "GitHub"
+            print(f"✅ GitHub forecast success ({len(df_github)} hours) on attempt {attempt}")
+            break
         except Exception as e:
-            print(f"⚠️ Forecast fetch failed (attempt {attempt}/{attempts}): {e}")
-            time.sleep(sleep_sec)
+            print(f"⚠️ GitHub forecast fetch failed (attempt {attempt}/{attempts}): {e}")
+            if attempt < attempts:
+                time.sleep(sleep_sec)
 
-    # If we get here → total failure
-    raise RuntimeError(f"Forecast prices unavailable after {attempts} attempts")
+    # --- 2) Try Carnot.dk ---
+    for attempt in range(1, attempts + 1):
+        try:
+            headers = {
+                "accept": "application/json",
+                "apikey": apikey,
+                "username": username,
+            }
+            params = {"daysahead": daysahead, "energysource": "spotprice", "region": "dk1"}
+            r = requests.get(carnot_url, params=params, headers=headers, timeout=30)
+            r.raise_for_status()
+            data = r.json()
+            df_carnot = pd.DataFrame(data["predictions"])
+            df_carnot["date"] = pd.to_datetime(df_carnot["utctime"], utc=True)
+            # Convert prediction → DKK/kWh (øre/MWh → DKK/kWh w/ moms)
+            df_carnot["price"] = df_carnot["prediction"] / 10.0 * 1.25
+            df_carnot["source"] = "Carnot"
+            df_carnot = df_carnot[["date", "price", "source"]]
+            print(f"✅ Carnot forecast success ({len(df_carnot)} hours) on attempt {attempt}")
+            break
+        except Exception as e:
+            print(f"⚠️ Carnot forecast fetch failed (attempt {attempt}/{attempts}): {e}")
+            if attempt < attempts:
+                time.sleep(sleep_sec)
 
+    # --- Combine results ---
+    if df_github is None and df_carnot is None:
+        raise RuntimeError("No forecast data available (both GitHub + Carnot failed).")
 
-prices_forecast = fetch_forecast_prices()
-prices_forecast["source"] = "Forecast"
+    if df_github is None:
+        return df_carnot.sort_values("date").reset_index(drop=True)[["date", "price", "source"]]
+
+    if df_carnot is None:
+        return df_github.sort_values("date").reset_index(drop=True)[["date", "price", "source"]]
+
+    last_df_github = df_github["date"].max()
+    future_carnot = df_carnot[df_carnot["date"] > last_df_github]
+
+    df = pd.concat([df_github, future_carnot], ignore_index=True).sort_values("date").reset_index(drop=True)
+
+    return df[["date", "price", "source"]]
+
+prices_forecast = fetch_combined_forecast(apikey=carnot_apikey, username=carnot_username, daysahead=7, attempts=3)
 
 def combine_actuals_and_forecast(prices_actual, prices_forecast, tz="Europe/Copenhagen"):
     last_actual = prices_actual["date"].max()

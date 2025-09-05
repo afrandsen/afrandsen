@@ -15,6 +15,8 @@ jobs:
       SOC_MAX_PCT: ${{ vars.SOC_MAX_PCT }}
       SOLAX_TOKEN_ID: ${{ secrets.SOLAX_TOKEN_ID }}
       SOLAX_WIFI_SN: ${{ secrets.SOLAX_WIFI_SN }}
+      CARNOT_APIKEY: ${{ secrets.CARNOT_APIKEY }}
+      CARNOT_USERNAME: ${{ secrets.CARNOT_USERNAME }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
