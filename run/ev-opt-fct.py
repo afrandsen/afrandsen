@@ -185,7 +185,7 @@ def fetch_dk1_prices_dkk(attempts=3):
                     print(f"⚠️ Nordpool prices not yet available for {date_str}, skipping")
                     continue
                 else:
-                    raise RuntimeError(f"Nordpool failed 10 times for {date_str}")
+                    raise RuntimeError(f"Nordpool failed {attempts} times for {date_str}")
     
             dfs.append(pd.DataFrame(rows))
     
