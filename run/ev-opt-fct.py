@@ -38,7 +38,7 @@ AZIMUTH=0
 tz = "Europe/Copenhagen"
 CHARGE_EFF = 0.95
 
-def _fetch_open_meteo_with_retries(url, value_path, attempts=10, sleep_sec=2):
+def _fetch_open_meteo_with_retries(url, value_path, attempts=3, sleep_sec=2):
     """Fetch Open-Meteo JSON and pull a numeric array at value_path (list of keys).
        Retries like the Nordpool logic. Returns (times, values) or (None, None) on total failure."""
     for attempt in range(1, attempts + 1):
@@ -118,7 +118,7 @@ def override_with_inverter(df, tz, token_id, wifi_sn):
 
     return df
 
-def fetch_dk1_prices_dkk():
+def fetch_dk1_prices_dkk(attempts=3):
     today = datetime.now().date()
     end = today + timedelta(days=1)  # today + tomorrow
 
@@ -160,7 +160,7 @@ def fetch_dk1_prices_dkk():
             date_str = (today + timedelta(days=offset)).strftime("%Y-%m-%d")
     
             rows = None
-            for attempt in range(10):
+            for attempt in range(attempts):
                 try:
                     data = p.hourly(end_date=date_str, areas=["DK1"])
                     values = data["areas"]["DK1"]["values"]
@@ -176,7 +176,7 @@ def fetch_dk1_prices_dkk():
                     print(f"✅ Nordpool success for {date_str} on attempt {attempt+1}")
                     break  # success → break retry loop
                 except Exception as e:
-                    print(f"Nordpool fetch failed {date_str} (attempt {attempt+1}/10): {e}")
+                    print(f"Nordpool fetch failed {date_str} (attempt {attempt+1}/{attempts}): {e}")
                     time.sleep(2)
     
             if rows is None:
@@ -202,7 +202,7 @@ prices_actual = fetch_dk1_prices_dkk()
 
 def fetch_forecast_prices(
     url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json",
-    attempts=10,
+    attempts=3,
     sleep_sec=2
 ):
     """Fetch forecast spot prices (DK1) with retry logic. Returns DataFrame or raises if all attempts fail."""
@@ -363,7 +363,7 @@ def optimize_ev_charging(
     t15, v15 = _fetch_open_meteo_with_retries(
         url_15,
         ["minutely_15", "global_tilted_irradiance_instant"],
-        attempts=10, sleep_sec=2
+        attempts=3, sleep_sec=2
     )
 
     # Then try hourly (as fallback and/or for filling gaps)
@@ -371,7 +371,7 @@ def optimize_ev_charging(
     th, vh = _fetch_open_meteo_with_retries(
         url_h,
         ["hourly", "global_tilted_irradiance_instant"],
-        attempts=10, sleep_sec=2
+        attempts=3, sleep_sec=2
     )
 
     if t15 is None and th is None:
