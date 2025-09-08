@@ -191,25 +191,14 @@ def fetch_dk1_prices_dkk(attempts=3):
 
 prices_actual = fetch_dk1_prices_dkk()
 
-def fetch_combined_forecast(
+def fetch_github_forecast_dkk(
     github_url="https://raw.githubusercontent.com/solmoller/Spotprisprognose/refs/heads/main/DK1.json",
-    carnot_url="https://openapi.carnot.dk/openapi/get_predict",
-    apikey="YOUR_API_KEY",
-    username="YOUR_USERNAME",
-    daysahead=3,
     attempts=3,
     sleep_sec=2
 ):
-    """
-    Get forecast prices with priority:
-      1) GitHub JSON
-      2) Fill missing hours with Carnot.dk
-
-    Returns: DataFrame with ["date", "price", "source"]
-    """
     import pandas as pd, requests, time
 
-    df_github, df_carnot = None, None
+    df_github = None
 
     # --- 1) Try GitHub JSON ---
     for attempt in range(1, attempts + 1):
@@ -227,7 +216,19 @@ def fetch_combined_forecast(
             if attempt < attempts:
                 time.sleep(sleep_sec)
 
-    # --- 2) Try Carnot.dk ---
+    return df_github[["date", "price", "source"]]
+
+def fetch_carnot_forecast_dkk(
+    carnot_url="https://openapi.carnot.dk/openapi/get_predict",
+    apikey="YOUR_API_KEY",
+    username="YOUR_USERNAME",
+    daysahead=3,
+    attempts=3,
+    sleep_sec=2
+):
+    import pandas as pd, requests, time
+
+    df_carnot = None
     for attempt in range(1, attempts + 1):
         try:
             headers = {
@@ -252,24 +253,41 @@ def fetch_combined_forecast(
             if attempt < attempts:
                 time.sleep(sleep_sec)
 
-    # --- Combine results ---
-    if df_github is None and df_carnot is None:
-        raise RuntimeError("No forecast data available (both GitHub + Carnot failed).")
+    return df_carnot[["date", "price", "source"]]
 
-    if df_github is None:
-        return df_carnot.sort_values("date").reset_index(drop=True)[["date", "price", "source"]]
+def fetch_combined_forecast(source="combined", apikey="YOUR_API_KEY", username="YOUR_USERNAME"):
+    """
+    Fetch price forecast(s) depending on selected source.
+    
+    source:
+        "github"   → only Github spot price forecast
+        "carnot"   → only Carnot forecast
+        "combined" → Github prioritized, Carnot appended (default)
+    """
+    if source == "github":
+        forecast = fetch_github_forecast_dkk()
+        print("🔮 Using Github forecast only")
 
-    if df_carnot is None:
-        return df_github.sort_values("date").reset_index(drop=True)[["date", "price", "source"]]
+    elif source == "carnot":
+        forecast = fetch_carnot_forecast_dkk(apikey=apikey, username=username, daysahead=7, attempts=3)
+        print("🔮 Using Carnot forecast only")
 
-    last_df_github = df_github["date"].max()
-    future_carnot = df_carnot[df_carnot["date"] > last_df_github]
+    elif source == "combined":
+        github = fetch_github_forecast_dkk()
+        carnot = fetch_carnot_forecast_dkk(apikey=apikey, username=username, daysahead=7, attempts=3)
 
-    df = pd.concat([df_github, future_carnot], ignore_index=True).sort_values("date").reset_index(drop=True)
+        last_github = github["date"].max()
+        future_carnot = carnot[carnot["date"] > last_github]
 
-    return df[["date", "price", "source"]]
+        forecast = pd.concat([github, future_carnot], ignore_index=True).sort_values("date").reset_index(drop=True)
+        print("🔮 Using Github forecast (prioritized), Carnot appended")
 
-prices_forecast = fetch_combined_forecast(apikey=carnot_apikey, username=carnot_username, daysahead=7, attempts=3)
+    else:
+        raise ValueError(f"Invalid forecast source: {source}")
+
+    return forecast.reset_index(drop=True)
+
+prices_forecast = fetch_combined_forecast(source="combined", apikey=carnot_apikey, username=carnot_username)
 
 def combine_actuals_and_forecast(prices_actual, prices_forecast, tz="Europe/Copenhagen"):
     last_actual = prices_actual["date"].max()
