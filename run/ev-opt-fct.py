@@ -141,6 +141,11 @@ def fetch_dk1_prices_dkk(attempts=3):
     now_cet = pd.Timestamp.now(tz="Europe/Copenhagen")
     fetch_tomorrow = now_cet.hour > 12 or (now_cet.hour == 12 and now_cet.minute >= 45)
 
+    if fetch_tomorrow:
+        print(f"🟢 It is {now_cet.strftime('%H:%M %Z')} → Nordpool tomorrow data should be available.")
+    else:
+        print(f"🟡 It is {now_cet.strftime('%H:%M %Z')} → Too early, skipping tomorrow fetch.")
+
     try:
         from nordpool import elspot
         p = elspot.Prices(currency="DKK")
