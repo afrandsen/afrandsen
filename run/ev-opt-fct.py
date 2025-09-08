@@ -136,45 +136,20 @@ def override_with_inverter(df, tz, token_id, wifi_sn, attempts=3, sleep_sec=2):
 
 def fetch_dk1_prices_dkk(attempts=3):
     today = datetime.now().date()
-    end = today + timedelta(days=1)  # today + tomorrow
 
-    # --- 1) Try Energidataservice ---
-    # try:
-    #     url = "https://api.energidataservice.dk/dataset/Elspotprices"
-    #     params = {
-    #         "filter": '{"PriceArea":"DK1"}',
-    #         "start": today.isoformat(),
-    #         "end": end.isoformat(),
-    #         "sort": "HourUTC asc"
-    #     }
+    # check if Nordpool day-ahead is published (12:45 CET / 11:45 UTC)
+    now_cet = pd.Timestamp.now(tz="Europe/Copenhagen")
+    fetch_tomorrow = now_cet.hour > 12 or (now_cet.hour == 12 and now_cet.minute >= 45)
 
-    #     r = requests.get(url, params=params, timeout=30)
-    #     r.raise_for_status()
-    #     data = r.json()
-
-    #     df = pd.DataFrame(data["records"])
-    #     if df.empty:
-    #         raise ValueError("Empty dataframe from Energidataservice")
-
-    #     df["date"] = pd.to_datetime(df["HourUTC"], utc=True)
-    #     # SpotPriceDKK is in øre/MWh → convert to DKK/kWh with moms
-    #     df["price"] = (df["SpotPriceDKK"] / 10) * 1.25  
-
-    #     df["source"] = "Energidataservice"
-    #     return df[["date", "price", "source"]].sort_values("date").reset_index(drop=True)
-
-    # except Exception as e:
-    #     print(f"Energidataservice failed, trying Nordpool: {e}")
-
-    # --- 2) Try Nordpool package with 10 retries ---
     try:
         from nordpool import elspot
         p = elspot.Prices(currency="DKK")
-    
+
         dfs = []
-        for offset in range(2):  # today + tomorrow
+        # always fetch today
+        for offset in range(1 + int(fetch_tomorrow)):  
             date_str = (today + timedelta(days=offset)).strftime("%Y-%m-%d")
-    
+
             rows = None
             for attempt in range(attempts):
                 try:
@@ -186,33 +161,28 @@ def fetch_dk1_prices_dkk(attempts=3):
                             continue
                         rows.append({
                             "date": pd.to_datetime(v["start"], utc=True),
-                            "price": (v["value"] / 10.0) * 1.25,  # DKK/MWh → DKK/kWh (with moms)
+                            "price": (v["value"] / 10.0) * 1.25,  # DKK/kWh incl moms
                             "source": "Nordpool"
                         })
                     print(f"✅ Nordpool success for {date_str} on attempt {attempt+1}")
-                    break  # success → break retry loop
+                    break
                 except Exception as e:
                     print(f"Nordpool fetch failed {date_str} (attempt {attempt+1}/{attempts}): {e}")
                     time.sleep(2)
-    
-            if rows is None:
-                # If tomorrow is missing → just skip it
-                if offset == 1:
-                    print(f"⚠️ Nordpool prices not yet available for {date_str}, skipping")
-                    continue
-                else:
-                    raise RuntimeError(f"Nordpool failed {attempts} times for {date_str}")
-    
-            dfs.append(pd.DataFrame(rows))
-    
+
+            if rows is not None:
+                dfs.append(pd.DataFrame(rows))
+            else:
+                print(f"⚠️ Nordpool prices not yet available for {date_str}, skipping")
+
         if not dfs:
             raise RuntimeError("No Nordpool data available at all")
-    
+
         df = pd.concat(dfs, ignore_index=True)
         return df.sort_values("date").reset_index(drop=True)
-    
+
     except Exception as e:
-        raise RuntimeError(f"Both Energidataservice and Nordpool failed after retries: {e}")
+        raise RuntimeError(f"Nordpool failed after retries: {e}")
 
 prices_actual = fetch_dk1_prices_dkk()
 
