@@ -17,4 +17,4 @@ I currently work as a quantitative analyst at [Jyske Bank](https://www.jyskebank
 
 Som kandidat i matematik-økonomi er mine primære faglige interesseområder kvantitativ analyse, matematisk modellering, finans og optimering. Mit speciale, *Langsigtet investering i aktiver: En empirisk analyse af porteføljeallokering med rebalancering*, fokuserede på porteføljeallokering og betydningen af rebalancering over lange investeringshorisonter.
 
-Jeg arbejder i dag som kvantitativ analytiker i Jyske Bank inden for modellering af kreditrisiko, hvor jeg arbejder med statistisk modellering, dataanalyse og kvantitative modeller.
+Jeg arbejder i dag som kvantitativ analytiker i [Jyske Bank](https://www.jyskebank.dk/) inden for modellering af kreditrisiko, hvor jeg arbejder med statistisk modellering, dataanalyse og kvantitative modeller.
